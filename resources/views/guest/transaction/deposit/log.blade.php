@@ -136,7 +136,9 @@
                 <div class="card-body pt-0">
                     @include('alerts')
                     <!--begin::Table-->
-                    <div id="kt_table_users_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="table-responsive"><table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_table_users">
+                    <div id="kt_table_users_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        <div class="table-responsive">
+                            <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_table_users">
                                 <!--begin::Table head-->
                                 <thead>
                                 <!--begin::Table row-->

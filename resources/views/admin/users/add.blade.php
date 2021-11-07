@@ -52,11 +52,14 @@
                     <!--begin::Heading-->
                     <div class="card-px text-center pt-20 pb-5">
                         <!--begin::Title-->
-                        <h2 class="fs-2x fw-bolder mb-0">Create Account Modal Example</h2>
+                        <h2 class="fs-2x fw-bolder mb-0">Create Administrator & User Accounts</h2>
                         <!--end::Title-->
                         <!--begin::Description-->
+                        <div class="p-2">
+                            @include('alerts')
+                        </div>
                         <p class="text-gray-400 fs-4 fw-bold py-7">Click on the below buttons to launch
-                            <br>create account modal example.</p>
+                            <br>create account</p>
                         <!--end::Description-->
                         <!--begin::Action-->
                         <div class="row">

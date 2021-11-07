@@ -35,7 +35,13 @@
 
 <script src="{{ asset('backend/assets/js/custom/account/referrals/referral-program.js')}}"></script>
 
+<script src="{{ asset('backend/assets/js/custom/apps/user-management/users/view/view.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/apps/user-management/users/view/update-details.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/apps/user-management/users/view/update-email.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/apps/user-management/users/view/update-password.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/apps/user-management/users/view/update-role.js') }}"></script>
 <script src="{{ asset('backend/assets/js/custom/modals/create-account.js') }}"></script>
+<script src="{{ asset('backend/assets/js/custom/apps/customers/list/list.js') }}"></script>
 <!--begin::Page Custom Javascript(used by this page)-->
 <script src="{{ asset('backend/assets/js/custom/modals/users-search.js') }}"></script>
 <script src="{{ asset('backend/assets/js/custom/widgets.js') }}"></script>
