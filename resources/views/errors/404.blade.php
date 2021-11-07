@@ -717,13 +717,13 @@
     <!--begin::Authentication - 404 Page-->
     <div class="d-flex flex-column flex-center flex-column-fluid p-10">
         <!--begin::Illustration-->
-        <img src="{{ asset('backend/assets/media/illustrations/sigma-1/9.png') }}" alt="" class="mw-100 mb-10 h-lg-450px">
+        <img src="{{ asset('backend/assets/media/illustrations/sigma-1/18.png') }}" alt="" class="mw-100 mb-10 h-lg-450px">
         <!--end::Illustration-->
         <!--begin::Message-->
-        <h1 class="fw-bold mb-10" style="color: #A3A3C7">Your Admin session has expired, please login to explore the platform</h1>
+        <h1 class="fw-bold mb-10" style="color: #A3A3C7">The page you are accessing has either been moved or broken</h1>
         <!--end::Message-->
         <!--begin::Link-->
-        <a href="{{ route('home') }}" class="btn btn-primary">Continue to dashboard</a>
+        <a href="{{ route('home') }}" class="btn btn-primary btn-lg"><i class="fa fa-home"></i>Homepage</a>
         <!--end::Link-->
     </div>
     <!--end::Authentication - 404 Page-->

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Front\PagesController;
 use App\Http\Controllers\Guest\DashboardController;
@@ -80,5 +81,18 @@ Route::group(['prefix' => 'secure'], function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
-    Route::get('/add-users', [UsersController::class, 'add'])->name('users.add');
+    Route::group(['prefix' => 'user', 'middleware' => 'admin'], function () {
+        Route::get('/add', [UsersController::class, 'add'])->name('users.add');
+        Route::get('/manage', [UsersController::class, 'manage'])->name('users.index');
+        Route::get('/view/{id}', [UsersController::class, 'show'])->name('users.show');
+        Route::post('/add', [UsersController::class, 'addProcess'])->name('users.add.process');
+        Route::post('/update/{id}', [UsersController::class, 'update'])->name('user.update');
+        Route::post('/update/email/{id}', [UsersController::class, 'updateEmail'])->name('user.email.update');
+        Route::post('/update/role/{id}', [UsersController::class, 'updateRole'])->name('user.role.update');
+        Route::post('/alter/{id}', [UsersController::class, 'alter'])->name('user.alter');
+    });
+
+
+    Route::resource('messages', MessagesController::class);
+
 });
