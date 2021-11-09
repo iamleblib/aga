@@ -33,19 +33,19 @@
         <!--end::Card header-->
         <!--begin::Card body-->
         <div class="card-body" id="kt_drawer_chat_messenger_body">
-            @if($messages->count() > 0)
-                @foreach($messages as $message)
+            @if($users->count() > 0)
+                @foreach($users as $user)
                     <div class="menu-content d-flex align-items-center px-3">
                         <!--begin::Avatar-->
-                        <a href="{{ route('messages.show', $message->user_id) }}">
+                        <a href="{{ route('messages.show', $user->id) }}">
                             <div class="symbol symbol-50px me-5">
-                                <img alt="Logo" src="https://ui-avatars.com/api/?name={{ $message->sender}}" />
+                                <img alt="Logo" src="https://ui-avatars.com/api/?name={{ $user->username}}" />
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Username-->
                             <div class="d-flex flex-column">
-                                <div class="fw-bolder d-flex align-items-left fs-5">{{ $message->sender }}</div>
-                                <a class="fw-bold text-muted text-hover-primary fs-7">{{ $message->subject }}</a>
+                                <div class="fw-bolder d-flex align-items-left fs-5">{{ ucfirst($user->name)  }}</div>
+                                <a class="fw-bold text-muted text-hover-primary fs-7">{{ $user->email }}</a>
                             </div>
                             <!--end::Username-->
                         </a>

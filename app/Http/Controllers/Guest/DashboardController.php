@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use App\Models\Deposit;
 use App\Models\Investment;
+use App\Models\Wallet;
+use App\Models\Withdraw;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,11 +25,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $wallet = Deposit::getProcessedDeposit();
-        $investment = Investment::getInvestment();
+        $deposit = new Deposit();
+        $investment = Investment::getInvestmentCount();
 
         return view('guest.index')->with([
-            'wallet' => $wallet,
+            'deposit' => $deposit,
             'investment' => $investment,
         ]);
     }

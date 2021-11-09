@@ -63,10 +63,7 @@
                         <!--end::Description-->
                         <!--begin::Action-->
                         <div class="row">
-                            <div class="col-6">
-                                <a href="#" class="btn btn-primary er fs-6 px-8 py-4" data-bs-toggle="modal" data-bs-target="#admin">Add New Admins</a>
-                            </div>
-                            <div class="col-6">
+                            <div class="col-12">
                                 <a href="#" class="btn btn-primary er fs-6 px-8 py-4" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Add New Users</a>
                             </div>
                         </div>
@@ -82,7 +79,6 @@
                 <!--end::Card body-->
             </div>
             <!--end::Card-->
-                @include('admin.add.admin')
                 @include('admin.add.users')
             <!--end::Modal - Create project-->
         </div>

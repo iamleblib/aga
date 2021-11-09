@@ -3,18 +3,15 @@
 namespace App\Http\Controllers\Transaction;
 
 use App\Http\Controllers\Controller;
-use App\Models\Deposit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class WithdrawController extends Controller
+class DepositsController extends Controller
 {
-    public function index()
+    public function preview(Request $request)
     {
-        $wallet = Deposit::getProcessedDeposit();
-        return view('guest.transaction.withdraw.index')->with('wallet', $wallet);
+        return view('guest.transaction.deposit.preview')->with('request', $request);
     }
-
 
     public function process(Request $request)
     {
@@ -26,19 +23,17 @@ class WithdrawController extends Controller
         $fields = [
             'ref' => "#CBA" . time(),
             'amount' => $request->amount,
-            'address' => $request->address,
             'gateway' => $request->paymentMethod,
         ];
 
-        Auth::user()->withdraw()->create($fields);
+        Auth::user()->deposit()->create($fields);
 
-        return redirect()->route('withdraw.logs')->with('success', 'Withdraw sent for review');
+        return redirect()->route('deposit.logs')->with('success', 'Deposit sent for review');
     }
 
     public function logs()
     {
-        $withdraws = Auth::user()->withdraw()->get();
-        return view('guest.transaction.withdraw.log')->with('withdraws', $withdraws);
+        $deposits = Auth::user()->deposit()->get();
+        return view('guest.transaction.deposit.log')->with('deposits', $deposits);
     }
-
 }

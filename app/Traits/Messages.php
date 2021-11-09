@@ -3,12 +3,20 @@
 namespace App\Traits;
 
 use App\Models\Message;
+use App\Models\User;
 
 trait Messages
 {
     public function getMessages(string $a = 'receiver', string $b = 'support@coinbaseassets.com')
     {
-        return $messages = Message::where($a, $b)->get();
+        return Message::where($a, $b)->orderBy('created_at')->get();
+    }
+
+    public function getUsers()
+    {
+        return User::where([
+            ['id', '!=', auth()->id()]
+        ])->orderBy('created_at')->get();
     }
 
     public function getSingleMessage($id)

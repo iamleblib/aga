@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Models\Referral;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,8 +17,12 @@ class GuestController extends Controller
      */
     public function index()
     {
+        $referrals = new Referral();
         $wallets = auth()->user()->wallet()->get();
-        return view('guest.profile.index')->with('wallets', $wallets);
+        return view('guest.profile.index')->with([
+            'wallets' => $wallets,
+            'referrals' => $referrals
+        ]);
     }
 
 

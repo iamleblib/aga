@@ -185,14 +185,14 @@
                                                 <!--end::Avatar-->
                                                 <!--begin::User details-->
                                                 <div class="d-flex flex-column">
-                                                    <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ auth()->user()->name }}</a>
+                                                    <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ auth()->user()->username }}</a>
                                                     <span>{{ auth()->user()->email }}</span>
                                                 </div>
                                                 <!--begin::User details-->
                                             </td>
                                             <!--end::User=-->
                                             <!--begin::Role=-->
-                                            <td><div class="badge badge-@if($deposit->status == 'pending')warning @elseif($deposit->status == 'decline')danger @elseif($deposit->status == 'processed')success @endif fw-bolder">{{ $deposit->status }}</div></td>
+                                            <td><div class="badge badge-@if($deposit->status == 'pending')warning @elseif($deposit->status == 'declined')danger @elseif($deposit->status == 'processed')success @endif fw-bolder">{{ $deposit->status }}</div></td>
                                             <!--end::Role=-->
                                             <!--begin::Last login=-->
                                             <td data-order="$$$">

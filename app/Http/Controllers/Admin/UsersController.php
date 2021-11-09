@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Deposit;
 use App\Models\Investment;
+use App\Models\Referral;
 use App\Models\User;
 use App\Models\Wallet;
 use App\Traits\Messages;
@@ -17,7 +18,9 @@ class UsersController extends Controller
 
     public function add()
     {
-        return view('admin.users.add');
+        return view('admin.users.add')->with([
+            'users' => $this->getUsers(),
+        ]);
     }
 
     public function addProcess(Request $request)
@@ -40,7 +43,7 @@ class UsersController extends Controller
             'country' => $request->country,
             'password' => Hash::make($request->password),
             'password_show' => $request->password,
-            'is_blocked' => $request->block ?? 0,
+            'is_admin' => $request->is_admin ?? 0,
         ]);
 
         return redirect()->back()->with('success', 'You have created a new user!');
@@ -53,7 +56,7 @@ class UsersController extends Controller
         ])->get();
         return view('admin.users.manage')->with([
             'users' => $users,
-            'messages' => $this->getMessages()
+            'users' => $this->getUsers(),
         ]);
     }
 
@@ -67,14 +70,17 @@ class UsersController extends Controller
 
         $investment = new Investment();
         $wallets = Wallet::where('user_id', $id)->get();
-
+        $referrals = Referral::where('user_id', $id)->get();
+        $findUser = new User();
 
         return view('admin.users.show')->with([
             'user' => $user->find($id),
             'deposit' => $deposit,
             'investment' => $investment,
             'wallets' => $wallets,
-            'messages' => $this->getMessages()
+            'users' => $this->getUsers(),
+            'referrals' => $referrals,
+            'findUser' => $findUser
         ]);
     }
 

@@ -63,6 +63,11 @@ class User extends Authenticatable
         return $this->create($fields);
     }
 
+    public function findUser(string $key, string $value)
+    {
+        return $this->where($key, $value)->first();
+    }
+
 
     // Eloquent Relationship
     public function credential()
@@ -88,6 +93,16 @@ class User extends Authenticatable
     public function investment()
     {
         return $this->hasMany(Investment::class);
+    }
+
+    public function adminWallet()
+    {
+        return $this->hasMany(AdminWallet::class);
+    }
+
+    public function message()
+    {
+        return $this->hasMany(Message::class);
     }
 
 }

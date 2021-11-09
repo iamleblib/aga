@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers\Transaction;
 
-
 use App\Http\Controllers\Controller;
 use App\Models\Deposit;
 use App\Models\Investment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Transaction\RealEstateController;
 
-class InvestmentController extends Controller
+class InvestmentsController extends Controller
 {
     public string $check = "";
     public function index()
@@ -77,5 +75,4 @@ class InvestmentController extends Controller
 ////        $investments = Auth::user()->investment()->get();
 //        return view('guest.transaction.investment.log');
 //    }
-
 }
