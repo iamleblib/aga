@@ -39,6 +39,14 @@
                             </div>
                         </div>
 
+                        @if (Request::has('user'))
+                            <input hidden  value="{{ Request::get('user') }}" id="refferal_id" type="text" class="form-control" name="referral">
+                            <input hidden  value="{{ App\Models\User::where('username', Request::get('user'))->first()->id }}" id="user_id" type="text" class="form-control" name="user_id">
+                        @else
+                            <input hidden type="text" name="user_id" value="0">
+                            <input hidden  value="Self Enrollment" id="refferal_email" type="text" class="form-control" name="referral">
+                        @endif
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 

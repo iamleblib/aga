@@ -15,6 +15,11 @@ class Investment extends Model
         'updated_at'
     ];
 
+    public static function getInvestmentCount()
+    {
+        return self::count();
+    }
+
     public static function getInvestment()
     {
         return self::sum('amount');

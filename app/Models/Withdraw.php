@@ -20,6 +20,11 @@ class Withdraw extends Model
         return self::sum('amount');
     }
 
+    public function getCount()
+    {
+        return $this->sum('amount');
+    }
+
     // eloquent
     public function user()
     {

@@ -8,108 +8,100 @@
             <!--begin::Col-->
             <div class="col-xl-6 mb-15 mb-xl-0 p-5">
                 <p class="text-gray-400 fs-4 fw-bold">Below is your up-line </p>
-                <input disabled type="text" style="width: 200px" class="form-control" width="10px" name="search" value="investor: {{ auth()->user()->username }}" />
+                <input disabled type="text" style="width: 200px" class="form-control" width="10px" name="search" value="investor: {{ auth()->user()->referral }}" />
             </div>
             <!--end::Col-->
             <!--begin::Col-->
             <div class="col-6">
+                <p class="text-gray-400 fs-4 fw-bold ">Click on the below buttons to Share &amp; earn .</p>
+                <!--end::Description-->
+                <!--begin::Action-->
+                <a href="#" class="btn btn-dark er fs-6 px-8 py-4" data-bs-toggle="modal" data-bs-target="#kt_modal_share_earn">Share &amp; Earn <i class="fa fa-share"></i> </a>
 
-                                    <!--end::Title-->
-                                    <!--begin::Description-->
-                                    <p class="text-gray-400 fs-4 fw-bold ">Click on the below buttons to Share &amp; earn .</p>
-                                    <!--end::Description-->
-                                    <!--begin::Action-->
-                                    <a href="#" class="btn btn-dark er fs-6 px-8 py-4" data-bs-toggle="modal" data-bs-target="#kt_modal_share_earn">Share &amp; Earn <i class="fa fa-share"></i> </a>
-                                    <!--end::Action-->
-                                <!--end::Heading-->
-                                <!--begin::Illustration-->
-                                <!--end::Illustration-->
-                        <!--end::Card-->
-                        <!--begin::Modal - Share & Earn-->
-                        <div class="modal fade" id="kt_modal_share_earn" tabindex="-1" aria-hidden="true">
-                            <!--begin::Modal dialog-->
-                            <div class="modal-dialog modal-dialog-centered mw-800px">
-                                <!--begin::Modal content-->
-                                <div class="modal-content">
-                                    <!--begin::Modal header-->
-                                    <div class="modal-header pb-0 border-0 justify-content-end">
-                                        <!--begin::Close-->
-                                        <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
-                                            <span class="svg-icon svg-icon-1">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
-														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
-													</svg>
-												</span>
-                                            <!--end::Svg Icon-->
-                                        </div>
-                                        <!--end::Close-->
-                                    </div>
-                                    <!--begin::Modal header-->
-                                    <!--begin::Modal body-->
-                                    <div class="modal-body scroll-y pt-0 pb-15">
-                                        <!--begin::Wrapper-->
-                                        <div class="mw-lg-600px mx-auto">
-                                            <!--begin::Heading-->
-                                            <div class="mb-13 text-center">
-                                                <!--begin::Title-->
-                                                <h1 class="mb-3">Share &amp; Earn</h1>
-                                                <!--end::Title-->
-                                                <!--begin::Description-->
-                                                <div class="text-muted fw-bold fs-5">If you need more info, please check
-                                                    <a href="#" class="link-primary fw-bolder">Compose</a>.</div>
-                                                <!--end::Description-->
-                                            </div>
-                                            <!--end::Heading-->
-                                            <!--begin::Input group-->
-                                            <div class="mb-10">
-                                                <!--begin::Title-->
-                                                <h4 class="fs-5 fw-bold text-gray-800">Share my referral link with friends</h4>
-                                                <!--end::Title-->
-                                                <!--begin::Title-->
-                                                <div class="d-flex">
-                                                    <input id="kt_referral_link_input" type="text" class="form-control form-control-solid me-3 flex-grow-1" name="search" value="{{ route('register', auth()->user()->username) }}" />
-                                                    <button id="kt_referral_program_link_copy_btn" class="btn btn-light fw-bolder flex-shrink-0" data-clipboard-target="#kt_referral_link_input"> <i class="fa fa-copy" style="font-size: 20px"></i></button>
-                                                </div>
-                                                <!--end::Title-->
-                                            </div>
-                                            <!--end::Input group-->
-                                            <!--begin::Actions-->
-                                            <div class="d-flex">
-                                                <a href="#" class="btn btn-light w-100">
-                                                    <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/google.svg')}}" class="h-15px me-3" />Import Contacts</a>
-                                                <a href="#" class="btn btn-light w-100 mx-6">
-                                                    <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/facebook.svg')}}" class="h-20px me-3" />Facebook</a>
-                                                <a href="#" class="btn btn-light w-100">
-                                                    <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/twitter.svg')}}" class="h-20px me-3" />Twitter</a>
-                                            </div>
-                                            <!--end::Actions-->
-                                            <!--begin::Input group-->
-                                            <div class="d-flex align-items-center mt-10">
-                                                <!--begin::Label-->
-                                                <div class="flex-grow-1">
-                                                    <span class="fs-6 fw-bold text-gray-800 d-block">Share my link</span>
-                                                    <span class="fs-7 fw-bold text-muted">Always allow me to share my link</span>
-                                                </div>
-                                                <!--end::Label-->
-                                                <!--begin::Switch-->
-                                                <label class="form-check form-switch form-check-custom form-check-solid">
-                                                    <input class="form-check-input" type="checkbox" value="1" checked="checked" />
-                                                    <span class="form-check-label">Allow</span>
-                                                </label>
-                                                <!--end::Switch-->
-                                            </div>
-                                            <!--end::Input group-->
-                                        </div>
-                                        <!--end::Wrapper-->
-                                    </div>
-                                    <!--end::Modal body-->
+                <div class="modal fade" id="kt_modal_share_earn" tabindex="-1" aria-hidden="true">
+                    <!--begin::Modal dialog-->
+                    <div class="modal-dialog modal-dialog-centered mw-800px">
+                        <!--begin::Modal content-->
+                        <div class="modal-content">
+                            <!--begin::Modal header-->
+                            <div class="modal-header pb-0 border-0 justify-content-end">
+                                <!--begin::Close-->
+                                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                    <span class="svg-icon svg-icon-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+                                                <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+                                            </svg>
+                                        </span>
+                                    <!--end::Svg Icon-->
                                 </div>
-                                <!--end::Modal content-->
+                                <!--end::Close-->
                             </div>
-                            <!--end::Modal dialog-->
-                    <!--end::Post-->
+                            <!--begin::Modal header-->
+                            <!--begin::Modal body-->
+                            <div class="modal-body scroll-y pt-0 pb-15">
+                                <!--begin::Wrapper-->
+                                <div class="mw-lg-600px mx-auto">
+                                    <!--begin::Heading-->
+                                    <div class="mb-13 text-center">
+                                        <!--begin::Title-->
+                                        <h1 class="mb-3">Share &amp; Earn</h1>
+                                        <!--end::Title-->
+                                        <!--begin::Description-->
+                                        <div class="text-muted fw-bold fs-5">If you need more info, please check
+                                            <a href="#" class="link-primary fw-bolder">Compose</a>.</div>
+                                        <!--end::Description-->
+                                    </div>
+                                    <!--end::Heading-->
+                                    <!--begin::Input group-->
+                                    <div class="mb-10">
+                                        <!--begin::Title-->
+                                        <h4 class="fs-5 fw-bold text-gray-800">Share my referral link with friends</h4>
+                                        <!--end::Title-->
+                                        <!--begin::Title-->
+                                        <div class="d-flex">
+                                            <input id="kt_referral_link_input" type="text" class="form-control form-control-solid me-3 flex-grow-1" name="search" value="{{ route('register') }}?user={{ auth()->user()->username }}" />
+                                            <button id="kt_referral_program_link_copy_btn" class="btn btn-light fw-bolder flex-shrink-0" data-clipboard-target="#kt_referral_link_input"> <i class="fa fa-copy" style="font-size: 20px"></i></button>
+                                        </div>
+                                        <!--end::Title-->
+                                    </div>
+                                    <!--end::Input group-->
+                                    <!--begin::Actions-->
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-light w-100">
+                                            <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/google.svg')}}" class="h-15px me-3" />Import Contacts</a>
+                                        <a href="#" class="btn btn-light w-100 mx-6">
+                                            <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/facebook.svg')}}" class="h-20px me-3" />Facebook</a>
+                                        <a href="#" class="btn btn-light w-100">
+                                            <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/twitter.svg')}}" class="h-20px me-3" />Twitter</a>
+                                    </div>
+                                    <!--end::Actions-->
+                                    <!--begin::Input group-->
+                                    <div class="d-flex align-items-center mt-10">
+                                        <!--begin::Label-->
+                                        <div class="flex-grow-1">
+                                            <span class="fs-6 fw-bold text-gray-800 d-block">Share my link</span>
+                                            <span class="fs-7 fw-bold text-muted">Always allow me to share my link</span>
+                                        </div>
+                                        <!--end::Label-->
+                                        <!--begin::Switch-->
+                                        <label class="form-check form-switch form-check-custom form-check-solid">
+                                            <input class="form-check-input" type="checkbox" value="1" checked="checked" />
+                                            <span class="form-check-label">Allow</span>
+                                        </label>
+                                        <!--end::Switch-->
+                                    </div>
+                                    <!--end::Input group-->
+                                </div>
+                                <!--end::Wrapper-->
+                            </div>
+                            <!--end::Modal body-->
+                        </div>
+                        <!--end::Modal content-->
+                    </div>
+                    <!--end::Modal dialog-->
+            <!--end::Post-->
                 </div>
                 <!--end::Container-->
 
@@ -177,6 +169,109 @@
     <!--end::Body-->
 </div>
 <!--end::Referral program-->
+
+<!--begin::Referred users-->
+
+<div class="card">
+    <!--begin::Header-->
+    <div class="card-header card-header-stretch">
+        <!--begin::Title-->
+        <div class="card-title">
+            <h3>Referred Users</h3>
+        </div>
+
+    </div>
+    <!--end::Header-->
+    <!--begin::Tab content-->
+
+    <!--begin::Table-->
+    @if($referrals->getReferrals()->count() > 0)
+
+    <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+        <div class="table-responsive p-9">
+            <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
+                <!--begin::Table head-->
+                <thead>
+                <!--begin::Table row-->
+                <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+                    <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
+                        <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                        </div>
+                    </th>
+                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Name</th>
+                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 204.734px;">Email</th>
+                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Joined Date</th>
+                </tr>
+                <!--end::Table row-->
+                </thead>
+                <!--end::Table head-->
+                <!--begin::Table body-->
+                <tbody class="fw-bold text-gray-600">
+
+                    @foreach($referrals->getReferrals() as $referral)
+                        <tr class="even">
+                            <!--begin::Checkbox-->
+                            <td>
+                                <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                </div>
+                            </td>
+                            <!--end::Checkbox-->
+                            <!--begin::Name=-->
+                            <td>
+                                <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $referral->name }}</a>
+                            </td>
+
+                            <td>
+                                <a href="mailto:{{ $referral->email }}" class="text-gray-800 text-hover-primary mb-1">{{ $referral->email }}</a>
+                            </td>
+
+                            <td>
+                                <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $referral->created_at->toFormattedDateString() }}</a>
+                            </td>
+
+                        </tr>
+                    @endforeach
+
+                </tbody>
+                <!--end::Table body-->
+            </table>
+        </div>
+    </div>
+    @else
+        <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6 m-6">
+            <!--begin::Icon-->
+            <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+            <span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
+                                <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black"></rect>
+                            </svg>
+                        </span>
+            <!--end::Svg Icon-->
+            <!--end::Icon-->
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-stack flex-grow-1">
+                <!--begin::Content-->
+                <div class="fw-bold">
+                    <h4 class="text-gray-900 fw-bolder">No Referral Found</h4>
+                    <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
+
+                        <div class="fs-6 text-gray-700">You recently do not have any referral (downline) on your list!
+                            <a href="#" class="fw-bolder" data-bs-toggle="modal" data-bs-target="#kt_modal_share_earn">Refer a friend today</a>
+                        </div>
+                    </ul>
+
+                </div>
+                <!--end::Content-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+@endif
+    <!--end::Table-->
+
+    <!--end::Tab content-->
+</div>
 </div>
 <!--end::Post-->
 </div>

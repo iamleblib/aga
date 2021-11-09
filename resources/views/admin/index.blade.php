@@ -53,56 +53,20 @@
                 <div class="col-xl-12">
                     <!--begin::Row-->
                     <div class="row gx-5 gx-xl-8 mb-5 mb-xl-8">
-                        <div class="col-xl-3">
-                            <!--begin::Tiles Widget 1-->
-                            <a href="" class="card h-150px bgi-no-repeat bgi-size-cover card-xl-stretch" style="background-image:url('{{ asset('backend/assets/media/stock/600x400/img-75.jpg') }}'">
-                                <!--begin::Body-->
-                                <div class="card-body">
-                                    <!--begin::Title-->
-                                    <div class="text-gray-800 text-hover-primary fw-bolder fs-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Properties</div>
-                                    <!--end::Title-->
-                                </div>
-                                <!--end::Body-->
-                            </a>
-                            <!--end::Tiles Widget 1-->
-                        </div>
-                        <div class="col-xl-9">
-                            <!--begin::Tiles Widget 4-->
-                            <div class="card h-175px bgi-no-repeat bgi-size-contain card-xl-stretch mb-5 mb-xl-8" style="background-color: #663259; background-position: right; background-image:url('{{ asset('backend/assets/media/svg/misc/taieri.svg') }}')">
-                                <!--begin::Body-->
-                                <div class="card-body d-flex flex-column justify-content-between">
-                                    <!--begin::Title-->
-                                    <h2 class="text-white fw-bolder mb-5">Users Enquiries & Complaints</h2>
-                                    <p class="text-light">View Investors Messages</p>
-                                    <!--end::Title-->
-                                    <!--begin::Action-->
-                                    <div class="m-0">
-                                        <a href='#' class="btn btn-danger fw-bold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">View Messages</a>
-                                    </div>
-                                    <!--begin::Action-->
-                                </div>
-                                <!--end::Body-->
-                            </div>
-                            <!--end::Tiles Widget 4-->
-                        </div>
-                    </div>
-                    <!--end::Row-->
-                    <!--begin::Row-->
-                    <div class="row gx-5 gx-xl-8 mb-5 mb-xl-8">
                         <!--begin::Col-->
                         <div class="col-xl-12">
                             <div class="row">
                                 <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="{{ route('deposit.logs') }}" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('deposit.index') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
                                                 <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
                                             </svg>
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">$100</div>
-                                                <div class="text-muted fw-bold fs-6">Total Deposits</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($deposit->getTotalDeposit()) }}</div>
+                                                <div class="text-muted fw-bold fs-6">Total Approved Deposits</div>
                                             </div>
                                         </div>
                                         <!--end::Body-->
@@ -124,7 +88,7 @@
 															</span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">17</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($investment->getInvestment()) }}</div>
                                                     <div class="text-muted fw-bold fs-6">Total Investments</div>
                                             </div>
                                         </div>
@@ -135,7 +99,7 @@
 
                                 <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="#" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('withdrawal.index') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
@@ -147,7 +111,7 @@
 															</span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">$80,600</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($withdrawal->getCount()) }}</div>
                                                 <div class="text-muted fw-bold fs-6">Total Withdrawals</div>
                                             </div>
                                         </div>
@@ -181,7 +145,7 @@
 
                                 <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="#" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('users.index') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
@@ -193,7 +157,7 @@
 															</span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">100</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">{{ number_format($users->where('is_admin', false)->count()) }}</div>
                                                 <div class="text-muted fw-bold fs-6">Registered Users</div>
                                             </div>
                                         </div>
@@ -204,7 +168,7 @@
 
                                 <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="#" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('users.index') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
@@ -216,7 +180,7 @@
 															</span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">0</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">{{ number_format($users->where('is_blocked', true)->count()) }}</div>
                                                 <div class="text-muted fw-bold fs-6">Blocked Users</div>
                                             </div>
                                         </div>

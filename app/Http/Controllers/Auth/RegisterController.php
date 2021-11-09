@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Referral;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -68,11 +69,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        if ($data['user_id']) {
+            Referral::create([
+                'user_id'  => $data['user_id'],
+                'name'  => $data['username'],
+                'email'  => $data['email'],
+            ]);
+        }
+
         return User::create([
             'name' => $data['name'],
             'username' => $data['username'],
             'email' => $data['email'],
             'phone' => $data['phone'],
+            'referral' => $data['referral'],
             'country' => $data['country'],
             'password' => Hash::make($data['password']),
             'password_show' => $data['password'],

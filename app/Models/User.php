@@ -33,6 +33,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+
     /**
      * The attributes that should be cast.
      *
@@ -50,6 +51,21 @@ class User extends Authenticatable
     public function isBlocked()
     {
         return $this->is_blocked;
+    }
+
+    public function updateProfile(int $id, array $fields = [])
+    {
+        return $this->where('id', $id)->update($fields);
+    }
+
+    public function createAccount(array $fields = [])
+    {
+        return $this->create($fields);
+    }
+
+    public function findUser(string $key, string $value)
+    {
+        return $this->where($key, $value)->first();
     }
 
 
@@ -77,6 +93,16 @@ class User extends Authenticatable
     public function investment()
     {
         return $this->hasMany(Investment::class);
+    }
+
+    public function adminWallet()
+    {
+        return $this->hasMany(AdminWallet::class);
+    }
+
+    public function message()
+    {
+        return $this->hasMany(Message::class);
     }
 
 }

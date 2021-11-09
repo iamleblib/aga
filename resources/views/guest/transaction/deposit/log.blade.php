@@ -136,7 +136,9 @@
                 <div class="card-body pt-0">
                     @include('alerts')
                     <!--begin::Table-->
-                    <div id="kt_table_users_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="table-responsive"><table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_table_users">
+                    <div id="kt_table_users_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        <div class="table-responsive">
+                            <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_table_users">
                                 <!--begin::Table head-->
                                 <thead>
                                 <!--begin::Table row-->
@@ -183,14 +185,14 @@
                                                 <!--end::Avatar-->
                                                 <!--begin::User details-->
                                                 <div class="d-flex flex-column">
-                                                    <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ auth()->user()->name }}</a>
+                                                    <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ auth()->user()->username }}</a>
                                                     <span>{{ auth()->user()->email }}</span>
                                                 </div>
                                                 <!--begin::User details-->
                                             </td>
                                             <!--end::User=-->
                                             <!--begin::Role=-->
-                                            <td><div class="badge badge-@if($deposit->status == 'pending')warning @elseif($deposit->status == 'decline')danger @elseif($deposit->status == 'processed')success @endif fw-bolder">{{ $deposit->status }}</div></td>
+                                            <td><div class="badge badge-@if($deposit->status == 'pending')warning @elseif($deposit->status == 'declined')danger @elseif($deposit->status == 'processed')success @endif fw-bolder">{{ $deposit->status }}</div></td>
                                             <!--end::Role=-->
                                             <!--begin::Last login=-->
                                             <td data-order="$$$">
