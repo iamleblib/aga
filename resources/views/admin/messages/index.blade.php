@@ -37,12 +37,7 @@
                 <!--end::Breadcrumb-->
             </div>
             <!--end::Page title-->
-            <!--begin::Actions-->
-            <div class="d-flex align-items-center py-3 py-md-1">
-                <a href="#" class="btn btn-bg-white btn-active-color-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Create</a>
-                <!--end::Button-->
-            </div>
-            <!--end::Actions-->
+
         </div>
         <!--end::Container-->
     </div>
@@ -61,10 +56,19 @@
 
                             <!--begin::Card body-->
                             <div class="card-body" id="kt_chat_messenger_body">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <h2>{{ $user->name }}</h2>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <a @class('btn btn-light-info btn-sm') href="#end"><i class="fa fa-arrow-down"></i> Scroll</a>
+                                    </div>
+                                </div>
+                                <hr>
                                 <!--begin::Messages-->
                                 <div class="scroll-y me-n5 pe-5 h-300px h-lg-auto" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_header, #kt_toolbar, #kt_footer, #kt_chat_messenger_header, #kt_chat_messenger_footer" data-kt-scroll-wrappers="#kt_content, #kt_chat_messenger_body" data-kt-scroll-offset="-2px">
                                     <!--begin::Message(in)-->
-
                                             <!--begin::Wrapper-->
                                             @if($showMessage->count() > 0)
                                                 @foreach($showMessage as $m)
@@ -73,19 +77,14 @@
                                                             <!--begin::User-->
                                                             <div class="d-flex align-items-center mb-2">
 
-                                                                <!--begin::Avatar-->
-                                                                <div class="symbol symbol-35px symbol-circle">
-                                                                    <img alt="Pic" src="https://ui-avatars.com/api/?name=@if($m->sender == 'support@coinbaseassets.com') {{ auth()->user()->username }} @else {{ $m->sender }} @endif" />
-                                                                </div>
                                                                 <!--end::Avatar-->
                                                                 <!--begin::Details-->
                                                                 <div class="ms-3">
-                                                                    <a class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">@if($m->sender == 'support@coinbaseassets.com')You @else {{ $m->sender }} @endif </a>
-                                                                    <span class="text-muted fs-7 mb-1">2 min</span>
+                                                                    <span class="text-muted fs-7 mb-1">{{ $m->created_at->toFormattedDateString() .' ('.date("H:i a", strtotime($m->created_at)) .')' }}</span>
                                                                 </div>
 
                                                                 <div class="ms-3">
-                                                                    <a class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">@if($m->sender == 'support@coinbaseassets.com')<i class="fa fa-trash text-danger"></i> @endif </a>
+                                                                    <a class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">@if($m->sender == 'support@coinbaseassets.com')@endif </a>
 
                                                                 </div>
                                                                 <!--end::Details-->
@@ -98,9 +97,9 @@
                                                         </div>
                                                         <!--end::Wrapper-->
                                                     </div>
-                                                @endforeach
-                                            @endif
-
+                                        @endforeach
+                                    @endif
+                                    <p id="end"></p>
 
                                 </div>
                                 <!--end::Messages-->
@@ -111,10 +110,9 @@
                                 <form action="{{ route('messages.store') }}" method="post">
                                     @csrf
                                     <!--begin::Input-->
-                                        <input type="hidden" name="user_id" value="{{ $m->user_id }}">
-                                        <input type="hidden" name="subject" value="{{ $m->subject }}">
+                                        <input type="hidden" name="user_id" value="{{ $user->id }}">
                                         <input type="hidden" name="sender" value="{{ __('support@coinbaseassets.com') }}">
-                                        <input type="hidden" name="receiver" value="{{ \App\Models\User::where('id', $m->user_id)->first()->username }}">
+                                        <input type="hidden" name="receiver" value="{{ $user->username }}">
                                     <input class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" name="message" placeholder="Type a message">
                                     <!--end::Input-->
                                     <!--begin:Toolbar-->

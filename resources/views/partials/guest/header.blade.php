@@ -99,7 +99,7 @@
                                     </span>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <span class="menu-title">Wallet Logs</span>
+                                <span class="menu-title">Withdrawal Logs</span>
                             </a>
                         </div>
 
@@ -114,7 +114,7 @@
                     </span>
                     <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
                         <div class="menu-item">
-                            <a class="menu-link py-3" href="{{ route('investment.index') }}" title="Make your investment" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                            <a class="menu-link py-3" href="{{ route('investment.guest.index') }}" title="Make your investment" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                             <span class="menu-icon">
                                 <!--begin::Svg Icon | path: /icons/duotune/general/gen002.svg-->
                                 <span class="svg-icon svg-icon-2">
@@ -145,7 +145,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <a class="menu-link py-3" href="documentation/getting-started.html" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                            <a class="menu-link py-3" href="{{ route('roi.log') }}" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                             <span class="menu-icon">
                                 <!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
                                 <span class="svg-icon svg-icon-2">
@@ -340,7 +340,7 @@
                                         <!--end::Symbol-->
                                         <!--begin::Title-->
                                         <div class="d-flex flex-column">
-                                            <a href="{{ route('investment.index')}}" class="fs-6 text-gray-800 text-hover-primary fw-bold">Start Investment</a>
+                                            <a href="{{ route('investment.guest.index')}}" class="fs-6 text-gray-800 text-hover-primary fw-bold">Start Investment</a>
                                             <span class="fs-7 text-muted fw-bold">Start your investment today</span>
                                         </div>
                                         <!--end::Title-->
@@ -848,7 +848,8 @@
                     <div class="separator my-2"></div>
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
-                    <a href="" class="menu-item px-5">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();" class="menu-item px-5">
                         <div class="menu-content px-5">
                             <label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success" for="kt_user_menu_dark_mode_toggle">
                                 <input class="form-check-input w-30px h-20px" type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="dark/index.html" />
@@ -857,6 +858,9 @@
                             </label>
                         </div>
                     </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                     <!--end::Menu item-->
                 </div>
                 <!--end::Menu-->

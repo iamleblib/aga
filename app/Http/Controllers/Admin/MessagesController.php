@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Message;
+use App\Models\User;
 use App\Traits\Messages;
 use Illuminate\Http\Request;
 
@@ -40,7 +41,7 @@ class MessagesController extends Controller
     {
         $request->validate([
             'user_id' => 'required|string',
-            'subject' => 'required',
+            'subject' => 'nullable',
             'sender' => 'required|string',
             'receiver' => 'required|string',
             'message' => 'required|string'
@@ -58,9 +59,10 @@ class MessagesController extends Controller
      */
     public function show($id)
     {
-//        $showMessage = Message::where('user_id', $id)->get();
+        $showMessage = Message::where('user_id', $id)->get();
         return view('admin.messages.index')->with([
-            'messages' => $this->getMessages(),
+            'user' => User::where('id', $id)->first(),
+            'users' => $this->getUsers(),
             'showMessage' => $this->getMessages('user_id', $id)
         ]);
     }

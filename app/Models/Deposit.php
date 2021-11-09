@@ -15,7 +15,7 @@ class Deposit extends Model
         'updated_at'
     ];
 
-    public static function getProcessedDeposit()
+    public function getProcessedDeposit()
     {
         $processedDeposit = self::where('status', 'processed')->sum('amount');
         $investments = Investment::getInvestment();
@@ -24,9 +24,15 @@ class Deposit extends Model
         return $processedDeposit - $investments - $withdrawals;
     }
 
+    public function getTotalDeposit()
+    {
+        return $this->where('status', 'processed')->sum('amount');
+    }
+
     // eloquent
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
 }

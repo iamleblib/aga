@@ -16,11 +16,11 @@
                     <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
                         <span class="svg-icon svg-icon-1">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
-														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
-													</svg>
-												</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+                                <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+                            </svg>
+                        </span>
                         <!--end::Svg Icon-->
                     </div>
                     <!--end::Close-->
@@ -44,7 +44,7 @@
                         <!--end::Heading-->
                         <!--begin::Input group-->
                         <div class="row g-9 mb-8">
-                            <div class="d-flex flex-column col-4 fv-row">
+                            <div class="d-flex flex-column col-6 fv-row">
                                 <!--begin::Label-->
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                     <span class="required">Name</span>
@@ -54,7 +54,7 @@
                                 <input autofocus type="text" class="form-control form-control-solid" placeholder="Enter Name" name="name" />
                             </div>
 
-                            <div class="d-flex flex-column col-4 fv-row">
+                            <div class="d-flex flex-column col-6 fv-row">
                                 <!--begin::Label-->
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                     <span class="required">Username</span>
@@ -74,7 +74,7 @@
                                 <input type="text" class="form-control form-control-solid" placeholder="Enter E-mail" name="email" />
                             </div>
 
-                            <div class="d-flex flex-column col-6 fv-row">
+                            <div class="d-flex flex-column col-4 fv-row">
                                 <!--begin::Label-->
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                     <span class="required">Phone</span>
@@ -84,7 +84,7 @@
                                 <input type="tel" class="form-control form-control-solid" placeholder="Enter Phone" name="phone" />
                             </div>
 
-                            <div class="d-flex flex-column col-6 fv-row">
+                            <div class="d-flex flex-column col-4 fv-row">
                                 <!--begin::Label-->
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                     <span class="required">Country</span>
@@ -355,7 +355,7 @@
                             <div class="d-flex flex-column col-6 fv-row">
                                 <!--begin::Label-->
                                 <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                    <span class="required">Password</span>
+                                    <span class="required">Password Confirm</span>
                                     <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Enter Password again"></i>
                                 </label>
                                 <!--end::Label-->
@@ -366,13 +366,13 @@
                         <div class="d-flex flex-stack mb-8">
                             <!--begin::Label-->
                             <div class="me-5">
-                                <label class="fs-6 fw-bold">Block this account</label>
-                                <div class="fs-7 fw-bold text-muted">Check this box to block this user</div>
+                                <label class="fs-6 fw-bold">Make Administrator</label>
+                                <div class="fs-7 fw-bold text-muted">Check this box to make this user an admin</div>
                             </div>
                             <!--end::Label-->
                             <!--begin::Switch-->
                             <label class="form-check form-switch form-check-custom form-check-solid">
-                                <input name="block" class="form-check-input" type="checkbox" value="1" />
+                                <input name="is_admin" class="form-check-input" type="checkbox" value="1" />
                                 <span class="form-check-label fw-bold text-muted">Allowed</span>
                             </label>
                             <!--end::Switch-->
@@ -381,7 +381,7 @@
                         <div class="text-center">
                             <button type="reset" id="kt_modal_new_target_cancel" class="btn btn-light me-3">Cancel</button>
                             <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
-                                <span class="indicator-label">Submit</span>
+                                <span class="indicator-label">Create account</span>
                                 <span class="indicator-progress">Please wait...
 														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>

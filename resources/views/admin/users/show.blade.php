@@ -36,8 +36,6 @@
                 <!--end::Wrapper-->
                 <!--begin::Button-->
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Top Up</a>
-                <!--end::Button-->
             </div>
             <!--end::Actions-->
         </div>
@@ -46,9 +44,9 @@
 
 
 
-    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+    <div id="kt_content_container" clxass="d-flex flex-column-fluid align-items-start container-xxl">
         <!--begin::Post-->
-        <div class="content flex-row-fluid" id="kt_content">
+        <div class="content flex-row-fluid m-9" id="kt_content">
             <!--begin::Layout-->
             <div class="d-flex flex-column flex-lg-row">
                 <!--begin::Sidebar-->
@@ -196,8 +194,8 @@
                                     </div>
 
                                     <div class="card-title float-right">
-                                        <a href="#" @class('btn btn-primary btn-sm m-2')><i class="fa fa-envelope-open"></i> Message User</a>
-                                    @if($user->isBlocked())
+                                        <a href="{{ route('messages.show', $user->id) }}" @class('btn btn-primary btn-sm')><i class="fa fa-envelope"></i> Message user </a>&nbsp;
+                                        @if($user->isBlocked())
                                             <a data-bs-toggle="modal" data-bs-target="#blockUnblock" @class('btn btn-success btn-sm')><i class="fa fa-unlock"></i> Unblock User </a>
                                         @else
                                             <a data-bs-toggle="modal" data-bs-target="#blockUnblock" @class('btn btn-danger btn-sm')><i class="fa fa-lock"></i> Block User</a>
@@ -316,108 +314,33 @@
                     <div class="row gx-9 gy-6">
                         <h2>Users Downline</h2>
 
-                        <!--begin::Followers-->
-                        <!--begin::Col-->
-                        <div class="col-xl-6">
-                            <!--begin::Card-->
-                            <div class="card">
-                                <!--begin::Card body-->
-                                <div class="card-body d-flex flex-center flex-column p-9">
-                                    <!--begin::Avatar-->
-                                    <div class="symbol symbol-65px symbol-circle mb-5">
-                                        <img src="https://ui-avatars.com/api/?name={{ $user->username }}" alt="image" />
-                                        <div class="bg-success position-absolute rounded-circle translate-middle start-100 top-100 border border-4 border-white h-15px w-15px ms-n3 mt-n3"></div>
-                                    </div>
-                                    <!--end::Avatar-->
-                                    <!--begin::Name-->
-                                    <a href="#" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">Patric Watson</a>
-                                    <!--end::Name-->
-                                    <!--begin::Position-->
-                                    <div class="fw-bold text-gray-400 mb-6">downline@yahoo.com.</div>
-                                    <!--end::Position-->
-                                    <!--begin::Info-->
-                                    <div class="d-flex flex-center flex-wrap mb-5">
-                                        <!--begin::Stats-->
-                                        <div class="border border-dashed rounded min-w-125px py-3 px-4 mx-3 mb-3">
-                                            <div class="fs-6 fw-bolder text-gray-700">60</div>
-                                            <div class="fw-bold text-gray-400">Total Investment</div>
+                        @if($referrals->count() > 0)
+                            @foreach($referrals as $referral)
+                                <div class="col-xl-6">
+                                    <!--begin::Card-->
+                                    <div class="card">
+                                        <!--begin::Card body-->
+                                        <div class="card-body d-flex flex-center flex-column p-9">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-65px symbol-circle mb-5">
+                                                <img src="https://ui-avatars.com/api/?name={{ $referral->name }}" alt="image" />
+                                                <div class="bg-success position-absolute rounded-circle translate-middle start-100 top-100 border border-4 border-white h-15px w-15px ms-n3 mt-n3"></div>
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Name-->
+                                            <a href="#" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">{{ $referral->name  }}</a>
+                                            <!--end::Name-->
+                                            <!--begin::Position-->
+                                            <div class="fw-bold text-gray-400 mb-6">{{ $referral->email }}</div>
+                                            <!--end::Position-->
                                         </div>
-                                        <!--end::Stats-->
-                                        <!--begin::Stats-->
-                                        <div class="border border-dashed rounded min-w-125px py-3 px-4 mx-3 mb-3">
-                                            <div class="fs-6 fw-bolder text-gray-700">$236,400</div>
-                                            <div class="fw-bold text-gray-400">Wallet Balance</div>
-                                        </div>
-                                        <!--end::Stats-->
+                                        <!--begin::Card body-->
                                     </div>
-                                    <!--end::Info-->
-                                    <!--begin::Follow-->
-                                    <a href="#" class="btn btn-sm btn-light-primary">
-                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr012.svg-->
-                                        <span class="svg-icon svg-icon-3">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<path opacity="0.3" d="M10 18C9.7 18 9.5 17.9 9.3 17.7L2.3 10.7C1.9 10.3 1.9 9.7 2.3 9.3C2.7 8.9 3.29999 8.9 3.69999 9.3L10.7 16.3C11.1 16.7 11.1 17.3 10.7 17.7C10.5 17.9 10.3 18 10 18Z" fill="black" />
-													<path d="M10 18C9.7 18 9.5 17.9 9.3 17.7C8.9 17.3 8.9 16.7 9.3 16.3L20.3 5.3C20.7 4.9 21.3 4.9 21.7 5.3C22.1 5.7 22.1 6.30002 21.7 6.70002L10.7 17.7C10.5 17.9 10.3 18 10 18Z" fill="black" />
-												</svg>
-											</span>
-                                        <!--end::Svg Icon-->Connected</a>
-                                    <!--end::Follow-->
+                                    <!--begin::Card-->
                                 </div>
-                                <!--begin::Card body-->
-                            </div>
-                            <!--begin::Card-->
-                        </div>
-                        <!--end::Col-->
-                        <!--begin::Col-->
-                        <div class="col-xl-6">
-                            <!--begin::Card-->
-                            <div class="card">
-                                <!--begin::Card body-->
-                                <div class="card-body d-flex flex-center flex-column p-9">
-                                    <!--begin::Avatar-->
-                                    <div class="symbol symbol-65px symbol-circle mb-5">
-                                        <img src="https://ui-avatars.com/api/?name={{ $user->username }}" alt="image" />
-                                    </div>
-                                    <!--end::Avatar-->
-                                    <!--begin::Name-->
-                                    <a href="#" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">Olivia Larson</a>
-                                    <!--end::Name-->
-                                    <!--begin::Position-->
-                                    <div class="fw-bold text-gray-400 mb-6">Art Director at Seal Inc.</div>
-                                    <!--end::Position-->
-                                    <!--begin::Info-->
-                                    <div class="d-flex flex-center flex-wrap mb-5">
-                                        <!--begin::Stats-->
-                                        <div class="border border-dashed rounded min-w-125px py-3 px-4 mx-3 mb-3">
-                                            <div class="fs-6 fw-bolder text-gray-700">$14,560</div>
-                                            <div class="fw-bold text-gray-400">Avg. Earnings</div>
-                                        </div>
-                                        <!--end::Stats-->
-                                        <!--begin::Stats-->
-                                        <div class="border border-dashed rounded min-w-125px py-3 px-4 mx-3 mb-3">
-                                            <div class="fs-6 fw-bolder text-gray-700">$236,400</div>
-                                            <div class="fw-bold text-gray-400">Total Sales</div>
-                                        </div>
-                                        <!--end::Stats-->
-                                    </div>
-                                    <!--end::Info-->
-                                    <!--begin::Follow-->
-                                    <a href="#" class="btn btn-sm btn-light">
-                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
-                                        <span class="svg-icon svg-icon-3">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)" fill="black" />
-													<rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="black" />
-												</svg>
-											</span>
-                                        <!--end::Svg Icon-->Connect</a>
-                                    <!--end::Follow-->
-                                </div>
-                                <!--begin::Card body-->
-                            </div>
-                            <!--begin::Card-->
-                        </div>
-                        <!--end::Col-->
+                            @endforeach
+                        @endif
+
                     </div>
 
 

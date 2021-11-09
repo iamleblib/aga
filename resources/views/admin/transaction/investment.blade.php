@@ -1,14 +1,16 @@
 @extends('layouts.admin')
 
-@section('title', 'Manage Users')
+@section('title', 'Transactions')
+
 @section('content')
+
     <div class="toolbar py-5 py-lg-15" id="kt_toolbar">
         <!--begin::Container-->
         <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
             <!--begin::Page title-->
             <div class="page-title d-flex flex-column me-3">
                 <!--begin::Title-->
-                <h1 class="d-flex text-white fw-bolder my-1 fs-3">Manage users</h1>
+                <h1 class="d-flex text-white fw-bolder my-1 fs-3">All Investment Transactions</h1>
                 <!--end::Title-->
                 <!--begin::Breadcrumb-->
                 <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
@@ -23,7 +25,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-white opacity-75">All users</li>
+                    <li class="breadcrumb-item text-white opacity-75">All Investments</li>
                     <!--end::Item-->
                 </ul>
                 <!--end::Breadcrumb-->
@@ -120,9 +122,6 @@
                                 <!--end::Content-->
                             </div>
 
-
-                            <a href="{{ route('users.add') }}" class="btn btn-primary" >Add Admin & Users</a>
-                            <!--end::Add customer-->
                         </div>
                         <!--end::Toolbar-->
                         <!--begin::Group actions-->
@@ -141,33 +140,31 @@
                 <div class="card-body pt-0">
                     <!--begin::Table-->
                     <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                        <div class="table-responsive">
-                            <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
-                                <!--begin::Table head-->
-                                <thead>
-                                <!--begin::Table row-->
-                                <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
-                                    <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
-                                        <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-                                            <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
-                                        </div>
-                                    </th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Name</th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Role</th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 204.734px;">Email</th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Username</th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Payment Method: activate to sort column ascending" style="width: 156.781px;">Phone</th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Joined Date</th>
-                                    <th class="text-end min-w-70px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 118.438px;">Actions</th>
-                                </tr>
-                                <!--end::Table row-->
-                                </thead>
-                                <!--end::Table head-->
-                                <!--begin::Table body-->
-                                <tbody class="fw-bold text-gray-600">
-
-                                @if($users->count() > 0)
-                                    @foreach($users as $user)
+                        @if($investments->count() > 0)
+                            <div class="table-responsive">
+                                <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
+                                    <!--begin::Table head-->
+                                    <thead>
+                                    <!--begin::Table row-->
+                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+                                        <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
+                                            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                                                <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
+                                            </div>
+                                        </th>
+                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Name</th>
+                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Ref</th>
+                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 204.734px;">Amount</th>
+                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Plan</th>
+                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Status</th>
+                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Created Date</th>
+                                    </tr>
+                                    <!--end::Table row-->
+                                    </thead>
+                                    <!--end::Table head-->
+                                    <!--begin::Table body-->
+                                    <tbody class="fw-bold text-gray-600">
+                                    @foreach($investments as $investment)
                                         <tr class="even">
                                             <!--begin::Checkbox-->
                                             <td>
@@ -178,64 +175,34 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Name=-->
                                             <td>
-                                                <a href="{{ route('users.show', $user->id) }}" class="text-gray-800 text-hover-primary mb-1">{{ $user->name }}</a>
+                                                <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $investment->user->username }}</a>
                                             </td>
 
                                             <td>
-                                                <a href="#" class="text-gray-800 text-hover-primary mb-1 badge badge-light-success">@if($user->isAdmin()) Admin @else Investor @endif</a>
+                                                <a href="#" class="text-gray-800 text-hover-primary mb-1 badge badge-light-success">{{ $investment->ref }}</a>
                                             </td>
                                             <!--end::Name=-->
                                             <!--begin::Email=-->
                                             <td>
-                                                <a href="#" class="text-gray-600 text-hover-primary mb-1">{{ $user->email }}</a>
+                                                <a href="#" class="text-gray-600 text-hover-primary mb-1">${{ number_format($investment->amount) }}</a>
                                             </td>
                                             <!--end::Email=-->
                                             <!--begin::Company=-->
-                                            <td>{{ $user->username }}</td>
+                                            <td><span class="badge badge-light-success">{{ $investment->plan }}</span></td>
+                                            <td><span class="badge @if($investment->completed) badge-light-success @else badge-light-warning @endif ">@if($investment->completed) Completed @else Running @endif</span></td>
                                             <!--end::Company=-->
-                                            <!--begin::Payment method=-->
-                                            <td data-filter="mastercard">
-                                                {{ $user->phone }}
-                                            </td>
-                                            <!--end::Payment method=-->
                                             <!--begin::Date=-->
-                                            <td data-order="2020-09-11T15:15:00+01:00">{{ $user->created_at->toFormattedDateString() }}</td>
+                                            <td data-order="2020-09-11T15:15:00+01:00">{{ $investment->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
-                                            <!--begin::Action=-->
-                                            <td class="text-end">
-                                                <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                                    Actions
-                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-                                                    <span class="svg-icon svg-icon-5 m-0">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                           <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
-                                                        </svg>
-                                                     </span>
-                                                    <!--end::Svg Icon-->
-                                                </a>
-                                                <!--begin::Menu-->
-                                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <a href="{{ route('users.show', $user->id) }}" class="menu-link px-3">View</a>
-                                                    </div>
-                                                    <!--end::Menu item-->
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Hide</a>
-                                                    </div>
-                                                    <!--end::Menu item-->
-                                                </div>
-                                                <!--end::Menu-->
-                                            </td>
-                                            <!--end::Action=-->
                                         </tr>
                                     @endforeach
-                                @endif
-                                </tbody>
-                                <!--end::Table body-->
-                            </table>
-                        </div>
+                                    </tbody>
+                                    <!--end::Table body-->
+                                </table>
+                            </div>
+                        @else
+                            <p class="text-center alert alert-danger">No Withdrawals Yet!</p>
+                        @endif
                     </div>
                     <!--end::Table-->
                 </div>
@@ -244,5 +211,6 @@
         </div>
         <!--end::Post-->
     </div>
+
 
 @endsection

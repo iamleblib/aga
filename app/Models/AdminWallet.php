@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Roi extends Model
+class AdminWallet extends Model
 {
     use HasFactory;
 
@@ -15,8 +15,9 @@ class Roi extends Model
         'updated_at'
     ];
 
-    public function getAll()
+    // eloquent
+    public function user()
     {
-        return $this->all();
+        return $this->belongsTo(User::class);
     }
 }
