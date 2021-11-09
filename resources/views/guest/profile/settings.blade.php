@@ -359,7 +359,7 @@
                                 var years = moment().diff(start, "years");
 
                                 Swal.fire(
-                                'Good job!',
+                                'Alright!',
                                 "You are " + years + " years old!",
                                 'success'
                             )

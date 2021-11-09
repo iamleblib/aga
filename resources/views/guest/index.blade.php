@@ -61,23 +61,163 @@
                         </div>
                         <!--end::Header-->
                         <div style="height:433px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;">
-                            <div style="height:413px; padding:0px; margin:0px; width: 100%;">
-                                <iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=6&pref_coin_id=1505&graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe>
-                            </div>
-                            <div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;">
-                                <a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by coinbase</div>
+                            <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener" target="_blank"><span class="blue-text">Financial Markets</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "colorTheme": "dark",
+  "dateRange": "12M",
+  "showChart": true,
+  "locale": "en",
+  "largeChartUrl": "",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "showFloatingTooltip": true,
+  "width": "400",
+  "height": "500",
+  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+  "gridLineColor": "rgba(42, 46, 57, 0)",
+  "scaleFontColor": "rgba(120, 123, 134, 1)",
+  "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+  "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+  "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+  "tabs": [
+    {
+      "title": "Indices",
+      "symbols": [
+        {
+          "s": "FOREXCOM:SPXUSD",
+          "d": "S&P 500"
+        },
+        {
+          "s": "FOREXCOM:NSXUSD",
+          "d": "Nasdaq 100"
+        },
+        {
+          "s": "FOREXCOM:DJI",
+          "d": "Dow 30"
+        },
+        {
+          "s": "INDEX:NKY",
+          "d": "Nikkei 225"
+        },
+        {
+          "s": "INDEX:DEU40",
+          "d": "DAX Index"
+        },
+        {
+          "s": "FOREXCOM:UKXGBP",
+          "d": "UK 100"
+        }
+      ],
+      "originalTitle": "Indices"
+    },
+    {
+      "title": "Futures",
+      "symbols": [
+        {
+          "s": "CME_MINI:ES1!",
+          "d": "S&P 500"
+        },
+        {
+          "s": "CME:6E1!",
+          "d": "Euro"
+        },
+        {
+          "s": "COMEX:GC1!",
+          "d": "Gold"
+        },
+        {
+          "s": "NYMEX:CL1!",
+          "d": "Crude Oil"
+        },
+        {
+          "s": "NYMEX:NG1!",
+          "d": "Natural Gas"
+        },
+        {
+          "s": "CBOT:ZC1!",
+          "d": "Corn"
+        }
+      ],
+      "originalTitle": "Futures"
+    },
+    {
+      "title": "Bonds",
+      "symbols": [
+        {
+          "s": "CME:GE1!",
+          "d": "Eurodollar"
+        },
+        {
+          "s": "CBOT:ZB1!",
+          "d": "T-Bond"
+        },
+        {
+          "s": "CBOT:UB1!",
+          "d": "Ultra T-Bond"
+        },
+        {
+          "s": "EUREX:FGBL1!",
+          "d": "Euro Bund"
+        },
+        {
+          "s": "EUREX:FBTP1!",
+          "d": "Euro BTP"
+        },
+        {
+          "s": "EUREX:FGBM1!",
+          "d": "Euro BOBL"
+        }
+      ],
+      "originalTitle": "Bonds"
+    },
+    {
+      "title": "Forex",
+      "symbols": [
+        {
+          "s": "FX:EURUSD"
+        },
+        {
+          "s": "FX:GBPUSD"
+        },
+        {
+          "s": "FX:USDJPY"
+        },
+        {
+          "s": "FX:USDCHF"
+        },
+        {
+          "s": "FX:AUDUSD"
+        },
+        {
+          "s": "FX:USDCAD"
+        }
+      ],
+      "originalTitle": "Forex"
+    }
+  ]
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
                         </div>
 
                         <div class="pt-5 card card-xl-stretch">
                             <!--begin::Header-->
-                            <div class="card-header border-0 bg-danger py-5">
+                            <div class="card-header border-0 bg-primary py-5">
                                 <h3 class="card-title fw-bolder text-white">Quick Link</h3>
                             </div>
                             <!--end::Header-->
                             <!--begin::Body-->
                             <div class="card-body p-0">
                                 <!--begin::Chart-->
-                                <div class="mixed-widget-2-chart card-rounded-bottom bg-danger" data-kt-color="danger" style="height: 200px"></div>
+                                <div class="mixed-widget-2-chart card-rounded-bottom bg-primary" data-kt-color="danger" style="height: 200px"></div>
                                 <!--end::Chart-->
                                 <!--begin::Stats-->
                                 <div class="card-p mt-n20 position-relative">
@@ -131,7 +271,7 @@
                                         </a>
                                         <!--end::Col-->
                                         <!--begin::Col-->
-                                            <a href="" class="col bg-light-primary px-6 py-8 rounded-2">
+                                            <a href="{{ route('realestate.index') }}" class="col bg-light-primary px-6 py-8 rounded-2">
                                             <!--begin::Svg Icon | path: icons/duotune/communication/com010.svg-->
                                                         <span class="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -140,7 +280,7 @@
 															</svg>
 														</span>
                                             <!--end::Svg Icon-->
-                                                <span class="text-primary fw-bold fs-6 mt-2">Properties</span>
+                                                <span class="text-light fw-bold fs-6 mt-2">Properties</span>
                                             </a>
                                         <!--end::Col-->
                                     </div>
@@ -158,9 +298,9 @@
                 <div class="col-xl-8">
                     <!--begin::Row-->
                     <div class="row gx-5 gx-xl-8 mb-5 mb-xl-8">
-                        <div class="col-xl-3">
+                        <div class="col-xl-12">
                             <!--begin::Tiles Widget 1-->
-                            <a href="" class="card h-150px bgi-no-repeat bgi-size-cover card-xl-stretch" style="background-image:url('{{ asset('backend/assets/media/stock/600x400/img-75.jpg') }}'">
+                            <a href="{{ route('realestate.index') }}" class="card h-150px bgi-no-repeat bgi-size-cover card-xl-stretch" style="background-image:url('{{ asset('backend/assets/media/estate/20.jpg') }}'">
                                 <!--begin::Body-->
                                 <div class="card-body">
                                     <!--begin::Title-->
@@ -171,25 +311,7 @@
                             </a>
                             <!--end::Tiles Widget 1-->
                         </div>
-                        <div class="col-xl-9">
-                            <!--begin::Tiles Widget 4-->
-                            <div class="card h-175px bgi-no-repeat bgi-size-contain card-xl-stretch mb-5 mb-xl-8" style="background-color: #663259; background-position: right; background-image:url('{{ asset('backend/assets/media/svg/misc/taieri.svg') }}')">
-                                <!--begin::Body-->
-                                <div class="card-body d-flex flex-column justify-content-between">
-                                    <!--begin::Title-->
-                                    <h2 class="text-white fw-bolder mb-5">Enquiries & Complaints</h2>
-                                    <p class="text-light">Write support team for clarity</p>
-                                    <!--end::Title-->
-                                    <!--begin::Action-->
-                                    <div class="m-0">
-                                        <a href='#' class="btn btn-danger fw-bold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Create Report</a>
-                                    </div>
-                                    <!--begin::Action-->
-                                </div>
-                                <!--end::Body-->
-                            </div>
-                            <!--end::Tiles Widget 4-->
-                        </div>
+                        
                     </div>
                     <!--end::Row-->
                     <!--begin::Row-->
@@ -292,7 +414,7 @@
                             <div class="row">
                                 <div class="col-xxl-12 pt-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="#" class="card card-xxl-stretch bg-primary">
+                                    <a href="{{ route('realestate.index') }}" class="card card-xxl-stretch bg-primary">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
@@ -725,4 +847,7 @@
         <!--end::Post-->
     </div>
 
+    </div>
+    </div>
+</div>
 @endsection

@@ -2,8 +2,8 @@
 <!--begin::Header Logo-->
 <div class="header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0">
     <a href="{{route('home')}}">
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-demo2.png') }}" class="logo-default h-25px" />
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-demo2-sticky.png') }}" class="logo-sticky h-25px" />
+        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" class="logo-default h-25px" />
+        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-stick.png') }}" class="logo-sticky h-25px" />
     </a>
 </div>
 <!--end::Header Logo-->
@@ -557,7 +557,7 @@
                             <!--end::Items-->
                             <!--begin::View more-->
                             <div class="py-3 text-center border-top">
-                                <a href="../../pages/profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+                                <a href="{{ route('deposit.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
                                     <span class="svg-icon svg-icon-5">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -599,7 +599,7 @@
                             <!--end::Items-->
                             <!--begin::View more-->
                             <div class="py-3 text-center border-top">
-                                <a href="../../pages/profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+                                <a href="{{ route('investment.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
                                     <span class="svg-icon svg-icon-5">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -615,7 +615,8 @@
 
 
 
-                        <!--begin::Tab panel-->
+                        
+                                     <!--begin::Tab panel-->
                         <div class="tab-pane fade show active" id="kt_topbar_notifications_3" role="tabpanel">
                             <!--begin::Items-->
                             <div class="scroll-y mh-325px my-5 px-8">
@@ -624,15 +625,15 @@
                                     <!--begin::Section-->
                                     <div class="d-flex align-items-center me-2">
                                         <!--begin::Code-->
-                                        <span class="w-70px badge badge-light-danger me-4">$200</span>
+                                        <span class="w-70px badge badge-light-danger me-4">$89,000</span>
                                         <!--end::Code-->
                                         <!--begin::Title-->
-                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold">Capital</a>
+                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold">Deposited</a>
                                         <!--end::Title-->
                                     </div>
                                     <!--end::Section-->
                                     <!--begin::Label-->
-                                    <span class="badge badge-light fs-8">Just now</span>
+                                    <span class="badge badge-light fs-8">2nd Sept, 2021</span>
                                     <!--end::Label-->
                                 </div>
                                 <!--end::Item-->
@@ -640,7 +641,7 @@
                             <!--end::Items-->
                             <!--begin::View more-->
                             <div class="py-3 text-center border-top">
-                                <a href="../../pages/profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+                                <a href="{{ route('withdraw.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
                                     <span class="svg-icon svg-icon-5">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -751,6 +752,11 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
+                                <a href="{{ route('realestate.index') }}" class="menu-link px-5">Real Estate </a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
                                 <a href="{{ route('profile.index')}}" class="menu-link d-flex flex-stack px-5">Settings
                                     <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Settings and Edits"></i></a>
                             </div>
@@ -800,6 +806,12 @@
                                     <i class="fas fa-exclamation-circle ms-2 fs-7"></i></a>
                             </div>
                             <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="#" class="menu-link d-flex flex-stack px-5">Properties
+                                    <i class="fas fa-exclamation-circle ms-2 fs-7"></i></a>
+                            </div>
+                            <!--end::Menu item-->
                             <!--begin::Menu separator-->
                             <div class="separator my-2"></div>
                             <!--end::Menu separator-->
@@ -824,14 +836,13 @@
                     <!--begin::Menu item-->
                     <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
                         <a href="#" class="menu-link px-5">
-														<span class="menu-title position-relative">Select Language
-														<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-														<img class="w-15px h-15px rounded-1 ms-2" src="assets/media/flags/united-states.svg" alt="" /></span></span>
+														<span class="menu-title position-relative">Select Language <img class="rounded-1 ms-2" src="{{ asset('backend/assets/media/flags/lan.png')}}" width="30px" alt="" /> </span>
                         </a>
                         <!--begin::Menu sub-->
                         <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                            <div class="menu-item px-3">
+                        <div class="menu-item px-3">
 
+                            <div id="google_translate_element"></div>
                             </div>
                             <!--end::Menu item-->
                         </div>

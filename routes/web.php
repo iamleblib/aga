@@ -76,6 +76,7 @@ Route::group(['prefix' => 'secure'], function () {
 
         Route::group(['prefix' => 'realestate'], function () {
             Route::get('/', [RealEstateController::class, 'index'])->name('realestate.index');
+            Route::post('/preview', [RealEstateController::class, 'preview'])->name('realestate.preview');
         });
 
         Route::post('guests/mail', [SendMessages::class, 'store'])->name('guests.send.message');

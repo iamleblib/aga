@@ -117,7 +117,9 @@
 															</svg>
 														</span>
                                             <!--end::Svg Icon-->{{ auth()->user()->email }}</a>
+                                            
                                     </div>
+                                    <p class="d-flex align-items-center text-gray-400 text-hover-primary mb-2">Date joined: {{ auth()->user()->updated_at->toFormattedDateString() }}</p>
 
                                     <div class="d-flex flex-wrap fw-bold fs-6 mb-4 pe-2">
                                         <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2">
@@ -261,6 +263,7 @@
                     <!--begin::Navs-->
                 </div>
             </div>
+            
             <!--end::Navbar-->
             <!--begin::details View-->
             @include('alerts')
@@ -288,4 +291,5 @@
                 </div>
             </div>
             <!--end::details View-->
+            
 @endsection

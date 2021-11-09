@@ -1,5 +1,13 @@
 <!--end::Main-->
+<!-- google language -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
 
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- main script -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>var hostUrl = "{{ asset('backend/assets/index.html') }}";</script>
@@ -24,6 +32,7 @@
 <script src="{{ asset('backend/assets/js/custom/intro.js') }}"></script>
 <!--end::Page Custom Javascript-->
 
+<script src="{{ asset('backend/assets/js/custom/modals/offer-a-deal.bundle.js') }}"></script>
 <!--begin::Page Vendors Javascript(used by this page)-->
 <script src="{{ asset('backend/assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
 <!--end::Page Vendors Javascript-->

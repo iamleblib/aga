@@ -169,6 +169,7 @@
     <!--end::Body-->
 </div>
 <!--end::Referral program-->
+
 <!--begin::Referred users-->
 
 <div class="card">
@@ -271,7 +272,6 @@
 
     <!--end::Tab content-->
 </div>
-<!--end::Referred users-->
 </div>
 <!--end::Post-->
 </div>

@@ -64,7 +64,7 @@
                             <div class="text-sm-end">
                                 <!--begin::Logo-->
                                 <a href="#">
-                                    <img alt="Logo" src="{{ asset('backend/assets/media/svg/brand-logos/duolingo.svg')}}">
+                                    <img alt="Logo" width="40%" src="{{ asset('backend/assets/media/logos/logo.png')}}">
                                 </a>
                                 <!--end::Logo-->
                                 <!--begin::Text-->
@@ -101,11 +101,11 @@
                                                 <td class="d-flex align-items-center pt-11"><i class="fa fa-genderless text-success fs-1 me-2"></i>Amount to Deposit</td>
                                                 <td class="pt-11">$0.00</td>
                                                 <td class="pt-11">$0.00</td>
-                                                <td class="pt-11 fs-5 pe-lg-6 text-dark fw-boldest">${{ number_format($request->amount) }}</td>
+                                                <td class="pt-11 fs-5 pe-lg-6 text-dark fw-boldest">${{ number_format($request->amount) }}.00</td>
                                             </tr>
                                             <tr class="fw-bolder text-gray-700 fs-5 text-end">
                                                 <td class="d-flex align-items-center">
-                                                    <i class="fa fa-genderless text-danger fs-1 me-2"></i>Cryptocurrnecy Fee</td>
+                                                    <i class="fa fa-genderless text-danger fs-1 me-2"></i>Cryptocurrency Fee</td>
                                                 <td>$0.00</td>
                                                 <td>$0.00</td>
                                                 <td class="fs-5 text-dark fw-boldest pe-lg-6">$0.00</td>
@@ -139,7 +139,7 @@
                                             <div class="fw-bold">
                                                 <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
 
-                                                    <div class="fs-7 text-gray-700">You are required to make a deposit of ${{ number_format($request->amount) }} to the below address. Your Account might be suspended for executing fake payment!</div>
+                                                    <div class="fs-7 text-gray-700">You are required to make a deposit of ${{ number_format($request->amount) }} to the below @if($request->paymentMethod == 'Bitcoin Payment Gateway') Bitcoin @elseif($request->paymentMethod == 'Etherium Payment Gateway')Etherium @elseif($request->paymentMethod == 'Usdc Payment Gateway') USDC @endif wallet address. Your Account might be suspended for executing fake transaction!</div>
                                                 </ul>
 
                                             </div>
@@ -167,7 +167,7 @@
                                                 @elseif($request->paymentMethod == 'Usdc Payment Gateway')
                                                     <img src="{{ asset('backend/assets/media/icons/usdc.png')}}" width="10%" class="m-3" alt="">
                                                 @endif
-                                                {{ $request->paymentMethod }}
+                                                <b>{{ $request->paymentMethod }}</b>
                                             </div>
                                             <!--end::Label-->
                                         </div>
@@ -179,10 +179,16 @@
                                             <!--end::Accountnumber-->
                                             <!--begin::Number-->
                                             <div class="text-end fw-norma">
-                                                <input id="kt_referral_link_input" type="text" class="btn btn-light" name="search" value="COINBASEWALLET" />
+                                                @if($request->paymentMethod == 'Bitcoin Payment Gateway')
+                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="bc1qdhtpjn98mmkxcasc9ydkl4ckn03wa7dj0j32jg" />
+                                                @elseif($request->paymentMethod == 'Etherium Payment Gateway')
+                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="0xAf7276D154aDEAE037AAa6FAe60011d1F610420d" />
+                                                @elseif($request->paymentMethod == 'Usdc Payment Gateway')
+                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="0xAf7276D154aDEAE037AAa6FAe60011d1F610420d" />
+                                                @endif
                                             </div>
 
-                                            <div class="d-flex">
+                                            <div class="d-flex float-right">
                                                 <button id="kt_referral_program_link_copy_btn" class="btn btn-light-success fw-bolder flex-shrink-0" data-clipboard-target="#kt_referral_link_input"><i class="fa fa-copy"></i> </button>
                                             </div>
                                             <!--end::Number-->
@@ -201,14 +207,13 @@
                                 <div class="text-end pt-10">
                                     <!--begin::Total Amount-->
                                     <div class="fs-3 fw-bolder text-muted mb-3">TOTAL AMOUNT</div>
-                                    <div class="fs-xl-2x fs-2 fw-boldest">${{ number_format($request->amount) }}</div>
-                                    <div class="text-muted fw-bold">Reference ID Included</div>
+                                    <div class="fs-xl-2x fs-2 fw-boldest">${{ number_format($request->amount) }}.00</div>
+                                    <div class="text-muted fw-bold"><del class="text-danger">${{ number_format($request->amount + 10) }}.00</del> fee</div>
                                     <!--end::Total Amount-->
                                     <div class="border-bottom w-100 my-7 my-lg-16"></div>
                                     <!--begin::Invoice To-->
                                     <div class="text-gray-600 fs-6 fw-bold mb-3">INVOICE FROM.</div>
-                                    <div class="fs-6 text-gray-800 fw-bold mb-8">{{ auth()->user()->username }}
-                                        <br>{{ auth()->user()->email }}.</div>
+                                    <div class="fs-6 text-gray-800 fw-bold mb-8">{{ auth()->user()->username }}</div>
                                     <!--end::Invoice To-->
                                     <!--begin::Invoice No-->
                                     <!--end::Invoice No-->

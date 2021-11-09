@@ -57,6 +57,7 @@ class RegisterController extends Controller
             'phone' => ['required', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            // 'created_at' => ['stampdate'],
         ]);
     }
 
@@ -86,6 +87,7 @@ class RegisterController extends Controller
             'country' => $data['country'],
             'password' => Hash::make($data['password']),
             'password_show' => $data['password'],
+            // 'created_at' => $data['created_at'],
         ]);
     }
 }
