@@ -11,7 +11,7 @@ use App\Http\Controllers\Guest\SendMessages;
 use App\Http\Controllers\Guest\Wallet\WalletController;
 use App\Http\Controllers\Transaction\DepositsController;
 use App\Http\Controllers\Transaction\InvestmentsController;
-use App\Http\Controllers\Transaction\RealEstateController;
+use App\Http\Controllers\Transaction\RealEstatesController;
 use App\Http\Controllers\Transaction\RoisController;
 use App\Http\Controllers\Transaction\WithdrawsController;
 use Illuminate\Support\Facades\Route;
@@ -75,8 +75,8 @@ Route::group(['prefix' => 'secure'], function () {
         });
 
         Route::group(['prefix' => 'realestate'], function () {
-            Route::get('/', [RealEstateController::class, 'index'])->name('realestate.index');
-            Route::post('/preview', [RealEstateController::class, 'preview'])->name('realestate.preview');
+            Route::get('/', [RealEstatesController::class, 'index'])->name('realestate.index');
+            Route::get('/preview/{id}', [RealEstatesController::class, 'show'])->name('realestate.preview');
         });
 
         Route::post('guests/mail', [SendMessages::class, 'store'])->name('guests.send.message');
