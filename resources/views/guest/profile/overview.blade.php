@@ -96,7 +96,7 @@
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
-            <span class="fw-bolder fs-6 text-gray-800">{{ auth()->user()->credential->address ?? 'N/A' }}</span>
+            <span class="fw-bolder fs-6 text-gray-800">{{ auth()->user()->credential->gender ?? 'N/A' }}</span>
         </div>
         <!--end::Col-->
     </div>
@@ -134,7 +134,7 @@
                     <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
 
                         <div class="fs-6 text-gray-700">Your wallet addres has not been added for payment, please
-                                <a data-bs-toggle="tab" class="fw-bolder" href="#Billing">Adds Wallet Address</a>
+                                <a data-bs-toggle="tab" class="fw-bolder" href="#Billing">Add Wallet Address</a>
                         </div>
                     </ul>
 
