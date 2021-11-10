@@ -15,13 +15,14 @@ class Deposit extends Model
         'updated_at'
     ];
 
-    public function getProcessedDeposit()
+    public static function getProcessedDeposit()
     {
         $processedDeposit = self::where('status', 'processed')->sum('amount');
         $investments = Investment::getInvestment();
         $withdrawals = Withdraw::getWithdrawals();
+        $referralBonus = ReferralBonus::getAmount();
 
-        return $processedDeposit - $investments - $withdrawals;
+        return $processedDeposit + $referralBonus - $investments - $withdrawals;
     }
 
     public function getTotalDeposit()

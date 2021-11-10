@@ -105,4 +105,9 @@ class User extends Authenticatable
         return $this->hasMany(Message::class);
     }
 
+    public function referralBonus()
+    {
+        return $this->hasMany(ReferralBonus::class);
+    }
+
 }

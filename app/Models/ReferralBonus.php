@@ -5,9 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Roi extends Model
+class ReferralBonus extends Model
 {
     use HasFactory;
+
+    public static function getAmount()
+    {
+        return self::sum('amount');
+    }
 
     protected $guarded = [
         'id',
@@ -15,13 +20,14 @@ class Roi extends Model
         'updated_at'
     ];
 
-    public static function getRoi()
+    // eloquent
+    public static function getReferralBonus()
     {
         return self::sum('amount');
     }
 
-    public function getAll()
+    public function user()
     {
-        return $this->all();
+        return $this->belongsTo(User::class);
     }
 }

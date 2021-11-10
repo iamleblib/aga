@@ -12,8 +12,10 @@ use App\Http\Controllers\Guest\Wallet\WalletController;
 use App\Http\Controllers\Transaction\DepositsController;
 use App\Http\Controllers\Transaction\InvestmentsController;
 use App\Http\Controllers\Transaction\RealEstatesController;
+use App\Http\Controllers\Transaction\ReferralController;
 use App\Http\Controllers\Transaction\RoisController;
 use App\Http\Controllers\Transaction\WithdrawsController;
+use App\Models\Referral;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +49,8 @@ Route::group(['prefix' => 'secure'], function () {
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [GuestController::class, 'index'])->name('profile.index');
             Route::post('/update', [GuestController::class, 'update'])->name('profile.update');
+            Route::post('/referral-withdraw', [ReferralController::class, 'withdraw'])->name('referral.withdraw');
+            Route::post('/delete-user', [GuestController::class, 'destroy'])->name('user.delete');
 
 //            Create Wallet address
             Route::post('/wallet', [WalletController::class, 'store'])->name('wallet.store');
@@ -81,6 +85,8 @@ Route::group(['prefix' => 'secure'], function () {
 
         Route::post('guests/mail', [SendMessages::class, 'store'])->name('guests.send.message');
 
+        Route::post('/guest-wallet-update/{id}', [WalletController::class, 'updateGuestWallet'])->name('guest.wallet.update');
+        Route::post('/guest-wallet-delete/{id}', [WalletController::class, 'deleteGuestWallet'])->name('guest.delete.wallet');
 
     });
 });
@@ -102,6 +108,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
         Route::post('/update/{id}', [UsersController::class, 'update'])->name('user.update');
         Route::post('/update/email/{id}', [UsersController::class, 'updateEmail'])->name('user.email.update');
         Route::post('/update/role/{id}', [UsersController::class, 'updateRole'])->name('user.role.update');
+        Route::post('/update/ref/{id}', [DashboardController::class, 'updateRef'])->name('user.ref.update');
         Route::post('/alter/{id}', [UsersController::class, 'alter'])->name('user.alter');
     });
 

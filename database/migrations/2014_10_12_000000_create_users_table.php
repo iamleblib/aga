@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('is_admin')->default(false);
             $table->string('is_blocked')->default(false);
             $table->string('referral')->default('Self Enrollment');
+            $table->string('referral_bonus')->default(false);
             $table->string('name');
             $table->string('username');
             $table->string('email')->unique();

@@ -149,7 +149,6 @@
                                         </div>
                                     </th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" style="width: 209.234px;">User</th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 125px;">Status</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Last login: activate to sort column ascending" style="width: 125px;">Amount</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Package</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Duration</th>
@@ -192,12 +191,6 @@
                                                 <!--begin::User details-->
                                             </td>
                                             <!--end::User=-->
-                                            <!--begin::Role=-->
-                                            <td>
-                                                <div class="badge badge-@if($roi->status == 'pending')warning @elseif($roi->status == 'decline')danger @elseif($roi->status == 'processed')success @endif fw-bolder">{{ $roi->status }} <i class="fa fa-spinner fa-spin text-light"></i>
-                                                </div>
-                                            </td>
-                                            <!--end::Role=-->
                                             <!--begin::Last login=-->
                                             <td data-order="$$$">
                                                 <div class="badge badge-light fw-bolder">${{ number_format($roi->amount) }}</div>

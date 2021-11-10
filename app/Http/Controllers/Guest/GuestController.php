@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use App\Models\Referral;
+use App\Models\ReferralBonus;
 use App\Models\User;
+use App\Rules\MatchOldPassword;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,9 +21,11 @@ class GuestController extends Controller
     {
         $referrals = new Referral();
         $wallets = auth()->user()->wallet()->get();
+        $referralBonus = ReferralBonus::getAmount();
         return view('guest.profile.index')->with([
             'wallets' => $wallets,
-            'referrals' => $referrals
+            'referrals' => $referrals,
+            'referralBonus' => $referralBonus
         ]);
     }
 
@@ -74,9 +78,13 @@ class GuestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $request->validate([
+            'password' => ['required', new MatchOldPassword],
+        ]);
+        Auth::user()->delete();
+        return redirect()->route('no.access');
     }
 }
 

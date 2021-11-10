@@ -150,6 +150,7 @@
                                     </th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" style="width: 209.234px;">User</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 125px;">Status</th>
+                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Last login: activate to sort column ascending" style="width: 125px;">Completed</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Last login: activate to sort column ascending" style="width: 125px;">Amount</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Package</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Duration</th>
@@ -196,6 +197,10 @@
                                             <td>
                                                 <div class="badge badge-@if($investment->status == 'pending')warning @elseif($investment->status == 'decline')danger @elseif($investment->status == 'processed')success @endif fw-bolder">{{ $investment->status }} <i class="fa fa-spinner fa-spin text-light"></i>
                                                 </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="badge badge-@if($investment->completed === 0)warning @else success @endif"> hi </div>
                                             </td>
                                             <!--end::Role=-->
                                             <!--begin::Last login=-->
