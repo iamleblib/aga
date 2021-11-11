@@ -97,16 +97,23 @@
                                     <!--begin::Input group-->
                                     <div class="mb-10" data-select2-id="select2-data-77-2yup">
                                         <!--begin::Label-->
-                                        <label class="form-label fs-5 fw-bold mb-3">Joined Month:</label>
+                                        <label class="form-label fs-5 fw-bold mb-3">Months:</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
                                         <select class="form-select form-select-solid fw-bolder select2-hidden-accessible" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-customer-table-filter="month" data-dropdown-parent="#kt-toolbar-filter" data-select2-id="select2-data-10-2mgv" tabindex="-1" aria-hidden="true">
                                             <option data-select2-id="select2-data-12-633u"></option>
+                                            <option value="jan" data-select2-id="select2-data-76-7cvr">January</option>
+                                            <option value="feb" data-select2-id="select2-data-77-7cvr">February</option>
+                                            <option value="mar" data-select2-id="select2-data-78-7cvr">March</option>
+                                            <option value="apr" data-select2-id="select2-data-79-7cvr">April</option>
+                                            <option value="may" data-select2-id="select2-data-80-7cvr">May</option>
+                                            <option value="jun" data-select2-id="select2-data-81-7cvr">June</option>
+                                            <option value="jul" data-select2-id="select2-data-82-7cvr">July</option>
                                             <option value="aug" data-select2-id="select2-data-83-7cvr">August</option>
                                             <option value="sep" data-select2-id="select2-data-84-dkr9">September</option>
                                             <option value="oct" data-select2-id="select2-data-85-bntq">October</option>
                                             <option value="nov" data-select2-id="select2-data-86-1x7d">November</option>
-                                            <option value="dec" data-select2-id="select2-data-87-528f">December</option>
+                                            <option value="Dec" data-select2-id="select2-data-87-528f">December</option>
                                         </select>
                                         <span class="select2 select2-container select2-container--bootstrap5 select2-container--below" dir="ltr" data-select2-id="select2-data-11-vqk4" style="width: 100%;">
                            <span class="dropdown-wrapper" aria-hidden="true"></span></span>
@@ -189,7 +196,7 @@
                                             </td>
 
                                             <td>
-                                                <a href="#" class="text-gray-600 text-hover-primary badge @if($deposit->status == 'processed') badge-light-success @elseif($deposit->status == 'pending') badge-light-warning @elseif($deposit->status == 'declined') badge-light-danger @endif mb-1">{{ $deposit->status }}</a>
+                                                <a href="#" class="text-hover-primary badge @if($deposit->status == 'processed') badge-light-success text-gray-600 @elseif($deposit->status == 'pending') badge-light-warning text-gray-600 @elseif($deposit->status == 'declined') text-light badge-danger @endif mb-1">{{ $deposit->status }}</a>
                                             </td>
                                             <!--end::Email=-->
                                             <!--begin::Company=-->
@@ -201,7 +208,28 @@
                                             <!--begin::Action=-->
                                             <td class="text-end">
                                                 @if($deposit->status == 'processed')
-                                                    <div class="badge badge-success">Completed</div>
+                                                
+                                                <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                                        Actions
+                                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                                        <span class="svg-icon svg-icon-5 m-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                           <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
+                                                        </svg>
+                                                     </span>
+                                                        <!--end::Svg Icon-->
+                                                    </a>
+                                                    <!--begin::Menu-->
+                                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
+                                                        <!--begin::Menu item-->
+                                                        <div class="menu-item px-3">
+                                                            <a data-bs-toggle="modal" data-bs-target="#decline_{{ $deposit->id }}" class="menu-link px-3">Cancel Deposit</a>
+                                                        </div>
+                                                        <!--end::Menu item-->
+                                                        <!--begin::Menu item-->
+                                                        <!--end::Menu item-->
+                                                    </div>
+                                                    
                                                 @elseif($deposit->status == 'pending')
                                                     <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
                                                         Actions
@@ -228,11 +256,31 @@
                                                     </div>
                                                     <!--end::Menu-->
                                                 @elseif($deposit->status == 'declined')
-                                                    <div class="badge badge-danger">Canceled</div>
+                                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                                        Actions
+                                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                                        <span class="svg-icon svg-icon-5 m-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                           <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
+                                                        </svg>
+                                                     </span>
+                                                        <!--end::Svg Icon-->
+                                                    </a>
+                                                    <!--begin::Menu-->
+                                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
+                                                        <!--begin::Menu item-->
+                                                        <div class="menu-item px-3">
+                                                            <a data-bs-toggle="modal" data-bs-target="#approve_{{ $deposit->id }}" class="menu-link px-3">Reapprove</a>
+                                                        </div>
+                                                        <!--end::Menu item-->
+                                                        <!--begin::Menu item-->
+                                                        <!--end::Menu item-->
+                                                    </div>
                                                 @endif
                                             </td>
                                             <!--end::Action=-->
                                         </tr>
+                                        
                                         <div class="modal fade" id="approve_{{ $deposit->id }}" tabindex="-1" aria-hidden="true">
                                             <!--begin::Modal dialog-->
                                             <div class="modal-dialog modal-dialog-centered mw-800px">

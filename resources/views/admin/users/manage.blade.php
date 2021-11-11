@@ -158,16 +158,15 @@
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Username</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Payment Method: activate to sort column ascending" style="width: 156.781px;">Phone</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Joined Date</th>
-                                    <th class="text-end min-w-70px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 118.438px;">Actions</th>
+                                    <th class="text-end min-w-70px" rowspan="1" colspan="1" aria-label="Actions" >Actions</th>
                                 </tr>
                                 <!--end::Table row-->
                                 </thead>
                                 <!--end::Table head-->
                                 <!--begin::Table body-->
-                                <tbody class="fw-bold text-gray-600">
-
                                 @if($users->count() > 0)
                                     @foreach($users as $user)
+                                <tbody class="fw-bold text-gray-600">
                                         <tr class="even">
                                             <!--begin::Checkbox-->
                                             <td>
@@ -230,9 +229,9 @@
                                             </td>
                                             <!--end::Action=-->
                                         </tr>
+                                </tbody>
                                     @endforeach
                                 @endif
-                                </tbody>
                                 <!--end::Table body-->
                             </table>
                         </div>

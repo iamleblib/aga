@@ -62,14 +62,3 @@ function googleTranslateElementInit() {
 <script src="{{ asset('backend/assets/js/custom/apps/user-management/users/list/export-users.js') }}"></script>
 <script src="{{ asset('backend/assets/js/custom/apps/user-management/users/list/add.js') }}"></script>
 <!--end::Javascript-->
-<!--Begin::Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
-<!--End::Google Tag Manager (noscript) -->
