@@ -2,7 +2,7 @@
 <!--begin::Header Logo-->
 <div class="header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0">
     <a href="{{route('home')}}">
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" class="logo-default h-25px" />
+        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" width="100px" class="" />
         <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-stick.png') }}" class="logo-sticky h-25px" />
     </a>
 </div>
@@ -615,7 +615,7 @@
 
 
 
-                        
+
                                      <!--begin::Tab panel-->
                         <div class="tab-pane fade show active" id="kt_topbar_notifications_3" role="tabpanel">
                             <!--begin::Items-->
