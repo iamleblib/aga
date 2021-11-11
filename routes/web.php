@@ -1,10 +1,11 @@
 <?php
-
+use App\Actions\Fortify\CreateNewUser;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Front\PagesController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Guest\DashboardController;
 use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\Guest\SendMessages;
@@ -16,6 +17,8 @@ use App\Http\Controllers\Transaction\RoisController;
 use App\Http\Controllers\Transaction\WithdrawsController;
 use Illuminate\Support\Facades\Route;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +29,26 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+Route::get('/', [PagesController::class, 'index'])->name('front.index');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::get('/team', [PagesController::class, 'team'])->name('team');
+Route::get('/packages', [PagesController::class, 'packages'])->name('packages');
+Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
+Route::get('/terms', [PagesController::class, 'terms'])->name('terms');
+Route::get('/legacy', [PagesController::class, 'legacy'])->name('legacy');
+Route::get('/privacy', [PagesController::class, 'privacy'])->name('privacy');
+Route::get('/real_estate', [PagesController::class, 'real_estate'])->name('real_estate');
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Route::get('/', [PagesController::class, 'index'])->name('front.index');
 Route::get('noaccess', function () {

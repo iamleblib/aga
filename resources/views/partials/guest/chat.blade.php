@@ -60,6 +60,7 @@
                         <div class="d-flex flex-column @if($message->sender == auth()->user()->username) align-items-end @else align-items-start @endif">
                             <!--begin::User-->
                             <div class="d-flex align-items-center mb-2">
+                            @if($message->sender == auth()->user()->username) @else<strong>Admin</strong>@endif
                                 <!--begin::Avatar-->
 {{--                                <div class="symbol symbol-35px symbol-circle">--}}
 {{--                                    <img alt="Pic" src="https://ui-avatars.com/api/?name={{ $message->receiver }}" />--}}
@@ -68,13 +69,13 @@
                                 <!--begin::Details-->
                                 <div class="ms-3">
 {{--                                    <a href="#" class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">@if($message->sender == auth()->user()->username) You @else {{ $message->receiver }} @endif</a>--}}
-                                    <span class="text-muted fs-7 mb-1">{{ $message->created_at->toFormattedDatestring() }}</span>
+                                    <span class="text-muted fs-7 mb-1">{{ $message->created_at->toDayDateTimeString() }}</span>
                                 </div>
                                 <!--end::Details-->
                             </div>
                             <!--end::User-->
                             <!--begin::Text-->
-                            <div class="p-5 rounded @if($message->sender == auth()->user()->username) bg-success text-white  @else bg-light-dark text-dark  @endif fw-bold mw-lg-400px @if($message->sender == auth()->user()->username)text-end @else text-start @endif " data-kt-element="message-text">{{ $message->message }}</div>
+                            <div style="border-radius: 30px 2px 30px 2px !important; box-shadow: 7px 7px 10px !important" class="p-5 rounded @if($message->sender == auth()->user()->username) bg-success text-white  @else bg-light-dark text-dark  @endif fw-bold mw-lg-400px @if($message->sender == auth()->user()->username)text-end @else text-start @endif " data-kt-element="message-text">{{ $message->message }}</div>
                             <!--end::Text-->
                         </div>
                     </div>
