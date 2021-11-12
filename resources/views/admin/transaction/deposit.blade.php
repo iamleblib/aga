@@ -195,9 +195,9 @@
                                                 <a href="#" class="text-gray-600 text-hover-primary mb-1">${{ number_format($deposit->amount) }}</a>
                                             </td>
 
-                                            <!-- <td>
+                                            <td>
                                                 <a href="#" class="text-hover-primary badge @if($deposit->status == 'processed') badge-light-success text-gray-600 @elseif($deposit->status == 'pending') badge-light-warning text-gray-600 @elseif($deposit->status == 'declined') text-light badge-danger @endif mb-1">{{ $deposit->status }}</a>
-                                            </td> -->
+                                            </td>
                                             <!--end::Email=-->
                                             <!--begin::Company=-->
                                             <td><span class="badge badge-light-warning">{{ $deposit->gateway }}</span></td>
@@ -220,15 +220,7 @@
                                                         <!--end::Svg Icon-->
                                                     </a>
                                                     <!--begin::Menu-->
-                                                    <!-- <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true"> -->
-                                                        <!--begin::Menu item-->
-                                                        <!-- <div class="menu-item px-3">
-                                                            <a data-bs-toggle="modal" data-bs-target="#decline_{{ $deposit->id }}" class="menu-link px-3">Cancel Deposit</a>
-                                                        </div> -->
-                                                        <!--end::Menu item-->
-                                                        <!--begin::Menu item-->
-                                                        <!--end::Menu item-->
-                                                    <!-- </div> -->
+                                                    
                                                     
                                                 @elseif($deposit->status == 'pending')
                                                     <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -249,9 +241,7 @@
                                                         </div>
                                                         <!--end::Menu item-->
                                                         <!--begin::Menu item-->
-                                                        <!-- <div class="menu-item px-3">
-                                                            <a data-bs-toggle="modal" data-bs-target="#decline_{{ $deposit->id }}" class="menu-link px-3">Decline</a>
-                                                        </div> -->
+                                                        
                                                         <!--end::Menu item-->
                                                     </div>
                                                     <!--end::Menu-->
@@ -356,6 +346,7 @@
                                             </div>
                                             <!--end::Modal dialog-->
                                         </div>
+                                        
 
                                         @endforeach
                                     </tbody>
