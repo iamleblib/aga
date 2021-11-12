@@ -18,7 +18,7 @@ class ReferralController extends Controller
             Auth::user()->update([
                 'referral_bonus' => 0
             ]);
-            return redirect()->back()->with('success', 'You referral bonus has been created in you wallet!');
+            return redirect()->back()->with('success', 'You referral bonus has been credited to your wallet!');
 
         }
         return redirect()->back()->with('error', 'You do not have any referral bonus');
