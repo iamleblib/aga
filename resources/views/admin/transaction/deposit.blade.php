@@ -220,7 +220,15 @@
                                                         <!--end::Svg Icon-->
                                                     </a>
                                                     <!--begin::Menu-->
-                                                    
+                                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
+                                                        <!--begin::Menu item-->
+                                                        <div class="menu-item px-3">
+                                                            <a data-bs-toggle="modal" data-bs-target="#decline_{{ $deposit->id }}" class="menu-link px-3">Cancel Deposit</a>
+                                                        </div>
+                                                        <!--end::Menu item-->
+                                                        <!--begin::Menu item-->
+                                                        <!--end::Menu item-->
+                                                    </div>
                                                     
                                                 @elseif($deposit->status == 'pending')
                                                     <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -241,7 +249,9 @@
                                                         </div>
                                                         <!--end::Menu item-->
                                                         <!--begin::Menu item-->
-                                                        
+                                                        <div class="menu-item px-3">
+                                                            <a data-bs-toggle="modal" data-bs-target="#decline_{{ $deposit->id }}" class="menu-link px-3">Decline</a>
+                                                        </div>
                                                         <!--end::Menu item-->
                                                     </div>
                                                     <!--end::Menu-->
@@ -346,7 +356,81 @@
                                             </div>
                                             <!--end::Modal dialog-->
                                         </div>
-                                        
+                                        <div class="modal fade" id="decline_{{ $deposit->id }}" tabindex="-1" aria-hidden="true">
+                                            <!--begin::Modal dialog-->
+                                            <div class="modal-dialog modal-dialog-centered mw-800px">
+                                                <!--begin::Modal content-->
+                                                <div class="modal-content">
+                                                    <!--begin::Modal header-->
+                                                    <div class="modal-header pb-0 border-0 justify-content-end">
+                                                        <!--begin::Close-->
+                                                        <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                                            <span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+													</svg>
+												</span>
+                                                            <!--end::Svg Icon-->
+                                                        </div>
+                                                        <!--end::Close-->
+                                                    </div>
+                                                    <!--begin::Modal header-->
+                                                    <!--begin::Modal body-->
+                                                    <div class="modal-body scroll-y pt-0 pb-15">
+                                                        <!--begin::Wrapper-->
+                                                        <div class="mw-lg-600px mx-auto">
+                                                            <!--begin::Heading-->
+                                                            <div class="mb-13 text-center">
+                                                                <!--begin::Title-->
+                                                                <h1 class="mb-3">Decline Deposit</h1>
+                                                            </div>
+                                                            <!--end::Heading-->
+                                                            <!--begin::Input group-->
+                                                            <form id="kt_modal_update_rolsse_form" class="form" method="post" action="{{ route('admin.deposit.decline', $deposit->id) }}">
+                                                                <!--begin::Notice-->
+                                                                <!--begin::Notice-->
+                                                                @csrf
+                                                                <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed mb-9 p-6">
+                                                                        <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                                                <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
+                                                                                <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black"></rect>
+                                                                            </svg>
+                                                                        </span>
+                                                                    <div class="d-flex flex-stack flex-grow-1">
+                                                                        <!--begin::Content-->
+                                                                        <div class="row">
+                                                                            <div class="col-8">
+                                                                                <div class="fw-bold">
+                                                                                    <div class="fs-6 text-gray-700">Confirm you want to decline this deposit!.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <input type="hidden" name="status" value="declined">
+
+                                                                            <div class="col-4">
+                                                                                <button type="submit" class="btn btn-danger">Decline</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--end::Content-->
+                                                                    </div>
+                                                                    <!--end::Wrapper-->
+                                                                </div>
+
+                                                                <!--end::Actions-->
+                                                            </form>
+                                                            <!--end::Input group-->
+                                                        </div>
+                                                        <!--end::Wrapper-->
+                                                    </div>
+                                                    <!--end::Modal body-->
+                                                </div>
+                                                <!--end::Modal content-->
+                                            </div>
+                                            <!--end::Modal dialog-->
+                                        </div>
 
                                         @endforeach
                                     </tbody>
