@@ -44,9 +44,9 @@
         </div>
         <!--end::Container-->
     </div>
-    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+    <div id="kt_content_container" class="">
         <!--begin::Post-->
-        <div class="content flex-row-fluid" id="kt_content" data-select2-id="select2-data-kt_content">
+        <div class="" id="kt_content" data-select2-id="select2-data-kt_content">
             <!--begin::Card-->
             <div class="card" data-select2-id="select2-data-81-s3zy">
                 <!--begin::Card header-->
@@ -144,17 +144,17 @@
                 </div>
                 <!--end::Card header-->
                 <!--begin::Card body-->
-                <div class="">
+                <div class="card-body pt-0">
                     <!--begin::Table-->
-                    <div id="kt_customers_table_wrapper" class="">
+                    <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         @if($deposits->count() > 0)
                             <div class="table-responsive">
-                                <table class="" id="kt_customers_table">
+                                <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
                                     <!--begin::Table head-->
                                     <thead>
                                     <!--begin::Table row-->
-                                    <tr class="">
-                                        <th class="" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
+                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+                                        <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
                                             <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
                                                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
                                             </div>
@@ -171,12 +171,12 @@
                                     </thead>
                                     <!--end::Table head-->
                                     <!--begin::Table body-->
-                                    <tbody class="">
+                                    <tbody class="fw-bold text-gray-600">
                                         @foreach($deposits as $deposit)
-                                        <tr class="">
+                                        <tr class="even">
                                             <!--begin::Checkbox-->
                                             <td>
-                                                <div class="">
+                                                <div class="form-check form-check-sm form-check-custom form-check-solid">
                                                     <input class="form-check-input" type="checkbox" value="1">
                                                 </div>
                                             </td>
@@ -206,7 +206,7 @@
                                             <td data-order="2020-09-11T15:15:00+01:00">{{ $deposit->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
                                             <!--begin::Action=-->
-                                            <td class="">
+                                            <td class="text-end">
                                                 @if($deposit->status == 'processed')
 
                                                 <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
