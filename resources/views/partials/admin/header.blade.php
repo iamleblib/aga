@@ -1,9 +1,8 @@
 <!--end::Heaeder menu toggle-->
 <!--begin::Header Logo-->
-<div class="header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0">
+<div class="">
     <a href="{{route('home')}}">
         <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" width="50%" />
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-demo2-sticky.png') }}" class="logo-sticky h-25px" />
     </a>
 </div>
 <!--end::Header Logo-->
