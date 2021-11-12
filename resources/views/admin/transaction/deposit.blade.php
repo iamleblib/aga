@@ -146,15 +146,15 @@
                 <!--begin::Card body-->
                 <div class="card-body pt-0">
                     <!--begin::Table-->
-                    <div id="kt_customers_table_wrapper" >
+                    <div id="kt_customers_table_wrapper" class="dt-bootstrap4 no-footer">
                         @if($deposits->count() > 0)
-                            <div >
-                                <table id="kt_customers_table">
+                            <div class="table-responsive">
+                                <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
                                     <!--begin::Table head-->
                                     <thead>
                                     <!--begin::Table row-->
-                                    <tr >
-                                        <th  rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
+                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+                                        <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
                                             <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
                                                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
                                             </div>
@@ -171,9 +171,9 @@
                                     </thead>
                                     <!--end::Table head-->
                                     <!--begin::Table body-->
-                                    <tbody >
+                                    <tbody class="fw-bold text-gray-600">
                                         @foreach($deposits as $deposit)
-                                        <tr >
+                                        <tr class="even">
                                             <!--begin::Checkbox-->
                                             <td>
                                                 <div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -203,10 +203,10 @@
                                             <td><span class="badge badge-light-warning">{{ $deposit->gateway }}</span></td>
                                             <!--end::Company=-->
                                             <!--begin::Date=-->
-                                            <td >{{ $deposit->created_at->toFormattedDateString() }}</td>
+                                            <td data-order="2020-09-11T15:15:00+01:00">{{ $deposit->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
                                             <!--begin::Action=-->
-                                            <td >
+                                            <td class="text-end">
                                                 @if($deposit->status == 'processed')
 
                                                 <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
