@@ -144,18 +144,18 @@
                 </div>
                 <!--end::Card header-->
                 <!--begin::Card body-->
-                <div class="card-body pt-0">
+                <div class="">
                     <!--begin::Table-->
-                    <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                    <div id="kt_customers_table_wrapper" class="">
                         @if($deposits->count() > 0)
                             <div class="table-responsive">
-                                <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
+                                <table class="" id="kt_customers_table">
                                     <!--begin::Table head-->
                                     <thead>
                                     <!--begin::Table row-->
-                                    <tr >
-                                        <th  rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
-                                            <div >
+                                    <tr class="">
+                                        <th class="" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
+                                            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
                                                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
                                             </div>
                                         </th>
@@ -171,12 +171,12 @@
                                     </thead>
                                     <!--end::Table head-->
                                     <!--begin::Table body-->
-                                    <tbody class="fw-bold text-gray-600">
+                                    <tbody class="">
                                         @foreach($deposits as $deposit)
-                                        <tr class="even">
+                                        <tr class="">
                                             <!--begin::Checkbox-->
                                             <td>
-                                                <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                                <div class="">
                                                     <input class="form-check-input" type="checkbox" value="1">
                                                 </div>
                                             </td>
@@ -206,7 +206,7 @@
                                             <td data-order="2020-09-11T15:15:00+01:00">{{ $deposit->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
                                             <!--begin::Action=-->
-                                            <td class="text-end">
+                                            <td class="">
                                                 @if($deposit->status == 'processed')
 
                                                 <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -277,7 +277,7 @@
                                                         <!--end::Menu item-->
                                                     </div>
                                                 @endif
-                                            </td class="text-end">
+                                            </td>
                                             <!--end::Action=-->
                                         </tr>
                                         <div class="modal fade" id="approve_{{ $deposit->id }}" tabindex="-1" aria-hidden="true">
