@@ -208,7 +208,7 @@
                                             <!--begin::Action=-->
                                             <td class="text-end">
                                                 @if($deposit->status == 'processed')
-                                                
+
                                                 <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
                                                         Actions
                                                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
@@ -229,7 +229,7 @@
                                                         <!--begin::Menu item-->
                                                         <!--end::Menu item-->
                                                     </div>
-                                                    
+
                                                 @elseif($deposit->status == 'pending')
                                                     <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
                                                         Actions
@@ -245,12 +245,12 @@
                                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
                                                         <!--begin::Menu item-->
                                                         <div class="menu-item px-3">
-                                                            <a data-bs-toggle="modal" data-bs-target="#approve_{{ $deposit->id }}" class="menu-link px-3">Approve</a>
+                                                            <a data-bs-toggle="modal" data-bs-target="#approve_1" class="menu-link px-3">Approve</a>
                                                         </div>
                                                         <!--end::Menu item-->
                                                         <!--begin::Menu item-->
                                                         <div class="menu-item px-3">
-                                                            <a data-bs-toggle="modal" data-bs-target="#decline_{{ $deposit->id }}" class="menu-link px-3">Decline</a>
+                                                            <a data-bs-toggle="modal" data-bs-target="#decline_2" class="menu-link px-3">Decline</a>
                                                         </div>
                                                         <!--end::Menu item-->
                                                     </div>
@@ -280,8 +280,8 @@
                                             </td>
                                             <!--end::Action=-->
                                         </tr>
-                                        
-                                        <div class="modal fade" id="approve_{{ $deposit->id }}" tabindex="-1" aria-hidden="true">
+
+                                        <div class="modal fade" id="approve_1" tabindex="-1" aria-hidden="true">
                                             <!--begin::Modal dialog-->
                                             <div class="modal-dialog modal-dialog-centered mw-800px">
                                                 <!--begin::Modal content-->
@@ -356,7 +356,7 @@
                                             </div>
                                             <!--end::Modal dialog-->
                                         </div>
-                                        <div class="modal fade" id="decline_{{ $deposit->id }}" tabindex="-1" aria-hidden="true">
+                                        <div class="modal fade" id="decline_2" tabindex="-1" aria-hidden="true">
                                             <!--begin::Modal dialog-->
                                             <div class="modal-dialog modal-dialog-centered mw-800px">
                                                 <!--begin::Modal content-->
@@ -446,6 +446,6 @@
         </div>
         <!--end::Post-->
     </div>
-
+    <hr>
 
 @endsection
