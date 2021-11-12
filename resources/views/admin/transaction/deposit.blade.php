@@ -44,13 +44,13 @@
         </div>
         <!--end::Container-->
     </div>
-    <div id="kt_content_container" class="">
+    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
         <!--begin::Post-->
-        <div class="" id="kt_content" data-select2-id="select2-data-kt_content">
+        <div class="content flex-row-fluid" id="kt_content" data-select2-id="select2-data-kt_content">
             <!--begin::Card-->
-            <div class="" data-select2-id="select2-data-81-s3zy">
+            <div class="card" data-select2-id="select2-data-81-s3zy">
                 <!--begin::Card header-->
-                <div class="" data-select2-id="select2-data-80-8j3u">
+                <div class="card-header border-0 pt-6" data-select2-id="select2-data-80-8j3u">
                     <!--begin::Card title-->
                     <div class="card-title">
                         <!--begin::Search-->
