@@ -241,7 +241,6 @@
                                                      </span>
                                                         <!--end::Svg Icon-->
                                                     </a>
-{{--                                                fake out--}}
                                                     <!--begin::Menu-->
                                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
                                                         <!--begin::Menu item-->
@@ -281,7 +280,7 @@
                                             </td>
                                             <!--end::Action=-->
                                         </tr>
-
+                                        @endforeach
                                         <div class="modal fade" id="approve_1" tabindex="-1" aria-hidden="true">
                                             <!--begin::Modal dialog-->
                                             <div class="modal-dialog modal-dialog-centered mw-800px">
@@ -433,7 +432,6 @@
                                             <!--end::Modal dialog-->
                                         </div>
 
-                                        @endforeach
                                     </tbody>
                                     <!--end::Table body-->
                                 </table>
