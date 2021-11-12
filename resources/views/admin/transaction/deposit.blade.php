@@ -153,9 +153,9 @@
                                     <!--begin::Table head-->
                                     <thead>
                                     <!--begin::Table row-->
-                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
-                                        <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
-                                            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                                    <tr >
+                                        <th  rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
+                                            <div >
                                                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
                                             </div>
                                         </th>
@@ -206,7 +206,7 @@
                                             <td data-order="2020-09-11T15:15:00+01:00">{{ $deposit->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
                                             <!--begin::Action=-->
-                                            <td>
+                                            <td class="text-end">
                                                 @if($deposit->status == 'processed')
 
                                                 <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -277,7 +277,7 @@
                                                         <!--end::Menu item-->
                                                     </div>
                                                 @endif
-                                            </td>
+                                            </td class="text-end">
                                             <!--end::Action=-->
                                         </tr>
                                         <div class="modal fade" id="approve_{{ $deposit->id }}" tabindex="-1" aria-hidden="true">
