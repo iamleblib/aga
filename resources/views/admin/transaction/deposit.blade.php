@@ -280,7 +280,6 @@
                                             </td>
                                             <!--end::Action=-->
                                         </tr>
-                                        @endforeach
                                         <div class="modal fade" id="approve_{{ $deposit->id }}" tabindex="-1" aria-hidden="true">
                                             <!--begin::Modal dialog-->
                                             <div class="modal-dialog modal-dialog-centered mw-800px">
@@ -431,6 +430,8 @@
                                             </div>
                                             <!--end::Modal dialog-->
                                         </div>
+
+                                        @endforeach
 
                                     </tbody>
                                     <!--end::Table body-->
