@@ -232,7 +232,7 @@
 
                                                 @elseif($deposit->status == 'pending')
                                                     <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                                        Actions
+                                                        a
                                                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
                                                         <span class="svg-icon svg-icon-5 m-0">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -254,15 +254,10 @@
                                                         </div>
                                                         <!--end::Menu item-->
                                                     </div>
-                                                    <br>
-                                                    <br>
-                                                    <br>
 
-                                                &nbsp;
-                                                &nbsp;
-                                                &nbsp;
                                                     <!--end::Menu-->
                                                 @elseif($deposit->status == 'declined')
+
                                                     <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
                                                         Actions
                                                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
