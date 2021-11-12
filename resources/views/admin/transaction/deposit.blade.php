@@ -173,7 +173,7 @@
                                     <!--begin::Table body-->
                                     <tbody class="">
                                         @foreach($deposits as $deposit)
-                                        <tr class="">
+                                        <tr class="even">
                                             <!--begin::Checkbox-->
                                             <td>
                                                 <div class="form-check form-check-sm form-check-custom form-check-solid">
