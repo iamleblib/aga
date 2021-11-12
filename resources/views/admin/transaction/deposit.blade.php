@@ -206,7 +206,7 @@
                                             <td data-order="2020-09-11T15:15:00+01:00">{{ $deposit->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
                                             <!--begin::Action=-->
-                                            <td class="">
+                                            <td class="text-end">
                                                 @if($deposit->status == 'processed')
 
                                                 <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
