@@ -171,7 +171,7 @@
                                     </thead>
                                     <!--end::Table head-->
                                     <!--begin::Table body-->
-                                    <tbody class="">
+                                    <tbody class="fw-bold text-gray-600">
                                         @foreach($deposits as $deposit)
                                         <tr class="even">
                                             <!--begin::Checkbox-->
