@@ -73,7 +73,7 @@
                         <!--begin::Toolbar-->
                         <div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base" data-select2-id="select2-data-78-kqup">
                             <!--begin::Filter-->
-                            <button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                            <button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="top-end">
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
                                 <span class="svg-icon svg-icon-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -148,7 +148,7 @@
                     <!--begin::Table-->
                     <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         @if($deposits->count() > 0)
-                            <div class="table-responsive">
+                            <div class="">
                                 <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
                                     <!--begin::Table head-->
                                     <thead>
@@ -206,10 +206,10 @@
                                             <td data-order="2020-09-11T15:15:00+01:00">{{ $deposit->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
                                             <!--begin::Action=-->
-                                            <td class="text-end">
+                                            <td>
                                                 @if($deposit->status == 'processed')
-                                                
-                                                <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+
+                                                <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="top-end">
                                                         Actions
                                                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
                                                         <span class="svg-icon svg-icon-5 m-0">
@@ -229,10 +229,10 @@
                                                         <!--begin::Menu item-->
                                                         <!--end::Menu item-->
                                                     </div>
-                                                    
+
                                                 @elseif($deposit->status == 'pending')
-                                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                                        Actions
+                                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="top-end">
+                                                        Action
                                                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
                                                         <span class="svg-icon svg-icon-5 m-0">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -254,9 +254,11 @@
                                                         </div>
                                                         <!--end::Menu item-->
                                                     </div>
+
                                                     <!--end::Menu-->
                                                 @elseif($deposit->status == 'declined')
-                                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+
+                                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="top-end">
                                                         Actions
                                                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
                                                         <span class="svg-icon svg-icon-5 m-0">
@@ -280,7 +282,6 @@
                                             </td>
                                             <!--end::Action=-->
                                         </tr>
-                                        
                                         <div class="modal fade" id="approve_{{ $deposit->id }}" tabindex="-1" aria-hidden="true">
                                             <!--begin::Modal dialog-->
                                             <div class="modal-dialog modal-dialog-centered mw-800px">
@@ -433,6 +434,7 @@
                                         </div>
 
                                         @endforeach
+
                                     </tbody>
                                     <!--end::Table body-->
                                 </table>
@@ -445,7 +447,6 @@
             </div>
         </div>
         <!--end::Post-->
+
     </div>
-
-
 @endsection

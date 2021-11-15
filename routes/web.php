@@ -9,12 +9,15 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Guest\DashboardController;
 use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\Guest\SendMessages;
+use App\Http\Controllers\Guest\TwoFAController;
 use App\Http\Controllers\Guest\Wallet\WalletController;
 use App\Http\Controllers\Transaction\DepositsController;
 use App\Http\Controllers\Transaction\InvestmentsController;
-use App\Http\Controllers\Transaction\RealEstateController;
+use App\Http\Controllers\Transaction\RealEstatesController;
+use App\Http\Controllers\Transaction\ReferralController;
 use App\Http\Controllers\Transaction\RoisController;
 use App\Http\Controllers\Transaction\WithdrawsController;
+use App\Models\Referral;
 use Illuminate\Support\Facades\Route;
 
 
@@ -43,6 +46,10 @@ Route::get('/privacy', [PagesController::class, 'privacy'])->name('privacy');
 Route::get('/real_estate', [PagesController::class, 'real_estate'])->name('real_estate');
 
 
+Route::get('2fa', [TwoFAController::class, 'index'])->name('2fa.index');
+Route::post('2fa', [TwoFAController::class, 'store'])->name('2fa.post');
+Route::get('2fa/reset', [TwoFAController::class, 'resend'])->name('2fa.resend');
+
 
 
 Auth::routes();
@@ -63,13 +70,16 @@ Route::get('blocked', function () {
 Route::group(['prefix' => 'secure'], function () {
     Auth::routes();
 
-    Route::group(['middleware' => ['auth', 'user']], function () {
+    Route::group(['middleware' => ['auth', 'user', '2fa']], function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
 //
 //        Users Profile
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [GuestController::class, 'index'])->name('profile.index');
             Route::post('/update', [GuestController::class, 'update'])->name('profile.update');
+            Route::post('/updatePassword', [GuestController::class, 'updatePassword'])->name('guest.profile.update');
+            Route::post('/referral-withdraw', [ReferralController::class, 'withdraw'])->name('referral.withdraw');
+            Route::post('/delete-user', [GuestController::class, 'destroy'])->name('user.delete');
 
 //            Create Wallet address
             Route::post('/wallet', [WalletController::class, 'store'])->name('wallet.store');
@@ -85,6 +95,7 @@ Route::group(['prefix' => 'secure'], function () {
 
         Route::group(['prefix' => 'investment'], function () {
             Route::get('/', [InvestmentsController::class, 'index'])->name('investment.guest.index');
+            Route::get('/preview', [InvestmentsController::class, 'index'])->name('investment.preview');
             Route::post('/preview', [InvestmentsController::class, 'preview'])->name('investment.preview');
             Route::post('/process', [InvestmentsController::class, 'process'])->name('investment.process');
             Route::get('/logs', [InvestmentsController::class, 'logs'])->name('investment.logs');
@@ -98,12 +109,14 @@ Route::group(['prefix' => 'secure'], function () {
         });
 
         Route::group(['prefix' => 'realestate'], function () {
-            Route::get('/', [RealEstateController::class, 'index'])->name('realestate.index');
-            Route::post('/preview', [RealEstateController::class, 'preview'])->name('realestate.preview');
+            Route::get('/', [RealEstatesController::class, 'index'])->name('realestate.index');
+            Route::get('/preview/{id}', [RealEstatesController::class, 'show'])->name('realestate.preview');
         });
 
         Route::post('guests/mail', [SendMessages::class, 'store'])->name('guests.send.message');
 
+        Route::post('/guest-wallet-update/{id}', [WalletController::class, 'updateGuestWallet'])->name('guest.wallet.update');
+        Route::post('/guest-wallet-delete/{id}', [WalletController::class, 'deleteGuestWallet'])->name('guest.delete.wallet');
 
     });
 });
@@ -125,6 +138,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
         Route::post('/update/{id}', [UsersController::class, 'update'])->name('user.update');
         Route::post('/update/email/{id}', [UsersController::class, 'updateEmail'])->name('user.email.update');
         Route::post('/update/role/{id}', [UsersController::class, 'updateRole'])->name('user.role.update');
+        Route::post('/update/ref/{id}', [DashboardController::class, 'updateRef'])->name('user.ref.update');
         Route::post('/alter/{id}', [UsersController::class, 'alter'])->name('user.alter');
     });
 

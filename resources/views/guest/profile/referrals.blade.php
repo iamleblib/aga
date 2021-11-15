@@ -120,7 +120,7 @@
                 <div class="card card-dashed flex-center min-w-175px my-3 p-6">
                     <span class="fs-4 fw-bold text-info pb-1 px-2">Referral Earnings</span>
                     <span class="fs-lg-2tx fw-bolder d-flex justify-content-center">$
-												<span data-kt-countup="true" data-kt-countup-value="589">0</span></span>
+												<span data-kt-countup="true" data-kt-countup-value="{{ auth()->user()->referral_bonus }}">{{ auth()->user()->referral_bonus }}</span></span>
                 </div>
             </div>
             <!--end::Col-->
@@ -129,7 +129,7 @@
                 <div class="card card-dashed flex-center min-w-175px my-3 p-6">
                     <span class="fs-4 fw-bold text-danger pb-1 px-2">Total Withdrawn</span>
                     <span class="fs-lg-2tx fw-bolder d-flex justify-content-center">$
-												<span data-kt-countup="true" data-kt-countup-value="783&quot;">0</span></span>
+												<span data-kt-countup="true" data-kt-countup-value="{{ $referralBonus }}&quot;">{{ $referralBonus }}</span></span>
                 </div>
             </div>
             <!--end::Col-->
@@ -159,8 +159,83 @@
                 </div>
                 <!--end::Content-->
                 <!--begin::Action-->
-                <a href="#" class="btn btn-danger px-6 align-self-center text-nowrap">Withdraw Money</a>
+                <a data-bs-toggle="modal" data-bs-target="#withdrawRef" class="btn btn-danger px-6 align-self-center text-nowrap">Withdraw Money</a>
                 <!--end::Action-->
+            </div>
+
+            <div class="modal fade" id="withdrawRef" tabindex="-1" aria-hidden="true">
+                <!--begin::Modal dialog-->
+                <div class="modal-dialog modal-dialog-centered mw-800px">
+                    <!--begin::Modal content-->
+                    <div class="modal-content">
+                        <!--begin::Modal header-->
+                        <div class="modal-header pb-0 border-0 justify-content-end">
+                            <!--begin::Close-->
+                            <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                <span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+													</svg>
+												</span>
+                                <!--end::Svg Icon-->
+                            </div>
+                            <!--end::Close-->
+                        </div>
+                        <!--begin::Modal header-->
+                        <!--begin::Modal body-->
+                        <div class="modal-body scroll-y pt-0 pb-15">
+                            <!--begin::Wrapper-->
+                            <div class="mw-lg-600px mx-auto">
+                                <!--begin::Heading-->
+                                <div class="mb-13 text-center">
+                                    <!--begin::Title-->
+                                    <h1 class="mb-3">Withdraw Referral Bonus</h1>
+                                </div>
+                                <!--end::Heading-->
+                                <!--begin::Input group-->
+                                <form id="kt_modal_update_rolsse_form" class="form" method="post" action="{{ route('referral.withdraw') }}">
+                                    <!--begin::Notice-->
+                                    <!--begin::Notice-->
+                                    @csrf
+                                    <div class="notice d-flex bg-light-success rounded border-success border border-dashed mb-9 p-6">
+                                        <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
+                                                <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black"></rect>
+                                            </svg>
+                                        </span>
+                                        <div class="d-flex flex-stack flex-grow-1">
+                                            <!--begin::Content-->
+                                            <div class="row p-2">
+                                                <div class="col-8">
+                                                    <div class="fw-bold">
+                                                        <div class="fs-6 text-gray-700">Are you sure you want to withdraw your referral bonus?</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="submit" class="btn btn-success"> Withdraw Now!</button>
+                                                </div>
+                                            </div>
+
+                                            <!--end::Content-->
+                                        </div>
+                                        <!--end::Wrapper-->
+                                    </div>
+
+                                    <!--end::Actions-->
+                                </form>
+                                <!--end::Input group-->
+                            </div>
+                            <!--end::Wrapper-->
+                        </div>
+                        <!--end::Modal body-->
+                    </div>
+                    <!--end::Modal content-->
+                </div>
+                <!--end::Modal dialog-->
             </div>
             <!--end::Wrapper-->
         </div>

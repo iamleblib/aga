@@ -117,7 +117,7 @@
 															</svg>
 														</span>
                                             <!--end::Svg Icon-->{{ auth()->user()->email }}</a>
-                                            
+
                                     </div>
                                     <p class="d-flex align-items-center text-gray-400 text-hover-primary mb-2">Date joined: {{ auth()->user()->updated_at->toFormattedDateString() }}</p>
 
@@ -175,61 +175,6 @@
                                 <!--end::Actions-->
                             </div>
                             <!--end::Title-->
-                            <!--begin::Stats-->
-                            <div class="d-flex flex-wrap flex-stack">
-                                <!--begin::Wrapper-->
-                                <div class="d-flex flex-column flex-grow-1 pe-8">
-                                    <!--begin::Stats-->
-                                    <div class="row d-flex flex-wrap">
-                                        <!--begin::Stat-->
-
-                                        <!--end::Stat-->
-                                        <!--begin::Stat-->
-                                        <div class="col-12 border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                            <!--begin::Number-->
-                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
-                                                <span class="svg-icon svg-icon-3 svg-icon-danger me-2">
-																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																		<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="black" />
-																		<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="black" />
-																	</svg>
-																</span>
-                                                <!--end::Svg Icon-->
-                                                <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="75">0</div>
-                                            <!--end::Number-->
-                                            <!--begin::Label-->
-                                            <div class="fw-bold fs-6 text-gray-400">Wallet</div>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Stat-->
-                                        <!--begin::Stat-->
-                                        <div class="col-12 border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                            <!--begin::Number-->
-                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-                                                                <span class="svg-icon svg-icon-3 svg-icon-success me-2">
-																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																		<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="black" />
-																		<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="black" />
-																	</svg>
-																</span>
-                                                <!--end::Svg Icon-->
-                                                <div class="fs-2 fw-bolder" data-kt-countup="true" data-kt-countup-value="60" data-kt-countup-prefix="%">0</div>
-
-                                            <!--end::Number-->
-                                            <!--begin::Label-->
-                                            <div class="fw-bold fs-6 text-gray-400">Property</div>
-
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Stat-->
-                                    </div>
-                                    <!--end::Stats-->
-                                </div>
-                                <!--end::Wrapper-->
-                                <!--begin::Progress-->
-                                <!--end::Progress-->
-                            </div>
-                            <!--end::Stats-->
                         </div>
                         <!--end::Info-->
                     </div>
@@ -263,7 +208,7 @@
                     <!--begin::Navs-->
                 </div>
             </div>
-            
+
             <!--end::Navbar-->
             <!--begin::details View-->
             @include('alerts')
@@ -291,5 +236,136 @@
                 </div>
             </div>
             <!--end::details View-->
-            
+
+            <div class="card container" style="width: 89%">
+                <!--begin::Card header-->
+                <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_deactivate" aria-expanded="true" aria-controls="kt_account_deactivate">
+                    <div class="card-title m-0">
+                        <h3 class="fw-bolder m-0">Deactivate Account</h3>
+                    </div>
+                </div>
+                <!--end::Card header-->
+                <!--begin::Content-->
+                <div id="kt_account_deactivate" class="collapse show">
+                    <!--begin::Form-->
+                    <form id="kt_account_deactivate_form" class="form">
+                        <!--begin::Card body-->
+                        <div class="card-body border-top p-9">
+                            <!--begin::Notice-->
+                            <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed mb-9 p-6">
+                                <!--begin::Icon-->
+                                <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+                                <span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+														<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black" />
+														<rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black" />
+													</svg>
+												</span>
+                                <!--end::Svg Icon-->
+                                <!--end::Icon-->
+                                <!--begin::Wrapper-->
+                                <div class="d-flex flex-stack flex-grow-1">
+                                    <!--begin::Content-->
+                                    <div class="fw-bold">
+                                        <h4 class="text-danger-900 fw-bolder">You Are Deactivating Your Account</h4>
+                                        <div class="fs-6 text-gray-700">For extra security, this requires you to confirm your password.</div>
+                                    </div>
+                                    <!--end::Content-->
+                                </div>
+                                <!--end::Wrapper-->
+                            </div>
+                            <!--end::Form input row-->
+                        </div>
+                        <!--end::Card body-->
+                        <!--begin::Card footer-->
+                        <div class="card-footer d-flex justify-content-end py-6 px-9">
+                            <a data-bs-toggle="modal" data-bs-target="#delete" class="btn btn-danger px-6 align-self-center text-nowrap"><i class="fa fa-trash"></i> Delete account</a>
+                        </div>
+                        <!--end::Card footer-->
+                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Content-->
+            </div>
+
+            <div class="modal fade" id="delete" tabindex="-1" aria-hidden="true">
+                <!--begin::Modal dialog-->
+                <div class="modal-dialog modal-dialog-centered mw-800px">
+                    <!--begin::Modal content-->
+                    <div class="modal-content">
+                        <!--begin::Modal header-->
+                        <div class="modal-header pb-0 border-0 justify-content-end">
+                            <!--begin::Close-->
+                            <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                <span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+													</svg>
+												</span>
+                                <!--end::Svg Icon-->
+                            </div>
+                            <!--end::Close-->
+                        </div>
+                        <!--begin::Modal header-->
+                        <!--begin::Modal body-->
+                        <div class="modal-body scroll-y pt-0 pb-15">
+                            <!--begin::Wrapper-->
+                            <div class="mw-lg-600px mx-auto">
+                                <!--begin::Heading-->
+                                <div class="mb-13 text-center">
+                                    <!--begin::Title-->
+                                    <h1 class="mb-3">Delete your account </h1>
+                                </div>
+                                <!--end::Heading-->
+                                <!--begin::Input group-->
+                                <form id="kt_modal_update_rolsse_form" class="form" method="post" action="{{ route('user.delete') }}">
+                                    <!--begin::Notice-->
+                                    <!--begin::Notice-->
+                                    @csrf
+                                        <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed mb-9 p-6">
+                                        <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
+                                                <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black"></rect>
+                                            </svg>
+                                        </span>
+                                            <div class="d-flex flex-stack flex-grow-1">
+                                                <!--begin::Content-->
+                                                <div class="row p-2">
+                                                    <div class="col-12">
+                                                        <div class="fw-bold">
+                                                            <div class="fs-6 text-gray-700">By deleting your account, you agree to lose all credential and active funds attached to your account</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-8">
+                                                        <input required placeholder="Enter password to confirm delete" type="password" @class('form-control') name="password" >
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                                                    </div>
+                                                </div>
+
+                                                <!--end::Content-->
+                                            </div>
+                                            <!--end::Wrapper-->
+                                        </div>
+
+                                <!--end::Actions-->
+                                </form>
+                                <!--end::Input group-->
+                            </div>
+                            <!--end::Wrapper-->
+                        </div>
+                        <!--end::Modal body-->
+                    </div>
+                    <!--end::Modal content-->
+                </div>
+                <!--end::Modal dialog-->
+            </div>
+
 @endsection

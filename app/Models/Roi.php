@@ -15,6 +15,11 @@ class Roi extends Model
         'updated_at'
     ];
 
+    public static function getRoi()
+    {
+        return self::sum('amount');
+    }
+
     public function getAll()
     {
         return $this->all();

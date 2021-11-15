@@ -46,13 +46,172 @@
                                 <!--end::Info-->
                                 <!--begin::Actions-->
                                 <div class="d-flex align-items-center py-2">
-                                    <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-3">Delete</button>
-                                    <button class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">Edit</button>
+                                    <button class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#edit_{{ $wallet->id }}">Edit</button> &nbsp;
+                                    <button class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#deletewallet_{{ $wallet->id }}">Delete</button>
                                 </div>
                                 <!--end::Actions-->
                             </div>
                             <!--end::Card-->
                         </div>
+
+                            <div class="modal fade" id="edit_{{ $wallet->id }}" tabindex="-1" aria-hidden="true">
+                                <!--begin::Modal dialog-->
+                                <div class="modal-dialog modal-dialog-centered mw-650px">
+                                    <!--begin::Modal content-->
+                                    <div class="modal-content">
+                                        <!--begin::Modal header-->
+                                        <div class="modal-header">
+                                            <!--begin::Modal title-->
+                                            <h2>Edit {{ $wallet->name }} Wallet</h2>
+                                            <!--end::Modal title-->
+                                            <!--begin::Close-->
+                                            <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                                <span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+													</svg>
+												</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Close-->
+                                        </div>
+                                        <!--end::Modal header-->
+                                        <!--begin::Modal body-->
+                                        <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                                            <!--begin::Form-->
+                                            <form method="post" id="kt_modal_new_card_form" class="form" action="{{ route('guest.wallet.update', $wallet->id) }}">
+                                            @csrf
+                                            <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                                                        <span class="required">Wallet Type</span>
+                                                        <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Select a wallet address"></i>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <select required name="name" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="{{ $wallet->name }}">
+                                                        <option value="{{ $wallet->name }}"> {{ $wallet->name }}</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-bold form-label mb-2">
+                                                        <span class="required">Wallet address</span>
+                                                        <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Enter your wallet address"></i>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input wrapper-->
+                                                    <div class="position-relative">
+                                                        <!--begin::Input-->
+                                                        <input required type="text" value="{{ $wallet->address }}" class="form-control form-control-solid" placeholder="Enter wallet address" name="address" />
+                                                        <!--end::Input-->
+
+                                                    </div>
+                                                    <!--end::Input wrapper-->
+                                                </div>
+                                                <!--end::Input group-->
+
+
+                                                <div class="text-center pt-15">
+                                                    <button type="reset" id="kt_modal_new_card_cancel" class="btn btn-light me-3">Clear</button>
+                                                    <button type="submit" id="kt_modal_new_card_submit" class="btn btn-primary">
+                                                        <span class="indicator-label">Update Wallet</span>
+                                                        <span class="indicator-progress">Please wait...
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                    </button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            </form>
+                                            <!--end::Form-->
+                                        </div>
+                                        <!--end::Modal body-->
+                                    </div>
+                                    <!--end::Modal content-->
+                                </div>
+                                <!--end::Modal dialog-->
+                            </div>
+
+                            <div class="modal fade" id="deletewallet_{{ $wallet->id }}" tabindex="-1" aria-hidden="true">
+                                <!--begin::Modal dialog-->
+                                <div class="modal-dialog modal-dialog-centered mw-800px">
+                                    <!--begin::Modal content-->
+                                    <div class="modal-content">
+                                        <!--begin::Modal header-->
+                                        <div class="modal-header pb-0 border-0 justify-content-end">
+                                            <!--begin::Close-->
+                                            <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                                <span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+													</svg>
+												</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Close-->
+                                        </div>
+                                        <!--begin::Modal header-->
+                                        <!--begin::Modal body-->
+                                        <div class="modal-body scroll-y pt-0 pb-15">
+                                            <!--begin::Wrapper-->
+                                            <div class="mw-lg-600px mx-auto">
+                                                <!--begin::Heading-->
+                                                <div class="mb-13 text-center">
+                                                    <!--begin::Title-->
+                                                    <h1 class="mb-3">Delete {{ $wallet->name }} Wallet</h1>
+                                                </div>
+                                                <!--end::Heading-->
+                                                <!--begin::Input group-->
+                                                <form id="kt_modal_update_rolsse_form" class="form" method="post" action="{{ route('guest.delete.wallet', $wallet->id) }}">
+                                                    <!--begin::Notice-->
+                                                    <!--begin::Notice-->
+                                                    @csrf
+                                                    <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed mb-9 p-6">
+                                                        <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
+                                                                <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
+                                                                <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black"></rect>
+                                                            </svg>
+                                                        </span>
+                                                        <div class="d-flex flex-stack flex-grow-1">
+                                                            <!--begin::Content-->
+                                                            <div class="row">
+                                                                <div class="col-8">
+                                                                    <div class="fw-bold">
+                                                                        <div class="fs-6 text-gray-700">Confirm you want to delete this {{ $wallet->name }}'s wallet!.</div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-4">
+                                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                                </div>
+                                                            </div>
+
+                                                            <!--end::Content-->
+                                                        </div>
+                                                        <!--end::Wrapper-->
+                                                    </div>
+
+
+                                                    <!--end::Actions-->
+                                                </form>
+                                                <!--end::Input group-->
+                                            </div>
+                                            <!--end::Wrapper-->
+                                        </div>
+                                        <!--end::Modal body-->
+                                    </div>
+                                    <!--end::Modal content-->
+                                </div>
+                                <!--end::Modal dialog-->
+                            </div>
+
                         @endforeach
 
                         <div class="col-xl-6">

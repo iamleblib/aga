@@ -35,7 +35,15 @@
 
                 <!--end::Wrapper-->
                 <!--begin::Button-->
-                <a href="#" class="btn btn-bg-white btn-active-color-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Fund Wallet</a>
+                <a href="#" class="btn btn-bg-white btn-active-color-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">
+                    <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: /icons/duotune/general/gen002.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-node-plus-fill" viewBox="0 0 16 16">
+                                      <path d="M11 13a5 5 0 1 0-4.975-5.5H4A1.5 1.5 0 0 0 2.5 6h-1A1.5 1.5 0 0 0 0 7.5v1A1.5 1.5 0 0 0 1.5 10h1A1.5 1.5 0 0 0 4 8.5h2.025A5 5 0 0 0 11 13zm.5-7.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2a.5.5 0 0 1 1 0z"/>
+                                    </svg>
+                                </span>
+                        Fund Wallet</a>
                 <!--end::Button-->
             </div>
             <!--end::Actions-->
@@ -224,7 +232,7 @@
                                     <!--begin::Row-->
                                     <div class="row g-0">
                                         <!--begin::Col-->
-                                        <a href="" class="col bg-light-success px-6 py-8 rounded-2 me-7 mb-7">
+                                        <a href="{{ route('deposit.logs') }}" class="col bg-light-success px-6 py-8 rounded-2 me-7 mb-7">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen032.svg-->
                                                         <span class="svg-icon svg-icon-3x svg-icon-success d-block my-2">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -238,17 +246,16 @@
                                         </a>
                                         <!--end::Col-->
                                         <!--begin::Col-->
-                                        <a href="" class="col bg-light-warning px-6 py-8 rounded-2 mb-7">
+                                        <a href="{{ route('investment.logs') }}" class="col bg-light-warning px-6 py-8 rounded-2 mb-7">
                                             <!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
-                                                        <span class="svg-icon svg-icon-3x svg-icon-warning d-block my-2">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<rect x="8" y="9" width="3" height="10" rx="1.5" fill="black" />
-																<rect opacity="0.5" x="13" y="5" width="3" height="14" rx="1.5" fill="black" />
-																<rect x="18" y="11" width="3" height="8" rx="1.5" fill="black" />
-																<rect x="3" y="13" width="3" height="6" rx="1.5" fill="black" />
-															</svg>
-														</span>
-
+                                            <span class="svg-icon svg-icon-3x svg-icon-warning d-block my-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <rect x="8" y="9" width="3" height="10" rx="1.5" fill="black" />
+                                                    <rect opacity="0.5" x="13" y="5" width="3" height="14" rx="1.5" fill="black" />
+                                                    <rect x="18" y="11" width="3" height="8" rx="1.5" fill="black" />
+                                                    <rect x="3" y="13" width="3" height="6" rx="1.5" fill="black" />
+                                                </svg>
+                                            </span>
                                             <!--end::Svg Icon-->
                                             <span class="text-warning fw-bold fs-6">Investment</span>
                                         </a>
@@ -258,7 +265,7 @@
                                     <!--begin::Row-->
                                     <div class="row g-0">
                                         <!--begin::Col-->
-                                        <a href="" class="col bg-light-danger px-6 py-8 rounded-2 me-7">
+                                        <a href="{{ route('withdraw.logs') }}" class="col bg-light-danger px-6 py-8 rounded-2 me-7">
                                             <!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
                                                         <span class="svg-icon svg-icon-3x svg-icon-danger d-block my-2">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -280,7 +287,7 @@
 															</svg>
 														</span>
                                             <!--end::Svg Icon-->
-                                                <span class="text-light fw-bold fs-6 mt-2">Properties</span>
+                                                <span class="text-grey fw-bold fs-6 mt-2">Properties</span>
                                             </a>
                                         <!--end::Col-->
                                     </div>
@@ -311,7 +318,7 @@
                             </a>
                             <!--end::Tiles Widget 1-->
                         </div>
-                        
+
                     </div>
                     <!--end::Row-->
                     <!--begin::Row-->
@@ -324,8 +331,9 @@
                                     <a href="{{ route('deposit.logs') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
-                                                <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wallet-fill" viewBox="0 0 16 16">
+                                                <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                                <path d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
                                             </svg>
                                             <div class="d-flex flex-column">
                                                 <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($deposit->getProcessedDeposit()) }}</div>
@@ -339,20 +347,18 @@
 
                                 <div class="col-md-6 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="{{ route('investment.index') }}" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('investment.logs') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
-                                            <span class="svg-icon svg-icon-warning svg-icon-2hx ms-n1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="black" />
-																	<path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="black" />
-																</svg>
-															</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-layers-fill" viewBox="0 0 16 16">
+                                                <path d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                                <path d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l-5.17-2.756z"/>
+                                            </svg>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
                                                 <div class="text-dark fw-bolder fs-1 mb-2 mt-5">{{ number_format($investment) }}</div>
-                                                <div class="text-muted fw-bold fs-6">Investment Balance</div>
+                                                <div class="text-muted fw-bold fs-6">Total Investments</div>
                                             </div>
                                         </div>
                                         <!--end::Body-->
@@ -362,22 +368,22 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6 p-5">
+                                <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="#" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('withdraw.logs') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
-                                            <span class="svg-icon svg-icon-primary svg-icon-2hx ms-n1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="black" />
-																	<path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="black" />
-																</svg>
-															</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+                                                <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+                                                <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+                                                <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+                                            </svg>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">$80,600</div>
-                                                <div class="text-muted fw-bold fs-6">Divident Balance</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($withdrawal) }}</div>
+                                                <div class="text-muted fw-bold fs-6">Withdrawals</div>
                                             </div>
                                         </div>
                                         <!--end::Body-->
@@ -385,22 +391,42 @@
                                     <!--end::Tiles Widget 5-->
                                 </div>
 
-                                <div class="col-md-6 p-5">
+                                <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="#" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('profile.index') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
-                                            <span class="svg-icon svg-icon-default svg-icon-2hx ms-n1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="black" />
-																	<path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="black" />
-																</svg>
-															</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                            </svg>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">$700</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ auth()->user()->referral_bonus }}</div>
                                                 <div class="text-muted fw-bold fs-6">Referral bonus</div>
+                                            </div>
+                                        </div>
+                                        <!--end::Body-->
+                                    </a>
+                                    <!--end::Tiles Widget 5-->
+                                </div>
+
+                                <div class="col-md-4 p-5">
+                                    <!--begin::Tiles Widget 5-->
+                                    <a href="{{ route('roi.log') }}" class="card card-xxl-stretch bg-body">
+                                        <!--begin::Body-->
+                                        <div class="card-body d-flex flex-column justify-content-between">
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
+                                            <span class="svg-icon svg-icon-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                                  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                                  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                            <div class="d-flex flex-column">
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ $roi }}</div>
+                                                <div class="text-muted fw-bold fs-6">Roi's</div>
                                             </div>
                                         </div>
                                         <!--end::Body-->
@@ -428,7 +454,7 @@
 															</span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-white fw-bolder fs-1 mb-2 mt-5">790</div>
+                                                <div class="text-white fw-bolder fs-1 mb-2 mt-5">$0</div>
                                                 <div class="text-white fw-bold fs-6">Properties Purchased</div>
                                             </div>
                                         </div>

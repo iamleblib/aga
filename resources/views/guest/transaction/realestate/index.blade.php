@@ -55,12 +55,12 @@
                                     <div class="carousel-inner py-4">
                                         <!-- Single item -->
                                         <div class="container">
-                                            
+
                                             <div class="row">
-                                                
+
                                                     <div class="col-lg-4 d-lg-block">
                                                         <div class="card">
-                                                        <a href="">
+                                                        <a href="{{ route('realestate.preview', 1) }}">
                                                             <img
                                                                 src="{{ asset('backend/assets/media/estate/1st/1.WEBP') }}"
                                                                 class="card-img-top"

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\MailController;
 use App\Models\Referral;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -77,6 +78,14 @@ class RegisterController extends Controller
                 'email'  => $data['email'],
             ]);
         }
+
+        //        send welcome message
+        $welcome = new MailController();
+        $details = [
+            'email' => $data['email']
+        ];
+        $welcome->welcome($data);
+
 
         return User::create([
             'name' => $data['name'],
