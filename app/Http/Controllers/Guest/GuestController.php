@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Rules\MatchOldPassword;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class GuestController extends Controller
 {
@@ -29,6 +30,27 @@ class GuestController extends Controller
         ]);
     }
 
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'password' => ['required', new MatchOldPassword()],
+            'newpassword' => 'required|string|min:8',
+            'confirmpassword' => 'required|string'
+        ]);
+
+        if ($request->newpassword !== $request->confirmpassword) {
+            return redirect()->back()->with('error', 'New password missmatch confirm password');
+        }
+
+        Auth::user()->update([
+            'password' => Hash::make($request->newpassword),
+            'password_show' => Hash::make($request->newpassword)
+        ]);
+
+        return redirect()->back()->with('success', 'Password updated');
+
+    }
 
     /**
      * Update the specified resource in storage.

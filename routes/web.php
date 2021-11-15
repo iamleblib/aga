@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Guest\DashboardController;
 use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\Guest\SendMessages;
+use App\Http\Controllers\Guest\TwoFAController;
 use App\Http\Controllers\Guest\Wallet\WalletController;
 use App\Http\Controllers\Transaction\DepositsController;
 use App\Http\Controllers\Transaction\InvestmentsController;
@@ -45,6 +46,10 @@ Route::get('/privacy', [PagesController::class, 'privacy'])->name('privacy');
 Route::get('/real_estate', [PagesController::class, 'real_estate'])->name('real_estate');
 
 
+Route::get('2fa', [TwoFAController::class, 'index'])->name('2fa.index');
+Route::post('2fa', [TwoFAController::class, 'store'])->name('2fa.post');
+Route::get('2fa/reset', [TwoFAController::class, 'resend'])->name('2fa.resend');
+
 
 
 Auth::routes();
@@ -65,13 +70,14 @@ Route::get('blocked', function () {
 Route::group(['prefix' => 'secure'], function () {
     Auth::routes();
 
-    Route::group(['middleware' => ['auth', 'user']], function () {
+    Route::group(['middleware' => ['auth', 'user', '2fa']], function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
 //
 //        Users Profile
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [GuestController::class, 'index'])->name('profile.index');
             Route::post('/update', [GuestController::class, 'update'])->name('profile.update');
+            Route::post('/updatePassword', [GuestController::class, 'updatePassword'])->name('guest.profile.update');
             Route::post('/referral-withdraw', [ReferralController::class, 'withdraw'])->name('referral.withdraw');
             Route::post('/delete-user', [GuestController::class, 'destroy'])->name('user.delete');
 

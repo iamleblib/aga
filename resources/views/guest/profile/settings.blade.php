@@ -435,7 +435,7 @@
                 <!--begin::Label-->
                 <div id="kt_signin_email">
                     <div class="fs-6 fw-bolder mb-1">Email Address</div>
-                    <div class="fw-bold text-gray-600">support@keenthemes.com</div>
+                    <div class="fw-bold text-gray-600">{{ auth()->user()->email }}m</div>
                 </div>
                 <!--end::Label-->
                 <!--begin::Edit-->
@@ -473,22 +473,9 @@
                                 <!--end::Wrapper-->
                             </div>
                             <!--end::Notice-->
-                            <div class="col-lg-6 mb-4 mb-lg-0">
-                                <div class="fv-row mb-0">
-                                    <label for="emailaddress" class="form-label fs-6 fw-bolder mb-3">Enter New Email Address</label>
-                                    <input disabled type="email" class="form-control form-control-lg form-control-solid" id="emailaddress" placeholder="Email Address" name="emailaddress" value="{{ auth() ->user()->email}}" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="fv-row mb-0">
-                                    <label for="confirmemailpassword" class="form-label fs-6 fw-bolder mb-3">Confirm Password</label>
-                                    <input disabled type="password" class="form-control form-control-lg form-control-solid" name="confirmemailpassword" id="confirmemailpassword" />
-                                </div>
-                            </div>
                         </div>
                         <div class="d-flex">
-                            <button disabled type="button" class="btn btn-primary me-2 px-6">Update Email</button>
-                            <button id="kt_signin_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">Cancel</button>
+                            <button id="kt_signin_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">&nbsp;</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -513,43 +500,46 @@
                 </div>
                 <!--end::Label-->
                 <!--begin::Edit-->
-                <div id="kt_signin_password_edit" class="flex-row-fluid d-none">
-                    <!--begin::Form-->
-                    <form id="kt_signin_change_password" class="form" novalidate="novalidate">
-                        <div class="row mb-1">
-                            <div class="col-lg-4">
-                                <div class="fv-row mb-0">
-                                    <label for="currentpassword" class="form-label fs-6 fw-bolder mb-3">Current Password</label>
-                                    <input type="password" class="form-control form-control-lg form-control-solid" name="currentpassword" id="currentpassword" />
+                    <div id="kt_signin_password_edit" class="flex-row-fluid d-none">
+                        <!--begin::Form-->
+                            <form id="kt_signin_change_password" class="form" novalidate="novalidate" action="{{ route('guest.profile.update') }}" method="POST">
+                                @csrf
+                                <div class="row mb-1">
+                                    <div class="col-lg-4">
+                                        <div class="fv-row mb-0">
+                                            <label for="currentpassword" class="form-label fs-6 fw-bolder mb-3">Current Password</label>
+                                            <input placeholder="current password" type="password" class="form-control form-control-lg form-control-solid" name="password" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="fv-row mb-0">
+                                            <label for="newpassword" class="form-label fs-6 fw-bolder mb-3">New Password</label>
+                                            <input placeholder="new password" type="password" class="form-control form-control-lg form-control-solid" name="newpassword" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="fv-row mb-0">
+                                            <label for="confirmpassword" class="form-label fs-6 fw-bolder mb-3">Confirm New Password</label>
+                                            <input placeholder="confirm new password" type="password" class="form-control form-control-lg form-control-solid" name="confirmpassword" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="fv-row mb-0">
-                                    <label for="newpassword" class="form-label fs-6 fw-bolder mb-3">New Password</label>
-                                    <input type="password" class="form-control form-control-lg form-control-solid" name="newpassword" id="newpassword" />
+
+                                <div class="form-text mb-5">Password must be at least 8 character and contain symbols</div>
+                                <div class="d-flex">
+                                    <button type="submit" id="kt_password_submit" class="btn btn-primary me-2 px-6">Update Password</button>
+                                    <button id="kt_password_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">Cancel</button>
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="fv-row mb-0">
-                                    <label for="confirmpassword" class="form-label fs-6 fw-bolder mb-3">Confirm New Password</label>
-                                    <input type="password" class="form-control form-control-lg form-control-solid" name="confirmpassword" id="confirmpassword" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-text mb-5">Password must be at least 8 character and contain symbols</div>
-                        <div class="d-flex">
-                            <button id="kt_password_submit" type="button" class="btn btn-primary me-2 px-6">Update Password</button>
-                            <button id="kt_password_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">Cancel</button>
-                        </div>
-                    </form>
-                    <!--end::Form-->
-                </div>
-                <!--end::Edit-->
-                <!--begin::Action-->
-                <div id="kt_signin_password_button" class="ms-auto">
-                    <button class="btn btn-light btn-active-light-primary">Reset Password</button>
-                </div>
-                <!--end::Action-->
+                            </form>
+                        <!--end::Form-->
+                    </div>
+                    <!--end::Edit-->
+                    <!--begin::Action-->
+                    <div id="kt_signin_password_button" class="ms-auto">
+                        <button class="btn btn-light btn-active-light-primary">Reset Password</button>
+                    </div>
+                    <!--end::Action-->
+
             </div>
             <!--end::Password-->
             <!--begin::Notice-->
