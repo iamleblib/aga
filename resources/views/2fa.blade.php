@@ -1,27 +1,16 @@
 
-<!DOCTYPE html>
-<!--
-Author: Keenthemes
-Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme
-Purchase: https://1.envato.market/EA4JP
-Website: http://www.keenthemes.com
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
--->
-<html lang="en">
-<!--begin::Head-->
-
-<!-- Mirrored from preview.keenthemes.com/metronic8/demo2/authentication/flows/basic/two-steps.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Nov 2021 01:48:31 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!DOCTYPE html><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <title>{{ env('APP_NAME') }}</title>
+    <title>{{ env('APP_NAME') }} 2fa</title>
     <meta charset="utf-8" />
-
+    <meta name="description" content="{{ env('APP_NAME') }} Crypto company" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ env('APP_NAME') }} Crypto company" />
+    <meta property="og:url" content="https://keenthemes.com/metronic" />
+    <meta property="og:site_name" content="{{ env('APP_NAME') }}" />
+    <link rel="canonical" href="{{ route('home') }}" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -48,7 +37,7 @@ License: For each use you must have a valid license purchased only from above li
             </a>
             <!--end::Logo-->
             <!--begin::Wrapper-->
-            <div class="w-lg-900px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+            <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
                 <!--begin::Form-->
                 <form method="POST" action="{{ route('2fa.post') }}">
                 @csrf
