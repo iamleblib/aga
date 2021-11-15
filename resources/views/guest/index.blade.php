@@ -248,15 +248,14 @@
                                         <!--begin::Col-->
                                         <a href="{{ route('investment.logs') }}" class="col bg-light-warning px-6 py-8 rounded-2 mb-7">
                                             <!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
-                                                        <span class="svg-icon svg-icon-3x svg-icon-warning d-block my-2">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<rect x="8" y="9" width="3" height="10" rx="1.5" fill="black" />
-																<rect opacity="0.5" x="13" y="5" width="3" height="14" rx="1.5" fill="black" />
-																<rect x="18" y="11" width="3" height="8" rx="1.5" fill="black" />
-																<rect x="3" y="13" width="3" height="6" rx="1.5" fill="black" />
-															</svg>
-														</span>
-
+                                            <span class="svg-icon svg-icon-3x svg-icon-warning d-block my-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <rect x="8" y="9" width="3" height="10" rx="1.5" fill="black" />
+                                                    <rect opacity="0.5" x="13" y="5" width="3" height="14" rx="1.5" fill="black" />
+                                                    <rect x="18" y="11" width="3" height="8" rx="1.5" fill="black" />
+                                                    <rect x="3" y="13" width="3" height="6" rx="1.5" fill="black" />
+                                                </svg>
+                                            </span>
                                             <!--end::Svg Icon-->
                                             <span class="text-warning fw-bold fs-6">Investment</span>
                                         </a>
@@ -348,7 +347,7 @@
 
                                 <div class="col-md-6 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="{{ route('investment.index') }}" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('investment.logs') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
@@ -359,7 +358,7 @@
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
                                                 <div class="text-dark fw-bolder fs-1 mb-2 mt-5">{{ number_format($investment) }}</div>
-                                                <div class="text-muted fw-bold fs-6">Investment Balance</div>
+                                                <div class="text-muted fw-bold fs-6">Total Investments</div>
                                             </div>
                                         </div>
                                         <!--end::Body-->
@@ -371,7 +370,7 @@
                             <div class="row">
                                 <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="#" class="card card-xxl-stretch bg-body">
+                                    <a href="{{ route('withdraw.logs') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
@@ -455,7 +454,7 @@
 															</span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-white fw-bolder fs-1 mb-2 mt-5">790</div>
+                                                <div class="text-white fw-bolder fs-1 mb-2 mt-5">$0</div>
                                                 <div class="text-white fw-bold fs-6">Properties Purchased</div>
                                             </div>
                                         </div>

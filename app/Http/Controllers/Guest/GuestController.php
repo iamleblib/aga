@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Models\Investment;
 use App\Models\Referral;
 use App\Models\ReferralBonus;
 use App\Models\User;
@@ -20,13 +21,15 @@ class GuestController extends Controller
      */
     public function index()
     {
+        $investment = Investment::getInvestmentCount();
         $referrals = new Referral();
         $wallets = auth()->user()->wallet()->get();
         $referralBonus = ReferralBonus::getAmount();
         return view('guest.profile.index')->with([
             'wallets' => $wallets,
             'referrals' => $referrals,
-            'referralBonus' => $referralBonus
+            'referralBonus' => $referralBonus,
+            'investment' => $investment
         ]);
     }
 

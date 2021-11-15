@@ -95,6 +95,7 @@ Route::group(['prefix' => 'secure'], function () {
 
         Route::group(['prefix' => 'investment'], function () {
             Route::get('/', [InvestmentsController::class, 'index'])->name('investment.guest.index');
+            Route::get('/preview', [InvestmentsController::class, 'index'])->name('investment.preview');
             Route::post('/preview', [InvestmentsController::class, 'preview'])->name('investment.preview');
             Route::post('/process', [InvestmentsController::class, 'process'])->name('investment.process');
             Route::get('/logs', [InvestmentsController::class, 'logs'])->name('investment.logs');

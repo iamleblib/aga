@@ -173,8 +173,7 @@
                                     <div class="border-bottom w-100 my-7 my-lg-16"></div>
                                     <!--begin::Invoice To-->
                                     <div class="text-gray-600 fs-6 fw-bold mb-3">INVOICE FROM.</div>
-                                    <div class="fs-6 text-gray-800 fw-bold mb-8">{{ auth()->user()->username }}
-                                        <br>{{ auth()->user()->email }}.</div>
+                                    <div class="fs-6 text-gray-800 fw-bold mb-8">{{ auth()->user()->username }}</div>
                                     <!--end::Invoice To-->
                                     <!--begin::Invoice No-->
                                     <!--end::Invoice No-->

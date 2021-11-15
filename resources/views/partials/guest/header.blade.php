@@ -2,7 +2,7 @@
 <!--begin::Header Logo-->
 <div class="header-logo">
     <a href="{{route('home')}}">
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" class="logo-default" width="60%"/>
+        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" class="logo-default" width="40%"/>
         <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-stick.png') }}" class="logo-sticky h-25px">
 	</a>
 </div>
