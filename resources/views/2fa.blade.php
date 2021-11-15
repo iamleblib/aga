@@ -43,12 +43,12 @@ License: For each use you must have a valid license purchased only from above li
         <!--begin::Content-->
         <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
             <!--begin::Logo-->
-            <a href="../../../index-2.html" class="mb-12">
+            <a href="{{ asset('backend/index-2.html') }}" class="mb-12">
                 <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" class="h-40px" />
             </a>
             <!--end::Logo-->
             <!--begin::Wrapper-->
-            <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+            <div class="w-lg-900px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
                 <!--begin::Form-->
                 <form method="POST" action="{{ route('2fa.post') }}">
                 @csrf
