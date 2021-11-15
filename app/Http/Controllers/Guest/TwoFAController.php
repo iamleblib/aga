@@ -31,11 +31,9 @@ class TwoFAController extends Controller
             'code2'=>'required',
             'code3'=>'required',
             'code4'=>'required',
-            'code5'=>'required',
-            'code6'=>'required',
         ]);
 
-        $request['code'] = $request->code1.$request->code2.$request->code3.$request->code4.$request->code5.$request->code6;
+        $request['code'] = $request->code1.$request->code2.$request->code3.$request->code4;
 
         $find = UserCode::where('user_id', auth()->user()->id)
             ->where('code', $request->code)

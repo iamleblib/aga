@@ -89,8 +89,6 @@
                             <input type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" name="code2" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" />
                             <input type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" name="code3" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" />
                             <input type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" name="code4" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" />
-                            <input type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" name="code5" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" />
-                            <input type="text" data-inputmask="'mask': '9', 'placeholder': ''" maxlength="1" name="code6" class="form-control form-control-solid h-60px w-60px fs-2qx text-center border-primary border-hover mx-1 my-2" />
                         </div>
                         <!--begin::Input group-->
                     </div>
