@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Guest\DashboardController;
 use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\Guest\SendMessages;
+use App\Http\Controllers\Guest\TwoFAController;
 use App\Http\Controllers\Guest\Wallet\WalletController;
 use App\Http\Controllers\Transaction\DepositsController;
 use App\Http\Controllers\Transaction\InvestmentsController;
@@ -46,7 +47,6 @@ Route::get('/real_estate', [PagesController::class, 'real_estate'])->name('real_
 
 
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -64,14 +64,15 @@ Route::get('blocked', function () {
 
 Route::group(['prefix' => 'secure'], function () {
     Auth::routes(['verify' => true]);
+    Route::group(['middleware' => ['auth', 'user', 'verified']], function () {
 
-    Route::group(['middleware' => ['auth', 'user']], function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
 //
 //        Users Profile
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [GuestController::class, 'index'])->name('profile.index');
             Route::post('/update', [GuestController::class, 'update'])->name('profile.update');
+            Route::post('/updatePassword', [GuestController::class, 'updatePassword'])->name('guest.profile.update');
             Route::post('/referral-withdraw', [ReferralController::class, 'withdraw'])->name('referral.withdraw');
             Route::post('/delete-user', [GuestController::class, 'destroy'])->name('user.delete');
 
@@ -89,6 +90,7 @@ Route::group(['prefix' => 'secure'], function () {
 
         Route::group(['prefix' => 'investment'], function () {
             Route::get('/', [InvestmentsController::class, 'index'])->name('investment.guest.index');
+            Route::get('/preview', [InvestmentsController::class, 'index'])->name('investment.preview');
             Route::post('/preview', [InvestmentsController::class, 'preview'])->name('investment.preview');
             Route::post('/process', [InvestmentsController::class, 'process'])->name('investment.process');
             Route::get('/logs', [InvestmentsController::class, 'logs'])->name('investment.logs');

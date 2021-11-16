@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Transaction;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\MailController;
 use App\Models\Deposit;
 use App\Models\Investment;
 use Illuminate\Http\Request;
@@ -54,10 +55,14 @@ class InvestmentsController extends Controller
         ]);
 
         $fields = [
+            'email' => auth()->user()->email,
             'ref' => "#CBA" . time(),
             'amount' => $request->amount,
             'plan' => $request->plan,
         ];
+
+        $investment = new MailController();
+        $investment->investment($fields);
 
         Auth::user()->investment()->create($fields);
 

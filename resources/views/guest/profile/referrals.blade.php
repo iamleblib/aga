@@ -159,11 +159,11 @@
                 </div>
                 <!--end::Content-->
                 <!--begin::Action-->
-                <a data-bs-toggle="modal" data-bs-target="#withdraw" class="btn btn-danger px-6 align-self-center text-nowrap">Withdraw Money</a>
+                <a data-bs-toggle="modal" data-bs-target="#withdrawRef" class="btn btn-danger px-6 align-self-center text-nowrap">Withdraw Money</a>
                 <!--end::Action-->
             </div>
 
-            <div class="modal fade" id="withdraw" tabindex="-1" aria-hidden="true">
+            <div class="modal fade" id="withdrawRef" tabindex="-1" aria-hidden="true">
                 <!--begin::Modal dialog-->
                 <div class="modal-dialog modal-dialog-centered mw-800px">
                     <!--begin::Modal content-->

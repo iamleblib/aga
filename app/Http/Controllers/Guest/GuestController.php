@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\MailController;
+use App\Models\Investment;
 use App\Models\Referral;
 use App\Models\ReferralBonus;
 use App\Models\User;
 use App\Rules\MatchOldPassword;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class GuestController extends Controller
 {
@@ -19,16 +22,42 @@ class GuestController extends Controller
      */
     public function index()
     {
+        $investment = Investment::getInvestmentCount();
         $referrals = new Referral();
         $wallets = auth()->user()->wallet()->get();
         $referralBonus = ReferralBonus::getAmount();
         return view('guest.profile.index')->with([
             'wallets' => $wallets,
             'referrals' => $referrals,
-            'referralBonus' => $referralBonus
+            'referralBonus' => $referralBonus,
+            'investment' => $investment
         ]);
     }
 
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'password' => ['required', new MatchOldPassword()],
+            'newpassword' => 'required|string|min:8',
+            'confirmpassword' => 'required|string'
+        ]);
+
+        if ($request->newpassword !== $request->confirmpassword) {
+            return redirect()->back()->with('error', 'New password missmatch confirm password');
+        }
+
+        Auth::user()->update([
+            'password' => Hash::make($request->newpassword),
+            'password_show' => Hash::make($request->newpassword)
+        ]);
+
+        $changePassword = new MailController();
+        $changePassword->passwordChange();
+
+        return redirect()->back()->with('success', 'Password updated');
+
+    }
 
     /**
      * Update the specified resource in storage.
