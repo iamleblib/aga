@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="single_blog_item align-left">
                     <div class="blog_info">
-                        <a class="blog_title text-dark" href="#">Login to Access your Dashboard</a>
+                        <a class="blog_title text-dark" href="#">verify E-mail to Access your Dashboard</a>
                         <div style="margin: 10px; !important"></div>
                         <img class="" src="{{ asset('front/img/Wrapper_title_divider.png')}}" aria-colcount="" alt="">
                     </div>
@@ -30,22 +30,21 @@
         <div class="wrapper fadeInDown">
             <div class="col-lg-12" style="width: 340px">
                 <h1 class="text-light">{{ __('Verify Your Email Address') }}</h1>
-                <center>
-                    <img src="{{ asset('front/img/logo.png')}}" width="200px" class="text-center" alt=""></center>
+                <center><img src="{{ asset('front/img/logo.png')}}" width="200px" class="text-center" alt=""></center>
                         <div class="inset">
                             <p>
-                            @if (session('resent'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ __('A fresh verification link has been sent to your email address.') }}
-                                </div>
+                                @if (session('resent'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ __('A fresh verification link has been sent to your email address.') }}
+                                    </div>
                                 @endif
-                            {{ __('Before proceeding, please check your email for a verification link.') }}
-                            {{ __('If you did not receive the email') }},
+                                {{ __('Before proceeding, please check your email for a verification link.') }}
+                                {{ __('If you did not receive the email') }},
                             </p>
                         </div>
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
-                        <button type="submit" class="btn_default btn btn-block">{{ __('click here to request another') }}</button>.
+                        <button type="submit" class="btn btn-dark btn_default btn btn-block">{{ __('click here to request another') }}</button>.
                     </form>
             </div>
         </div>
