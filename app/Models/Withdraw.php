@@ -25,6 +25,11 @@ class Withdraw extends Model
         return $this->sum('amount');
     }
 
+    public function pendingWithdrawals()
+    {
+        return $this->where('status', 'pending');
+    }
+
     // eloquent
     public function user()
     {
