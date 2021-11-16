@@ -72,7 +72,7 @@
                         <a href="{{route('register')}}" class="text-light p-2 float-right"><small>I'm  not a User yet ?</small></a>
 
                             <a href="{{ route('password.request') }}" style="font-size:12px" class="text-warning p-2 float-left">
-                                {{ __('Forgot Your Password?') }}
+                                {{ __('forgot your password?') }}
                             </a>
                     </p>
             </form>
