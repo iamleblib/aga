@@ -51,7 +51,6 @@ Route::post('2fa', [TwoFAController::class, 'store'])->name('2fa.post');
 Route::get('2fa/reset', [TwoFAController::class, 'resend'])->name('2fa.resend');
 
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -68,9 +67,9 @@ Route::get('blocked', function () {
 
 
 Route::group(['prefix' => 'secure'], function () {
-    Auth::routes();
+    Auth::routes(['verify' => true]);
+    Route::group(['middleware' => ['auth', 'user', 'verified']], function () {
 
-    Route::group(['middleware' => ['auth', 'user']], function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
 //
 //        Users Profile
