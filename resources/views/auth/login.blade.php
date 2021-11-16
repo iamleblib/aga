@@ -67,16 +67,14 @@
                       </p>
                       </div>
                             <p class="p-container">
-                                <button type="submit" class="btn_default btn btn-block"> 
+                                <button type="submit" class="btn_default btn btn-block">
                                     {{ __('Login') }} <img class="icon_img" src="{{ asset('front/img/icons/user.png')}}"  width="20px" alt="">
                                 </button>
                                 <a href="{{route('register')}}" class="text-light p-2 float-right"><small>I'm  not a User yet ?</small></a>
-                                
-                                @if (Route::has('password.request'))
-                                    <a href="" style="font-size:12px" class="text-warning p-2 float-left">
+
+                                    <a href="{{ route('password.request') }}" style="font-size:12px" class="text-warning p-2 float-left">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
                             </p>
                     </form>
                 </div>

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<title>Coinbase Assets - Terms & Condition</title>
+<title>{{env("APP_NAME")}} - Terms & Condition</title>
 
 <div class="landing_wrapper breadcrumb_wrapper">
 
@@ -30,7 +30,7 @@
                     <img class="" src="{{ asset('front/img/Wrapper_title_divider.png')}}" aria-colcount="" alt="">
                     <br>
                     <br>
-                    <p class="" style="color: grey">Coinbase Assets is a platform managed by Coinbase Assets (referred to as "CBA" henceforth). By accessing and using the http://coinbaseassets.com/ website,
+                    <p class="" style="color: grey">{{env("APP_NAME")}} is a platform managed by {{env("APP_NAME")}} (referred to as "CBA" henceforth). By accessing and using the http://coinbaseassets.com/ website,
                     you agree to the following terms and conditions (the "terms") as they may be modified, changed, supplemented or updated from time
                     to time, as well as all applicable laws and regulations. Please read the following terms carefully. If you do not agree to any of the terms,
                     please do not use this Website or any information, links or content contained on this Website. Your access to and use of this Website constitutes
@@ -84,7 +84,7 @@
                             compliance, or decency of such content. Your use of or interactions with any Third-Party Content, and any third
                             party that provides Third-Party Content are solely between you and such third parties and we are not responsible
                             or liable in any manner for such use or interactions. We are not responsible for any of the content on third party
-                            sites linked to our Website nor can it be assumed that we have reviewed or approved of such sites or their content, 
+                            sites linked to our Website nor can it be assumed that we have reviewed or approved of such sites or their content,
                             nor do we warrant that the links to these sites work or are up-to-date.
                             </div>
                         </div>
@@ -117,13 +117,13 @@
                                 information. Furthermore, you are solely responsible for any and all activities that occur under your account (if any).
                                 You agree to notify us immediately of any unauthorized use of your User Content, account or any other breach of security.
                                 We will not be liable for any loss or damages that you may incur as a result of someone else using your User Content or
-                                account, either with or without your knowledge. However, you could be held liable for losses incurred by the Coinbase Assets
+                                account, either with or without your knowledge. However, you could be held liable for losses incurred by the {{env("APP_NAME")}}
                                 Parties (as defined below) or another party due to someone else using your User Content or account. You may not use
                                 anyone else's User Content or account at any time without the permission of such person or entity.
                                 <br>
                                 <br>
 
-                                By posting, uploading, inputting, providing or submitting your User Content to us, you grant Coinbase Assets, its affiliates
+                                By posting, uploading, inputting, providing or submitting your User Content to us, you grant {{env("APP_NAME")}}, its affiliates
                                 and any necessary sub-licensees a non-exclusive, worldwide, perpetual, right and permission to use, reproduce, copy, edit,
                                 modify, translate, reformat, create derivative works from, distribute, transmit, publicly perform and publicly display your
                                 User Content and sub-license such rights to others.
@@ -160,7 +160,7 @@
                             compensation to you. Do not send us Feedback if you expect to be paid or want to continue to own or claim rights to your
                             Feedback. The purpose of these terms is to avoid potential misunderstandings or disputes if our products, services, business
                             ideas or business strategies might seem similar to ideas submitted to us as Feedback. If you decide to send us Feedback,
-                            you acknowledge and understand that the Coinbase Assets Parties make no assurances that your Feedback will be treated as
+                            you acknowledge and understand that the {{env("APP_NAME")}} Parties make no assurances that your Feedback will be treated as
                             confidential or proprietary.
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                         </div>
                         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                             <div class="card-body">
-                            Coinbase Assets and its licensors reserve all right, title and interest in and to this Website and its products and services,
+                            {{env("APP_NAME")}} and its licensors reserve all right, title and interest in and to this Website and its products and services,
                             including all copyrights, patents, trade secrets, trademarks, other intellectual property rights, trade names, logos,
                             slogans, custom graphics, button icons, scripts, videos, text, images, software, code, files, content, information and
                             other material available on our Website and nothing on this Website may be copied, imitated or used, in whole or in part,
@@ -204,7 +204,7 @@
                             <br>                                <br>
                             If you seek to reproduce or otherwise use the content on this Website in any way it is your responsibility to obtain
                             approval from us for such use. Nothing in these terms will be construed as conferring any right or license to any patent,
-                            trademark, copyright or other proprietary rights of Coinbase Assets or any third party, whether by estoppel, implication or
+                            trademark, copyright or other proprietary rights of {{env("APP_NAME")}} or any third party, whether by estoppel, implication or
                             otherwise.
                             </div>
                         </div>
@@ -343,7 +343,7 @@
                         </div>
                         <div id="collapseTen" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                             <div class="card-body">
-                            <p>THE MAXIMUM EXTENT PERMITTED BY LAW NONE OF THE COINBASE ASSETS PARTIES SHALL BE RESPONSIBLE OR LIABLE FOR</p>
+                            <p>THE MAXIMUM EXTENT PERMITTED BY LAW NONE OF THE {{env("APP_NAME")}} PARTIES SHALL BE RESPONSIBLE OR LIABLE FOR</p>
                                 <li>1. Any loss, liability, cost, expense or damage suffered or incurred arising out of or in connection with any access
                                 to or use of this Website or any of its content;</li>
                                 <br>
@@ -360,7 +360,7 @@
                                     for repairs, maintenance or the introduction of new facilities, products or services;</li>
                                 <br>
                                 <li>6. Any information or material on any website operated by a third party which may be accessed from this Website.</li>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -387,7 +387,7 @@
                                 <li>5. Unauthorized access, use or alteration of the transmission of data or content to or from us; or</li>
                                 <br>
                                 <li>6. The failure to receive in any way the transmission of any data, content, funds or property from you in no circumstances will the aggregate liability of the CBA parties arising under these terms exceed $5.00.</li>
-                                
+
                             </div>
                         </div>
                     </div>

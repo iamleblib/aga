@@ -70,7 +70,7 @@ Route::get('blocked', function () {
 Route::group(['prefix' => 'secure'], function () {
     Auth::routes();
 
-    Route::group(['middleware' => ['auth', 'user', '2fa']], function () {
+    Route::group(['middleware' => ['auth', 'user']], function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
 //
 //        Users Profile

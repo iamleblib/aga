@@ -3,7 +3,7 @@
 @section('content')
 
 
-<title>Coinbase Assets - Investment packages</title>
+<title>{{env("APP_NAME")}} - Investment packages</title>
 
 <div class="landing_wrapper breadcrumb_wrapper">
 
@@ -75,11 +75,11 @@
                             <li class="mb-3 text-muted">
                             <i class="fa fa-times mr-2"></i><del>BECOME AN AGENT</del></li>
                         </ul>
-                        <a href="#" class="btn rounded-lg btn-block btn-warning p-2 shadow rounded-pill">Start Now!</a>
+                        <a href="{{route('investment.guest.index')}}" class="btn rounded-lg btn-block btn-warning p-2 shadow rounded-pill">Start Now!</a>
                     </div>
                 </div>
             </div>
-            
+
                 <!-- Pricing Table-->
                 <div class="col-lg-12 mb-12 mb-lg-0">
                     <div class="bg-white p-5 rounded-lg shadow">
@@ -103,10 +103,10 @@
                             <i class="fa fa-times mr-2"></i><del>BECOME AN AGENT</del></li>
                         </li>
                     </ul>
-                    <a href="#" class="btn rounded-lg btn-block btn-warning p-2 shadow rounded-pill">Start Now!</a>
+                    <a href="{{route('investment.guest.index')}}" class="btn rounded-lg btn-block btn-warning p-2 shadow rounded-pill">Start Now!</a>
                     </div>
                 </div>
-                
+
                 <!-- Pricing Table-->
                 <div class="col-lg-12">
                     <div class="bg-white p-5 rounded-lg shadow">
@@ -129,17 +129,17 @@
                             <li class="mb-3">
                             <i class="fa fa-check mr-2 text-primary"></i>BECOME AN AGENT</li>
                     </ul>
-                    <a href="#" class="btn rounded-lg btn-block btn-success p-2 shadow rounded-pill">Start Now!</a>
+                    <a href="{{route('investment.guest.index')}}" class="btn rounded-lg btn-block btn-success p-2 shadow rounded-pill">Start Now!</a>
                     </div>
                 </div>
             </div>
         </div>
             <script src="https://widgets.coingecko.com/coingecko-coin-converter-widget.js"></script>
                 <coingecko-coin-converter-widget  coin-id="bitcoin" currency="usd" background-color="grey" font-color="#4c4c4c" locale="en"></coingecko-coin-converter-widget>
-                                
+
     </div>
 </div>
-                        
+
 <style>
 
 

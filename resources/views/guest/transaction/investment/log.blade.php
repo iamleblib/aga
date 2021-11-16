@@ -38,8 +38,28 @@
                 <!--begin::Button-->
 
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Top Up</a>
-                <!--end::Button-->
+                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">
+                    <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: /icons/duotune/general/gen002.svg-->
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-node-plus-fill" viewBox="0 0 16 16">
+                          <path d="M11 13a5 5 0 1 0-4.975-5.5H4A1.5 1.5 0 0 0 2.5 6h-1A1.5 1.5 0 0 0 0 7.5v1A1.5 1.5 0 0 0 1.5 10h1A1.5 1.5 0 0 0 4 8.5h2.025A5 5 0 0 0 11 13zm.5-7.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2a.5.5 0 0 1 1 0z"/>
+                        </svg>
+                    </span>
+                        Top Up
+                </a>
+                <a href="{{route('investment.guest.index')}}" class="btn btn-bg-white btn-active-color-primary m-3">
+                    <span class="menu-icon">
+                                <!--begin::Svg Icon | path: /icons/duotune/general/gen002.svg-->
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/>
+                            </svg>
+                        </span>
+                    </span>
+                        Add
+                </a>
+        <!--end::Button-->
             </div>
             <!--end::Actions-->
         </div>
@@ -152,11 +172,11 @@
                                     </th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" style="width: 209.234px;">User</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 125px;">Status</th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Last login: activate to sort column ascending" style="width: 125px;">Completed</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Last login: activate to sort column ascending" style="width: 125px;">Amount</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Package</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Duration</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" style="width: 209.234px;">Reference ID</th>
+                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Last login: activate to sort column ascending" style="width: 125px;">Completed</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Date</th>
                                     <th class="text-end min-w-100px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 100px;">Actions</th></tr>
                                 <!--end::Table row-->
@@ -197,25 +217,45 @@
                                             <!--end::User=-->
                                             <!--begin::Role=-->
                                             <td>
-                                                <div class="badge badge-@if($investment->status == 'pending')warning @elseif($investment->status == 'decline')danger @elseif($investment->status == 'processed')success @endif fw-bolder">{{ $investment->status }} <i class="fa fa-spinner fa-spin text-light"></i>
+                                                <div class="badge badge-@if($investment->status == 'pending')warning @elseif($investment->status == 'decline')danger @elseif($investment->status == 'processed')success @endif fw-bolder">{{ $investment->status }}
+                                                    <i class="@if($investment->status == 'pending')fa fa-spinner fa-spin @elseif($investment->status == 'decline')fa fa-ban @elseif($investment->status == 'processed') fa fa-spinner fa-spin @endif text-light"></i>
                                                 </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="badge badge-@if($investment->completed === 0)warning @else success @endif"> hi </div>
                                             </td>
                                             <!--end::Role=-->
                                             <!--begin::Last login=-->
                                             <td data-order="$$$">
-                                                <div class="badge badge-light fw-bolder">${{ number_format($investment->amount) }}</div>
+                                                <div class="alert alert-light fw-bolder">${{ number_format($investment->amount) }}</div>
                                             </td>
                                             <!--end::Last login=-->
                                             <!--begin::Two step=-->
                                             <!--end::Two step=-->
                                             <!--begin::Joined-->
-                                            <td data-order="#abcsd">{{ $investment->plan }}</td>
-                                            <td data-order="#abcsd"><div class="badge badge-warning">@if($investment->plan == 'Enterprise') 3weeks @elseif($investment->plan == 'World Class') 4weeks @elseif($investment->plan == 'Unlimited') 5weeks @endif </div></td>
+                                            <td data-order="#abcsd">
+                                                @if($investment->plan == 'Enterprise'){{ $investment->plan }}
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                                    </svg>
+                                                @elseif($investment->plan == 'World Class'){{ $investment->plan }}
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                                    </svg>
+                                                @elseif($investment->plan == 'Unlimited'){{ $investment->plan }}
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+                                                        <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
+                                                        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                                                    </svg>
+                                                @endif
+                                            </td>
+                                            <td data-order="#abcsd">
+                                                @if($investment->plan == 'Enterprise')<div class="badge badge-warning"> 3weeks
+                                                @elseif($investment->plan == 'World Class')<div class="badge badge-warning"> 4weeks
+                                                @elseif($investment->plan == 'Unlimited')<div class="badge badge-success"> 5weeks @endif </div>
+                                            </td>
                                             <td data-order="#abcsd">{{ $investment->ref }}</td>
+
+                                            <td>
+                                                <div class="badge badge-@if($investment->completed === 0)warning @else success @endif"> </div>
+                                            </td>
                                             <td data-order="2021-05-05T17:20:00+01:00">{{ $investment->created_at->toFormattedDateString() }}</td>
                                             <!--begin::Joined-->
                                             <!--begin::Action=-->
@@ -223,7 +263,11 @@
                                                 <!--end::Menu item-->
                                                 <!--begin::Menu item-->
                                                 <a href="#" class="menu-link px-2 btn btn-light-success btn-sm" data-bs-toggle="modal" data-bs-target="#receipt{{ $investment->id }}"><i class="fa fa-eye"></i></a>
-                                                <a href="#" class="menu-link px-3 btn btn-danger btn-sm" data-kt-users-table-filter="delete_row">Hide</a>
+                                                <a href="#" class="menu-link px-3 btn btn-danger btn-sm" data-kt-users-table-filter="delete_row"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                                                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+                                                    </svg>
+                                                </a>
                                                 <!--end::Menu-->
                                             </td>
                                             <!--end::Action=-->
@@ -302,7 +346,25 @@
                                                                             <label class="required fs-5 fw-bold mb-2">Investment Package</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p class="btn btn-light-success btn-sm">{{ $investment->plan }}</p>
+
+                                                                                @if($investment->plan == 'Enterprise')
+                                                                                <p class="btn btn-light-warning btn-sm">{{ $investment->plan }}
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                                                                    <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                                                                </svg>
+                                                                                @elseif($investment->plan == 'World Class')
+                                                                                <p class="btn btn-light-warning btn-sm">{{ $investment->plan }}
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                                                                    <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                                                                </svg>
+                                                                                @elseif($investment->plan == 'Unlimited')
+                                                                                <p class="btn btn-light-success btn-sm">{{ $investment->plan }}
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+                                                                                    <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
+                                                                                    <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                                                                                </svg>
+                                                                                @endif
+                                                                            </p>
                                                                             <!--end::Input-->
                                                                         </div>
                                                                         <!--end::Col-->

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<title>Our Expert Teams</title>
+<title>{{env("APP_NAME")}} - Expert Teams</title>
 
 <div class="landing_wrapper breadcrumb_wrapper">
         <div class="wrapper breadcrumb_wrapper_content" style="background-image: url('https://eskipaper.com/images/3d-wallpaper-20.jpg'); background-size: cover">
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="wrapper blog_page_wrapper">
         <div class="container">
             <div class="row">
@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    
+
     <div id="team_wrapper" class="wrapper team_wrapper" style="background-image: url('https://eskipaper.com/images/3d-wallpaper-20.jpg'); background-size: cover">
         <div class="container">
             <div class="row">

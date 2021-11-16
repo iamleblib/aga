@@ -37,7 +37,16 @@
                 <!--begin::Button-->
 
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Top Up</a>
+                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#withdraw" id="kt_toolbar_primary_button"><span class="menu-icon">
+                                    <!--begin::Svg Icon | path: /icons/duotune/general/gen002.svg-->
+                                    <span class="svg-icon svg-icon-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-node-minus-fill" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M16 8a5 5 0 0 1-9.975.5H4A1.5 1.5 0 0 1 2.5 10h-1A1.5 1.5 0 0 1 0 8.5v-1A1.5 1.5 0 0 1 1.5 6h1A1.5 1.5 0 0 1 4 7.5h2.025A5 5 0 0 1 16 8zm-2 0a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5A.5.5 0 0 0 14 8z"/>
+                                    </svg>
+                                    </span>
+                        <!--end::Svg Icon-->
+                                </span>
+                    Cash out</a>
                 <!--end::Button-->
             </div>
             <!--end::Actions-->
@@ -194,7 +203,8 @@
                                             <!--end::User=-->
                                             <!--begin::Role=-->
                                             <td>
-                                                <div class="badge badge-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'decline')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">{{ $withdraw->status }} <i class="fa fa-spinner fa-spin text-light"></i>
+                                                <div class="badge badge-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'decline')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">{{ $withdraw->status }}
+                                                    <i class="@if($withdraw->status == 'pending')fa fa-spinner fa-spin @elseif($withdraw->status == 'decline')fa fa-ban @elseif($withdraw->status == 'processed') fa fa-check @endif text-light"></i>
                                                 </div>
                                             </td>
                                             <!--end::Role=-->
@@ -226,7 +236,11 @@
                                                 <!--end::Menu item-->
                                                 <!--begin::Menu item-->
                                                 <a href="#" class="menu-link px-2 btn btn-light-success btn-sm" data-bs-toggle="modal" data-bs-target="#receipt{{ $withdraw->id }}"><i class="fa fa-eye"></i></a>
-                                                <a href="#" class="menu-link px-3 btn btn-danger btn-sm" data-kt-users-table-filter="delete_row">Hide</a>
+                                                <a href="#" class="menu-link px-3 btn btn-danger btn-sm" data-kt-users-table-filter="delete_row"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                                                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+                                                    </svg>
+                                                </a>
                                                 <!--end::Menu-->
                                             </td>
                                             <!--end::Action=-->
@@ -331,7 +345,7 @@
                                                                             <label class="fs-5 fw-bold mb-2 required">Withdrawal Status</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p class="fs-7 fw-bold alert alert-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'decline')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">Your withdrawal is {{ $withdraw->status }} <i class="fa fa-spinner fa-spin"></i></p>
+                                                                            <p class="fs-7 fw-bold alert alert-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'decline')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">Your withdrawal is {{ $withdraw->status }} <i class="@if($withdraw->status == 'pending')fa fa-spinner fa-spin @elseif($withdraw->status == 'decline')fa fa-ban @elseif($withdraw->status == 'processed') fa fa-check @endif"></i></p>
                                                                             <!--end::Input-->
                                                                         </div>
                                                                         <!--end::Col-->

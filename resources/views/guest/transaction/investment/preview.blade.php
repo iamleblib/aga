@@ -64,7 +64,7 @@
                             <div class="text-sm-end">
                                 <!--begin::Logo-->
                                 <a href="#">
-                                    <img alt="Logo" src="{{ asset('backend/assets/media/svg/brand-logos/duolingo.svg')}}">
+                                    <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png')}}" width="20%">
                                 </a>
                                 <!--end::Logo-->
                                 <!--begin::Text-->

@@ -2,9 +2,9 @@
 
 @section('content')
 
-<title>Coinbase Asset - Bitcoin and Cryptocurrency Platform</title>
-    
-    
+<title>{{env("APP_NAME")}} - Bitcoin and Cryptocurrency Platform</title>
+
+
     <div class="loader">
         <div id="loader_wrap">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="100 100 400 400" xml:space="preserve">
@@ -36,9 +36,9 @@
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-between">
                     <div class="col-md-7">
-                        <h5 class="text_colored" data-animation-in="slideInRight">Welcome to Coinbase Assets</h5>
+                        <h5 class="text_colored" data-animation-in="slideInRight">Welcome to {{env("APP_NAME")}}</h5>
                         <h4 data-animation-in="slideInLeft">Join us today at <span class="text_colored">Coinbaseassets.com</span></h4>
-                        <p data-animation-in="slideInRight">Coinbase Assets is a cryptocurrency and worldwide payment system. The network is peer-to-peer and transactions .</p>
+                        <p data-animation-in="slideInRight">{{env("APP_NAME")}} is a cryptocurrency and worldwide payment system. The network is peer-to-peer and transactions .</p>
                         <a data-animation-in="slideInUp" class="btn_default" href="{{ route('register')}}">Join Us</a>
                         <a data-animation-in="slideInUp" class="btn_white" href="{{ route('about')}}">Read More</a>
                     </div>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="wrapper landing_wrapper_content" style="background-image: url({{ asset('front/img/landing_bg_img_01.jpeg')}})">
             <div class="container h-100">
@@ -172,8 +172,8 @@ The comeback — a gain of another 12% would take it back to its all-time high o
         </div>
     </div>
 
-    
-    
+
+
     <div class="wrapper opportunity_wrapper">
         <div class="container">
             <div class="row">
@@ -181,7 +181,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                     <!-- TradingView Widget BEGIN -->
                         <div class="tradingview-widget-container">
                             <div class="tradingview-widget-container__widget"></div>
-                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/economic-calendar/" rel="noopener" target="_blank"><span class="blue-text">Coinbase Assets Calendar</span></a> by TradingView</div>
+                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/economic-calendar/" rel="noopener" target="_blank"><span class="blue-text">{{env("APP_NAME")}} Calendar</span></a> by TradingView</div>
                             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
                             {
                             "colorTheme": "dark",
@@ -197,7 +197,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                 </div>
                 <div class="col-md-6">
                     <h3 class="opportunity_title opp_ttl_02">Connecting Great Investors <br> To Great Companies</h3>
-                    <p class="text_colored opportunity_subtitle_01 opp_sttl_01_02">If you had invested $10,000 in Coinbase Assets at the start of year, you would have had an approximate profit of $30,000 by August.</p>
+                    <p class="text_colored opportunity_subtitle_01 opp_sttl_01_02">If you had invested $10,000 in {{env("APP_NAME")}} at the start of year, you would have had an approximate profit of $30,000 by August.</p>
                     <p class="opportunity_subtitle_02 opp_sttl_02_02">Bitcoin is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.</p>
                     <a class="btn_default" href="{{ route('register')}}">Sign Up <img class="icon_img" src="{{ asset('front/img/icons/chat.png')}}" width="30px" alt=""></a>
                 </div>
@@ -233,7 +233,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
             <div class="row h-100 align-items-center">
                 <div class="col-md-6">
                     <h2 class="wrapper_title">You can sign in to our website using any of the Security Cyber Apps</h2>
-                    <p class="da_wrapper_subtitle">We recommend most security Softwares and Emails to register with Coinbase Assets and Access our webiste content and values  </p>
+                    <p class="da_wrapper_subtitle">We recommend most security Softwares and Emails to register with {{env("APP_NAME")}} and Access our webiste content and values  </p>
                     <p class="da_wrapper_subtitle">You may not find other browser or software listed below, we Literally use security cyber to encrypt your device from phising.  </p>
                     <a href="{{ route('register') }}" class="btn_default">Register <img class="icon_img" src="{{ asset('front/img/icons/chat.png')}}" width="30px" alt=""><i class="fa fa-arrow-right"></i></a>
                     <div class="app_stores_links">
@@ -309,9 +309,9 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                                     <div class="row btc_excng_wrapper_input_inner justify-content-center">
                                         <script src="https://widgets.coingecko.com/coingecko-coin-converter-widget.js"></script>
                                         <coingecko-coin-converter-widget  coin-id="bitcoin" currency="usd" background-color="#ffffff" font-color="#4c4c4c" locale="en"></coingecko-coin-converter-widget>
-                                        
+
                                         <div class="col-lg-2 col-12">
-                                            <a href="{{ route('login') }}" class="btn_default" style="margin: -560px 80px 0px -100px" type="submit">Deposit <i class="fa fa-exchange"></i></a>
+                                            <a href="{{ route('deposit.logs') }}" class="btn_default" style="margin: -560px 80px 0px -100px" type="submit">Deposit <i class="fa fa-exchange"></i></a>
                                         </div>
                                         </div>
                                     </div>
@@ -346,7 +346,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                             <img src="{{ asset('front/img/icons/user.png')}}" alt="">
                         </div>
                         <h4 class="steps_03_title">Active Account</h4>
-                        <p class="steps_03_subtitle">You're not authorize to earn from Coinbase Assets if you have no registered account.</p>
+                        <p class="steps_03_subtitle">You're not authorize to earn from {{env("APP_NAME")}} if you have no registered account.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -464,7 +464,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                         <!-- TradingView Widget BEGIN -->
                             <div class="tradingview-widget-container">
                                 <div class="tradingview-widget-container__widget"></div>
-                                
+
                                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
                                 {
                                 "interval": "1m",
@@ -493,7 +493,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                         <!-- TradingView Widget BEGIN -->
                             <div class="tradingview-widget-container">
                                 <div class="tradingview-widget-container__widget"></div>
-                                
+
                                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
                                 {
                                 "colorTheme": "dark",
@@ -555,7 +555,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Coinbase Assets is a registered digital Forex Trading Investment firm based in the UK. The platform, which includes advanced basic and technical analysis at the source of high return performance, offers high & fixed interest return. Aiming for success with its international investor network, experienced team, privileged information from business and technology world; Coinbase Assets stands out from its competitors with its proven quality and ease of use. The company, which is managed under the leadership of people who think and foresee the future, is committed to achieving high returns from well-diversified portfolios and prioritizing clients.
+                                    {{env("APP_NAME")}} is a registered digital Forex Trading Investment firm based in the UK. The platform, which includes advanced basic and technical analysis at the source of high return performance, offers high & fixed interest return. Aiming for success with its international investor network, experienced team, privileged information from business and technology world; {{env("APP_NAME")}} stands out from its competitors with its proven quality and ease of use. The company, which is managed under the leadership of people who think and foresee the future, is committed to achieving high returns from well-diversified portfolios and prioritizing clients.
                                 </div>
                                 <center><a href="{{ route('faq')}}" class="btn_default align-center">More FAQs</a></center>
                             </div>
@@ -565,7 +565,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
             </div>
         </div>
     </div>
-    
+
     <div id="team_wrapper" class="wrapper team_wrapper">
         <div class="container">
             <div class="row">
@@ -732,7 +732,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                     </div>
                     <div class="col-lg-7 col-md-12">
                         <div class="taken_details">
-                            <p class="token_details_text">Coinbase Assets is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.</p>
+                            <p class="token_details_text">{{env("APP_NAME")}} is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.</p>
                             <div class="row no-gutters">
                                 <div class="col-md-6 col-12">
                                     <div class="token_details_single_info">
@@ -771,7 +771,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                     </div>
                     <div class="col-md-6 pl-25">
                         <p>We Accept: BTC, ETH, USDC</p>
-                        <a class="btn_default" href="{{ route('login')}}">Invest Now <img src="{{ asset('front/img/icons/money_t.png')}}" width="30px" alt=""></a>
+                        <a class="btn_default" href="{{ route('investment.guest.index')}}">Invest Now <img src="{{ asset('front/img/icons/money_t.png')}}" width="30px" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -814,11 +814,11 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                             <li class="mb-3 text-muted">
                             <i class="fa fa-times mr-2"></i><del>BECOME AN AGENT</del></li>
                         </ul>
-                        <a href="#" class="btn rounded-lg btn-block btn-warning p-2 shadow rounded-pill">Start Now!</a>
+                        <a href="{{route('investment.guest.index')}}" class="btn rounded-lg btn-block btn-warning p-2 shadow rounded-pill">Start Now!</a>
                     </div>
                 </div>
             </div>
-            
+
                 <!-- Pricing Table-->
                 <div class="col-lg-12 mb-12 mb-lg-0">
                     <div class="bg-white p-5 rounded-lg shadow">
@@ -842,10 +842,10 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                             <i class="fa fa-times mr-2"></i><del>BECOME AN AGENT</del></li>
                         </li>
                     </ul>
-                    <a href="#" class="btn rounded-lg btn-block btn-warning p-2 shadow rounded-pill">Start Now!</a>
+                    <a href="{{route('investment.guest.index')}}" class="btn rounded-lg btn-block btn-warning p-2 shadow rounded-pill">Start Now!</a>
                     </div>
                 </div>
-                
+
                 <!-- Pricing Table-->
                 <div class="col-lg-12">
                     <div class="bg-white p-5 rounded-lg shadow">
@@ -868,7 +868,7 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                             <li class="mb-3">
                             <i class="fa fa-check mr-2 text-primary"></i>BECOME AN AGENT</li>
                     </ul>
-                    <a href="#" class="btn rounded-lg btn-block btn-success p-2 shadow rounded-pill">Start Now!</a>
+                    <a href="{{route('investment.guest.index')}}" class="btn rounded-lg btn-block btn-success p-2 shadow rounded-pill">Start Now!</a>
                         </div>
                     </div>
                 </div>
@@ -921,7 +921,8 @@ The comeback — a gain of another 12% would take it back to its all-time high o
                 </div>
                 <div class="col-md-6">
                     <!-- Google Map Start Here -->
-                    <div class="gmap-area"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.954119524521!2d10.72558835650488!3d59.92163869678888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416dd6397d5e5b%3A0x688ba8f67d3ba81f!2sBusiness%20Angel%20Network%20Norway!5e0!3m2!1sen!2sng!4v1636503242167!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                    <div class="gmap-area">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.954119524521!2d10.72558835650488!3d59.92163869678888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416dd6397d5e5b%3A0x688ba8f67d3ba81f!2sBusiness%20Angel%20Network%20Norway!5e0!3m2!1sen!2sng!4v1636503242167!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
                 </div>
             </div>
         </div>

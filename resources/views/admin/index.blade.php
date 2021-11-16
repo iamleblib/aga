@@ -76,6 +76,24 @@
 
                                 <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
+                                    <a href="{{ route('deposit.index') }}" class="card card-xxl-stretch bg-body">
+                                        <!--begin::Body-->
+                                        <div class="card-body d-flex flex-column justify-content-between">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
+                                                <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
+                                            </svg>
+                                            <div class="d-flex flex-column">
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">{{ number_format($deposit->getPendingDepositCount()) }}</div>
+                                                <div class="text-muted fw-bold fs-6">Total Pending Deposits</div>
+                                            </div>
+                                        </div>
+                                        <!--end::Body-->
+                                    </a>
+                                    <!--end::Tiles Widget 5-->
+                                </div>
+
+                                <div class="col-md-4 p-5">
+                                    <!--begin::Tiles Widget 5-->
                                     <a href="{{ route('investment.index') }}" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">

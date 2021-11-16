@@ -3,7 +3,7 @@
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <title>@yield('title') | Coin Base</title>
+    <title>@yield('title') | {{ env("APP_NAME")}}</title>
     <meta charset="utf-8" />
     <meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
     <meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -12,7 +12,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="CBA - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
     <meta property="og:url" content="https://keenthemes.com/metronic" />
-    <meta property="og:site_name" content="Coinbase Asset" />
+    <meta property="og:site_name" content="{{env("APP_NAME")}}" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="{{ asset('backend/assets/media/logos/favicon.ico') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
@@ -116,7 +116,7 @@
             <div class="modal-body pt-0 pb-15 px-5 px-xl-20">
                 <!--begin::Heading-->
                 <div class="mb-13 text-center">
-                    <h1 class="mb-3">Fund Your Coinbase Asset Wallet</h1>
+                    <h1 class="mb-3">Fund Your {{env("APP_NAME")}} Wallet</h1>
                     <div class="text-muted fw-bold fs-5">If you need more info, please check
                         <a href="#" class="link-primary fw-bolder">Pricing Guidelines</a>.</div>
                 </div>
@@ -145,7 +145,7 @@
                                         <!--end::Radio-->
                                         <!--begin::Info-->
                                         <div class="flex-grow-1">
-                                            <h2 class="d-flex align-items-center fs-2 fw-bolder flex-wrap">Enterprices</h2>
+                                            <h2 class="d-flex align-items-center fs-2 fw-bolder flex-wrap">Enterprises</h2>
                                             <div class="fw-bold opacity-50">Best for startups</div>
                                         </div>
                                         <!--end::Info-->

@@ -50,7 +50,16 @@
                 <!--begin::Button-->
 
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Fund Wallet</a>
+                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">
+                    <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: /icons/duotune/general/gen002.svg-->
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-node-plus-fill" viewBox="0 0 16 16">
+                          <path d="M11 13a5 5 0 1 0-4.975-5.5H4A1.5 1.5 0 0 0 2.5 6h-1A1.5 1.5 0 0 0 0 7.5v1A1.5 1.5 0 0 0 1.5 10h1A1.5 1.5 0 0 0 4 8.5h2.025A5 5 0 0 0 11 13zm.5-7.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2a.5.5 0 0 1 1 0z"/>
+                        </svg>
+                    </span>
+                        Fund Wallet
+                </a>
                 <!--end::Button-->
             </div>
             <!--end::Actions-->
@@ -255,7 +264,7 @@
                             <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed mb-9 p-6">
                                 <!--begin::Icon-->
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
-                                <span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+                                <span class="svg-icon svg-icon-2tx svg-icon-danger me-4">
 													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 														<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
 														<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black" />
@@ -268,7 +277,7 @@
                                 <div class="d-flex flex-stack flex-grow-1">
                                     <!--begin::Content-->
                                     <div class="fw-bold">
-                                        <h4 class="text-danger-900 fw-bolder">You Are Deactivating Your Account</h4>
+                                        <h4 class="text-danger-900 fw-bolder">Deactivating Your Account</h4>
                                         <div class="fs-6 text-gray-700">For extra security, this requires you to confirm your password.</div>
                                     </div>
                                     <!--end::Content-->
@@ -280,7 +289,9 @@
                         <!--end::Card body-->
                         <!--begin::Card footer-->
                         <div class="card-footer d-flex justify-content-end py-6 px-9">
-                            <a data-bs-toggle="modal" data-bs-target="#delete" class="btn btn-danger px-6 align-self-center text-nowrap"><i class="fa fa-trash"></i> Delete account</a>
+                            <a data-bs-toggle="modal" data-bs-target="#delete" class="btn btn-danger px-6 align-self-center text-nowrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
+                                    <path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+                                </svg> Deactivate</a>
                         </div>
                         <!--end::Card footer-->
                     </form>
@@ -317,7 +328,9 @@
                                 <!--begin::Heading-->
                                 <div class="mb-13 text-center">
                                     <!--begin::Title-->
-                                    <h1 class="mb-3">Delete your account </h1>
+                                    <h1 class="mb-3">Delete My Account <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
+                                            <path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+                                        </svg> </h1>
                                 </div>
                                 <!--end::Heading-->
                                 <!--begin::Input group-->
@@ -326,7 +339,7 @@
                                     <!--begin::Notice-->
                                     @csrf
                                         <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed mb-9 p-6">
-                                        <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                        <span class="svg-icon svg-icon-2tx svg-icon-danger me-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                 <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
                                                 <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
@@ -338,15 +351,19 @@
                                                 <div class="row p-2">
                                                     <div class="col-12">
                                                         <div class="fw-bold">
-                                                            <div class="fs-6 text-gray-700">By deleting your account, you agree to lose all credential and active funds attached to your account</div>
+                                                            <div class="fs-6 text-gray-700">By deleting your account, you agree to lose all credential and active funds attached to your account & all personal data will be lost.</div>
                                                         </div>
                                                     </div>
-
+                                                        <div class="p-4"></div>
                                                     <div class="col-md-8">
                                                         <input required placeholder="Enter password to confirm delete" type="password" @class('form-control') name="password" >
                                                     </div>
                                                     <div class="col-4">
-                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                                                        <button type="submit" class="btn btn-danger">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                                            </svg>
+                                                        </button>
                                                     </div>
                                                 </div>
 

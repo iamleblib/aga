@@ -2,7 +2,7 @@
 
 @section('content')
 
-<title>Coinbase Assets - About us</title>
+<title>{{env("APP_NAME")}} - About us</title>
 
 
 <div class="landing_wrapper breadcrumb_wrapper">
@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="single_blog_item align-left">
                     <div class="blog_info">
-                        <a class="blog_title" href="#">About Coinbase Assets</a>
+                        <a class="blog_title" href="#">About {{env("APP_NAME")}}</a>
                         <div style="margin: 10px; !important"></div>
                         <img class="" src="{{ asset('front/img/Wrapper_title_divider.png')}}" aria-colcount="" alt="">
                     </div>
@@ -46,12 +46,12 @@
                         <div class="blog_sidebar_widget">
                             <h2 class="blog_sidebar_title">Quick Link</h2>
                             <ul class="blog_sidebar_category">
-                                <li><a href="register"><i class="fa fa-angle-right text_colored"></i>Registration</a></li>
-                                <li><a href="login"><i class="fa fa-angle-right text_colored"></i>Login</a></li>
-                                <li><a href="privacy"><i class="fa fa-angle-right text_colored"></i>Privacy Policy</a></li>
-                                <li><a href="terms"><i class="fa fa-angle-right text_colored"></i>Terms & Condition</a></li>
-                                <li><a href="legacy"><i class="fa fa-angle-right text_colored"></i>Legal Certificate </a></li>
-                                <li><a href="plans"><i class="fa fa-angle-right text_colored"></i>Investment Plans</a></li>
+                                <li><a href="{{ route('register')}}"><i class="fa fa-angle-right text_colored"></i>Registration</a></li>
+                                <li><a href="{{ route('login')}}"><i class="fa fa-angle-right text_colored"></i>Login</a></li>
+                                <li><a href="{{ route('terms')}}"><i class="fa fa-angle-right text_colored"></i>Privacy Policy</a></li>
+                                <li><a href="{{ route('terms')}}"><i class="fa fa-angle-right text_colored"></i>Terms & Condition</a></li>
+                                <li><a href="{{ route('legacy')}}"><i class="fa fa-angle-right text_colored"></i>Legal Certificate </a></li>
+                                <li><a href="{{ route('packages')}}"><i class="fa fa-angle-right text_colored"></i>Investment Plans</a></li>
                             </ul>
                         </div>
                         <div class="blog_sidebar_widget blog_sidebar_ad">
@@ -84,18 +84,18 @@
                                 <br>
                                 <br>
                                 <p class="blog_desc">
-                                Coinbase Assets is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.
-
-                                    <b>Started</b>Aug 15, 2018 (9:12 AM GMT)
-                                    <b>Registered</b> Feb 19, 2019 (13:44 AM GMT)
-                                    <b>Certified </b> Nov 31, 2019 (9:00 AM GMT)
+                                    {{env("APP_NAME")}} is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.
+                                    <br>
+                                    <b>Started</b> Aug 15, 2018 (9:12 AM GMT) <br>
+                                    <b>Registered</b> Feb 19, 2019 (13:44 AM GMT) <br>
+                                    <b>Certified </b> Nov 31, 2019 (9:00 AM GMT) <br>
                                     <b>Published</b> Dec 5, 2019 (9:00 AM GMT)
                                     <br>
                                         <br>
-                                    Coinbase Assets is a fast-rising, technological-driven blockchain-based platform that empowers and operates Forex, Natural Gas, Crude Oil, Gold, Indices, Bonds. We are creating a business opportunity for the investors who wish to deal with a simple investment plan and with a safety as their own infrastructure type, and also to make their lifestyle worth living without any left-out debts and free of the complex trade..
+                                    {{env("APP_NAME")}} is a fast-rising, technological-driven blockchain-based platform that empowers and operates Forex, Natural Gas, Crude Oil, Gold, Indices, Bonds. We are creating a business opportunity for the investors who wish to deal with a simple investment plan and with a safety as their own infrastructure type, and also to make their lifestyle worth living without any left-out debts and free of the complex trade..
 
                                     Our team experts resuming experience of almost two decades with near to accurate results for our customers. Also providing outstanding services, which incorporate both mining services and trading platform.
-                                    
+
                                     We well understand and digest that our investor’s capital is importantly allocated at the very right area and for which we provide a complete and accurate transparency in a high definition source and a quality security to the individual with an end encryption sockets, while assuring a fully transparent deposit deals with a very swift easy withdrawal pay-out policy. Which will help our investors to create a solid financial history in their own career and keep them always an updated trading master by himself.
                                     <a href=""></a>
                                     </p>
@@ -122,16 +122,16 @@
                                         For every good trader, there comes a time when he forgets whether he is trading to make money or to prove that he is right.
                                         When he focuses on the latter, that's when disaster strikes.
                                     </p>
-                                    
+
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-3 p-2">
                                                <!-- Forex Trading -->
-                                               
+
                                                 <button type="button" class="btn btn-block" data-toggle="modal" data-target="#exampleModalCenter">
                                                     Forex Trading <img src="{{ asset('front/img/forex-trading.png')}}" alt="" width="50px">
                                                 </button>
-                                                
+
                                                 <!-- Modal -->
                                                 <div class="modal fade" style="background: silver;" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -144,7 +144,7 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             Through an analytic observation, we understand that our investors are looking for handsome profits.
-                                                            Forex is an ultimate element that can yield you wider benefits. 
+                                                            Forex is an ultimate element that can yield you wider benefits.
                                                             <br>
                                                             The foreign exchange market is the "area" where currencies are traded. Hence, Currencies are important to most
                                                             people around the world, whether they realize it or not because currencies need to be exchanged in order to conduct
@@ -156,7 +156,7 @@
                                                             specific date in the future.
                                                         </div>
                                                         <div class="modal-footer">
-                                                        
+
                                                         <button type="button" data-dismiss="modal" class="btn btn-primary">Thumbs  <i class="fa fa-thumbs-up"></i></button>
                                                         </div>
                                                     </div>
@@ -170,7 +170,7 @@
                                                 <button type="button" class="btn btn-block" data-toggle="modal" data-target="#exampleModalCenter2">
                                                     Stock Trading <img src="{{ asset('front/img/stocks-trading.png')}}" alt="" width="50px">
                                                 </button>
-                                                
+
                                                 <!-- Modal -->
                                                 <div class="modal fade"  style="background: darkgrey" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -192,7 +192,7 @@
                                                             range of stocks to diversify your oriented portfolios.
                                                         </div>
                                                         <div class="modal-footer">
-                                                        
+
                                                         <button type="button" data-dismiss="modal" class="btn btn-primary">Thumbs  <i class="fa fa-thumbs-up"></i></button>
                                                         </div>
                                                     </div>
@@ -206,7 +206,7 @@
                                             <button type="button" class="btn btn-block" data-toggle="modal" data-target="#exampleModalCenter3">
                                                 Crypto <img src="{{ asset('front/img/cryptocurrency.png')}}" alt="" width="50px">
                                             </button>
-                                            
+
                                             <!-- Modal -->
                                             <div class="modal fade"  style="background: darkgrey" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -225,7 +225,7 @@
                                                         etc. We strongly believe derivatives are the next step in evolution of Cryptocurrencies as a bona-fide asset class.
                                                     </div>
                                                     <div class="modal-footer">
-                                                    
+
                                                     <button type="button" data-dismiss="modal" class="btn btn-primary">Thumbs  <i class="fa fa-thumbs-up"></i></button>
                                                     </div>
                                                 </div>
@@ -233,13 +233,13 @@
                                             </div>
                                         </div>
 
-                                    
+
                                         <div class="col-lg-3 p-2">
                                             <!-- precious-metals  -->
                                             <button type="button" class="btn btn-block" data-toggle="modal" data-target="#exampleModalCenter4">
                                                 Metal <img src="{{ asset('front/img/precious-metals.png')}}" alt="" width="50px">
                                             </button>
-                                            
+
                                             <!-- Modal -->
                                             <div class="modal fade"  style="background: darkgrey" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -268,7 +268,7 @@
                                                             compared to other precious metals, it is slowly becoming one of the favorite investment platforms.</p>
                                                     </div>
                                                     <div class="modal-footer">
-                                                    
+
                                                     <button type="button" data-dismiss="modal" class="btn btn-primary">Thumbs  <i class="fa fa-thumbs-up"></i></button>
                                                     </div>
                                                 </div>
@@ -283,7 +283,7 @@
                                         <button type="button" class="btn btn-block" data-toggle="modal" data-target="#exampleModalCenter5">
                                             Crude Oil <img src="{{ asset('front/img/crude-oil.png')}}" alt="" width="50px">
                                         </button>
-                                        
+
                                         <!-- Modal -->
                                         <div class="modal fade"  style="background: darkgrey" id="exampleModalCenter5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -298,7 +298,7 @@
                                                     Investment with the crude oil needed to be handled with care, as there are multiple options available while investing in crude oil. Though it is easy to handle a proper precaution better to be taken, else great lose cannot be avoided. For trading in oil, the source from where it is being extracted need to be researched on a two way phase, first from where it is being extracted and second efficient use of it. Which we do for our investor and take their headache of sorting it in a particular sequence, so that it gets easy for them to understand and earn a reward.
                                                 </div>
                                                 <div class="modal-footer">
-                                                
+
                                                 <button type="button" data-dismiss="modal" class="btn btn-primary">Thumbs  <i class="fa fa-thumbs-up"></i></button>
                                                 </div>
                                             </div>
@@ -311,7 +311,7 @@
                                     <button type="button" class="btn btn-block" data-toggle="modal" data-target="#exampleModalCenter6">
                                         Natural Gas <img src="{{ asset('front/img/natural-gas.png')}}" alt="" width="50px">
                                     </button>
-                                    
+
                                     <!-- Modal -->
                                     <div class="modal fade"  style="background: darkgrey" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -326,14 +326,14 @@
                                                 It appeals to the most favourite investments in the world of trading. It is an attractive and suitable alternative behalf fuel as it is clean burning and efficient by any angle, and also have ample of supply, which will help to raise the potential of the resource as a smart investment. The use of natural gas for the generation of electricity is like to strike the market as it causes less harm to the environment. Due to which it is considered to be the fastest growing industry among all, which gives a marvellous opportunity for investors to earn in a smart way through the digital world globally
                                             </div>
                                             <div class="modal-footer">
-                                            
+
                                             <button type="button" data-dismiss="modal" class="btn btn-primary">Thumbs  <i class="fa fa-thumbs-up"></i></button>
                                             </div>
                                         </div>
                                         </div>
                                     </div>
                                 </div>
-                            
+
 
 
                             <div class="col-lg-4 p-2">
@@ -341,7 +341,7 @@
                                     <button type="button" class="btn btn-block" data-toggle="modal" data-target="#exampleModalCenterEstate">
                                         Real Estate <img src="{{ asset('front/img/real-estate.png')}}" alt="" width="17px">
                                     </button>
-                                    
+
                                     <!-- Modal -->
                                     <div class="modal fade"  style="background: darkgrey" id="exampleModalCenterEstate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -353,18 +353,18 @@
                                             </button>
                                             </div>
                                             <div class="modal-body">
-                                            XXXXX is an enterprise whose purpose is to tokenize parts of the traditional investment models and bring them to the masses. XXXXX Security
-                                            tokens offer members an easy and accessible way to participate in exclusive opportunities. XXXXX foundations are build on a real estate portfolio ensuring the
+                                            {{env("APP_NAME")}} is an enterprise whose purpose is to tokenize parts of the traditional investment models and bring them to the masses. XXXXX Security
+                                            tokens offer members an easy and accessible way to participate in exclusive opportunities. {{env("APP_NAME")}} foundations are build on a real estate portfolio ensuring the
                                             necessary security and stability. We are a team of real estate & blockchain experts that offer a new way of participation in exciting global trends. We closely monitor global trends
-                                            and bring the most stable asset growth opportunities to the XXXXX Holding.
+                                            and bring the most stable asset growth opportunities to the {{env("APP_NAME")}} Holding.
                                             <br>
                                             <br>
-                                            Real estate is both head and heart. While technology can create a connected journey, there is no substitute for the counsel of professionals. XXXXX works with real estate 
-                                            agents, brokers, builders, propert managers and landlords to pair technology with top notch service. Our technology platform connects buyers, sellers and renters with the people and services 
-                                            hey need to make it easier to get into a home they love. Own a property today with XXXXX.
+                                            Real estate is both head and heart. While technology can create a connected journey, there is no substitute for the counsel of professionals. XXXXX works with real estate
+                                            agents, brokers, builders, property managers and landlords to pair technology with top notch service. Our technology platform connects buyers, sellers and renters with the people and services
+                                            hey need to make it easier to get into a home they love. Own a property today with {{env("APP_NAME")}}.
                                             </div>
                                             <div class="modal-footer">
-                                            
+
                                             <button type="button" data-dismiss="modal" class="btn btn-primary float-left">Thumbs  <i class="fa fa-thumbs-up"></i></button>
                                             <a href="{{ route('real_estate')}}" type="button" class="btn btn-warning">View Assets  <i class="fa fa-home"></i></a>
                                             </div>
@@ -381,7 +381,7 @@
 
                         <hr>
                         <div class="single_blog_item">
-                            
+
                             <div class="blog_info">
                                 <a class="blog_title" href="#">MISSION</a>
                                 <div style="margin: -20px; !important"></div>
@@ -393,7 +393,7 @@
                                     We believe that satisfaction is the only KEY, so we supply fully transparent trading accommodations and also the
                                     financial freedom to our investors, which is why we are more reliable and as flexible as our investor's financial
                                     desires.
-                                    
+
                                     </p>
                             </div>
                         </div>
@@ -401,7 +401,7 @@
 
                         <hr>
                         <div class="single_blog_item align-left">
-                            
+
                             <div class="blog_info">
                                 <a class="blog_title" href="#">OUR VISION</a>
                                 <div style="margin: -20px; !important"></div>
