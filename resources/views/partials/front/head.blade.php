@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-2 col-6">
                         <a href="{{ route('home')}}" class="logo">
-                            <img src="{{ asset('front/img/logo.png')}}" width="250px" alt="Coinbase Assets">
+                            <img src="{{ asset('front/img/logo.png')}}" width="150px" alt="{{env("APP_NAME")}}">
                         </a>
                     </div>
                     <div class="col-md-10 col-6">
@@ -62,9 +62,9 @@
                                 <li><a class="smooth_scroll" href="{{ route('about')}}">About</a></li>
                                 <li><a class="smooth_scroll" href="{{ route('team')}}">Team</a></li>
                                 <li><a class="smooth_scroll" href="{{ route('faq')}}">Faqs</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('home')}}#step_wrapper">Step</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('home')}}#investment_plan">Investment Plan</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('home')}}#contact_wrapper">Contact</a></li>
+                                <li><a class="smooth_scroll" href="{{ route('front.index')}}#step_wrapper">Step</a></li>
+                                <li><a class="smooth_scroll" href="{{ route('front.index')}}#investment_plan">Investment Plan</a></li>
+                                <li><a class="smooth_scroll" href="{{ route('front.index')}}#contact_wrapper">Contact</a></li>
                                 <!-- <li></li>
                                 <li><a class="smooth_scroll" href="#">More <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                                     <ul class="sub-menu">
@@ -82,5 +82,4 @@
             </div>
         </div>
     </div>
-    
-    
+

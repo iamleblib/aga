@@ -773,7 +773,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('investment.index')}}" class="menu-link px-5">Investment</a>
+                                <a href="{{ route('investment.guest.index')}}" class="menu-link px-5">Investment</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
@@ -833,7 +833,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="#" class="menu-link d-flex flex-stack px-5">ROI
+                                <a href="{{route('roi.log')}}" class="menu-link d-flex flex-stack px-5">ROI
                                     <i class="fas fa-exclamation-circle ms-2 fs-7"></i></a>
                             </div>
                             <!--end::Menu item-->
@@ -894,7 +894,7 @@
                                                     document.getElementById('logout-form').submit();" class="menu-item px-5">
                         <div class="menu-content px-5">
                             <label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success" for="kt_user_menu_dark_mode_toggle">
-                                <input class="form-check-input w-30px h-20px" type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="dark/index.html" />
+                                <input class="form-check-input w-30px h-20px" checked type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="dark/index.html" />
                                 <span class="pulse-ring ms-n1"></span>
                                 <span class="form-check-label text-gray-600 fs-7">Sign Out</span>
                             </label>
@@ -903,6 +903,19 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
+
+                    <div class="separator my-2"></div>
+                    <!--end::Menu separator-->
+                    <!--begin::Menu item-->
+                    <a href="{{ route('front.index') }}" class="menu-item px-5">
+                        <div class="menu-content px-5">
+                            <label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success">
+                                <span class="pulse-ring ms-n1"></span>
+                                <span class="form-check-label text-gray-600 fs-7">Visit Website</span>
+                            </label>
+                        </div>
+                    </a>
+
                     <!--end::Menu item-->
                 </div>
                 <!--end::Menu-->

@@ -25,6 +25,11 @@ class Deposit extends Model
         return $processedDeposit + $referralBonus - $investments - $withdrawals;
     }
 
+    public function getPendingDepositCount()
+    {
+        return $this->where('status', 'pending')->count();
+    }
+
     public function getTotalDeposit()
     {
         return $this->where('status', 'processed')->sum('amount');

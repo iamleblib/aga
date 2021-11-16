@@ -14,7 +14,9 @@
         <div class="container">
             <div class="row no-gutters justify-content-between">
                 <div class="col-lg-3 col-md-12">
-                    <div><a href="home-one.html"><img class="footer_logo" src="{{ asset('front/img/logo.png')}}" width="100%" alt=""></a></div>
+                    <div><a href="{{ route('front.index') }}">
+                            <img class="footer_logo" src="{{ asset('front/img/logo.png')}}" width="50%" alt=""></a>
+                    </div>
 
                     <div class="row no-gutters">
                         <div class="col">
@@ -57,11 +59,7 @@
                                     <input type="text" style="color:grey" name="mail" placeholder="Email Address" required>
                                     <button type="submit" name="send" class="btn_default"><i class="fa fa-paper-plane-o"></i></button>
                                    <br>
-                                   <?php if (isset($_POST["mail"])) {
-                                    echo ' <span class="text-danger">You encounter service error please try again</span>';
-                                } else {
-                                    echo "";
-                                } ?>
+
                                 </div>
                             </div>
                         </form>
@@ -69,21 +67,19 @@
                             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-                        <?php
-                                if (isset($_POST["mail"])) {
-                                    echo " <script>
-                                    Swal.fire(
-                                        'Service connection failed!',
-                                        'Unable to subscribe, please try again or click <b>OK</b> below to Contact us for more enquires',
-                                        'error'
-                                      ).then(function() {
-                                        window.location = 'index.php#contact_wrapper';
-                                    });
-                                      </script> ";
-                                } else {
-                                    echo "";
-                                }
-                        ?>
+
+{{--                                @if (isset($_POST["mail"])) {--}}
+{{--                                    echo " <script>--}}
+{{--                                    Swal.fire(--}}
+{{--                                        'Service connection failed!',--}}
+{{--                                        'Unable to subscribe, please try again or click <b>OK</b> below to Contact us for more enquires',--}}
+{{--                                        'error'--}}
+{{--                                      ).then(function() {--}}
+{{--                                        window.location = 'index.php#contact_wrapper';--}}
+{{--                                    });--}}
+{{--                                      </script> ";--}}
+{{--                                }--}}
+{{--                        @endif--}}
 
                     <div class="footer_socials">
                         <ul>

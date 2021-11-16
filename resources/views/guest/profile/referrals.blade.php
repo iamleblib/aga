@@ -69,12 +69,16 @@
                                     <!--end::Input group-->
                                     <!--begin::Actions-->
                                     <div class="d-flex">
-                                        <a href="#" class="btn btn-light w-100">
-                                            <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/google.svg')}}" class="h-15px me-3" />Import Contacts</a>
-                                        <a href="#" class="btn btn-light w-100 mx-6">
+                                        <a href="https://plus.google.com/share?url={{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" class="btn btn-light w-100">
+                                            <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/google.svg')}}" class="h-15px me-3" />Contacts</a>
+                                        <a href="https://www.facebook.com/share.php?{{ route('register') }}?user={{ auth()->user()->username }}"  target="_blank" class="btn btn-light w-100 mx-6">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/facebook.svg')}}" class="h-20px me-3" />Facebook</a>
-                                        <a href="#" class="btn btn-light w-100">
+                                        <a href="https://www.twitter.com/home?status=Am inviting you to join coinbase assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/twitter/share" class="btn btn-light w-100">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/twitter.svg')}}" class="h-20px me-3" />Twitter</a>
+                                        <a href="https://instagram.com/send?text=Am inviting you to join Coinbase Assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/instagram/share" class="btn btn-light w-100">
+                                            <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/instagram.svg')}}" class="h-20px me-3" />Instagram</a>
+                                        <a href="https://wa.me/?text=Am inviting you to join Coinbase Assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/whatsapp/share" class="btn btn-light w-100">
+                                            <img alt="Logo" src="{{ asset('backend/assets/media/icons/whatsapp.png')}}" class="h-20px me-3" />WhatsApp</a>
                                     </div>
                                     <!--end::Actions-->
                                     <!--begin::Input group-->
@@ -155,11 +159,11 @@
                 <!--begin::Content-->
                 <div class="mb-3 mb-md-0 fw-bold">
                     <h4 class="text-gray-900 fw-bolder">Withdraw Your Bonus to your Crypto wallet</h4>
-                    <div class="fs-6 text-gray-700 pe-7">Withdraw money sequencially to your cryptocurrency wallet. Commission is 2.5 - 5% per transaction under each downline</div>
+                    <div class="fs-6 text-gray-700 pe-7">Withdraw money sequencially to your cryptocurrency wallet. Commission is 2.5 - 5% per transaction under each down-line</div>
                 </div>
                 <!--end::Content-->
                 <!--begin::Action-->
-                <a data-bs-toggle="modal" data-bs-target="#withdrawRef" class="btn btn-danger px-6 align-self-center text-nowrap">Withdraw Money</a>
+                <a data-bs-toggle="modal" data-bs-target="#withdrawRef" class="btn btn-danger px-6 align-self-center text-nowrap">Withdraw Bonus</a>
                 <!--end::Action-->
             </div>
 
@@ -332,7 +336,7 @@
                     <h4 class="text-gray-900 fw-bolder">No Referral Found</h4>
                     <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
 
-                        <div class="fs-6 text-gray-700">You recently do not have any referral (downline) on your list!
+                        <div class="fs-6 text-gray-700">You recently do not have any referral (down-line) on your list!
                             <a href="#" class="fw-bolder" data-bs-toggle="modal" data-bs-target="#kt_modal_share_earn">Refer a friend today</a>
                         </div>
                     </ul>

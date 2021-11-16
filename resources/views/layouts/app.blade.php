@@ -4,11 +4,12 @@
     <!-- header -->
     <body>
             @yield('content')
+
             <div id="contact_wrapper" class="wrapper footer_wrapper" style="background-image: url('https://eskipaper.com/images/3d-wallpaper-20.jpg'); background-size: cover" data-src="{{ asset('front/img/footer-bg.jpg')}}">
         <div class="container">
             <div class="row no-gutters justify-content-between">
                 <div class="col-lg-3 col-md-12">
-                    <div><a href="home-one.html"><img class="footer_logo" src="{{ asset('front/img/logo.png')}}" width="100%" alt=""></a></div>
+                    <div><a href="{{ route('front.index')}}"><img class="footer_logo" src="{{ asset('front/img/logo.png')}}" width="60%" alt=""></a></div>
 
                     <div class="row no-gutters">
                         <div class="col">
@@ -40,7 +41,7 @@
                         <li><a href="#aapl"><i class="fa fa-angle-right"></i> AAPL Checker</a></li>
                         <li><a href="#"><i class="fa fa-angle-right"></i> Coinbase Assets Worthiness</a></li>
                         <li><a href="{{ route('packages')}}"><i class="fa fa-angle-right"></i> Our Packages</a></li>
-                        <li><a href="legacy"><i class="fa fa-angle-right"></i> Legal Certificate</a></li>
+                        <li><a href="{{ route('legacy')}}"><i class="fa fa-angle-right"></i> Legal Certificate</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-5 col-md-12 p-4">
@@ -51,11 +52,12 @@
                                     <input type="text" style="color:grey" name="mail" placeholder="Email Address" required>
                                     <button type="submit" name="send" class="btn_default"><i class="fa fa-paper-plane-o"></i></button>
                                    <br>
-                                   <?php if (isset($_POST["mail"])) {
-                                    echo ' <span class="text-danger">You encounter service error please try again</span>';
-                                } else {
-                                    echo "";
-                                } ?>
+                                   @if (isset($_POST["mail"])) {
+                                                echo ' <span class="text-danger">You encounter service error please try again</span>';
+                                            } else {
+                                                echo "";
+                                            }
+                                       @endif
                                 </div>
                             </div>
                         </form>
@@ -63,8 +65,8 @@
                             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-                        <?php
-                                if (isset($_POST["mail"])) {
+
+                                @if (isset($_POST["mail"])) {
                                     echo " <script>
                                     Swal.fire(
                                         'Service connection failed!',
@@ -74,10 +76,10 @@
                                         window.location = 'index.php#contact_wrapper';
                                     });
                                       </script> ";
-                                } else {
+                                } @else {
                                     echo "";
                                 }
-                        ?>
+                            @endif
 
                     <div class="footer_socials">
                         <ul>
@@ -89,7 +91,7 @@
                         </ul>
                     <br>
                     <p class="">
-                    Risk Disclamer: Past Returns Do Not Assure Future Returns. All financial products with a margin involve a certain risk for your capital. They are not suitable for all participants. Please make sure you fully understand the risks involved. Any reference to possible earnings, whether implicit or explicit, is provided for illustrative purposes only. Amarexcoin Investment does not guarantee profits or any kind of success. Profits depend on the returns, skills and leadership of each Independent Distributor
+                    Risk Disclaimer: Past Returns Do Not Assure Future Returns. All financial products with a margin involve a certain risk for your capital. They are not suitable for all participants. Please make sure you fully understand the risks involved. Any reference to possible earnings, whether implicit or explicit, is provided for illustrative purposes only. Amarexcoin Investment does not guarantee profits or any kind of success. Profits depend on the returns, skills and leadership of each Independent Distributor
                     </p>
                     <div class="row">
                         <div class="col-lg-4 p-2">

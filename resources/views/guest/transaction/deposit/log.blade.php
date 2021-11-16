@@ -36,7 +36,16 @@
                 <!--end::Wrapper-->
                 <!--begin::Button-->
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Top Up</a>
+                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">
+                    <span class="menu-icon">
+                        <!--begin::Svg Icon | path: /icons/duotune/general/gen002.svg-->
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-node-plus-fill" viewBox="0 0 16 16">
+                          <path d="M11 13a5 5 0 1 0-4.975-5.5H4A1.5 1.5 0 0 0 2.5 6h-1A1.5 1.5 0 0 0 0 7.5v1A1.5 1.5 0 0 0 1.5 10h1A1.5 1.5 0 0 0 4 8.5h2.025A5 5 0 0 0 11 13zm.5-7.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2a.5.5 0 0 1 1 0z"/>
+                        </svg>
+                    </span>
+                        Top Up
+                </a>
                 <!--end::Button-->
             </div>
             <!--end::Actions-->
@@ -192,11 +201,14 @@
                                             </td>
                                             <!--end::User=-->
                                             <!--begin::Role=-->
-                                            <td><div class="badge badge-@if($deposit->status == 'pending')warning @elseif($deposit->status == 'declined')danger @elseif($deposit->status == 'processed')success @endif fw-bolder">{{ $deposit->status }}</div></td>
+                                            <td>
+                                                <div class="badge badge-@if($deposit->status == 'pending')warning @elseif($deposit->status == 'declined')danger @elseif($deposit->status == 'processed')success @endif fw-bolder">{{ $deposit->status }}</div>
+                                                <i class="fa @if($deposit->status == 'pending')fa-spinner fa-spin @elseif($deposit->status == 'declined')fa-ban @elseif($deposit->status == 'processed')fa-check @endif text-light"></i>
+                                            </td>
                                             <!--end::Role=-->
                                             <!--begin::Last login=-->
                                             <td data-order="$$$">
-                                                <div class="badge badge-light fw-bolder">${{ number_format($deposit->amount) }}</div>
+                                                <div class="alert alert-light fw-bolder">${{ number_format($deposit->amount) }}</div>
                                             </td>
                                             <!--end::Last login=-->
                                             <!--begin::Two step=-->
@@ -204,10 +216,10 @@
                                             <!--begin::Joined-->
                                             <td data-order="#abcsd">{{ $deposit->ref }}</td>
                                             <td data-order="2021-05-05T17:20:00+01:00">
-                                                @if($deposit->gateway == 'Etherium Payment Gateway')
+                                                @if($deposit->gateway == 'Bitcoin Payment Gateway')
                                                     <img src="{{ asset('backend/assets/media/icons/bitcoin.png')}}" width="17%" class="m-4" alt="">
 
-                                                @elseif($deposit->gateway == 'Bitcoin Payment Gateway')
+                                                @elseif($deposit->gateway == 'Etherium Payment Gateway')
                                                     <img src="{{ asset('backend/assets/media/icons/etherium.png')}}" width="17%" class="m-4" alt="">
 
                                                 @elseif($deposit->gateway == 'Usdc Payment Gateway')
@@ -221,7 +233,11 @@
                                             <td class="text-end">
                                                 <!--end::Menu item-->
                                                 <!--begin::Menu item-->
-                                                <a href="#" class="menu-link px-3 btn btn-danger btn-sm" data-kt-users-table-filter="delete_row">Hide</a>
+                                                <a href="#" class="menu-link px-3 btn btn-danger btn-sm" data-kt-users-table-filter="delete_row"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                                                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+                                                    </svg>
+                                                </a>
                                                 <!--end::Menu-->
                                             </td>
                                             <!--end::Action=-->

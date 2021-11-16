@@ -32,7 +32,16 @@
             <!--begin::Actions-->
             <div class="d-flex align-items-center py-3 py-md-1">
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Fund Wallet</a>
+                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">
+                    <span class="menu-icon">
+                                    <!--begin::Svg Icon | path: /icons/duotune/general/gen002.svg-->
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-node-plus-fill" viewBox="0 0 16 16">
+                          <path d="M11 13a5 5 0 1 0-4.975-5.5H4A1.5 1.5 0 0 0 2.5 6h-1A1.5 1.5 0 0 0 0 7.5v1A1.5 1.5 0 0 0 1.5 10h1A1.5 1.5 0 0 0 4 8.5h2.025A5 5 0 0 0 11 13zm.5-7.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2a.5.5 0 0 1 1 0z"/>
+                        </svg>
+                    </span>
+                        Fund Wallet
+                </a>
                 <!--end::Button-->
             </div>
             <!--end::Actions-->
@@ -494,7 +503,7 @@
                                     <h5 class="modal-title">Enter Amount to Proceed</h5>
                                     <p>You currently have ${{ number_format($wallet) }} in your wallet amount</p>
                                     <p>Please enter your amount below to proceed</p>
-                                    <input type="number" name="amount" id="amountToInvest" placeholder="Enter Amount here..." class="form-control p-4">
+                                    <input type="number" autofocus name="amount" id="amountToInvest" placeholder="Enter Amount here..." class="form-control p-4">
                                 </div>
 
                                 <div class="modal-footer">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<title>Coinbase Assets - Register</title>
+<title>{{env("APP_NAME")}} - Register</title>
 
 <div class="landing_wrapper breadcrumb_wrapper">
 
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="single_blog_item align-left">
                 <div class="blog_info">
-                    <a class="blog_title text-dark" href="#">Register to Coinbase Assets</a>
+                    <a class="blog_title text-dark" href="#">Register to {{env("APP_NAME")}}</a>
                     <div style="margin: 10px; !important"></div>
                     <img class="" src="{{ asset('front/img/Wrapper_title_divider.png')}}" aria-colcount="" alt="">
                 </div>
@@ -32,11 +32,11 @@
         </div>
     </div>
 
-                    
+
                     <form class="fadeInDown col-lg-5" action="{{ route('register') }}" method="POST">
                     @csrf
                       <h1 class="text-light">Sign-Up</h1>
-                      <center><img src="{{ asset('front/img/logo.png')}}" width="300px" class="text-center" alt=""></center>
+                      <center><img src="{{ asset('front/img/logo.png')}}" width="50%" class="text-center" alt=""></center>
                       <div class="inset row">
                         <div class="col-lg-7">
                           <label for="email" class="text-light">{{ __('Full name') }} <i class="fa fa-user-plus"></i></label>
@@ -45,9 +45,9 @@
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror  
+                                @enderror
                         </div>
-                          
+
                         <div class="col-lg-5">
                           <label for="email" class="text-light">{{ __('Username') }} <i class="fa fa-user"></i></label>
                           <input type="text" placeholder="Enter Username" name="username" id="name" class="form-control @error('username') is-invalid @enderror" value="{{ old('username') }}" required autocomplete="username" autofocus>
@@ -55,9 +55,9 @@
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror 
+                                @enderror
                         </div>
-                          
+
 
                         @if (Request::has('user'))
                             <input hidden  value="{{ Request::get('user') }}" id="refferal_id" type="text" class="form-control" name="referral">
@@ -77,9 +77,9 @@
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror   
+                                @enderror
                         </div>
-                          
+
                         <div class="col-lg-6">
                             <label for="email" class="text-light">{{ __('Phone Contact') }} <i class="fa fa-phone"></i></label>
                             <input id="phone" maxlength="14" minlength="11" type="tel" name="phone" placeholder="Enter Phone Number" id="tel" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
@@ -87,9 +87,9 @@
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror     
+                                @enderror
                         </div>
-                            
+
                           <div class="col-lg-12">
                             <label for="country" class="text-light col-8">{{ __('Your Country') }} <i class="fa fa-globe"></i></label>
                             <input id="country_selector" type="text" name="country" class="w-100 col-lg-12 form-control @error('country') is-invalid @enderror" value="{{ old('country') }}" required autocomplete="country" autofocus>
@@ -97,7 +97,7 @@
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror   
+                                @enderror
                         </div>
 
                           <div class="col-12 p-2"></div>
@@ -109,19 +109,19 @@
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror 
+                                @enderror
                         </div>
-                          
+
                         <div class="col-lg-6">
                           <label for="password" class="text-light">{{ __('Confirm Password') }} <i class="fa fa-lock"></i></label>
                           <input type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" id="password_confirmation">
                           <div id='message' style="margin-top: -20px"></div>
                         </div>
-                        
+
                         <input class="" style="width: 30px" type="checkbox"  checked>
                         <label for="remember" class="text-light m-4 col-12" style="bottom: 50px">I Agreed to the <a href="{{route('terms')}}" class="text-warning"> Terms of use</a></label>
                       </div>
-  
+
                       <div class="p-container">
                         <button type="submit" class="btn_default btn btn-block" >{{ __('Register') }} <img class="icon_img" src="{{ asset('front/img/icons/chat.png')}}" width="20px" alt=""></button>
                         <a href="{{ route('login')}}" class="text-warning p-4 float-right">Already a User ?</a>
