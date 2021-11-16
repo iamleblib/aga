@@ -123,7 +123,7 @@
                       </div>
 
                       <div class="p-container">
-                        <button type="submit" class="btn_default btn btn-block" >{{ __('Register') }} <img class="icon_img" src="{{ asset('front/img/icons/chat.png')}}" width="20px" alt=""></button>
+                        <button type="submit" class="btn btn-dark btn_default btn btn-block" >{{ __('Register') }} <img class="icon_img" src="{{ asset('front/img/icons/chat.png')}}" width="20px" alt=""></button>
                         <a href="{{ route('login')}}" class="text-warning p-4 float-right">Already a User ?</a>
                       </div>
                     </form>
