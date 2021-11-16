@@ -63,7 +63,7 @@ Route::get('blocked', function () {
 
 
 Route::group(['prefix' => 'secure'], function () {
-    Auth::routes();
+    Auth::routes(['verify' => true]);
 
     Route::group(['middleware' => ['auth', 'user']], function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
