@@ -11,7 +11,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Exception;
 use App\Mail\SendCodeMail;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 

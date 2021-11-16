@@ -4,7 +4,7 @@
 <title>{{env("APP_NAME")}} - Register</title>
 
 <div class="landing_wrapper breadcrumb_wrapper">
-
+@include('alerts')
 <div class="wrapper breadcrumb_wrapper_content" style="background-image: url('https://eskipaper.com/images/3d-wallpaper-20.jpg'); background-size: cover">
         <div class="container h-100">
             <div class="row h-100 align-items-center text-center">
