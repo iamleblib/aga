@@ -164,7 +164,6 @@
                 <!--end::Content-->
                 <!--begin::Action-->
                 <a data-bs-toggle="modal" data-bs-target="#withdrawRef" class="btn btn-danger px-6 align-self-center text-nowrap">Withdraw Bonus</a>
-                <!--end::Action-->
             </div>
 
             <div class="modal fade" id="withdrawRef" tabindex="-1" aria-hidden="true">

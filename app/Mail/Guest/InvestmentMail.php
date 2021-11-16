@@ -7,9 +7,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class DepositMail extends Mailable
+class InvestmentMail extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $fields;
     /**
      * Create a new message instance.
@@ -28,6 +29,6 @@ class DepositMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.deposit');
+        return $this->markdown('emails.investment');
     }
 }

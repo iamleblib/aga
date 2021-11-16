@@ -7,18 +7,18 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class DepositMail extends Mailable
+class PasswordChangeMail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $fields;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($fields)
+    public function __construct()
     {
-        $this->fields = $fields;
+        //
     }
 
     /**
@@ -28,6 +28,6 @@ class DepositMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.deposit');
+        return $this->markdown('emails.password_change');
     }
 }

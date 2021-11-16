@@ -435,6 +435,7 @@
                 <div id="kt_signin_email">
                     <div class="fs-6 fw-bolder mb-1">Email Address</div>
                     <div class="fw-bold text-gray-600">{{ auth()->user()->email }}</div>
+
                 </div>
                 <!--end::Label-->
                 <!--begin::Edit-->
@@ -528,9 +529,7 @@
 
                                 <div class="form-text mb-5">Password must be at least 8 character and contain symbols</div>
                                 <div class="d-flex">
-                                    <button type="submit" id="kt_password_submit" class="btn btn-primary me-2 px-6"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-                                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-                                        </svg> Update Password</button>
+                                    <button type="submit" id="kt_password_submit" class="btn btn-primary me-2 px-6">Update Password</button>
                                     <button id="kt_password_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">Cancel</button>
                                 </div>
                             </form>
@@ -538,35 +537,9 @@
                     </div>
                     <!--end::Edit-->
                     <!--begin::Action-->
-                <div id="kt_signin_password_button" class="ms-auto">
-                    <button class="btn btn-light btn-active-light-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
-                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                        </svg>
-                        Change Password</button>
-                </div>
-            </div>
-
-
-                <div class="separator separator-dashed my-6"></div>
-
-                <div class="d-flex flex-wrap align-items-center mb-10">
-                    <!--begin::Label-->
-                    <div id="kt_signin_password">
-                        <div class="fs-6 fw-bolder mb-1">Reset Password Manually</div>
-                        <div class="fw-bold text-gray-600">************</div>
+                    <div id="kt_signin_password_button" class="ms-auto">
+                        <button class="btn btn-light btn-active-light-primary">Reset Password</button>
                     </div>
-                    <!--end::Label-->
-                    <!--begin::Edit-->
-                    <!--end::Edit-->
-                    <!--begin::Action-->
-                    <a href="#" class="ms-auto">
-                        <button class="btn btn-light btn-active-light-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5z"/>
-                            </svg>
-                            Manual Reset</button>
-                    </a>
                     <!--end::Action-->
 
             </div>

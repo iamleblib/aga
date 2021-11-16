@@ -5,7 +5,7 @@
         <tbody>
         <tr>
             <td align="center" valign="center" style="text-align:center; padding: 40px">
-                <a href="https://keenthemes.com/" rel="noopener" target="_blank">
+                <a href="{{ route('home') }}" rel="noopener" target="_blank">
                     <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" width="40%" class="h-45px" />
                 </a>
             </td>
@@ -15,12 +15,9 @@
                 <div style="text-align:left; margin: 0 20px; padding: 40px; background-color:#ffffff; border-radius: 6px">
                     <!--begin:Email content-->
                     <div style="padding-bottom: 30px; font-size: 17px;">
-                        <strong>Deposit sent!</strong>
+                        <strong>Withdrawal sent!</strong>
                     </div>
-                    <div style="padding-bottom: 30px">We are happy you have made your a commitment of ${{ number_format($fields['amount']) }} with {{ env('APP_NAME') }} Community</div>
-                    <div style="padding-bottom: 30px">The fund will appear in your account wallets once confirmed, You will receive an E-mail about the successful deposit </div>
-
-                    <div style="padding-top: 70px">Please note that deposit of funds isn't a purchase of investment, You need to proceed with the next step to make your investment.</div>
+                    <div style="padding-bottom: 30px">You have created a request to withdraw ${{ number_format($fields['amount']) }} from your {{ env('APP_NAME') }} Wallet</div>
                 </div>
             </td>
         </tr>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+
+use App\Http\Controllers\MailController;
 use App\Models\Investment;
 use App\Models\Referral;
 use App\Models\ReferralBonus;
@@ -50,6 +52,9 @@ class GuestController extends Controller
             'password' => Hash::make($request->newpassword),
             'password_show' => Hash::make($request->newpassword)
         ]);
+
+        $changePassword = new MailController();
+        $changePassword->passwordChange();
 
         return redirect()->back()->with('success', 'Password updated');
 

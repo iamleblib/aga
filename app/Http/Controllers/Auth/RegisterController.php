@@ -81,10 +81,10 @@ class RegisterController extends Controller
 
         //        send welcome message
         $welcome = new MailController();
-        $details = [
+        $item = [
             'email' => $data['email']
         ];
-        $welcome->welcome($data);
+        $welcome->welcome($item);
 
 
         return User::create([

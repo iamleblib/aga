@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Transaction;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\MailController;
 use App\Models\Deposit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,11 +25,15 @@ class WithdrawsController extends Controller
         ]);
 
         $fields = [
+            'email' => auth()->user()->email,
             'ref' => "#CBA" . time(),
             'amount' => $request->amount,
             'address' => $request->address,
             'gateway' => $request->paymentMethod,
         ];
+
+        $withdraw = new MailController();
+        $withdraw->withdraw($fields);
 
         Auth::user()->withdraw()->create($fields);
 

@@ -262,15 +262,14 @@
                         <div class="card-body border-top p-9">
                             <!--begin::Notice-->
                             <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed mb-9 p-6">
-                                <!--begin::Icon-->
-                                <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+
                                 <span class="svg-icon svg-icon-2tx svg-icon-danger me-4">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
-														<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black" />
-														<rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black" />
-													</svg>
-												</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+                                        <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black" />
+                                        <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black" />
+                                    </svg>
+                                </span>
                                 <!--end::Svg Icon-->
                                 <!--end::Icon-->
                                 <!--begin::Wrapper-->
@@ -285,13 +284,12 @@
                                 <!--end::Wrapper-->
                             </div>
                             <!--end::Form input row-->
+
                         </div>
                         <!--end::Card body-->
                         <!--begin::Card footer-->
                         <div class="card-footer d-flex justify-content-end py-6 px-9">
-                            <a data-bs-toggle="modal" data-bs-target="#delete" class="btn btn-danger px-6 align-self-center text-nowrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
-                                    <path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
-                                </svg> Deactivate</a>
+                            <a data-bs-toggle="modal" data-bs-target="#delete" class="btn btn-danger px-6 align-self-center text-nowrap"><i class="fa fa-trash"></i> Delete account</a>
                         </div>
                         <!--end::Card footer-->
                     </form>
