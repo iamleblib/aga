@@ -538,156 +538,156 @@
                     <!--end::Svg Icon-->
                 </div>
                 <!--begin::Menu-->
-                <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true">
-                    <!--begin::Heading-->
-                    <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('{{ asset('backend/assets/media/misc/pattern-1.jpg')}}')">
-                        <!--begin::Title-->
-                        <h3 class="text-white fw-bold px-9 mt-10 mb-6">Notifications
-                            <span class="fs-8 opacity-75 ps-3">24 reports</span></h3>
-                        <!--end::Title-->
-                        <!--begin::Tabs-->
-                        <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-bold px-9">
-                            <li class="nav-item">
-                                <a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_1">Deposit</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_2">Investment</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="#kt_topbar_notifications_3">Withdrawal</a>
-                            </li>
-                        </ul>
-                        <!--end::Tabs-->
-                    </div>
-                    <!--end::Heading-->
-                    <!--begin::Tab content-->
-                    <div class="tab-content">
-                        <!--begin::Tab panel-->
-                        <div class="tab-pane fade" id="kt_topbar_notifications_1" role="tabpanel">
-                            <!--begin::Items-->
-                            <div class="scroll-y mh-325px my-5 px-8">
-                                <!--begin::Item-->
-                                <div class="d-flex flex-stack py-4">
-                                    <!--begin::Section-->
-                                    <div class="d-flex align-items-center me-2">
-                                        <!--begin::Code-->
-                                        <span class="w-70px badge badge-light-success me-4">$</span>
-                                        <!--end::Code-->
-                                        <!--begin::Title-->
-                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold"></a>
-                                        <!--end::Title-->
-                                    </div>
-                                    <!--end::Section-->
-                                    <!--begin::Label-->
-                                    <span class="badge badge-light fs-8">Just now</span>
-                                    <!--end::Label-->
-                                </div>
-                                <!--end::Item-->
-                            </div>
+{{--                <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true">--}}
+{{--                    <!--begin::Heading-->--}}
+{{--                    <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('{{ asset('backend/assets/media/misc/pattern-1.jpg')}}')">--}}
+{{--                        <!--begin::Title-->--}}
+{{--                        <h3 class="text-white fw-bold px-9 mt-10 mb-6">Notifications--}}
+{{--                            <span class="fs-8 opacity-75 ps-3">24 reports</span></h3>--}}
+{{--                        <!--end::Title-->--}}
+{{--                        <!--begin::Tabs-->--}}
+{{--                        <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-bold px-9">--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_1">Deposit</a>--}}
+{{--                            </li>--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_2">Investment</a>--}}
+{{--                            </li>--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="#kt_topbar_notifications_3">Withdrawal</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                        <!--end::Tabs-->--}}
+{{--                    </div>--}}
+{{--                    <!--end::Heading-->--}}
+{{--                    <!--begin::Tab content-->--}}
+{{--                    <div class="tab-content">--}}
+{{--                        <!--begin::Tab panel-->--}}
+{{--                        <div class="tab-pane fade" id="kt_topbar_notifications_1" role="tabpanel">--}}
+{{--                            <!--begin::Items-->--}}
+{{--                            <div class="scroll-y mh-325px my-5 px-8">--}}
+{{--                                <!--begin::Item-->--}}
+{{--                                <div class="d-flex flex-stack py-4">--}}
+{{--                                    <!--begin::Section-->--}}
+{{--                                    <div class="d-flex align-items-center me-2">--}}
+{{--                                        <!--begin::Code-->--}}
+{{--                                        <span class="w-70px badge badge-light-success me-4">$</span>--}}
+{{--                                        <!--end::Code-->--}}
+{{--                                        <!--begin::Title-->--}}
+{{--                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold"></a>--}}
+{{--                                        <!--end::Title-->--}}
+{{--                                    </div>--}}
+{{--                                    <!--end::Section-->--}}
+{{--                                    <!--begin::Label-->--}}
+{{--                                    <span class="badge badge-light fs-8">Just now</span>--}}
+{{--                                    <!--end::Label-->--}}
+{{--                                </div>--}}
+{{--                                <!--end::Item-->--}}
+{{--                            </div>--}}
 
-                            <!--end::Items-->
-                            <!--begin::View more-->
-                            <div class="py-3 text-center border-top">
-                                <a href="{{ route('deposit.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
-                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                    <span class="svg-icon svg-icon-5">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
-																	<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
-																</svg>
-															</span>
-                                    <!--end::Svg Icon--></a>
-                            </div>
-                            <!--end::View more-->
-                        </div>
+{{--                            <!--end::Items-->--}}
+{{--                            <!--begin::View more-->--}}
+{{--                            <div class="py-3 text-center border-top">--}}
+{{--                                <a href="{{ route('deposit.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All--}}
+{{--                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->--}}
+{{--                                    <span class="svg-icon svg-icon-5">--}}
+{{--																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">--}}
+{{--																	<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />--}}
+{{--																	<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />--}}
+{{--																</svg>--}}
+{{--															</span>--}}
+{{--                                    <!--end::Svg Icon--></a>--}}
+{{--                            </div>--}}
+{{--                            <!--end::View more-->--}}
+{{--                        </div>--}}
 
-                        <!--end::Tab panel-->
-
-
-
-                        <!--begin::Tab panel-->
-                        <div class="tab-pane fade" id="kt_topbar_notifications_2" role="tabpanel">
-                            <!--begin::Items-->
-                            <div class="scroll-y mh-325px my-5 px-8">
-                                <!--begin::Item-->
-                                <div class="d-flex flex-stack py-4">
-                                    <!--begin::Section-->
-                                    <div class="d-flex align-items-center me-2">
-                                        <!--begin::Code-->
-                                        <span class="w-70px badge badge-light-warning me-4">$22,000</span>
-                                        <!--end::Code-->
-                                        <!--begin::Title-->
-                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold">Investment</a>
-                                        <!--end::Title-->
-                                    </div>
-                                    <!--end::Section-->
-                                    <!--begin::Label-->
-                                    <span class="badge badge-light fs-8">Just now</span>
-                                    <!--end::Label-->
-                                </div>
-                                <!--end::Item-->
-                            </div>
-                            <!--end::Items-->
-                            <!--begin::View more-->
-                            <div class="py-3 text-center border-top">
-                                <a href="{{ route('investment.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
-                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                    <span class="svg-icon svg-icon-5">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
-																	<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
-																</svg>
-															</span>
-                                    <!--end::Svg Icon--></a>
-                            </div>
-                            <!--end::View more-->
-                        </div>
-                        <!--end::Tab panel-->
+{{--                        <!--end::Tab panel-->--}}
 
 
 
+{{--                        <!--begin::Tab panel-->--}}
+{{--                        <div class="tab-pane fade" id="kt_topbar_notifications_2" role="tabpanel">--}}
+{{--                            <!--begin::Items-->--}}
+{{--                            <div class="scroll-y mh-325px my-5 px-8">--}}
+{{--                                <!--begin::Item-->--}}
+{{--                                <div class="d-flex flex-stack py-4">--}}
+{{--                                    <!--begin::Section-->--}}
+{{--                                    <div class="d-flex align-items-center me-2">--}}
+{{--                                        <!--begin::Code-->--}}
+{{--                                        <span class="w-70px badge badge-light-warning me-4">$22,000</span>--}}
+{{--                                        <!--end::Code-->--}}
+{{--                                        <!--begin::Title-->--}}
+{{--                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold">Investment</a>--}}
+{{--                                        <!--end::Title-->--}}
+{{--                                    </div>--}}
+{{--                                    <!--end::Section-->--}}
+{{--                                    <!--begin::Label-->--}}
+{{--                                    <span class="badge badge-light fs-8">Just now</span>--}}
+{{--                                    <!--end::Label-->--}}
+{{--                                </div>--}}
+{{--                                <!--end::Item-->--}}
+{{--                            </div>--}}
+{{--                            <!--end::Items-->--}}
+{{--                            <!--begin::View more-->--}}
+{{--                            <div class="py-3 text-center border-top">--}}
+{{--                                <a href="{{ route('investment.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All--}}
+{{--                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->--}}
+{{--                                    <span class="svg-icon svg-icon-5">--}}
+{{--																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">--}}
+{{--																	<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />--}}
+{{--																	<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />--}}
+{{--																</svg>--}}
+{{--															</span>--}}
+{{--                                    <!--end::Svg Icon--></a>--}}
+{{--                            </div>--}}
+{{--                            <!--end::View more-->--}}
+{{--                        </div>--}}
+{{--                        <!--end::Tab panel-->--}}
 
-                                     <!--begin::Tab panel-->
-                        <div class="tab-pane fade show active" id="kt_topbar_notifications_3" role="tabpanel">
-                            <!--begin::Items-->
-                            <div class="scroll-y mh-325px my-5 px-8">
-                                <!--begin::Item-->
-                                <div class="d-flex flex-stack py-4">
-                                    <!--begin::Section-->
-                                    <div class="d-flex align-items-center me-2">
-                                        <!--begin::Code-->
-                                        <span class="w-70px badge badge-light-danger me-4">$89,000</span>
-                                        <!--end::Code-->
-                                        <!--begin::Title-->
-                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold">Deposited</a>
-                                        <!--end::Title-->
-                                    </div>
-                                    <!--end::Section-->
-                                    <!--begin::Label-->
-                                    <span class="badge badge-light fs-8">2nd Sept, 2021</span>
-                                    <!--end::Label-->
-                                </div>
-                                <!--end::Item-->
-                            </div>
-                            <!--end::Items-->
-                            <!--begin::View more-->
-                            <div class="py-3 text-center border-top">
-                                <a href="{{ route('withdraw.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All
-                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-                                    <span class="svg-icon svg-icon-5">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
-																	<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
-																</svg>
-															</span>
-                                    <!--end::Svg Icon--></a>
-                            </div>
-                            <!--end::View more-->
-                        </div>
-                        <!--end::Tab panel-->
-                    </div>
-                    <!--end::Tab content-->
-                </div>
+
+
+
+{{--                                     <!--begin::Tab panel-->--}}
+{{--                        <div class="tab-pane fade show active" id="kt_topbar_notifications_3" role="tabpanel">--}}
+{{--                            <!--begin::Items-->--}}
+{{--                            <div class="scroll-y mh-325px my-5 px-8">--}}
+{{--                                <!--begin::Item-->--}}
+{{--                                <div class="d-flex flex-stack py-4">--}}
+{{--                                    <!--begin::Section-->--}}
+{{--                                    <div class="d-flex align-items-center me-2">--}}
+{{--                                        <!--begin::Code-->--}}
+{{--                                        <span class="w-70px badge badge-light-danger me-4">$89,000</span>--}}
+{{--                                        <!--end::Code-->--}}
+{{--                                        <!--begin::Title-->--}}
+{{--                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold">Deposited</a>--}}
+{{--                                        <!--end::Title-->--}}
+{{--                                    </div>--}}
+{{--                                    <!--end::Section-->--}}
+{{--                                    <!--begin::Label-->--}}
+{{--                                    <span class="badge badge-light fs-8">2nd Sept, 2021</span>--}}
+{{--                                    <!--end::Label-->--}}
+{{--                                </div>--}}
+{{--                                <!--end::Item-->--}}
+{{--                            </div>--}}
+{{--                            <!--end::Items-->--}}
+{{--                            <!--begin::View more-->--}}
+{{--                            <div class="py-3 text-center border-top">--}}
+{{--                                <a href="{{ route('withdraw.logs') }}" class="btn btn-color-gray-600 btn-active-color-primary">View All--}}
+{{--                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->--}}
+{{--                                    <span class="svg-icon svg-icon-5">--}}
+{{--																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">--}}
+{{--																	<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />--}}
+{{--																	<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />--}}
+{{--																</svg>--}}
+{{--															</span>--}}
+{{--                                    <!--end::Svg Icon--></a>--}}
+{{--                            </div>--}}
+{{--                            <!--end::View more-->--}}
+{{--                        </div>--}}
+{{--                        <!--end::Tab panel-->--}}
+{{--                    </div>--}}
+{{--                    <!--end::Tab content-->--}}
+{{--                </div>--}}
                 <!--end::Menu-->
                 <!--end::Menu wrapper-->
             </div>
@@ -753,7 +753,14 @@
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a href="{{ route('profile.index') }}" class="menu-link px-5">My Profile</a>
+                        <a href="{{ route('profile.index') }}" class="menu-link px-5">
+                            <span class="menu-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                                    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                </svg>
+                            </span>
+                            My Profile</a>
                     </div>
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
@@ -761,34 +768,76 @@
                     <!--begin::Menu item-->
                     <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
                         <a href="#" class="menu-link px-5">
-                            <span class="menu-title">Accessibility</span>
+                            <span class="menu-title">
+                                <span class="menu-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+                                  <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
+                                </svg>
+                            </span>
+                                Accessibility</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <!--begin::Menu sub-->
                         <div class="menu-sub menu-sub-dropdown w-175px py-4">
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button"  class="menu-link px-5">Deposit</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button"  class="menu-link px-5">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wallet-fill" viewBox="0 0 16 16">
+                                          <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                          <path d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
+                                        </svg>
+                                    </span>
+                                    Deposit</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('investment.guest.index')}}" class="menu-link px-5">Investment</a>
+                                <a href="{{ route('investment.guest.index')}}" class="menu-link px-5">
+                                    <span class="menu-icon">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layers-fill" viewBox="0 0 16 16">
+                                          <path d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                          <path d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l-5.17-2.756z"/>
+                                        </svg>
+                                    </span>
+                                    Investment</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#withdraw" id="kt_toolbar_primary_button" class="menu-link px-5">Withdraw</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#withdraw" id="kt_toolbar_primary_button" class="menu-link px-5">
+                                    <span class="menu-icon">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+                                          <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+                                          <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+                                          <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+                                        </svg>
+                                    </span>
+                                    Withdraw</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('realestate.index') }}" class="menu-link px-5">Real Estate </a>
+                                <a href="{{ route('realestate.index') }}" class="menu-link px-5">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                        </svg>
+                                    </span>
+                                    Real Estate</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('profile.index')}}" class="menu-link d-flex flex-stack px-5">Settings
+                                <a href="{{ route('profile.index')}}" class="menu-link d-flex flex-stack px-5">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                          <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                        </svg>
+                                    </span>
+                                    Settings
                                     <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Settings and Edits"></i></a>
                             </div>
                             <!--end::Menu item-->
@@ -811,35 +860,82 @@
 
                     <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
                         <a href="#" class="menu-link px-5">
-                            <span class="menu-title">Statements</span>
+                                <span class="menu-title">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                                          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                        </svg>
+                                    </span>
+                                    Statements
+                                </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <!--begin::Menu sub-->
                         <div class="menu-sub menu-sub-dropdown w-175px py-4">
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('deposit.logs')}}" class="menu-link px-5">Deposit</a>
+                                <a href="{{ route('deposit.logs')}}" class="menu-link px-5">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                                          <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                                          <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                                          <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                                        </svg>
+                                    </span>
+                                    Deposit</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('investment.logs')}}" class="menu-link px-5">Investment</a>
+                                <a href="{{ route('investment.logs')}}" class="menu-link px-5">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                                          <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                                          <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                                          <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                                        </svg>
+                                    </span>
+                                    Investment</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('withdraw.logs')}}"  class="menu-link px-5">Withdraw</a>
+                                <a href="{{ route('withdraw.logs')}}"  class="menu-link px-5">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                                          <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                                          <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                                          <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                                        </svg>
+                                    </span>
+                                    Withdraw</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{route('roi.log')}}" class="menu-link d-flex flex-stack px-5">ROI
+                                <a href="{{route('roi.log')}}" class="menu-link d-flex flex-stack px-5">
+                                    <span class="menu-icon">
+                                <!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                              <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                                              <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                                            </svg>
+                                    </span>
+                                    ROI
                                     <i class="fas fa-exclamation-circle ms-2 fs-7"></i></a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="#" class="menu-link d-flex flex-stack px-5">Properties
+                                <a href="#" class="menu-link d-flex flex-stack px-5">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                        </svg>
+                                    </span>
+                                    Properties
                                     <i class="fas fa-exclamation-circle ms-2 fs-7"></i></a>
                             </div>
                             <!--end::Menu item-->
@@ -867,7 +963,14 @@
                     <!--begin::Menu item-->
                     <div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
                         <a href="#" class="menu-link px-5">
-														<span class="menu-title position-relative">Select Language <img class="rounded-1 ms-2" src="{{ asset('backend/assets/media/flags/lan.png')}}" width="30px" alt="" /> </span>
+                            <span class="menu-title">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                          <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+                                          <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+                                        </svg>
+                                    </span>
+                            <span class="menu-title position-relative">Select Language</span>
                         </a>
                         <!--begin::Menu sub-->
                         <div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -882,7 +985,14 @@
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-5 my-1">
-                        <a href="{{ route('realestate.index')}}" class="menu-link px-5">Real Estate Management</a>
+                        <a href="{{ route('realestate.index')}}" class="menu-link px-5">
+                            <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                        </svg>
+                                    </span>
+                            Real Estate Management</a>
                     </div>
                     <!--end::Menu item-->
                     <!--end::Menu item-->
@@ -911,7 +1021,13 @@
                         <div class="menu-content px-5">
                             <label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success">
                                 <span class="pulse-ring ms-n1"></span>
-                                <span class="form-check-label text-gray-600 fs-7">Visit Website</span>
+                                <span class="form-check-label text-gray-600 fs-7">
+                                    <span class="menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                                        </svg>
+                                    </span>
+                                    Visit Website</span>
                             </label>
                         </div>
                     </a>

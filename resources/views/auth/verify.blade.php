@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="single_blog_item align-left">
                     <div class="blog_info">
-                        <a class="blog_title text-dark" href="#">verify E-mail to Access your Dashboard</a>
+                        <a class="blog_title text-dark" href="#">Verify E-mail to Access your Dashboard</a>
                         <div style="margin: 10px; !important"></div>
                         <img class="" src="{{ asset('front/img/Wrapper_title_divider.png')}}" aria-colcount="" alt="">
                     </div>
@@ -40,7 +40,7 @@
                                     </div>
                                 @endif
                                 {{ __('Before proceeding, please check your email for a verification link.') }}
-                                {{ __('If you did not receive the email') }},
+                                {{ __('If you did not receive the email') }}.
                             </p>
                         </div>
                         <button type="submit" class="btn btn-dark btn_default btn btn-block">{{ __('click here to request another') }}</button>.

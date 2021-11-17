@@ -82,7 +82,7 @@
 
                         <div class="col-lg-6">
                             <label for="email" class="text-light">{{ __('Phone Contact') }} <i class="fa fa-phone"></i></label>
-                            <input id="phone" maxlength="14" minlength="11" type="tel" name="phone" placeholder="Enter Phone Number" id="tel" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                            <input id="phone" title="Enter country code (+) and number not less than 10 or greater 15" pattern="[+][0-9]{10,15}" autocomplete="off" data-intl-tel-input-id="0" maxlength="14" minlength="11" type="tel" name="phone" placeholder="Enter Phone Number" id="tel" class="form-control @error('phone') is-invalid @enderror" value="+47" required autocomplete="phone" autofocus>
                             @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
