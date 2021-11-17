@@ -13,80 +13,75 @@ class TransactionController extends Controller
 {
     use Messages;
 
-    public function deposit()
+    public function deposit(Deposit $deposits)
     {
-        $deposits = Deposit::all();
         return view('admin.transaction.deposit')->with([
             'users' => $this->getUsers(),
-            'deposits' => $deposits
+            'deposits' => $deposits->all()
         ]);
     }
 
-    public function withdrawal()
+    public function withdrawal(Withdraw $withdrawals)
     {
-        $withdrawals = Withdraw::all();
         return view('admin.transaction.withdrawal')->with([
             'users' => $this->getUsers(),
-            'withdrawals' => $withdrawals
+            'withdrawals' => $withdrawals->all()
         ]);
     }
 
-    public function investment()
+    public function investment(Investment $investments)
     {
-        $investments = Investment::all();
         return view('admin.transaction.investment')->with([
             'users' => $this->getUsers(),
-            'investments' => $investments
+            'investments' => $investments->all()
         ]);
     }
 
-    public function approveDeposit(int $id, Request $request)
+    public function approveDeposit(int $id, Request $request, Deposit $deposit)
     {
         $request->validate([
             'status' => 'required|string'
         ]);
-        Deposit::where('id', $id)->update([
-            'status' => $request->status
-        ]);
+        $deposit->updateDeposit('id', $id, ['status' => $request->status]);
         return redirect()->back()->with('success', 'Deposit marked as paid');
 
     }
 
-    public function declineDeposit(int $id, Request $request)
+    public function declineDeposit(int $id, Request $request, Deposit $deposit)
     {
         $request->validate([
             'status' => 'required|string'
         ]);
-
-        Deposit::where('id', $id)->update([
-            'status' => $request->status
-        ]);
+        $deposit->updateDeposit('id', $id, ['status' => $request->status]);
         return redirect()->back()->with('success', 'Deposit marked as decline');
-
     }
 
 
-    public function approveWithdrawal(int $id, Request $request)
+    public function approveWithdrawal(int $id, Request $request, Withdraw $withdraw)
     {
         $request->validate([
             'status' => 'required|string'
         ]);
-        Withdraw::where('id', $id)->update([
-            'status' => $request->status
-        ]);
+        $withdraw->updateWithdrawal('id', $id, ['status' => $request->status]);
         return redirect()->back()->with('success', 'Withdrawal marked as processed');
 
     }
 
-    public function declineWithdrawal(int $id, Request $request)
+    public function declineWithdrawal(int $id, Request $request, Withdraw $withdraw, Deposit $deposit)
     {
         $request->validate([
             'status' => 'required|string'
         ]);
 
-        Withdraw::where('id', $id)->update([
-            'status' => $request->status
+        $withdraw->updateWithdrawal('id', $id, ['status' => $request->status]);
+        $deposit->createDeposit([
+            'user_id' => $request->user_id,
+            'ref' => '#CBA'.time(),
+            'amount' => $request->amount,
+            'status' => 'refund',
+            'gateway' => 'REFUND'
         ]);
+
         return redirect()->back()->with('success', 'Withdrawal marked as decline');
 
     }

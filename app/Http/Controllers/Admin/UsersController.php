@@ -11,6 +11,7 @@ use App\Models\Wallet;
 use App\Traits\Messages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\In;
 
 class UsersController extends Controller
 {
@@ -23,7 +24,7 @@ class UsersController extends Controller
         ]);
     }
 
-    public function addProcess(Request $request)
+    public function addProcess(Request $request, User $user)
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -34,7 +35,6 @@ class UsersController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        $user = new User();
         $user->createAccount([
             'name' => $request->name,
             'email' => $request->email,
@@ -49,26 +49,21 @@ class UsersController extends Controller
         return redirect()->back()->with('success', 'You have created a new user!');
     }
 
-    public function manage()
+    public function manage(User $users)
     {
-        $users = User::where([
-            ['id', '!=', auth()->id()]
-        ])->get();
+        $users = $users->getGuests('id', '!=', auth()->id());
+
         return view('admin.users.manage')->with([
             'users' => $users,
-            'users' => $this->getUsers(),
         ]);
     }
 
-    public function show($id)
+    public function show($id, Deposit $deposit, User $user, Investment $investment)
     {
-        $deposit = new Deposit();
-        $user = new User();
         if (!$user->find($id)) {
             return redirect()->route('users.index')->with('error', 'User not found ');
         }
 
-        $investment = new Investment();
         $wallets = Wallet::where('user_id', $id)->get();
         $referrals = Referral::where('user_id', $id)->get();
         $findUser = new User();
@@ -84,13 +79,12 @@ class UsersController extends Controller
         ]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, User $user)
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'max:255'],
         ]);
-        $user = new User();
         $user->updateProfile($id, [
             'name' => $request->name,
             'phone' => $request->phone
@@ -99,14 +93,13 @@ class UsersController extends Controller
         return redirect()->back()->with('success', 'Users profile updated');
     }
 
-    public function updateEmail(Request $request, int $id)
+    public function updateEmail(Request $request, int $id, User $user)
     {
         if ($request->email !== User::where('id', $id)->first()->email) {
             $request->validate([
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             ]);
         }
-        $user = new User();
         $user->updateProfile($id, [
             'email' => $request->email,
         ]);
@@ -114,13 +107,11 @@ class UsersController extends Controller
 
     }
 
-    public function updateRole(Request $request, int $id)
+    public function updateRole(Request $request, int $id, User $user)
     {
         $request->validate([
             'user_role' => 'required|string'
         ]);
-
-        $user = new User();
         $user->updateProfile($id, [
             'is_admin' => $request->user_role,
         ]);
@@ -128,13 +119,12 @@ class UsersController extends Controller
 
     }
 
-    public function alter(int $id, Request $request)
+    public function alter(int $id, Request $request, User $user)
     {
         $request->validate([
             'alter' => 'required|string'
         ]);
 
-        $user = new User();
         $user->updateProfile($id, [
             'is_blocked' => $request->alter,
         ]);

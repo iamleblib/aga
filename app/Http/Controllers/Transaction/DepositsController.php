@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Transaction;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\MailController;
+use App\Models\Deposit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,12 +15,16 @@ class DepositsController extends Controller
         return view('guest.transaction.deposit.preview')->with('request', $request);
     }
 
-    public function process(Request $request)
+    public function process(Request $request, MailController $depositMail, Deposit $deposit)
     {
         $request->validate([
             'amount' => 'required|string',
             'paymentMethod' => 'required|string'
         ]);
+
+        if ($deposit->check($request->amount, 0)) {
+            return redirect()->back()->with('error', 'Please enter a valid amount');
+        }
 
         $fields = [
             'email' => auth()->user()->email,
@@ -28,7 +33,6 @@ class DepositsController extends Controller
             'gateway' => $request->paymentMethod,
         ];
 
-        $depositMail = new MailController();
         $depositMail->deposit($fields);
 
         Auth::user()->deposit()->create($fields);

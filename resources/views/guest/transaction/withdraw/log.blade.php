@@ -203,7 +203,7 @@
                                             <!--end::User=-->
                                             <!--begin::Role=-->
                                             <td>
-                                                <div class="badge badge-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'decline')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">{{ $withdraw->status }}
+                                                <div class="badge badge-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'declined')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">{{ $withdraw->status }}
                                                     <i class="@if($withdraw->status == 'pending')fa fa-spinner fa-spin @elseif($withdraw->status == 'decline')fa fa-ban @elseif($withdraw->status == 'processed') fa fa-check @endif text-light"></i>
                                                 </div>
                                             </td>

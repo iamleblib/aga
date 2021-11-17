@@ -8,9 +8,8 @@ use Illuminate\Http\Request;
 
 class RoisController extends Controller
 {
-    public function logs()
+    public function logs(Roi $rois)
     {
-        $rois = new Roi();
         return view('guest.transaction.roi.log')->with([
             'rois' => $rois
         ]);

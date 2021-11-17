@@ -202,7 +202,7 @@
                                             <!--end::User=-->
                                             <!--begin::Role=-->
                                             <td>
-                                                <div class="badge badge-@if($deposit->status == 'pending')warning @elseif($deposit->status == 'declined')danger @elseif($deposit->status == 'processed')success @endif fw-bolder">{{ $deposit->status }}</div>
+                                                <div class="badge badge-@if($deposit->status == 'pending')warning @elseif($deposit->status == 'declined')danger @elseif($deposit->status == 'processed')success @elseif($deposit->status == 'refund')info @endif fw-bolder">{{ $deposit->status }}</div>
                                                 <i class="fa @if($deposit->status == 'pending')fa-spinner fa-spin @elseif($deposit->status == 'declined')fa-ban @elseif($deposit->status == 'processed')fa-check @endif text-light"></i>
                                             </td>
                                             <!--end::Role=-->
@@ -224,7 +224,8 @@
 
                                                 @elseif($deposit->gateway == 'Usdc Payment Gateway')
                                                     <img src="{{ asset('backend/assets/media/icons/usdc.png')}}" width="17%" class="m-4" alt="">
-
+                                                @else
+                                                    <img src="{{ asset('backend/assets/media/icons/refund.png')}}" width="17%" class="m-4" alt="">
                                                 @endif
                                             </td>
                                             <td data-order="2021-05-05T17:20:00+01:00">{{ $deposit->created_at->toFormattedDateString() }}</td>

@@ -26,9 +26,8 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Deposit $deposit)
     {
-        $deposit = new Deposit();
         $investment = Investment::getInvestmentCount();
         $withdrawal = Withdraw::getWithdrawals();
         $roi = Roi::getRoi();
@@ -41,13 +40,11 @@ class DashboardController extends Controller
         ]);
     }
 
-    public function updateRef($id, Request $request)
+    public function updateRef($id, Request $request, User $user)
     {
         $request->validate([
             'referral_bonus' => 'required'
         ]);
-        $user = new User();
-
         $user->updateProfile($id, [
             'referral_bonus' => $request->referral_bonus
         ]);

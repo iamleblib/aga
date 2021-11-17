@@ -21,10 +21,9 @@ class GuestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Referral $referrals)
     {
         $investment = Investment::getInvestmentCount();
-        $referrals = new Referral();
         $wallets = auth()->user()->wallet()->get();
         $referralBonus = ReferralBonus::getAmount();
         return view('guest.profile.index')->with([

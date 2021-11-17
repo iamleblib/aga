@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Transaction;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\MailController;
 use App\Models\Deposit;
+use App\Models\Withdraw;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,12 +18,16 @@ class WithdrawsController extends Controller
     }
 
 
-    public function process(Request $request)
+    public function process(Request $request, Withdraw $withdraw)
     {
         $request->validate([
             'amount' => 'required|string',
             'paymentMethod' => 'required|string'
         ]);
+
+        if ($withdraw->check($request->amount, 0)) {
+            return redirect()->back()->with('error', 'Please enter a valid amount');
+        }
 
         $fields = [
             'email' => auth()->user()->email,

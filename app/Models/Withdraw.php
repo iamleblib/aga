@@ -15,6 +15,19 @@ class Withdraw extends Model
         'updated_at'
     ];
 
+
+    public function check($amount, $value1): bool
+    {
+        return $amount <= $value1;
+    }
+
+    // UPDATE WITHDRAWALS
+
+    public function updateWithdrawal(string $key, string $value, array $fields = [])
+    {
+        return $this->where($key, $value)->update($fields);
+    }
+
     public static function getWithdrawals()
     {
         return self::sum('amount');

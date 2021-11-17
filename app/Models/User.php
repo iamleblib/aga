@@ -46,6 +46,13 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    public function getGuests($key, $operation, $value)
+    {
+        return $this->where([
+            [$key,  $operation, $value]
+        ])->get();
+    }
+
     public function isAdmin()
     {
         return $this->is_admin;

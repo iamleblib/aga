@@ -47,7 +47,7 @@ class InvestmentsController extends Controller
         return view('guest.transaction.investment.preview')->with(['request' => $request, 'plan' => $plan]);
     }
 
-    public function process(Request $request)
+    public function process(Request $request, MailController $investment)
     {
         $request->validate([
             'amount' => 'required|string',
@@ -61,7 +61,6 @@ class InvestmentsController extends Controller
             'plan' => $request->plan,
         ];
 
-        $investment = new MailController();
         $investment->investment($fields);
 
         Auth::user()->investment()->create($fields);

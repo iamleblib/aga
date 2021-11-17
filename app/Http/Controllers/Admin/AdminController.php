@@ -15,15 +15,10 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     use Messages;
-    public function index()
+    public function index(Deposit $deposit, Investment $investment, Withdraw $withdrawal)
     {
-        $users = User::all();
-        $deposit = new Deposit();
-        $investment = new Investment();
-        $withdrawal = new Withdraw();
 
         return view('admin.index')->with([
-            'users' => $users,
             'users' => $this->getUsers(),
             'deposit' => $deposit,
             'investment' => $investment,

@@ -366,6 +366,8 @@
                                                                                 </div>
                                                                             </div>
                                                                             <input type="hidden" name="status" value="declined">
+                                                                            <input type="hidden" name="amount" value="{{$withdrawal->amount}}">
+                                                                            <input type="hidden" name="user_id" value="{{$withdrawal->user_id}}">
 
                                                                             <div class="col-4">
                                                                                 <button type="submit" class="btn btn-danger">Decline</button>
