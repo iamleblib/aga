@@ -342,7 +342,7 @@
                     <script src="{{ asset('backend/assets/plugins/global/plugins.bundle.js')}}"></script>
                     <div class="col-lg-8 fv-row">
                         <div class="mb-10">
-                            <input class="form-control form-control-solid" placeholder="date of birth"  name="dob"  id="kt_daterangepicker_3" value="{{ auth()->user()->credential->dob ?? '' }}">
+                            <input class="form-control form-control-solid" placeholder="date of birth"  name="dob"  id="kt_daterangepicker_3" value="{{ auth()->user()->credential->dob ?? 'N/A' }}">
                             <div class="form-text">Custom date format:
                                 <code>mm/dd/yyyy</code></div>
                         </div>
