@@ -1,5 +1,5 @@
 @extends('layouts.guest')
-
+@section ('title', auth()->user()->username)
 @section('content')
     <div class="toolbar py-5 py-lg-15" id="kt_toolbar">
         <!--begin::Container-->
