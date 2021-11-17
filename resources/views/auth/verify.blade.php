@@ -28,7 +28,8 @@
         </div>
 
         <div class="wrapper fadeInDown">
-            <div class="col-lg-12" style="width: 340px">
+            <form class="col-lg-12" style="width: 340px" method="POST" action="{{ route('verification.resend') }}">
+                @csrf
                 <h1 class="text-light">{{ __('Verify Your Email Address') }}</h1>
                 <center><img src="{{ asset('front/img/logo.png')}}" width="200px" class="text-center" alt=""></center>
                         <div class="inset">
@@ -42,11 +43,8 @@
                                 {{ __('If you did not receive the email') }},
                             </p>
                         </div>
-                    <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
-                        @csrf
                         <button type="submit" class="btn btn-dark btn_default btn btn-block">{{ __('click here to request another') }}</button>.
-                    </form>
-            </div>
+            </form>
         </div>
     </div>
 
