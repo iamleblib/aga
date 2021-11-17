@@ -32,7 +32,7 @@
                 @csrf
                 <h1 class="text-light">{{ __('Verify Your Email Address') }}</h1>
                 <center><img src="{{ asset('front/img/logo.png')}}" width="200px" class="text-center" alt=""></center>
-                        <div class="inset">
+                        <div class="inset text-light">
                             <p @class('text-light')>
                                 @if (session('resent'))
                                     <div class="alert alert-success" role="alert">
