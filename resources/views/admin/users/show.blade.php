@@ -294,11 +294,11 @@
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Icon-->
                                                 @if($wallet->name == "Bitcoin (BTC)")
-                                                    <img src="{{ asset('backend/assets/media/icons/bitcoin.png') }}" width="10%" alt="" class="me-4" />
+                                                    <img src="{{ asset('backend/assets/media/icons/btc.png') }}" width="10%" alt="" class="me-4" />
                                                 @elseif($wallet->name == "Etherium (ETH)")
-                                                    <img src="{{ asset('backend/assets/media/icons/etherium.png') }}" width="10%" alt="" class="me-4" />
+                                                    <img src="{{ asset('backend/assets/media/icons/eth.png') }}" width="10%" alt="" class="me-4" />
                                                 @elseif($wallet->name == "USDC (USDC)")
-                                                    <img src="{{ asset('backend/assets/media/icons/usdc.png') }}" width="10%" alt="" class="me-4" />
+                                                    <img src="{{ asset('backend/assets/media/icons/usd.png') }}" width="10%" alt="" class="me-4" />
                                             @endif
 
                                             <!--end::Icon-->

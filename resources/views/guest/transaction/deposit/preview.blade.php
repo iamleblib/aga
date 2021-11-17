@@ -161,11 +161,11 @@
                                             <!--begin::Label-->
                                             <div class="text-end fw-norma">
                                                 @if($request->paymentMethod == 'Bitcoin Payment Gateway')
-                                                    <img src="{{ asset('backend/assets/media/icons/bitcoin.png')}}" width="10%" class="m-3" alt="">
+                                                    <img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="10%" class="m-3" alt="">
                                                 @elseif($request->paymentMethod == 'Etherium Payment Gateway')
-                                                    <img src="{{ asset('backend/assets/media/icons/etherium.png')}}" width="10%" class="m-3" alt="">
+                                                    <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="10%" class="m-3" alt="">
                                                 @elseif($request->paymentMethod == 'Usdc Payment Gateway')
-                                                    <img src="{{ asset('backend/assets/media/icons/usdc.png')}}" width="10%" class="m-3" alt="">
+                                                    <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="10%" class="m-3" alt="">
                                                 @endif
                                                 <b>{{ $request->paymentMethod }}</b>
                                             </div>

@@ -217,13 +217,13 @@
                                             <td data-order="#abcsd">{{ $deposit->ref }}</td>
                                             <td data-order="2021-05-05T17:20:00+01:00">
                                                 @if($deposit->gateway == 'Bitcoin Payment Gateway')
-                                                    <img src="{{ asset('backend/assets/media/icons/bitcoin.png')}}" width="17%" class="m-4" alt="">
+                                                    <img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="17%" class="m-4" alt="">
 
                                                 @elseif($deposit->gateway == 'Etherium Payment Gateway')
-                                                    <img src="{{ asset('backend/assets/media/icons/etherium.png')}}" width="17%" class="m-4" alt="">
+                                                    <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="17%" class="m-4" alt="">
 
                                                 @elseif($deposit->gateway == 'Usdc Payment Gateway')
-                                                    <img src="{{ asset('backend/assets/media/icons/usdc.png')}}" width="17%" class="m-4" alt="">
+                                                    <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="17%" class="m-4" alt="">
                                                 @else
                                                     <img src="{{ asset('backend/assets/media/icons/refund.png')}}" width="17%" class="m-4" alt="">
                                                 @endif

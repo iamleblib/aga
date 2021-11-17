@@ -133,7 +133,7 @@
                                             <!--begin::Label-->
                                             <span class="d-flex align-items-center me-2">
 														<!--begin::Icon-->
-														<img src="{{ asset('backend/assets/media/icons/bitcoin.png')}}" width="10%" class="m-4" alt="">
+														<img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="10%" class="m-4" alt="">
                                                 <!--end::Icon-->
                                                 <!--begin::Info-->
 														<span class="d-flex flex-column">
@@ -155,7 +155,7 @@
                                             <!--begin::Label-->
                                             <span class="d-flex align-items-center me-2">
 														<!--begin::Icon-->
-                                                <img src="{{ asset('backend/assets/media/icons/etherium.png')}}" width="10%" class="m-4" alt="">
+                                                <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="10%" class="m-4" alt="">
 
                                                 <!--end::Icon-->
                                                 <!--begin::Info-->
@@ -178,7 +178,7 @@
                                             <!--begin::Label-->
                                             <span class="d-flex align-items-center me-2">
 														<!--begin::Icon-->
-                                                <img src="{{ asset('backend/assets/media/icons/usdc.png')}}" width="10%" class="m-4" alt="">
+                                                <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="10%" class="m-4" alt="">
 
                                                 <!--end::Icon-->
                                                 <!--begin::Info-->

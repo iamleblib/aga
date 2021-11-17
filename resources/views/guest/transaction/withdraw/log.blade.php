@@ -219,11 +219,11 @@
                                             <td data-order="#abcsd">
                                                 <p class="badge badge-light-warning px-6">
                                                     @if($withdraw->gateway == 'Bitcoin (BTC)')
-                                                        <img src="{{ asset('backend/assets/media/icons/bitcoin.png')}}" width="5%" class="m-0" alt="">
+                                                        <img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="5%" class="m-0" alt="">
                                                     @elseif($withdraw->gateway == 'Etherium (ETH)')
-                                                        <img src="{{ asset('backend/assets/media/icons/etherium.png')}}" width="5%" class="m-0" alt="">
+                                                        <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="5%" class="m-0" alt="">
                                                     @elseif($withdraw->gateway == 'USDC (USDC)')
-                                                        <img src="{{ asset('backend/assets/media/icons/usdc.png')}}" width="5%" class="m-0" alt="">
+                                                        <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="5%" class="m-0" alt="">
                                                     @endif
                                                     {{$withdraw->address}}
                                                 </p>
