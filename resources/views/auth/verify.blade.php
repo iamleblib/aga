@@ -33,7 +33,7 @@
                 <h1 class="text-light">{{ __('Verify Your Email Address') }}</h1>
                 <center><img src="{{ asset('front/img/logo.png')}}" width="200px" class="text-center" alt=""></center>
                         <div class="inset">
-                            <p>
+                            <p @class('text-light')>
                                 @if (session('resent'))
                                     <div class="alert alert-success" role="alert">
                                         {{ __('A fresh verification link has been sent to your email address.') }}
