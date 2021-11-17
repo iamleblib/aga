@@ -16,14 +16,10 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //Force https on production server
-        if(config('app.env') !== 'local') {
-            URL::forceScheme('https');
-        }
-        //lorem
-
-        if (true) {
-            return;
-        }
+//        if(config('app.env') !== 'local') {
+//            URL::forceScheme('https');
+//        }
+//
     }
 
     /**
