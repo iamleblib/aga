@@ -23,7 +23,7 @@
                                     <div class="d-flex align-items-center fs-4 fw-bolder mb-5">{{ $wallet->name }}</div>
                                     <!--end::Owner-->
                                     <!--begin::Wrapper-->
-                                    <div class="align-items-center">
+                                    <div class="d-flex align-items-center">
                                         <!--begin::Icon-->
                                         @if($wallet->name == "Bitcoin (BTC)")
                                             <img src="{{ asset('backend/assets/media/icons/bitcoin.png') }}" width="10%" alt="" class="me-4" />
@@ -32,6 +32,9 @@
                                         @elseif($wallet->name == "USDC (USDC)")
                                             <img src="{{ asset('backend/assets/media/icons/usdc.png') }}" width="10%" alt="" class="me-4" />
                                         @endif
+
+                                        <!--end::Icon-->
+                                        <!--begin::Details-->
                                         <div>
                                             <div class="fs-4 fw-bolder">Wallet address</div>
                                             <div class="fs-6 fw-bold text-gray-400">{{ $wallet->address }}</div>
