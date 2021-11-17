@@ -35,9 +35,9 @@ class Deposit extends Model
         $investments = Investment::getInvestment();
         $withdrawals = Withdraw::getWithdrawals();
         $referralBonus = ReferralBonus::getAmount();
-        $refund = self::where('status', 'refund')->sum('amount');
+//        $refund = self::where('status', 'refund')->sum('amount');
 
-        return $processedDeposit + $refund + $referralBonus - $investments - $withdrawals;
+        return $processedDeposit + $referralBonus - $investments - $withdrawals;
     }
 
     public function getPendingDepositCount()
