@@ -60,7 +60,8 @@
 
                                                     <div class="col-lg-4 d-lg-block">
                                                         <div class="card">
-                                                        <a href="{{ route('realestate.preview', 1) }}">
+                                                            <a href="#" onclick="executeExample()">
+{{--                                                        <a href="{{ route('realestate.preview', 1) }}">--}}
                                                             <img
                                                                 src="{{ asset('backend/assets/media/estate/1st/1.WEBP') }}"
                                                                 class="card-img-top"
@@ -72,14 +73,14 @@
                                                                 <p class="card-text">
                                                                 Stately Villa Forvald "A Time Capsule" From The End Of The 19th Century
                                                                 </p>
-                                                                <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                                <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                 <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/2nd/1.WEBP') }}"
                                                             class="card-img-top"
@@ -91,7 +92,7 @@
                                                         <p class="card-text">
                                                         Modern Villa With Breathtaking Sea View And A Private Pier
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -100,7 +101,7 @@
 
                                             <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/3rd/1.WEBP') }}"
                                                             class="card-img-top"
@@ -112,7 +113,7 @@
                                                         <p class="card-text">
                                                         54 Merles Lndg (Norway, ME 04268)
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,7 +122,7 @@
 
                                             <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/4th/1.WEBP') }}"
                                                             class="card-img-top"
@@ -133,7 +134,7 @@
                                                         <p class="card-text">
                                                         30 Greenwood Rd. (Norway, ME 04268)
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -142,7 +143,7 @@
 
                                             <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/5th/1.WEBP') }}"
                                                             class="card-img-top"
@@ -154,7 +155,7 @@
                                                         <p class="card-text">
                                                         58 Pikes Hl (Norway, ME 04268)
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -163,7 +164,7 @@
 
                                             <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/6th/1.WEBP') }}"
                                                             class="card-img-top"
@@ -175,7 +176,7 @@
                                                         <p class="card-text">
                                                         Stone Ln #23-C-1 (Norway, ME 04268)
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -183,7 +184,7 @@
 
                                             <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/7th/1.WEBP') }}"
                                                             class="card-img-top"
@@ -195,7 +196,7 @@
                                                         <p class="card-text">
                                                         88 Morse Rd (Norway, ME 04268)
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -204,7 +205,7 @@
 
                                             <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/8th/1.WEBP') }}"
                                                             class="card-img-top"
@@ -216,7 +217,7 @@
                                                         <p class="card-text">
                                                         20 Maple St (Paris, ME 04281)
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -225,7 +226,7 @@
 
                                             <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/9th/1.WEBP') }}"
                                                             class="card-img-top"
@@ -237,7 +238,7 @@
                                                         <p class="card-text">
                                                         5 Thurlow Ave (South Paris, ME 04281)
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -246,7 +247,7 @@
 
                                             <div class="col-lg-4 d-lg-block">
                                                     <div class="card">
-                                                    <a href="">
+                                                    <a href="#" onclick="executeExample()">
                                                         <img
                                                             src="{{ asset('backend/assets/media/estate/10th/1.WEBP') }}"
                                                             class="card-img-top"
@@ -258,7 +259,7 @@
                                                         <p class="card-text">
                                                         32 Western Promenade (South Paris, ME 04281)
                                                         </p>
-                                                        <a href="#!" class="btn btn-light-primary">Explore Details</a>
+                                                        <a href="#!" onclick="executeExample()" class="btn btn-light-primary">Explore Details</a>
                                                     </div>
                                                 </div>
                                             </div>

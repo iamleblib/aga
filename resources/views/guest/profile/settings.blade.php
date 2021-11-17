@@ -50,7 +50,7 @@
                     <!--end::Label-->
                     <!--begin::Col-->
                     <div class="col-lg-8 fv-row">
-                        <input required type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" value="{{ auth()->user()->phone ?? '' }}" />
+                        <input type="tel" id="phone" title="Enter country code (+) and number not less than 10 or greater 15" pattern="[+][0-9]{10,15}" autocomplete="off" data-intl-tel-input-id="0" maxlength="14" minlength="11" required name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" value="{{ auth()->user()->phone ?? '' }}" />
 
                     </div>
                     <!--end::Col-->

@@ -62,7 +62,7 @@
                         <div class="mb-13 text-center">
                             <h1 class="fs-2hx fw-bolder mb-5">Choose Your Plan</h1>
                             <div class="text-gray-400 fw-bold fs-5">If you need more info about our pricing, please check
-                                <a href="#" class="link-primary fw-bolder">Pricing Guidelines</a>.</div>
+                                <a href="{{route('faq')}}" class="link-primary fw-bolder">Pricing Guidelines</a>.</div>
                         </div>
                         <!--end::Heading-->
                         <!--begin::Nav group-->
@@ -83,7 +83,11 @@
                                         <!--begin::Heading-->
                                         <div class="mb-7 text-center">
                                             <!--begin::Title-->
-                                            <h1 class="text-dark mb-5 fw-boldest">Enterprise</h1>
+                                            <h1 class="text-dark mb-5 fw-boldest">Enterprise <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star" viewBox="0 0 16 16">
+                                                    <path d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z"/>
+                                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                                                </svg>
+                                            </h1>
                                             <!--end::Title-->
                                             <!--begin::Description-->
                                             <!--end::Description-->
@@ -219,7 +223,9 @@
                                         <!--begin::Heading-->
                                         <div class="mb-7 text-center">
                                             <!--begin::Title-->
-                                            <h1 class="text-dark mb-5 fw-boldest">World Class</h1>
+                                            <h1 class="text-dark mb-5 fw-boldest">World Class <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                                </svg></h1>
                                             <!--end::Title-->
                                             <!--begin::Description-->
                                             <!--end::Description-->
@@ -360,7 +366,10 @@
                                         <!--begin::Heading-->
                                         <div class="mb-7 text-center">
                                             <!--begin::Title-->
-                                            <h1 class="text-dark mb-5 fw-boldest">Unlimited</h1>
+                                            <h1 class="text-dark mb-5 fw-boldest">Unlimited  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+                                                    <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
+                                                    <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                                                </svg></h1>
                                             <!--end::Title-->
                                             <!--begin::Description-->
                                             <!--end::Description-->
@@ -500,15 +509,18 @@
                             <div class="modal-content">
 
                                 <div class="modal-body">
+                                    <p><i>You currently have</i> <h3>${{ number_format($wallet) }}.00 in your wallet Account</h3>
                                     <h5 class="modal-title">Enter Amount to Proceed</h5>
-                                    <p>You currently have ${{ number_format($wallet) }} in your wallet amount</p>
-                                    <p>Please enter your amount below to proceed</p>
+                                    </p>
                                     <input type="number" autofocus name="amount" id="amountToInvest" placeholder="Enter Amount here..." class="form-control p-4">
                                 </div>
 
                                 <div class="modal-footer">
                                     <span type="button" class="btn btn-light" data-bs-dismiss="modal">Close</span>
-                                    <button type="submit" class="btn btn-warning">Proceed</button>
+                                    <button type="submit" class="btn btn-warning">Calculate <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16">
+                                            <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+                                            <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z"/>
+                                        </svg> </button>
                                 </div>
                             </div>
                         </div>

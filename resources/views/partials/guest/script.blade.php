@@ -75,3 +75,15 @@ function googleTranslateElementInit() {
 <script src="{{ asset('backend/assets/js/custom/apps/user-management/users/view/update-role.js') }}"></script>
 <script src="{{ asset('backend/assets/js/custom/modals/create-account.js') }}"></script>
 <script src="{{ asset('backend/assets/js/custom/apps/customers/list/list.js') }}"></script>
+
+<script>
+    function executeExample(){
+        Swal.fire(
+            '<h1>Coming Soon...</h1>',
+            '<h4 class="text-info">Hello {{auth()->user()->username}},</h4>We have not released any assets for sale yet, we will notify you on this email <a class="text-info">{{auth()->user()->email}}</a> in a short time! <br>' +
+            'Thank you!',
+            'question',
+
+    )
+    }
+</script>
