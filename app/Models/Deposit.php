@@ -31,11 +31,11 @@ class Deposit extends Model
 
     public static function getProcessedDeposit()
     {
-        $processedDeposit = self::where('status', 'processed')->sum('amount');
+        $processedDeposit = self::where(['status' => 'processed', 'user_id' => auth()->id()])->sum('amount');
         $investments = Investment::getInvestment();
         $withdrawals = Withdraw::getWithdrawals();
         $referralBonus = ReferralBonus::getAmount();
-//        $refund = self::where('status', 'refund')->sum('amount');
+        $refund = self::where(['status' => 'refund', 'user_id' => auth()->id()])->sum('amount');
 
         return $processedDeposit + $referralBonus - $investments - $withdrawals;
     }

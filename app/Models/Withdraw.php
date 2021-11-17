@@ -30,7 +30,7 @@ class Withdraw extends Model
 
     public static function getWithdrawals()
     {
-        return self::sum('amount');
+        return self::where(['user_id' => auth()->id()])->sum('amount');
     }
 
     public function getCount()
@@ -40,7 +40,7 @@ class Withdraw extends Model
 
     public function pendingWithdrawals()
     {
-        return $this->where('status', 'pending');
+        return $this->where('status', 'pending')->get();
     }
 
     // eloquent

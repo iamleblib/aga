@@ -17,12 +17,19 @@ class Investment extends Model
 
     public static function getInvestmentCount()
     {
-        return self::count();
+        return self::where('user_id', auth()->id())->count();
     }
+
+    public static function getAllInvestment()
+    {
+        return self::sum('amount');
+    }
+
+
 
     public static function getInvestment()
     {
-        return self::sum('amount');
+        return self::where('user_id', auth()->id())->sum('amount');
     }
 
     public static function check($amount, $value1, $value2): bool

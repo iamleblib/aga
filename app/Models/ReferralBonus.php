@@ -11,7 +11,7 @@ class ReferralBonus extends Model
 
     public static function getAmount()
     {
-        return self::sum('amount');
+        return self::where('user_id', auth()->id())->sum('amount');
     }
 
     protected $guarded = [

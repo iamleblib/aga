@@ -17,7 +17,7 @@ class Roi extends Model
 
     public static function getRoi()
     {
-        return self::sum('amount');
+        return self::where('user_id', auth()->id())->sum('amount');
     }
 
     public function getAll()

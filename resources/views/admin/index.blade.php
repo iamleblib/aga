@@ -106,7 +106,7 @@
 															</span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($investment->getInvestment()) }}</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($investment->getAllInvestment()) }}</div>
                                                     <div class="text-muted fw-bold fs-6">Total Investments</div>
                                             </div>
                                         </div>
@@ -152,7 +152,7 @@
 															</span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($withdrawal->pendingWithdrawals()->count()) }}</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">{{ number_format($withdrawal->pendingWithdrawals()->count()) }}</div>
                                                 <div class="text-muted fw-bold fs-6">Total Pending Withdrawals</div>
                                             </div>
                                         </div>
@@ -233,7 +233,7 @@
 
                                 <div class="col-md-4 p-5">
                                     <!--begin::Tiles Widget 5-->
-                                    <a href="{{ route('users.index') }}" class="card card-xxl-stretch bg-body">
+                                    <a href="#" id="kt_drawer_chat_toggle" class="card card-xxl-stretch bg-body">
                                         <!--begin::Body-->
                                         <div class="card-body d-flex flex-column justify-content-between">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
