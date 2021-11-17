@@ -131,7 +131,7 @@
                                         <!--begin:Option-->
                                         <label class="d-flex flex-stack cursor-pointer mb-5">
                                             <!--begin::Label-->
-                                            <span class="d-flex align-items-center me-2">
+                                            <span class="align-items-center me-2">
 														<!--begin::Icon-->
 														<img src="{{ asset('backend/assets/media/icons/bitcoin.png')}}" width="10%" class="m-4" alt="">
                                                 <!--end::Icon-->
@@ -153,7 +153,7 @@
                                         <!--begin:Option-->
                                         <label class="d-flex flex-stack cursor-pointer mb-5">
                                             <!--begin::Label-->
-                                            <span class="d-flex align-items-center me-2">
+                                            <span class="align-items-center me-2">
 														<!--begin::Icon-->
                                                 <img src="{{ asset('backend/assets/media/icons/etherium.png')}}" width="10%" class="m-4" alt="">
 
@@ -164,7 +164,7 @@
 															<span class="fs-7 text-muted">Etherium Payment Method</span>
 														</span>
                                                 <!--end::Info-->
-													</span>
+                                            </span>
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <span class="form-check form-check-custom form-check-solid">
@@ -176,7 +176,7 @@
                                         <!--begin:Option-->
                                         <label class="d-flex flex-stack cursor-pointer">
                                             <!--begin::Label-->
-                                            <span class="d-flex align-items-center me-2">
+                                            <span class="align-items-center me-2">
 														<!--begin::Icon-->
                                                 <img src="{{ asset('backend/assets/media/icons/usdc.png')}}" width="10%" class="m-4" alt="">
 
@@ -187,7 +187,7 @@
 															<span class="fs-7 text-muted">USDC Payment Method</span>
 														</span>
                                                 <!--end::Info-->
-													</span>
+                                            </span>
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <span class="form-check form-check-custom form-check-solid">
