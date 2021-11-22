@@ -1,5 +1,4 @@
 <?php
-use App\Actions\Fortify\CreateNewUser;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Controllers\Admin\TransactionController;
