@@ -1,139 +1,168 @@
 @extends('layouts.front')
+@section('title', 'Our Team')
 
 @section('content')
 
-<title>{{env("APP_NAME")}} - Expert Teams</title>
-
-<div class="landing_wrapper breadcrumb_wrapper">
-        <div class="wrapper breadcrumb_wrapper_content" style="background-image: url('https://eskipaper.com/images/3d-wallpaper-20.jpg'); background-size: cover">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center text-center">
-                    <div class="col">
-                        <h2 class="breadcrumb_title">Our Team</h2>
-                    </div>
-                </div>
-                <div class="bread_crumb">
-                    <p><a href="{{ route('front.index')}}">Home</a> <i class="fa fa-angle-right"></i> <span class="text_colored">Team</span></p>
-                </div>
+    <section class="page-title" style="background-image:url({{ asset('front/images/background/team.jpeg') }})">
+        <div class="auto-container">
+            <div class="content">
+                <h1>Team <span>Member</span></h1>
+                <ul class="page-breadcrumb">
+                    <li><a href="{{ route('front.index') }}">Home</a></li>
+                    <li>Expert Team</li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section>
+    <!--End Page Title-->
 
-    <div class="wrapper blog_page_wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="single_blog_item align-left">
-                    <div class="blog_info">
-                        <a class="blog_title" href="#">Our Team</a>
-                        <div style="margin: 10px; !important"></div>
-                        <img class="" src="{{ asset('front/img/Wrapper_title_divider.png')}}" aria-colcount="" alt="">
-                    </div>
-                </div>
+    <!-- Team Page Section -->
+    <section class="team-page-section">
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <div class="title">about us</div>
+                <h2>We are here to manage your <br> finance with <span>experience</span></h2>
             </div>
-        </div>
 
-    <div id="faq_wrapper" class="wrapper faq_wrapper" style="background-image: url('{{ asset('front/img/faqs_breadcrumb_wrapper_content.png')}}')">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                        <div class="">
-                            <img src="{{ asset('front/img/ceo.png')}}" class="ceo" width="350px" alt="">
-                            <span style="margin: -3px 20px 5px 0px" class="btn_default float-right col-11">CEO & Founder. Alex Gomez (CBA)</span>
-                        </div>
-                </div>
-                <div class="col-md-7">
-                <br>
-                <br>
-                        <p class="text-left"><span class="text_colored" style="font-size: 40px">"</span>
-                        <i>Bitcoin is one of the most important inventions in all of human history. <br>
-                        <span class="m-1">For the first time ever, anyone can send or receive any amount of money
-                        with anyone else, anywhere on the planet, conveniently and without restriction. It’s the dawn of a better, more free world.</span></i></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            <div class="row clearfix">
 
-    <div id="team_wrapper" class="wrapper team_wrapper" style="background-image: url('https://eskipaper.com/images/3d-wallpaper-20.jpg'); background-size: cover">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <h2 class="wrapper_title">Expert Team</h2>
-                    <img class="wrapper_title_img" src="{{ asset('front/img/Wrapper_title_divider.png')}}" alt="">
-                    <span class="text-light p-4 text-left">
-                        <p class=""><small>We make it possible for individuals, groups, families, companies, etc. who may not be professionals in the fields to
-                            meaningfully engage and benefit from financial and stock markets, and experts-managed trading and trades portfolios.
-                            Our trading and trades experts ensure not only that your funds are at work, but are put in carefully planned and
-                            strategically diversified trading and trade portfolios. We ensure transparent returns, with favourable management fee.</small></p>
-                            <br>
-                            <br>
-                        </p>
-                    </span>
+                <!--Team Block-->
+                <div class="team-block-two style-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="#"><img src="{{ asset('front/images/resource/team-4.jpg') }}" alt="" title=""></a>
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <div class="lower-content">
+                            <h5><a href="#">Frazer Diamond</a></h5>
+                            <div class="designation">Founder & CEO</div>
+                        </div>
+                    </div>
                 </div>
+
+                <!--Team Block-->
+                <div class="team-block-two style-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="#"><img src="{{ asset('front/images/resource/team-5.jpg') }}" alt="" title=""></a>
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <div class="lower-content">
+                            <h5><a href="#">Chen Lee</a></h5>
+                            <div class="designation">Co-Founder</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Team Block-->
+                <div class="team-block-two style-two col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="#"><img src="{{ asset('front/images/resource/team-6.jpg') }}" alt="" title=""></a>
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <div class="lower-content">
+                            <h5><a href="#">Emma O’Brien</a></h5>
+                            <div class="designation">Sr. Product Engineer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Team Block-->
+                <div class="team-block-two style-two col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="#"><img src="{{ asset('front/images/resource/team-7.jpg') }}" alt="" title=""></a>
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <div class="lower-content">
+                            <h5><a href="#">David Ankrum</a></h5>
+                            <div class="designation">Co Founder</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Team Block-->
+                <div class="team-block-two style-two col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="#"><img src="{{ asset('front/images/resource/team-8.jpg') }}" alt="" title=""></a>
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <div class="lower-content">
+                            <h5><a href="#">Maria De Aragon</a></h5>
+                            <div class="designation">HRM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Team Block-->
+                <div class="team-block-two style-two col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="#"><img src="{{ asset('front/images/resource/team-9.jpg') }}" alt="" title=""></a>
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <div class="lower-content">
+                            <h5><a href="#">Joe Hurt</a></h5>
+                            <div class="designation">CTO</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Team Block-->
+                <div class="team-block-two style-two col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="#"><img src="{{ asset('front/images/resource/team-10.jpg') }}" alt="" title=""></a>
+                            <ul class="social-box">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <div class="lower-content">
+                            <h5><a href="#">Damien Wayne</a></h5>
+                            <div class="designation">COO</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="owl-carousel team_slider">
-                <div class="team_item">
-                    <img class="img-fluid" src="{{ asset('front/img/teams/manager.jpeg') }}" alt="">
-                    <div class="team_info" style="background: black">
-                        <div class="team_socials">
-                            <a href="#"><i class="fa fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                        <h4>Franklin Luiz</h4>
-                        <p>Manager</p>
-                    </div>
-                </div>
-                <div class="team_item">
-                    <img class="img-fluid" src="{{ asset('front/img/teams/Cordinator.jpeg') }}" alt="">
-                    <div class="team_info" style="background: black">
-                        <div class="team_socials">
-                            <a href="#"><i class="fa fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                        <h4>Davis Kurt</h4>
-                        <p>Cordinator</p>
-                    </div>
-                </div>
-                <div class="team_item">
-                    <img class="img-fluid" src="{{ asset('front/img/teams/Support.jpeg') }}" alt="">
-                    <div class="team_info" style="background: black">
-                        <div class="team_socials">
-                            <a href="#"><i class="fa fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                        <h4>Jummy Raymond</h4>
-                        <p>HR & Support</p>
-                    </div>
-                </div>
-                <div class="team_item">
-                    <img class="img-fluid" src="{{ asset('front/img/teams/Marketer.jpeg') }}" alt="">
-                    <div class="team_info" style="background: black">
-                        <div class="team_socials">
-                            <a href="#"><i class="fa fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                        <h4>Li Wei Zhang</h4>
-                        <p>Marketer</p>
-                    </div>
-                </div>
-                <div class="team_item">
-                    <img class="img-fluid" src="{{ asset('front/img/teams/Financial.jpeg') }}" alt="">
-                    <div class="team_info" style="background: black">
-                        <div class="team_socials">
-                            <a href="#"><i class="fa fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                        <h4>Josh Henies</h4>
-                        <p>Financial Analyst</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
-    </div>
-    </div>
+    </section>
+    <!-- End Team Page Section -->
 @endsection
