@@ -68,6 +68,7 @@
                 <div class="clearfix">
 
                     <div class="pull-left logo-box">
+
                         <div class="logo"><a href="{{ route('front.index') }}"><img src="{{ asset('front/images/logo.png') }}" width="100px" alt="" title=""></a></div>
                     </div>
 
