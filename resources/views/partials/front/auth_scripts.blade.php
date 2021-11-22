@@ -1,5 +1,5 @@
 
-		
+
 		<link rel="stylesheet" href="{{ asset('front/build/css/countrySelect.css')}}">
 		<link rel="stylesheet" href="{{ asset('front/build/css/demo.css')}}">
 
@@ -7,18 +7,11 @@
                         <!-- Load jQuery from CDN so can run demo immediately -->
                         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
                         <script src="{{ asset('front/build/js/countrySelect.js')}}"></script>
-                        <script>
-                            $("#country_selector").countrySelect({
-                                // defaultCountry: "jp",
-                                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-                                // responsiveDropdown: true,
-                                preferredCountries: ['no', 'gb', 'us']
-                            });
-                        </script>
+
 <style>
 
 form {
-  background:#111; 
+  background:#111;
   width:300px;
   margin:30px auto;
   border-radius:0.4em;
@@ -30,7 +23,7 @@ form {
 
 
 .inset {
-  padding:20px; 
+  padding:20px;
   border-top:1px solid #19191a;
 }
 
@@ -46,8 +39,8 @@ form h1 {
 
 
 input[type=text],
-input[type=password], 
-input[type=email], 
+input[type=password],
+input[type=email],
 input[type=tel] {
   width:100%;
   padding:8px 5px;
@@ -78,7 +71,7 @@ input[type=tel]:hover {
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   min-height: 100%;
   padding: 20px;
@@ -155,7 +148,7 @@ input[type=tel]:hover {
      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
    />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
- 
+
 <script>
    const phoneInputField = document.querySelector("#phone");
    const phoneInput = window.intlTelInput(phoneInputField, {
@@ -171,7 +164,7 @@ input[type=tel]:hover {
       // utilsScript:
     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
 });
-  
+
  </script>
 
  <!-- email validation -->
@@ -238,11 +231,11 @@ input[type=tel]:hover {
     $('#password, #password_confirmation').on('keyup', function () {
     if ($('#password').val() == $('#password_confirmation').val()) {
         $('#message').html('Matched!').css('color', 'green');
-    } 
+    }
     // elseif ($('#password').val() == null() ){
     //   $('#message').html('');
     // }
-      else 
+      else
         $('#message').html('Not Match...').css('color', 'red');
     });
 </script>

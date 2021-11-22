@@ -13,7 +13,7 @@
     <link href="{{ asset('front/css/style.css')}}" rel="stylesheet">
     <link href="{{ asset('front/css/responsive.css')}}" rel="stylesheet">
 
-    <link rel="shortcut icon" href="{{ asset('front/images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('front/images/logo.png')}}" type="image/x-icon">
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,7 +74,7 @@
                     <div class="nav-outer clearfix">
 
                         <!-- Main Menu -->
-                        <nav class="main-menu navbar-expand-md">
+                        <nav class="main-menu navbar-expand-md p-3">
                             <div class="navbar-header">
                                 <div onclick="myFunction(this)" class="navbar-toggler" style="border: none" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <div class="icon-bar bar1"></div>
