@@ -2,8 +2,8 @@
 <!--begin::Header Logo-->
 <div class="header-logo">
     <a href="{{route('home')}}">
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" class="logo-default" width="20%"/>
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-stick.png') }}" class="logo-sticky h-25px">
+        <img alt="Logo" src="{{ asset('front/images/footer-logo.png') }}" class="logo-default" width="20%"/>
+        <img alt="Logo" src="{{ asset('front/images/logo-small.png') }}" class="logo-sticky h-25px">
 	</a>
 </div>
 <!--end::Header Logo-->

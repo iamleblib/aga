@@ -64,7 +64,7 @@
                             <div class="text-sm-end">
                                 <!--begin::Logo-->
                                 <a href="#">
-                                    <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-stick.png')}}" width="10%">
+                                    <img alt="Logo" src="{{ asset('front/images/logo.png') }}" width="10%">
                                 </a>
                                 <!--end::Logo-->
                                 <!--begin::Text-->
