@@ -295,7 +295,7 @@
                             <option data-kt-flag="flags/ukraine.svg" value="UA">Ukraine</option>
                             <option data-kt-flag="flags/united-arab-emirates.svg" value="AE">United Arab Emirates</option>
                             <option data-kt-flag="flags/united-kingdom.svg" value="GB">United Kingdom</option>
-                            <option data-kt-flag="flags/united-states.svg" value="US">United States</option>
+                            <option data-kt-flag="flags/united-states.svg" value="USA">United States of America</option>
                             <option data-kt-flag="flags/uruguay.svg" value="UY">Uruguay</option>
                             <option data-kt-flag="flags/uzbekistan.svg" value="UZ">Uzbekistan</option>
                             <option data-kt-flag="flags/vanuatu.svg" value="VU">Vanuatu</option>

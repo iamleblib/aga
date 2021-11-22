@@ -76,7 +76,7 @@ function googleTranslateElementInit() {
 <script src="{{ asset('backend/assets/js/custom/modals/create-account.js') }}"></script>
 <script src="{{ asset('backend/assets/js/custom/apps/customers/list/list.js') }}"></script>
 
-<script>
+<!-- <script>
     function executeExample(){
         Swal.fire(
             '<h1>Coming Soon...</h1>',
@@ -86,4 +86,4 @@ function googleTranslateElementInit() {
 
     )
     }
-</script>
+</script> -->

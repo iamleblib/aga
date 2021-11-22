@@ -37,7 +37,23 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
+
 Route::get('/', [PagesController::class, 'index'])->name('front.index');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::get('/team', [PagesController::class, 'team'])->name('team');
+Route::get('/packages', [PagesController::class, 'packages'])->name('packages');
+Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
+Route::get('/terms', [PagesController::class, 'terms'])->name('terms');
+Route::get('/legacy', [PagesController::class, 'legacy'])->name('legacy');
+Route::get('/privacy', [PagesController::class, 'privacy'])->name('privacy');
+//Route::get('/real_estate', [PagesController::class, 'real_estate'])->name('real_estate');
+
+
+Route::get('2fa', [TwoFAController::class, 'index'])->name('2fa.index');
+Route::post('2fa', [TwoFAController::class, 'store'])->name('2fa.post');
+Route::get('2fa/reset', [TwoFAController::class, 'resend'])->name('2fa.resend');
+
 
 Auth::routes(['verify' => true]);
 
@@ -100,10 +116,10 @@ Route::group(['prefix' => 'secure'], function () {
             Route::get('/logs', [WithdrawsController::class, 'logs'])->name('withdraw.logs');
         });
 
-        Route::group(['prefix' => 'realestate'], function () {
-            Route::get('/', [RealEstatesController::class, 'index'])->name('realestate.index');
-            Route::get('/preview/{id}', [RealEstatesController::class, 'show'])->name('realestate.preview');
-        });
+//        Route::group(['prefix' => 'realestate'], function () {
+//            Route::get('/', [RealEstatesController::class, 'index'])->name('realestate.index');
+//            Route::get('/preview/{id}', [RealEstatesController::class, 'show'])->name('realestate.preview');
+//        });
 
         Route::post('guests/mail', [SendMessages::class, 'store'])->name('guests.send.message');
 
