@@ -12,7 +12,6 @@
 <!--Begin::Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-5FS8GGP');</script>
 <!--End::Google Tag Manager -->
-
 <section class="page-title" style="background-image:url({{ asset('front/images/background/register.jpeg') }})">
     <div class="auto-container">
         <div class="content">
@@ -366,7 +365,7 @@
                             <!--end::Label-->
                             <!--begin::Input wrapper-->
                             <div class="position-relative mb-3">
-                                <input class="form-control form-control-lg form-control-solid  @error('password') is-invalid @enderror" value="{{ old('password') }}" placeholder="Enter Password" type="password" placeholder="" name="password" id="password" autocomplete="off" />
+                                <input class="form-control form-control-lg form-control-solid  @error('password') is-invalid @enderror" placeholder="Enter Password" type="password" placeholder="enter password" name="password" id="password" autocomplete="off" />
                                 <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
 											<i class="fs-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">

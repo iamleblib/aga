@@ -67,7 +67,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'username' => $data['username'],
+            'username' => preg_replace('/\s+/', '', $data['username']),
             'phone' => $data['phone'],
             'country' => $data['country'],
             'email' => $data['email'],
