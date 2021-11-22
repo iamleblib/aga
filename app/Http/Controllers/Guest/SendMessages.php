@@ -25,7 +25,7 @@ class SendMessages extends Controller
         Auth::user()->message()->create([
             'subject' => 'demo',
             'sender' => auth()->user()->username,
-            'receiver' => 'support@coinbaseassets.com',
+            'receiver' => env('APP_MAIL'),
             'message' => $request->message
         ]);
 

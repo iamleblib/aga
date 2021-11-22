@@ -437,32 +437,32 @@
 
 
 
-                            <div class="row">
-                                <div class="col-xxl-12 pt-5">
-                                    <!--begin::Tiles Widget 5-->
-                                    <a href="{{ route('realestate.index') }}" class="card card-xxl-stretch bg-primary">
-                                        <!--begin::Body-->
-                                        <div class="card-body d-flex flex-column justify-content-between">
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-                                            <span class="svg-icon svg-icon-white svg-icon-2hx ms-n1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
-																	<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
-																	<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
-																	<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
-                                            <div class="d-flex flex-column">
-                                                <div class="text-white fw-bolder fs-1 mb-2 mt-5">$0</div>
-                                                <div class="text-white fw-bold fs-6">Properties Purchased</div>
-                                            </div>
-                                        </div>
-                                        <!--end::Body-->
-                                    </a>
-                                    <!--end::Tiles Widget 5-->
-                                </div>
-                            </div>
+{{--                            <div class="row">--}}
+{{--                                <div class="col-xxl-12 pt-5">--}}
+{{--                                    <!--begin::Tiles Widget 5-->--}}
+{{--                                    <a href="{{ route('realestate.index') }}" class="card card-xxl-stretch bg-primary">--}}
+{{--                                        <!--begin::Body-->--}}
+{{--                                        <div class="card-body d-flex flex-column justify-content-between">--}}
+{{--                                            <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->--}}
+{{--                                            <span class="svg-icon svg-icon-white svg-icon-2hx ms-n1">--}}
+{{--																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">--}}
+{{--																	<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />--}}
+{{--																	<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />--}}
+{{--																	<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />--}}
+{{--																	<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />--}}
+{{--																</svg>--}}
+{{--															</span>--}}
+{{--                                            <!--end::Svg Icon-->--}}
+{{--                                            <div class="d-flex flex-column">--}}
+{{--                                                <div class="text-white fw-bolder fs-1 mb-2 mt-5">$0</div>--}}
+{{--                                                <div class="text-white fw-bold fs-6">Properties Purchased</div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <!--end::Body-->--}}
+{{--                                    </a>--}}
+{{--                                    <!--end::Tiles Widget 5-->--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
                         <!--end::Col-->
 

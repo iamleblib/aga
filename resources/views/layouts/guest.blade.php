@@ -81,14 +81,15 @@
 @include('partials.guest.chat')
 <!--begin::Exolore drawer toggle-->
 <button id="kt_explore_toggle" class="explore-toggle btn btn-sm bg-body btn-color-gray-700 btn-active-primary shadow-sm position-fixed px-5 fw-bolder zindex-2 top-50 mt-10 end-0 transform-90 fs-6 rounded-top-0" title="Welcome to {{env('APP_NAME')}}" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover">
-    <span id="kt_explore_toggle_label">Welcome</span>
+    <span id="kt_explore_toggle_label">Welcome to {{ env('APP_NAME') }}</span>
 </button>
 <!--end::Exolore drawer toggle-->
 @include('partials.guest.explore')
 <!--end::Drawers-->
-
+@include('guest.transaction.transfer.index')
 @include('guest.transaction.deposit.index')
 @include('guest.transaction.withdraw.index')
+
 
 <!--begin::Modal - Upgrade plan-->
 <div class="modal fade" id="kt_modal_upgrade_plan" tabindex="-1" aria-hidden="true">
