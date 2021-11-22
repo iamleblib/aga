@@ -120,6 +120,24 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(ReferralBonus::class);
     }
 
+    public function beneficiary()
+    {
+        return $this->hasMany(Beneficiary::class);
+    }
+
+    public function transfer()
+    {
+        return $this->hasMany(Transfer::class);
+    }
+
+    public function checkUsernameExist($username)
+    {
+        return $this->where([
+            ['username', $username],
+            ['username', '!=', auth()->user()->username]
+        ])->count();
+    }
+
 
 //    public function generateCode()
 //    {

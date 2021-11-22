@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\MailController;
-use App\Models\Referral;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -55,10 +53,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone' => ['required', 'max:255'],
-            'country' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            // 'created_at' => ['stampdate'],
         ]);
     }
 
@@ -70,33 +65,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
-        if ($data['user_id']) {
-            Referral::create([
-                'user_id'  => $data['user_id'],
-                'name'  => $data['username'],
-                'email'  => $data['email'],
-            ]);
-        }
-
-        //        send welcome message
-        $welcome = new MailController();
-        $item = [
-            'email' => $data['email']
-        ];
-        $welcome->welcome($item);
-
-
         return User::create([
             'name' => $data['name'],
             'username' => $data['username'],
-            'email' => $data['email'],
             'phone' => $data['phone'],
-            'referral' => $data['referral'],
             'country' => $data['country'],
+            'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'password_show' => $data['password'],
-            // 'created_at' => $data['created_at'],
         ]);
     }
 }

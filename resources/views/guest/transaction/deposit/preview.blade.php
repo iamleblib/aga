@@ -91,7 +91,7 @@
                                             <thead>
                                             <tr class="border-bottom fs-6 fw-bolder text-muted text-uppercase">
                                                 <th class="min-w-175px pb-9">Description</th>
-                                                <th class="min-w-70px pb-9 text-end">Coinbase Charges</th>
+                                                <th class="min-w-70px pb-9 text-end">altriagroup Charges</th>
                                                 <th class="min-w-80px pb-9 text-end">Transaction Fee</th>
                                                 <th class="min-w-80px pb-9 text-end">Amount to Deposit</th>
                                             </tr>

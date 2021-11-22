@@ -12,7 +12,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="CBA - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
     <meta property="og:url" content="https://keenthemes.com/metronic" />
-    <meta property="og:site_name" content="Coinbase Asset" />
+    <meta property="og:site_name" content="altriagroup Asset" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="{{ asset('backend/assets/media/logos/favicon.ico') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
@@ -112,7 +112,7 @@
             <div class="modal-body pt-0 pb-15 px-5 px-xl-20">
                 <!--begin::Heading-->
                 <div class="mb-13 text-center">
-                    <h1 class="mb-3">Fund Your Coinbase Asset Wallet</h1>
+                    <h1 class="mb-3">Fund Your altriagroup Asset Wallet</h1>
                     <div class="text-muted fw-bold fs-5">If you need more info, please check
                         <a href="#" class="link-primary fw-bolder">Pricing Guidelines</a>.</div>
                 </div>

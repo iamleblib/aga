@@ -627,7 +627,7 @@
                                                                                             <!--end::Title-->
                                                                                             <!--begin::Description-->
                                                                                             <div class="text-muted fw-bold fs-5">If you need help, send a 
-                                                                                            <a href="mailto:support@coinbaseassets.com" target="_blank" class="link-primary fw-bolder">Support mail </a>.</div>
+                                                                                            <a href="mailto:support@altriagroupasset.com" target="_blank" class="link-primary fw-bolder">Support mail </a>.</div>
                                                                                             <!--end::Description-->
                                                                                         </div>
                                                                                         <!--end::Heading-->
@@ -652,7 +652,7 @@
                                                                                             <label class="fs-6 fw-bold mb-2">Deal Description</label>
                                                                                             <!--end::Label-->
                                                                                             <!--begin::Label-->
-                                                                                            <textarea class="form-control form-control-solid" rows="3" placeholder="Enter Deal Description" name="details_description">It is a very privillage to experience purchase a house properyt at my fingertips with Coinbase Real Estate investment property</textarea>
+                                                                                            <textarea class="form-control form-control-solid" rows="3" placeholder="Enter Deal Description" name="details_description">It is a very privillage to experience purchase a house properyt at my fingertips with altriagroup Real Estate investment property</textarea>
                                                                                             <!--end::Label-->
                                                                                         </div>
                                                                                         <!--end::Input group-->
@@ -805,7 +805,7 @@
                                                                                             <div class="tab-content">
                                                                                                     <label class="d-flex align-items-center fs-6 fw-bold mb-2">
                                                                                                         <span class="required">Setup Budget (if installment)</span>
-                                                                                                        <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="&lt;div class='p-4 rounded bg-light'&gt; &lt;div class='d-flex flex-stack text-muted mb-4'&gt; &lt;i class='fas fa-university fs-3 me-3'&gt;&lt;/i&gt; &lt;div class='fw-bold'&gt;Coinbase Assets **** 45927 STATEMENT&lt;/div&gt; &lt;/div&gt; &lt;div class='d-flex flex-stack fw-bold text-gray-600'&gt; &lt;div&gt;Property Price&lt;/div&gt; &lt;div&gt;Transaction&lt;/div&gt; &lt;/div&gt; &lt;div class='separator separator-dashed my-2'&gt;&lt;/div&gt; &lt;div class='d-flex flex-stack text-dark fw-bolder mb-2'&gt; &lt;div&gt;USD2,329,856&lt;/div&gt; &lt;div&gt;Cryprocurrency*&lt;/div&gt;"></i>
+                                                                                                        <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="&lt;div class='p-4 rounded bg-light'&gt; &lt;div class='d-flex flex-stack text-muted mb-4'&gt; &lt;i class='fas fa-university fs-3 me-3'&gt;&lt;/i&gt; &lt;div class='fw-bold'&gt;altriagroup Assets **** 45927 STATEMENT&lt;/div&gt; &lt;/div&gt; &lt;div class='d-flex flex-stack fw-bold text-gray-600'&gt; &lt;div&gt;Property Price&lt;/div&gt; &lt;div&gt;Transaction&lt;/div&gt; &lt;/div&gt; &lt;div class='separator separator-dashed my-2'&gt;&lt;/div&gt; &lt;div class='d-flex flex-stack text-dark fw-bolder mb-2'&gt; &lt;div&gt;USD2,329,856&lt;/div&gt; &lt;div&gt;Cryprocurrency*&lt;/div&gt;"></i>
                                                                                                     </label>
                                                                                             </div>
                                                                                             <!--end::Label-->

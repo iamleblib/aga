@@ -34,7 +34,7 @@
                         <div class="header_top_left">
                             <span><img class="icon_img" src="{{ asset('front/img/icons/phone.png')}}" alt=""> +132 0269 1010</span>
                             <span class="vertical_divider"></span>
-                            <span><a href="mailto:support@coinbaseassets.com"><img class="icon_img" src="{{ asset('front/img/icons/mail.png')}}" alt=""> Support@coinbaseassets.com</a></span>
+                            <span><a href="mailto:support@altriagroupasset.com"><img class="icon_img" src="{{ asset('front/img/icons/mail.png')}}" alt=""> Support@altriagroupasset.com</a></span>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-12">
@@ -59,12 +59,12 @@
                         <nav>
                             <ul>
                                 <li><a class="smooth_scroll" href="{{ route('front.index')}}">Home</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('about')}}">About</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('team')}}">Team</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('faq')}}">Faqs</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('front.index')}}#step_wrapper">Step</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('front.index')}}#investment_plan">Investment Plan</a></li>
-                                <li><a class="smooth_scroll" href="{{ route('front.index')}}#contact_wrapper">Contact</a></li>
+                                <li><a class="smooth_scroll" href="">About</a></li>
+                                <li><a class="smooth_scroll" href="">Team</a></li>
+                                <li><a class="smooth_scroll" href="">Faqs</a></li>
+                                <li><a class="smooth_scroll" href="#step_wrapper">Step</a></li>
+                                <li><a class="smooth_scroll" href="#investment_plan">Investment Plan</a></li>
+                                <li><a class="smooth_scroll" href="#contact_wrapper">Contact</a></li>
                                 <!-- <li></li>
                                 <li><a class="smooth_scroll" href="#">More <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                                     <ul class="sub-menu">
