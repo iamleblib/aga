@@ -2,7 +2,7 @@
 <!--begin::Header Logo-->
 <div class="">
     <a href="{{route('home')}}">
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" width="50%" />
+        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" width="20%" />
     </a>
 </div>
 <!--end::Header Logo-->

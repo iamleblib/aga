@@ -36,7 +36,7 @@
             <!--begin::Wrapper-->
             <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
                 <!--begin::Form-->
-                <form class="form w-100" novalidate="novalidate" id="" method="POST" action="{{ route('register') }}">
+                <form class="form w-100" novalidate="novalidate" id="" autocomplete="off" method="POST" action="{{ route('register') }}">
                     @csrf
                     <!--begin::Heading-->
                     <div class="mb-10 text-center">
@@ -88,7 +88,7 @@
                         <!--begin::Col-->
                         <div class="col-xl-4">
                             <label class="form-label fw-bolder text-dark fs-6">Username</label>
-                            <input id="name" class="form-control form-control-lg form-control-solid  @error('username') is-invalid @enderror" type="text" placeholder="Username" name="username" value="{{ old('username') }}" autocomplete="off" />
+                            <input id="name" class="form-control form-control-lg form-control-solid  @error('username') is-invalid @enderror" type="text" placeholder="@- Username" name="username" value="{{ old('username') }}" autocomplete="off" />
                             @error('username')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -101,7 +101,7 @@
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
                         <label class="form-label fw-bolder text-dark fs-6">Email</label>
-                        <input class="form-control form-control-lg form-control-solid  @error('email') is-invalid @enderror" oninput="checker()" value="{{ old('email') }}" type="email" placeholder="Enter your Email" id="email-id" name="email" autocomplete="email" />
+                        <input class="form-control form-control-lg form-control-solid  @error('email') is-invalid @enderror" oninput="checker()" value="{{ old('email') }}" type="email" placeholder="_ _ _@_ _.com" id="email-id" name="email" autocomplete="email" />
                         @error('email')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -338,7 +338,7 @@
                                 <option data-kt-flag="flags/ukraine.svg" value="UA">Ukraine</option>
                                 <option data-kt-flag="flags/united-arab-emirates.svg" value="AE">United Arab Emirates</option>
                                 <option data-kt-flag="flags/united-kingdom.svg" value="GB">United Kingdom</option>
-                                <option data-kt-flag="flags/united-states.svg" value="US">United States</option>
+                                <option data-kt-flag="flags/united-states.svg" value="USA">United States of America</option>
                                 <option data-kt-flag="flags/uruguay.svg" value="UY">Uruguay</option>
                                 <option data-kt-flag="flags/uzbekistan.svg" value="UZ">Uzbekistan</option>
                                 <option data-kt-flag="flags/vanuatu.svg" value="VU">Vanuatu</option>
@@ -411,24 +411,33 @@
                     <!--begin::Input group-->
                     <div class="fv-row mb-10">
                         <label class="form-check form-check-custom form-check-solid form-check-inline">
-                            <input class="form-check-input" required type="checkbox" name="toc" value="1" />
+                            <input class="form-check-input" checked type="checkbox" name="toc" value="1" />
                             <span class="form-check-label fw-bold text-gray-700 fs-6">I Agree
 									<a href="{{ route('terms') }}" class="ms-1 link-primary">Terms and conditions</a>.</span>
                         </label>
                     </div>
                     <!--end::Input group-->
                     <!--begin::Actions-->
-                    <div class="text-center">
-                        <button type="submit" id="" class="btn btn-lg btn-primary">
-                            <span class="indicator-label">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-sm btn-light-warning" type="reset">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                                 </svg>
-                                Register</span>
-                                <span class="indicator-progress">Please wait...
-									<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                        </button>
+                                Clear Cache</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" id="" class="btn btn-sm btn-primary">
+                                <span class="indicator-label">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                    </svg>
+                                    Register</span>
+                                    <span class="indicator-progress">Please wait...
+                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                            </button>
+                        </div>
                     </div>
                     <!--end::Actions-->
                 </form>

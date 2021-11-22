@@ -173,8 +173,8 @@
                         <img src="{{ asset('front/images/gallery/1.jpg') }}" alt="" />
                         <div class="overlay-box">
                             <div class="overlay-inner">
-                                <h3><a href="#l">Business Advisor</a></h3>
-                                <div class="text">The argument in favor of using filler text goes something consecte tur adipis elit sed eiusmod. </div>
+                                <h3><a href="#l">Protected by insurance</a></h3>
+                                <div class="text">Cryptocurrency stored on our servers is covered by our insurance policy. </div>
                             </div>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <h3><a href="#">Branch Advisor</a></h3>
-                                <div class="text">The argument in favor of using filler text goes something consecte tur adipis elit sed eiusmod. </div>
+                                <div class="text">{{ env("APP_NAME") }} supports a variety of the most popular digital currencies.</div>
                             </div>
                         </div>
                     </div>
@@ -203,8 +203,8 @@
                         <img src="{{ asset('front/images/gallery/32.jpg') }}" alt="" />
                         <div class="overlay-box">
                             <div class="overlay-inner">
-                                <h3><a href="#">Manager CEO</a></h3>
-                                <div class="text">The argument in favor of using filler text goes something consecte tur adipis elit sed eiusmod. </div>
+                                <h3><a href="#">Secure Storage Facility</a></h3>
+                                <div class="text">We store the vast majority of the digital assets in secure offline storage. </div>
                             </div>
                         </div>
                     </div>
@@ -227,7 +227,7 @@
                     <div class="quote-icon">
                         <span class="icon flaticon-right-quote-sign"></span>
                     </div>
-                    <div class="text">The argument in favor of using filler text goes something like this: If you use real content in the design preocess, anytime you reach a review point you’ll end up reviewing and negotiating </div>
+                    <div class="text">Bitcoin is one of the most important inventions in all of human history. For the first time ever, anyone can send or receive any amount of money with anyone else, anywhere on the planet, conveniently and without restriction. It’s the dawn of a better, more free world. </div>
                     <h3>Robert Froast</h3>
                     <div class="author">Chairman and CEO</div>
                 </div>

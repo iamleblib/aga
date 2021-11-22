@@ -11,7 +11,7 @@
     <link href="{{ asset('front/css/style.css')}}" rel="stylesheet">
     <link href="{{ asset('front/css/responsive.css')}}" rel="stylesheet">
 
-    <link rel="shortcut icon" href="{{ asset('front/images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('front/images/logo.png')}}" type="image/x-icon">
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

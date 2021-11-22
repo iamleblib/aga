@@ -49,7 +49,7 @@
                                         <div class="inner-box">
                                             <!-- Title Box -->
                                             <div class="title-box">
-                                                <h5>Basic Plan</h5>
+                                                <h5>Enterprise Plan</h5>
                                                 <div class="text">This Package Is Known As Standard Package, Investment Strategy With A Minimum Denomination Of $300 To A Maximum Denomination Of $9,999, This Strategy Assured Returns For 3 Weeks</div>
                                             </div>
                                             <div class="price">$300 <span>/ weekly</span></div>
@@ -71,7 +71,7 @@
                                             <div class="recomend">Recommended</div>
                                             <!-- Title Box -->
                                             <div class="title-box">
-                                                <h5>Standard Plan</h5>
+                                                <h5>World Class Plan</h5>
                                                 <div class="text">This Package Is Known As Standard Package, Investment Strategy With A Minimum Denomination Of $10,000 To A Maximum Denomination Of $49,999, This Strategy Assured Returns For 4 Weeks</div>
                                             </div>
                                             <div class="price" style="background: green">$10,000 <span>/ weekly</span></div>
@@ -92,7 +92,7 @@
                                         <div class="inner-box">
                                             <!-- Title Box -->
                                             <div class="title-box">
-                                                <h5>Extended Plan</h5>
+                                                <h5>Unlimited Plan</h5>
                                                 <div class="text">This Package Is Known As Extended Package, Investment Strategy With A Minimum Denomination Of $50,000 To A Maximum Denomination Of $$$$, This Strategy Assured Returns For 5 Weeks</div>
                                             </div>
                                             <div class="price">$50,000 <span>/ weekly</span></div>

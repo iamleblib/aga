@@ -27,8 +27,8 @@
                     <div class="icon-box">
                         <span class="icon flaticon-bar-chart"></span>
                     </div>
-                    <h6><a href="#">Business Growth</a></h6>
-                    <div class="text">The argument in favor of using filler text goes some labore et dolore magna aliqua consectetur.</div>
+                    <h6><a href="#">Secure Storage Facility</a></h6>
+                    <div class="text">We store the vast majority of the digital assets in secure offline storage.</div>
                 </div>
             </div>
 
@@ -38,8 +38,8 @@
                     <div class="icon-box">
                         <span class="icon flaticon-board"></span>
                     </div>
-                    <h6><a href="#">Strategy Process</a></h6>
-                    <div class="text">The argument in favor of using filler text goes some labore et dolore magna aliqua consectetur.</div>
+                    <h6><a href="#">Account Certified Privacy</a></h6>
+                    <div class="text">We will never share your private data without your permission.</div>
                 </div>
             </div>
 
@@ -49,8 +49,8 @@
                     <div class="icon-box">
                         <span class="icon flaticon-student"></span>
                     </div>
-                    <h6><a href="#">Finance Manage</a></h6>
-                    <div class="text">The argument in favor of using filler text goes some labore et dolore magna aliqua consectetur.</div>
+                    <h6><a href="#">Protected by insurance</a></h6>
+                    <div class="text">Cryptocurrency stored on our servers is covered by our insurance policy.</div>
                 </div>
             </div>
 
@@ -121,8 +121,10 @@
                     </div>
 
                     <div class="text">
-                        <p>The argument in favor of using filler text goes something like this: If you use real content in the <a href="#">design process,</a> anytime you reach a review point you’ll end up reviewing and negotiating the content itself and not the design.</p>
-                        <p>Aenean tincidunt id mauris id auctor. Donec at ligula lacus. Nulla dignissim mi quis neque interdum, quis porta sem finibus.</p>
+                        <p>{{ env('APP_NAME') }} Ltd is a registered investment platform providing digital asset investment management services to individuals.</p>
+                        <p>We provide a dynamic investment solution to clients in need of a self-operating portfolio, as well as a smart fund with flexible time and investment amount.</p>
+                        <p> {{ env('APP_NAME') }} Ltd is a registered investment platform providing digital asset investment management services to individuals.</p>
+                        <p>  We provide a dynamic investment solution to clients in need of a self-operating portfolio, as well as a smart fund with flexible time and investment amount.</p>
                     </div>
 
                 </div>
@@ -148,7 +150,7 @@
             <div class="clearfix">
                 <div class="pull-left">
                     <div class="title">Why choose us</div>
-                    <h2>There are many companies <br> but why <span>choose us</span></h2>
+                    <h2>There are many companies <br> {{ env('APP_NAME') }} <span>Trade</span></h2>
                 </div>
                 <div class="pull-right">
                     <div class="text">Our Services is strategically diversified to mitigate risks of overly streamlined trading.
@@ -291,11 +293,11 @@
                         <div class="team-block">
                             <div class="inner-box">
                                 <div class="image">
-                                    <img src="{{ asset('front/images/resource/team-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('front/images/resource/Protocol.jpg') }}" alt="" />
                                     <div class="overlay-box">
                                         <div class="content">
-                                            <h5><a href="team.html">Amber Lee</a></h5>
-                                            <div class="designation">Co-founder</div>
+                                            <h5><a href="#">Amber Stella</a></h5>
+                                            <div class="designation">Protocol Officer</div>
                                             <div class="social-outer">
                                                 <div class="social-box">
                                                     <ul>
@@ -315,11 +317,11 @@
                         <div class="team-block">
                             <div class="inner-box">
                                 <div class="image">
-                                    <img src="{{ asset('front/images/resource/team-2.jpg') }}" alt="" />
+                                    <img src="{{ asset('front/images/resource/Director.jpg') }}" alt="" />
                                     <div class="overlay-box">
                                         <div class="content">
-                                            <h5><a href="team.html">John Legend</a></h5>
-                                            <div class="designation">Co-founder</div>
+                                            <h5><a href="#">Frank Legend</a></h5>
+                                            <div class="designation">Director</div>
                                             <div class="social-outer">
                                                 <div class="social-box">
                                                     <ul>
@@ -339,11 +341,11 @@
                         <div class="team-block">
                             <div class="inner-box">
                                 <div class="image">
-                                    <img src="{{ asset('front/images/resource/team-3.jpg') }}" alt="" />
+                                    <img src="{{ asset('front/images/resource/Consultant.jpg') }}" alt="" />
                                     <div class="overlay-box">
                                         <div class="content">
-                                            <h5><a href="team.html">Aaron Ramsey</a></h5>
-                                            <div class="designation">Manager</div>
+                                            <h5><a href="#">Aaron Ramsey</a></h5>
+                                            <div class="designation">Consultant</div>
                                             <div class="social-outer">
                                                 <div class="social-box">
                                                     <ul>
@@ -363,59 +365,11 @@
                         <div class="team-block">
                             <div class="inner-box">
                                 <div class="image">
-                                    <img src="{{ asset('front/images/resource/team-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('front/images/resource/Franchise.jpeg') }}" alt="" />
                                     <div class="overlay-box">
                                         <div class="content">
-                                            <h5><a href="team.html">Amber Lee</a></h5>
-                                            <div class="designation">Co-founder</div>
-                                            <div class="social-outer">
-                                                <div class="social-box">
-                                                    <ul>
-                                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Team Block -->
-                        <div class="team-block">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="{{ asset('front/images/resource/team-2.jpg') }}" alt="" />
-                                    <div class="overlay-box">
-                                        <div class="content">
-                                            <h5><a href="team.html">John Legend</a></h5>
-                                            <div class="designation">Co-founder</div>
-                                            <div class="social-outer">
-                                                <div class="social-box">
-                                                    <ul>
-                                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Team Block -->
-                        <div class="team-block">
-                            <div class="inner-box">
-                                <div class="image">
-                                    <img src="{{ asset('front/images/resource/team-3.jpg') }}" alt="" />
-                                    <div class="overlay-box">
-                                        <div class="content">
-                                            <h5><a href="team.html">Aaron Ramsey</a></h5>
-                                            <div class="designation">Manager</div>
+                                            <h5><a href="#">Charles Ivory</a></h5>
+                                            <div class="designation">Franchise agent</div>
                                             <div class="social-outer">
                                                 <div class="social-box">
                                                     <ul>

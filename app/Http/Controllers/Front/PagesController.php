@@ -46,4 +46,9 @@ class PagesController extends Controller
     {
         return view('front.privacy');
     }
+
+    public function contact()
+    {
+        return view('front.contact');
+    }
 }

@@ -46,6 +46,7 @@ Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
 Route::get('/terms', [PagesController::class, 'terms'])->name('terms');
 Route::get('/legacy', [PagesController::class, 'legacy'])->name('legacy');
 Route::get('/privacy', [PagesController::class, 'privacy'])->name('privacy');
+Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
 //Route::get('/real_estate', [PagesController::class, 'real_estate'])->name('real_estate');
 
 
