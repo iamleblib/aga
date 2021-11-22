@@ -72,8 +72,8 @@
                                             <!--begin::Wrapper-->
                                             @if($showMessage->count() > 0)
                                                 @foreach($showMessage as $m)
-                                                    <div class="d-flex @if($m->sender == 'support@coinbaseassets.com') justify-content-end @else justify-content-start @endif mb-10">
-                                                        <div class="d-flex flex-column @if($m->sender == 'support@coinbaseassets.com') align-items-end @else align-items-start @endif ">
+                                                    <div class="d-flex @if($m->sender == 'support@altriagroupasset.com') justify-content-end @else justify-content-start @endif mb-10">
+                                                        <div class="d-flex flex-column @if($m->sender == 'support@altriagroupasset.com') align-items-end @else align-items-start @endif ">
                                                             <!--begin::User-->
                                                             <div class="d-flex align-items-center mb-2">
 
@@ -84,14 +84,14 @@
                                                                 </div>
 
                                                                 <div class="ms-3">
-                                                                    <a class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">@if($m->sender == 'support@coinbaseassets.com')@endif </a>
+                                                                    <a class="fs-5 fw-bolder text-gray-900 text-hover-primary me-1">@if($m->sender == 'support@altriagroupasset.com')@endif </a>
 
                                                                 </div>
                                                                 <!--end::Details-->
                                                             </div>
                                                             <!--end::User-->
                                                             <!--begin::Text-->
-                                                            <div class="p-5 rounded @if($m->sender == 'support@coinbaseassets.com') bg-light-success @else bg-light-dark text-dark @endif fw-bold mw-lg-400px text-start" data-kt-element="message-text">
+                                                            <div class="p-5 rounded @if($m->sender == 'support@altriagroupasset.com') bg-light-success @else bg-light-dark text-dark @endif fw-bold mw-lg-400px text-start" data-kt-element="message-text">
                                                                 {{ $m->message }}
                                                             </div>
                                                         </div>
@@ -111,7 +111,7 @@
                                     @csrf
                                     <!--begin::Input-->
                                         <input type="hidden" name="user_id" value="{{ $user->id }}">
-                                        <input type="hidden" name="sender" value="{{ __('support@coinbaseassets.com') }}">
+                                        <input type="hidden" name="sender" value="{{ env('APP_MAIL') }}">
                                         <input type="hidden" name="receiver" value="{{ $user->username }}">
                                     <input class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" name="message" placeholder="Type a message">
                                     <!--end::Input-->

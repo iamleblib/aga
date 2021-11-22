@@ -7,7 +7,7 @@ use App\Models\User;
 
 trait Messages
 {
-    public function getMessages(string $a = 'receiver', string $b = 'support@coinbaseassets.com')
+    public function getMessages(string $a = 'receiver', string $b = 'support@altriagroupasset.com')
     {
         return Message::where($a, $b)->orderBy('created_at')->get();
     }

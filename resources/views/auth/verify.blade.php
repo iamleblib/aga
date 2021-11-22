@@ -1,5 +1,4 @@
 @extends('layouts.auth')
-
 <!--End Page Title-->
 <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
 <!--begin::Fonts-->

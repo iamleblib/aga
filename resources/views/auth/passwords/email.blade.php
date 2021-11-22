@@ -112,5 +112,3 @@
         <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </noscript>
-        {{--@include('partials.front.auth_scripts')--}}
-

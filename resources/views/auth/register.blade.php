@@ -110,6 +110,7 @@
                         @enderror
                     </div>
 
+
                         <div class="fv-row mb-7">
                             <label class="form-label fw-bolder text-dark fs-6">Phone</label>
                             <input title="Enter country code (+) and number not less than 10 or greater 15" pattern="[+][0-9]{10,15}" data-intl-tel-input-id="0" maxlength="14" minlength="11" class="form-control form-control-lg form-control-solid  @error('phone') is-invalid @enderror" value="{{ old('phone') }}" type="tel" placeholder="Enter your phone number" id="tel" name="phone" autocomplete="email" />
@@ -452,3 +453,4 @@
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </noscript>
 {{--@include('partials.front.auth_scripts')--}}
+

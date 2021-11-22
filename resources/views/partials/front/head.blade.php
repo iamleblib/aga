@@ -43,6 +43,7 @@
                             <li><i class="fa fa-phone"></i><a href="#">+1 401 572 4423</a></li>
                             <li><i class="fa fa-map-marker"></i><a href="#">England Cres, Leamington Spa, UK</a></li>
                         </ul>
+
                     </div>
                     <div class="top-right">
 
@@ -139,7 +140,6 @@
                         </nav>
 
                     </div>
-
                 </div>
             </div>
         </div>

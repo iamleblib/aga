@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Guest\DashboardController;
 use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\Guest\SendMessages;
+use App\Http\Controllers\Guest\TransferController;
 use App\Http\Controllers\Guest\TwoFAController;
 use App\Http\Controllers\Guest\Wallet\WalletController;
 use App\Http\Controllers\Transaction\DepositsController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\Transaction\RealEstatesController;
 use App\Http\Controllers\Transaction\ReferralController;
 use App\Http\Controllers\Transaction\RoisController;
 use App\Http\Controllers\Transaction\WithdrawsController;
+use App\Http\Controllers\HomeController;
 use App\Models\Referral;
 use Illuminate\Support\Facades\Route;
 
@@ -36,26 +38,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [PagesController::class, 'index'])->name('front.index');
-Route::get('/about', [PagesController::class, 'about'])->name('about');
-Route::get('/team', [PagesController::class, 'team'])->name('team');
-Route::get('/packages', [PagesController::class, 'packages'])->name('packages');
-Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
-Route::get('/terms', [PagesController::class, 'terms'])->name('terms');
-Route::get('/legacy', [PagesController::class, 'legacy'])->name('legacy');
-Route::get('/privacy', [PagesController::class, 'privacy'])->name('privacy');
-Route::get('/real_estate', [PagesController::class, 'real_estate'])->name('real_estate');
-
-
-Route::get('2fa', [TwoFAController::class, 'index'])->name('2fa.index');
-Route::post('2fa', [TwoFAController::class, 'store'])->name('2fa.post');
-Route::get('2fa/reset', [TwoFAController::class, 'resend'])->name('2fa.resend');
-
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/', [PagesController::class, 'index'])->name('front.index');
 Route::get('noaccess', function () {
     return view('errors.noaccess');
@@ -99,9 +85,16 @@ Route::group(['prefix' => 'secure'], function () {
             Route::post('/process', [InvestmentsController::class, 'process'])->name('investment.process');
             Route::get('/logs', [InvestmentsController::class, 'logs'])->name('investment.logs');
             Route::get('/roi-log', [RoisController::class, 'logs'])->name('roi.log');
+
         });
 
-        Route::group(['prefix' => 'withdraw'], function () {
+        Route::group(['prefix' => 'transfer'], function () {
+
+            // Transfer
+            Route::resource('transfer', TransferController::class);
+        });
+
+            Route::group(['prefix' => 'withdraw'], function () {
             Route::get('/', [WithdrawsController::class, 'index'])->name('withdraw.index');
             Route::post('/process', [WithdrawsController::class, 'process'])->name('withdraw.process');
             Route::get('/logs', [WithdrawsController::class, 'logs'])->name('withdraw.logs');
@@ -165,3 +158,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 
 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,3 +1,4 @@
+
 @extends('layouts.front')
 @section('title',  'Bitcoin and Cryptocurrency Platform')
 @section('content')
