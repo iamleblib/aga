@@ -2,7 +2,7 @@
 <!--begin::Header Logo-->
 <div class="header-logo">
     <a href="{{route('home')}}">
-        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" class="logo-default" width="40%"/>
+        <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo.png') }}" class="logo-default" width="20%"/>
         <img alt="Logo" src="{{ asset('backend/assets/media/logos/logo-stick.png') }}" class="logo-sticky h-25px">
 	</a>
 </div>
@@ -859,16 +859,16 @@
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="{{ route('realestate.index') }}" class="menu-link px-5">
-                                    <span class="menu-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                                        </svg>
-                                    </span>
-                                    Real Estate</a>
-                            </div>
+{{--                            <div class="menu-item px-3">--}}
+{{--                                <a href="{{ route('realestate.index') }}" class="menu-link px-5">--}}
+{{--                                    <span class="menu-icon">--}}
+{{--                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">--}}
+{{--                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>--}}
+{{--                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>--}}
+{{--                                        </svg>--}}
+{{--                                    </span>--}}
+{{--                                    Real Estate</a>--}}
+{{--                            </div>--}}
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
@@ -968,17 +968,17 @@
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="#" class="menu-link d-flex flex-stack px-5">
-                                    <span class="menu-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                                        </svg>
-                                    </span>
-                                    Properties
-                                    <i class="fas fa-exclamation-circle ms-2 fs-7"></i></a>
-                            </div>
+{{--                            <div class="menu-item px-3">--}}
+{{--                                <a href="#" class="menu-link d-flex flex-stack px-5">--}}
+{{--                                    <span class="menu-icon">--}}
+{{--                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">--}}
+{{--                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>--}}
+{{--                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>--}}
+{{--                                        </svg>--}}
+{{--                                    </span>--}}
+{{--                                    Properties--}}
+{{--                                    <i class="fas fa-exclamation-circle ms-2 fs-7"></i></a>--}}
+{{--                            </div>--}}
                             <!--end::Menu item-->
                             <!--begin::Menu separator-->
                             <div class="separator my-2"></div>
@@ -1025,16 +1025,16 @@
                     </div>
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
-                    <div class="menu-item px-5 my-1">
-                        <a href="{{ route('realestate.index')}}" class="menu-link px-5">
-                            <span class="menu-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                                        </svg>
-                                    </span>
-                            Real Estate Management</a>
-                    </div>
+{{--                    <div class="menu-item px-5 my-1">--}}
+{{--                        <a href="{{ route('realestate.index')}}" class="menu-link px-5">--}}
+{{--                            <span class="menu-icon">--}}
+{{--                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">--}}
+{{--                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>--}}
+{{--                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>--}}
+{{--                                        </svg>--}}
+{{--                                    </span>--}}
+{{--                            Real Estate Management</a>--}}
+{{--                    </div>--}}
                     <!--end::Menu item-->
                     <!--end::Menu item-->
                     <!--begin::Menu separator-->

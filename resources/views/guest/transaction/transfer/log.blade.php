@@ -67,7 +67,7 @@
 											</svg>
 										</span>
                     <!--end::Svg Icon-->
-                    <h3 class="fw-bolder m-0 text-gray-800">Transaction history</h3>
+                    <h3 class="fw-bolder m-0 text-gray-800">Transfer history</h3>
                 </div>
 
             </div>
@@ -191,5 +191,7 @@
         <hr><div class="m-5"></div>
 
         <!--end::Timeline-->
+    </div>
+    </div>
     </div>
 @endsection
