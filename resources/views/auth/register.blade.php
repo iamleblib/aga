@@ -83,7 +83,7 @@
                         @else
                             <input hidden type="text" name="user_id" value="0">
                             <input hidden  value="Self Enrollment" id="refferal_email" type="text" class="form-control" name="referral">
-                    @endif
+                        @endif
                         <!--end::Col-->
                         <!--begin::Col-->
                         <div class="col-xl-4">
@@ -355,7 +355,7 @@
                                     </span>
                             @enderror
                         </div>
-                    <!--end::Input group-->
+
                     <!--begin::Input group-->
                     <div class="mb-10 fv-row" data-kt-password-meter="true">
                         <!--begin::Wrapper-->

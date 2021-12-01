@@ -33,6 +33,11 @@ class Transfer extends Model
         ])->sum('amount');
     }
 
+    public function updateTransfer(string $key, string $value, array $fields = [])
+    {
+        return $this->where($key, $value)->update($fields);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -1,5 +1,6 @@
 <!--end::Heaeder menu toggle-->
 <!--begin::Header Logo-->
+
 <div class="header-logo">
     <a href="{{route('home')}}">
         <img alt="Logo" src="{{ asset('front/images/footer-logo.png') }}" class="logo-default" width="20%"/>

@@ -158,6 +158,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
         Route::get('/withdrawals', [TransactionController::class, 'withdrawal'])->name('withdrawal.index');
         Route::get('/investments/all', [TransactionController::class, 'investment'])->name('investment.index');
 
+        Route::get('/rois', [TransactionController::class, 'roi'])->name('roi.index');
+
+        Route::get('/transfers', [TransactionController::class, 'transfers'])->name('transfers.index');
+
+
+        Route::post('/transfers/approve/{id}', [TransactionController::class, 'approveTransfer'])->name('admin.transfer.approve');
+        Route::post('/transfers/decline/{id}', [TransactionController::class, 'declineTransfer'])->name('admin.transfer.decline');
+
 
         // alter deposit
         Route::post('/deposit/approve/{id}', [TransactionController::class, 'approveDeposit'])->name('admin.deposit.approve');

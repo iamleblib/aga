@@ -24,4 +24,9 @@ class Roi extends Model
     {
         return $this->all();
     }
+
+    public function roi()
+    {
+
+    }
 }

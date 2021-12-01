@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Deposit;
 use App\Models\Investment;
+use App\Models\Roi;
+use App\Models\Transfer;
 use App\Models\Withdraw;
 use App\Traits\Messages;
 use Illuminate\Http\Request;
@@ -86,5 +88,50 @@ class TransactionController extends Controller
 
     }
 
+    public function roi(Roi $rois)
+    {
+        return view('admin.transaction.rois')->with([
+            'users' => $this->getUsers(),
+            'rois' => $rois->all()
+        ]);
+    }
+
+
+    public function transfers(Transfer $transfer)
+    {
+        return view('admin.transaction.transfer')->with([
+            'users' => $this->getUsers(),
+            'transfers' => $transfer->all()
+        ]);
+    }
+
+    public function approveTransfer(int $id, Request $request, Transfer $transfer)
+    {
+        $request->validate([
+            'status' => 'required|string'
+        ]);
+        $transfer->updateTransfer('id', $id, ['status' => $request->status]);
+        return redirect()->back()->with('success', 'Transfer marked as processed');
+
+    }
+
+    public function declineTransfer(int $id, Request $request, Transfer $transfer, Deposit $deposit)
+    {
+        $request->validate([
+            'status' => 'required|string'
+        ]);
+
+        $transfer->updateTransfer('id', $id, ['status' => $request->status]);
+        $deposit->createDeposit([
+            'user_id' => $request->user_id,
+            'ref' => '#CBA'.time(),
+            'amount' => $request->amount,
+            'status' => 'refund',
+            'gateway' => 'REFUND'
+        ]);
+
+        return redirect()->back()->with('success', 'Transfer marked as decline');
+
+    }
 
 }

@@ -25,13 +25,13 @@
                         <div class="row">
                             <div class="p-4"></div>
                             <div class="col-12">
-                                <p>{{ env('APP_NAME') }}is a platform managed by {{ env('APP_NAME') }} (referred to as "AGA" henceforth). By accessing and using the http://altriagroupassets.com website, you agree to the following terms and conditions (the "terms") as they may be modified, changed, supplemented or updated from time to time, as well as all applicable laws and regulations. Please read the following terms carefully. If you do not agree to any of the terms, please do not use this Website or any information, links or content contained on this Website. Your access to and use of this Website constitutes your acceptance of an agreement to abide by each of the terms set forth below including our Privacy Policy which is hereby incorporated in the terms by reference. If you are using our Website on behalf of your organization, that organization accepts the terms.
+                                <p>{{ env('APP_NAME') }}is a platform managed by {{ env('APP_NAME') }} (referred to as "AGA" henceforth). By accessing and using the http://altriagroupasset.com website, you agree to the following terms and conditions (the "terms") as they may be modified, changed, supplemented or updated from time to time, as well as all applicable laws and regulations. Please read the following terms carefully. If you do not agree to any of the terms, please do not use this Website or any information, links or content contained on this Website. Your access to and use of this Website constitutes your acceptance of an agreement to abide by each of the terms set forth below including our Privacy Policy which is hereby incorporated in the terms by reference. If you are using our Website on behalf of your organization, that organization accepts the terms.
                                     <br>
                                     The terms may be modified, changed, supplemented or updated by AGA ("we", "us" or "our" as applicable) in its sole discretion at any time without advance notice. We suggest that you visit this page regularly to keep up to date with any changes. Your continued use of this Website will confirm your acceptance of the terms as modified, changed, supplemented or updated by us. If you do not agree to such revised terms you must stop using this Website and any information, links or content contained on this Website.</p>
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">
-                                            <a class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">USE OF WEBSITE <span class="fa fa-angle-down"></span></a>
+                                            <a class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">USE OF WEBSITE </a>
                                         </div>
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-header" id="headingTwo">
-                                            <a class=""  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">THIRD PARTY CONTENT <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">THIRD PARTY CONTENT </a>
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-header" id="headingThree">
-                                            <a class=""  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">USER CONTENT <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">USER CONTENT </a>
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -64,7 +64,7 @@
                                                 <br>
                                                 By posting, uploading, inputting, providing or submitting your User Content to us, you grant {{ env('APP_NAME') }}, its affiliates and any necessary sub-licensees a non-exclusive, worldwide, perpetual, right and permission to use, reproduce, copy, edit, modify, translate, reformat, create derivative works from, distribute, transmit, publicly perform and publicly display your User Content and sub-license such rights to others.
                                                 <br>
-                                                You must immediately update and inform us of any changes to your User Content by updating your personal data by contacting us at support@altriagroupassets.com so that we can communicate with you effectively and provide accurate and up to date information to you.
+                                                You must immediately update and inform us of any changes to your User Content by updating your personal data by contacting us at support@altriagroupasset.com so that we can communicate with you effectively and provide accurate and up to date information to you.
                                                 <br>
                                                 Although we have no obligation to screen, edit or monitor User Content, we reserve the right and have absolute discretion, to remove, screen or edit User Content. Furthermore, if we have reason to believe that there is likely to be a breach of security, breach or misuse of our Website or if you breach any of your obligations under these terms or the Privacy Policy, we may suspend your use of this Website at any time and for any reason.
                                                 <br>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-header" id="headingFour">
-                                            <a class=""  data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">FEEDBACK <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">FEEDBACK </a>
                                         </div>
                                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -84,7 +84,7 @@
                                     </div>
                                     <div class="card mb-0">
                                         <div class="card-header" id="headingFive">
-                                            <a class=""  data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">AGGREGATE INFORMATION <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">AGGREGATE INFORMATION </a>
                                         </div>
                                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -94,7 +94,7 @@
                                     </div>
                                     <div class="card mb-0">
                                         <div class="card-header" id="heading6">
-                                            <a class=""  data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">INTELLECTUAL PROPERTY <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">INTELLECTUAL PROPERTY </a>
                                         </div>
                                         <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -112,7 +112,7 @@
                                     </div>
                                     <div class="card mb-0">
                                         <div class="card-header" id="heading7">
-                                            <a class=""  data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">ACCEPTABLE USE POLICY <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">ACCEPTABLE USE POLICY </a>
                                         </div>
                                         <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -143,7 +143,7 @@
                                     </div>
                                     <div class="card mb-0">
                                         <div class="card-header" id="heading8">
-                                            <a class=""  data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">INDEMNIFICATION <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">INDEMNIFICATION </a>
                                         </div>
                                         <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -163,7 +163,7 @@
                                     </div>
                                     <div class="card mb-0">
                                         <div class="card-header" id="heading9">
-                                            <a class=""  data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">DISCLAIMER <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">DISCLAIMER </a>
                                         </div>
                                         <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
                                             <div class="card-body">
@@ -214,11 +214,11 @@
                                     </div>
                                     <div class="card mb-0">
                                         <div class="card-header" id="heading10">
-                                            <a class=""  data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">GENERAL <span class="fa fa-angle-right"></span></a>
+                                            <a class=""  data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">GENERAL </a>
                                         </div>
                                         <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                - The terms are governed by the laws of Cyprus. All claims arising out of or relating to these terms will be litigated exclusively in the courts within Cyprus and we and you consent to personal jurisdiction in those courts.
+                                                - The terms are governed by the laws of England. All claims arising out of or relating to these terms will be litigated exclusively in the courts within England and we and you consent to personal jurisdiction in those courts.
                                                 <br>
                                                 - These terms control the relationship between us and you. They do not create any third-party beneficiary rights.
                                                 <br>
@@ -226,7 +226,7 @@
                                                 <br>
                                                 - If it turns out that a particular term is not enforceable, the term will be modified such that it is enforceable and this will not affect any other terms contained herein.
                                                 <br>
-                                                - If you have any questions regarding these terms, please contact us at support@altriagroupassets.com
+                                                - If you have any questions regarding these terms, please contact us at support@altriagroupasset.com
                                             </div>
                                         </div>
                                     </div>

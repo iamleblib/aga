@@ -55,7 +55,7 @@
                                         <div class="text"></div>
                                         <ul class="list-style-two">
                                             <li><span class="icon fa fa-phone"></span> +123 (4567) 890</li>
-                                            <li><span class="icon fa fa-envelope"></span> support@altriagroupassets.com</li>
+                                            <li><span class="icon fa fa-envelope"></span> support@altriagroupasset.com</li>
                                             <li><span class="icon fa fa-home"></span>England Cres, <br> Leamington Spa, UK</li>
                                         </ul>
                                     </div>

@@ -8,7 +8,7 @@
             <!--begin::Page title-->
             <div class="page-title d-flex flex-column me-3">
                 <!--begin::Title-->
-                <h1 class="d-flex text-white fw-bolder my-1 fs-3">Dashboard</h1>
+                <h1 class="d-flex text-white fw-bolder my-1 fs-3">Dashboard </h1>
                 <!--end::Title-->
                 <!--begin::Breadcrumb-->
                 <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">

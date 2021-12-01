@@ -1,16 +1,15 @@
 @extends('layouts.admin')
 
-@section('title', 'Transactions')
+@section('title', 'ALL ROIS')
 
 @section('content')
-
     <div class="toolbar py-5 py-lg-15" id="kt_toolbar">
         <!--begin::Container-->
         <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
             <!--begin::Page title-->
             <div class="page-title d-flex flex-column me-3">
                 <!--begin::Title-->
-                <h1 class="d-flex text-white fw-bolder my-1 fs-3">All Investment Transactions</h1>
+                <h1 class="d-flex text-white fw-bolder my-1 fs-3">All ROI'S</h1>
                 <!--end::Title-->
                 <!--begin::Breadcrumb-->
                 <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
@@ -25,7 +24,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-white opacity-75">All Investments</li>
+                    <li class="breadcrumb-item text-white opacity-75">All ROI's</li>
                     <!--end::Item-->
                 </ul>
                 <!--end::Breadcrumb-->
@@ -57,12 +56,11 @@
                         <div class="d-flex align-items-center position-relative my-1">
                             <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
                             <span class="svg-icon svg-icon-1 position-absolute ms-6">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
-                        <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
-                     </svg>
-                  </span>
-                            <!--end::Svg Icon-->
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
+                                    <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
+                                 </svg>
+                            </span>
                             <input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Customers">
                         </div>
                         <!--end::Search-->
@@ -140,7 +138,7 @@
                 <div class="card-body pt-0">
                     <!--begin::Table-->
                     <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                        @if($investments->count() > 0)
+                        @if($rois->count() > 0)
                             <div class="table-responsive">
                                 <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
                                     <!--begin::Table head-->
@@ -164,7 +162,7 @@
                                     <!--end::Table head-->
                                     <!--begin::Table body-->
                                     <tbody class="fw-bold text-gray-600">
-                                    @foreach($investments as $investment)
+                                    @foreach($rois as $roi)
                                         <tr class="even">
                                             <!--begin::Checkbox-->
                                             <td>
@@ -175,24 +173,24 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Name=-->
                                             <td>
-                                                <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $investment->user->username }}</a>
+                                                <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $roi->ref }}</a>
                                             </td>
 
                                             <td>
-                                                <a href="#" class="text-gray-800 text-hover-primary mb-1 badge badge-light-success">{{ $investment->ref }}</a>
+                                                <a href="#" class="text-gray-800 text-hover-primary mb-1 badge badge-light-success">{{ $roi->ref }}</a>
                                             </td>
                                             <!--end::Name=-->
                                             <!--begin::Email=-->
                                             <td>
-                                                <a href="#" class="text-gray-600 text-hover-primary mb-1">${{ number_format($investment->amount) }}</a>
+                                                <a href="#" class="text-gray-600 text-hover-primary mb-1">${{ number_format($roi->amount) }}</a>
                                             </td>
                                             <!--end::Email=-->
                                             <!--begin::Company=-->
-                                            <td><span class="badge badge-light-success">{{ $investment->plan }}</span></td>
-                                            <td><span class="badge @if($investment->completed) badge-light-success @else badge-light-warning @endif ">@if($investment->completed) Completed @else Running @endif</span></td>
+                                            <td><span class="badge badge-light-success">{{ $roi->plan }}</span></td>
+                                            <td><span class="badge @if($roi->completed) badge-light-success @else badge-light-warning @endif ">@if($roi->completed) Completed @else Running @endif</span></td>
                                             <!--end::Company=-->
                                             <!--begin::Date=-->
-                                            <td data-order="2020-09-11T15:15:00+01:00">{{ $investment->created_at->toFormattedDateString() }}</td>
+                                            <td data-order="2020-09-11T15:15:00+01:00">{{ $roi->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
                                         </tr>
                                     @endforeach
@@ -201,7 +199,7 @@
                                 </table>
                             </div>
                         @else
-                            <p class="text-center alert alert-danger">No Transaction Yet!</p>
+                            <p class="text-center alert alert-danger">No Roi's Yet!</p>
                         @endif
                     </div>
                     <!--end::Table-->

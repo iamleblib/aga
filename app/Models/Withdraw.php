@@ -21,6 +21,11 @@ class Withdraw extends Model
         return $amount <= $value1;
     }
 
+    public function userBalance()
+    {
+        return Deposit::getProcessedDeposit();
+    }
+
     // UPDATE WITHDRAWALS
 
     public function updateWithdrawal(string $key, string $value, array $fields = [])

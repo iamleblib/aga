@@ -130,8 +130,8 @@
                     <div class="question">                   </div>
                     <div class="signature">
                         <div class="signature-img"><img src="{{asset('front/images/icons/signature.png')}}" alt=""/></div>
-                        <h5>Natalia Duke</h5>
-                        <div class="designation">(Chairman and founder)</div>
+                        <h5>Robert Froast</h5>
+                        <div class="designation">(Chief Executive Officer)</div>
                     </div>
                 </div>
             </div>
@@ -229,7 +229,7 @@
                     </div>
                     <div class="text">Bitcoin is one of the most important inventions in all of human history. For the first time ever, anyone can send or receive any amount of money with anyone else, anywhere on the planet, conveniently and without restriction. It’s the dawn of a better, more free world. </div>
                     <h3>Robert Froast</h3>
-                    <div class="author">Chairman and CEO</div>
+                    <div class="author">Chief Executive Officer</div>
                 </div>
             </div>
 
@@ -245,7 +245,8 @@
         <div class="sec-title centered">
             <div class="title">services</div>
             <h2>Most prominent side is <br> our devoted <span>services</span></h2>
-            <div class="text">The argument in favor of using filler text goes something like this: If you use real content in the design process, anytime you <br> reach a review point you’ll end up reviewing and negotiating the content itself and not the design.</div>
+            <div class="text">Our Services is strategically diversified to mitigate risks of overly streamlined trading.
+                {{env('APP_NAME')}} offers extensive cryptocurrency basics which could help just about anyone who wishes to learn more about cryptocurrency and the blockchain network. Our sole aim is to enrich our investors by utilizing trading bots and best paid accurate signals based on technical and fundamental analysis to develop accurate trading pairs which rewards short term..</div>
         </div>
 
         <div class="row clearfix">

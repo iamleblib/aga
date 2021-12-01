@@ -123,9 +123,7 @@
                     <div class="text">
                         <p>{{ env('APP_NAME') }} Ltd is a registered investment platform providing digital asset investment management services to individuals.</p>
                         <p>We provide a dynamic investment solution to clients in need of a self-operating portfolio, as well as a smart fund with flexible time and investment amount.</p>
-                        <p> {{ env('APP_NAME') }} Ltd is a registered investment platform providing digital asset investment management services to individuals.</p>
-                        <p>  We provide a dynamic investment solution to clients in need of a self-operating portfolio, as well as a smart fund with flexible time and investment amount.</p>
-                    </div>
+                        </div>
 
                 </div>
             </div>

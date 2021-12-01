@@ -25,7 +25,7 @@ class WithdrawsController extends Controller
             'paymentMethod' => 'required|string'
         ]);
 
-        if ($withdraw->check($request->amount, 0)) {
+        if ($withdraw->check($request->amount, 0) || $request->amount > $withdraw->userBalance()) {
             return redirect()->back()->with('error', 'Please enter a valid amount');
         }
 
