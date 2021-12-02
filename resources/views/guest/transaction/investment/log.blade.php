@@ -254,7 +254,7 @@
                                             <td data-order="#abcsd">{{ $investment->ref }}</td>
 
                                             <td>
-                                                <div class="badge badge-@if($investment->completed === 0)warning @else success @endif"> </div>
+                                                <div class="badge badge-@if($investment->completed == 0)warning @else success @endif"> @if($investment->completed == 0) Processing  <i class="fa fa-spinner fa-spin text-light"></i> @else Completed <i class="fa fa-check-circle  text-light"></i> @endif </div>
                                             </td>
                                             <td data-order="2021-05-05T17:20:00+01:00">{{ $investment->created_at->toFormattedDateString() }}</td>
                                             <!--begin::Joined-->

@@ -15,9 +15,15 @@ class AdminWallet extends Model
         'updated_at'
     ];
 
+    public function exist($key, $value):bool
+    {
+        return $this->where($key, $value)->count();
+    }
+
     // eloquent
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
 }

@@ -20,12 +20,18 @@ class WalletController extends Controller
         return redirect()->back()->with('success', 'New Wallet Added');
     }
 
-    public function storeAdminWallet(Request $request)
+    public function storeAdminWallet(Request $request, AdminWallet $adminWallet)
     {
         $request->validate([
             'name' => 'required|string',
             'address' => 'required|string'
         ]);
+
+       $exist = $adminWallet->exist('name', $request->name);
+
+        if ($exist) {
+            return redirect()->back()->with('error', 'You are not allowed to have multiple '.  $request->name . ' wallet');
+        }
 
         auth()->user()->adminWallet()->create($request->all());
 
