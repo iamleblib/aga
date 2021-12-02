@@ -57,7 +57,7 @@
                                                 <ul class="price-list">
                                                     <li>Maximum Investment: $9,999</li>
                                                     <li>On Weekly ROI Model: 10% Weekly</li>
-                                                    <li>Three Weeks Duration</li>
+                                                    <li>Duration: 21 days</li>
                                                     <li>Referral Commission: 3%</li>
                                                 </ul>
                                                 <a href="{{ route('investment.guest.index') }}" class="theme-btn btn btn-primary">Invest Now</a>
@@ -79,7 +79,7 @@
                                                 <ul class="price-list">
                                                     <li>Maximum Investment: $49,999</li>
                                                     <li>On Weekly ROI Model: 15% Weekly</li>
-                                                    <li>Four Weeks Duration</li>
+                                                    <li>Duration: 28 days</li>
                                                     <li>Referral Commission: 6%</li>
                                                 </ul>
                                                 <a href="{{ route('investment.guest.index') }}" class="theme-btn btn btn-success">Invest Now</a>
@@ -100,7 +100,7 @@
                                                 <ul class="price-list">
                                                     <li>Maximum Investment: Unlimited</li>
                                                     <li>On Weekly ROI Model: 20% Weekly</li>
-                                                    <li>Five Weeks Duration</li>
+                                                    <li>Duration: 35 days</li>
                                                     <li>Referral Commission: 9%</li>
                                                 </ul>
                                                 <a href="{{ route('investment.guest.index') }}" class="theme-btn btn btn-primary">Invest Now</a>
