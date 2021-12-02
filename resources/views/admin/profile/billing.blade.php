@@ -114,6 +114,23 @@
                                                 </div>
                                                 <!--end::Input wrapper-->
                                             </div>
+
+                                            <div class="d-flex flex-column mb-7 fv-row">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-bold form-label mb-2">
+                                                    <span class="required">Account Password</span>
+                                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Enter your account password"></i>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Input wrapper-->
+                                                <div class="position-relative">
+                                                    <!--begin::Input-->
+                                                    <input required type="password" class="form-control form-control-solid" placeholder="Enter your password" name="password" />
+                                                    <!--end::Input-->
+
+                                                </div>
+                                                <!--end::Input wrapper-->
+                                            </div>
                                             <!--end::Input group-->
 
 

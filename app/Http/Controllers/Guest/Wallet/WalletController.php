@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Guest\Wallet;
 use App\Http\Controllers\Controller;
 use App\Models\AdminWallet;
 use App\Models\Wallet;
+use App\Rules\MatchOldPassword;
 use Illuminate\Http\Request;
 
 class WalletController extends Controller
@@ -42,7 +43,8 @@ class WalletController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'address' => 'required|string'
+            'address' => 'required|string',
+            'password' => ['required', new MatchOldPassword],
         ]);
 
         AdminWallet::where('id', $id)->update([
