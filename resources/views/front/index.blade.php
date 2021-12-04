@@ -102,7 +102,7 @@
                     <div class="text">
                         <p>
                             We make it possible for individuals, groups, families, companies, etc. who may not be professionals in the fields to meaningfully engage and benefit from financial and stock markets, and experts-managed trading and trades portfolios. Our trading and trades experts ensure not only that your funds are at work, but are put in carefully planned and strategically diversified trading and trade portfolios. We ensure transparent returns, with favourable management fee.</p>
-                        <p>is a pioneering, fast-rising, technological-driven blockchain-based platform that empowers and operates Cryptocurrency. We are creating a business opportunity For investors who wish to maximize the predominant digital currency (Bitcoin) and earn passively with little or no effort at no hidden charges And also to aid our investors make their lifestyle worth living without any left-out Debt Our team of experienced expert traders with almost 2 decades with accurate
+                        <p> {{ env('APP_NAME') }}is a pioneering, fast-rising, technological-driven blockchain-based platform that empowers and operates Cryptocurrency. We are creating a business opportunity For investors who wish to maximize the predominant digital currency (Bitcoin) and earn passively with little or no effort at no hidden charges And also to aid our investors make their lifestyle worth living without any left-out Debt Our team of experienced expert traders with almost 2 decades with accurate
                             results for our investors.</p>
                     </div>
                     <div class="row clearfix">
