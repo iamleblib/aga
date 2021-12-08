@@ -36,8 +36,6 @@
                 <!--end::Wrapper-->
                 <!--begin::Button-->
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Top Up</a>
-                <!--end::Button-->
             </div>
             <!--end::Actions-->
         </div>
@@ -150,7 +148,7 @@
                                                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
                                             </div>
                                         </th>
-                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Name</th>
+                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">User ID</th>
                                         <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Ref</th>
                                         <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 204.734px;">Amount</th>
                                         <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Plan</th>
@@ -173,7 +171,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Name=-->
                                             <td>
-                                                <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $roi->ref }}</a>
+                                                <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $roi->user_id }}</a>
                                             </td>
 
                                             <td>

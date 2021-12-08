@@ -35,8 +35,8 @@
                 <!--begin::Wrapper-->
 
                 <!--end::Wrapper-->
-                @include('partials.guest.back')
-                <!--end::Button-->
+            @include('partials.guest.back')
+            <!--end::Button-->
             </div>
             <!--end::Actions-->
         </div>
@@ -79,8 +79,8 @@
                 <!--end::Card body-->
             </div>
             <!--end::Card-->
-                @include('admin.add.users')
-            <!--end::Modal - Create project-->
+        @include('admin.add.users')
+        <!--end::Modal - Create project-->
         </div>
         <!--end::Post-->
     </div>

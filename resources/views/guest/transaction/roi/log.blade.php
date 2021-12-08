@@ -75,7 +75,7 @@
 												</svg>
 											</span>
                             <!--end::Svg Icon-->
-                            <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search user">
+                            <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search ROI">
                         </div>
                         <!--end::Search-->
                     </div>
@@ -166,6 +166,7 @@
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Duration</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" style="width: 209.234px;">Reference ID</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="Joined Date: activate to sort column ascending" style="width: 125px;">Date</th>
+                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_table_users" rowspan="1" colspan="1" aria-label="User: activate to sort column ascending" style="width: 209.234px;">Next Payout</th>
                                     <th class="text-end min-w-100px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 100px;">Actions</th></tr>
                                 <!--end::Table row-->
                                 </thead>
@@ -214,7 +215,22 @@
                                             <td data-order="#abcsd">{{ $roi->plan }}</td>
                                             <td data-order="#abcsd"><div class="badge badge-warning">@if($roi->plan == 'Enterprise') 3weeks @elseif($roi->plan == 'World Class') 4weeks @elseif($roi->plan == 'Unlimited') 5weeks @endif </div></td>
                                             <td data-order="#abcsd">{{ $roi->ref }}</td>
-                                            <td data-order="2021-05-05T17:20:00+01:00">{{ $roi->created_at->toFormattedDateString() }}</td>
+                                            <td data-order="2021-05-05T17:20:00+01:00">{{ $roi->created_at->toFormattedDateString() }}
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm-fill" viewBox="0 0 16 16">
+                                                    <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"/>
+                                                </svg> {{ $roi->created_at->format('h:i:a') }}</td>
+
+                                            <td data-order="2021-05-05T17:20:00+01:00">
+                                                @if ($roi->completed)
+                                                    <p class="btn btn-light-success btn-sm">{{ __('Investment Completed') }} <i class="fa fa-check"></i></p>
+                                                @else
+                                                    <p>{{ $roi->updated_at->addWeek()->toFormattedDateString() }}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm-fill" viewBox="0 0 16 16">
+                                                            <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"/>
+                                                        </svg>
+                                                        {{ $roi->updated_at->format('h:i:a') }}</p>
+                                                @endif
+                                            </td>
                                             <!--begin::Joined-->
                                             <!--begin::Action=-->
                                             <td class="text-end">
@@ -299,7 +315,7 @@
                                                                     <!--begin::Input group-->
                                                                     <div class="row mb-5">
                                                                         <!--begin::Col-->
-                                                                        <div class="col-md-6 fv-row">
+                                                                        <div class="col-md-12 fv-row">
                                                                             <!--begin::Label-->
                                                                             <label class="required fs-5 fw-bold mb-2">Investment Package</label>
                                                                             <!--end::Label-->
@@ -309,13 +325,6 @@
                                                                         </div>
                                                                         <!--end::Col-->
                                                                         <!--begin::Col-->
-                                                                        <div class="col-md-6 fv-row">
-                                                                            <!--end::Label-->
-                                                                            <label class="required fs-5 fw-bold mb-2">Amount Invested</label>
-                                                                            <!--end::Label-->
-                                                                            <!--end::Input-->
-                                                                            <p>${{ number_format($roi->amount) }}</p><!--end::Input-->
-                                                                        </div>
 
                                                                         <!--end::Col-->
                                                                     </div>
@@ -339,24 +348,6 @@
                                                                         </div>
                                                                         <!--end::Col-->
                                                                         <!--begin::Col-->
-                                                                        <div class="col-6 fv-row">
-                                                                            <!--begin::Label-->
-                                                                            <label class="fs-5 fw-bold mb-2 required">Total Earning</label>
-                                                                            <!--end::Label-->
-                                                                            <!--begin::Input-->
-                                                                            <p>@if($roi->plan == 'Enterprise') ${{ number_format($roi->amount /100 * 10 * 3) }} @elseif($roi->plan == 'World Class') ${{ number_format($roi->amount  /100 * 15* 4) }} @elseif($roi->plan == 'Unlimited') ${{ number_format($roi->amount  /100 * 20 * 5) }} @endif</p>
-                                                                            <!--end::Input-->
-                                                                        </div>
-
-                                                                        <div class="col-6 fv-row">
-                                                                            <!--begin::Label-->
-                                                                            <label class="fs-5 fw-bold mb-2 required">Weekly Earning</label>
-                                                                            <!--end::Label-->
-                                                                            <!--begin::Input-->
-                                                                            <p>@if($roi->plan == 'Enterprise') ${{ number_format($roi->amount  /100 * 10) }} @elseif($roi->plan == 'World Class') ${{ number_format($roi->amount  /100 * 15) }} @elseif($roi->plan == 'Unlimited') ${{ number_format($roi->amount  /100 * 20) }} @endif</p>
-                                                                            <!--end::Input-->
-                                                                        </div>
-
                                                                         <div class="col-6 fv-row">
                                                                             <!--begin::Label-->
                                                                             <label class="fs-5 fw-bold mb-2 required">Next Payment</label>

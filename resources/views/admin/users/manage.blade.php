@@ -35,8 +35,6 @@
                 <!--end::Wrapper-->
                 <!--begin::Button-->
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Top Up</a>
-                <!--end::Button-->
             </div>
             <!--end::Actions-->
         </div>
@@ -61,7 +59,7 @@
                      </svg>
                   </span>
                             <!--end::Svg Icon-->
-                            <input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Customers">
+                            <input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search users">
                         </div>
                         <!--end::Search-->
                     </div>
@@ -153,9 +151,9 @@
                                         </div>
                                     </th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Name</th>
+                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Username</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Role</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 204.734px;">Email</th>
-                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Username</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Payment Method: activate to sort column ascending" style="width: 156.781px;">Phone</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Joined Date</th>
                                     <th class="text-end min-w-70px" rowspan="1" colspan="1" aria-label="Actions" >Actions</th>
@@ -166,7 +164,7 @@
                                 <!--begin::Table body-->
                                 @if($users->count() > 0)
                                     @foreach($users as $user)
-                                <tbody class="fw-bold text-gray-600">
+                                        <tbody class="fw-bold text-gray-600">
                                         <tr class="even">
                                             <!--begin::Checkbox-->
                                             <td>
@@ -177,20 +175,35 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Name=-->
                                             <td>
-                                                <a href="{{ route('users.show', $user->id) }}" class="text-gray-800 text-hover-primary mb-1">{{ $user->name }}</a>
+                                                <a href="{{ route('users.show', $user->id) }}" class="text-gray-800 text-hover-primary mb-1">{{ $user->name }}
+                                                    @if($user->isBlocked())
+                                                        <span class="text-danger">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/>
+                                                            </svg>
+                                                        </span>
+                                                    @else
+                                                        <span class="text-primary">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                                            </svg>
+                                                        </span>
+                                                    @endif
+                                                </a>
                                             </td>
 
+                                            <td>{{ $user->username }}</td>
+
                                             <td>
-                                                <a href="#" class="text-gray-800 text-hover-primary mb-1 badge badge-light-success">@if($user->isAdmin()) Admin @else Investor @endif</a>
+                                                <a href="{{ route('users.show', $user->id) }}w" class="text-gray-800 text-hover-primary mb-1 @if($user->isAdmin())badge badge-light-success @else()badge badge-light-primary @endif">@if($user->isAdmin()) Admin @else Investor @endif</a>
                                             </td>
                                             <!--end::Name=-->
                                             <!--begin::Email=-->
                                             <td>
-                                                <a href="#" class="text-gray-600 text-hover-primary mb-1">{{ $user->email }}</a>
+                                                <a href="{{ route('users.show', $user->id) }}" class="text-gray-600 text-hover-primary mb-1">{{ $user->email }}</a>
                                             </td>
                                             <!--end::Email=-->
                                             <!--begin::Company=-->
-                                            <td>{{ $user->username }}</td>
                                             <!--end::Company=-->
                                             <!--begin::Payment method=-->
                                             <td data-filter="mastercard">
@@ -229,10 +242,10 @@
                                             </td>
                                             <!--end::Action=-->
                                         </tr>
-                                </tbody>
-                                    @endforeach
-                                @endif
-                                <!--end::Table body-->
+                                        </tbody>
+                                @endforeach
+                            @endif
+                            <!--end::Table body-->
                             </table>
                         </div>
                     </div>

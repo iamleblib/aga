@@ -222,7 +222,7 @@
                                                         <!--begin::Menu item-->
                                                         <!--end::Menu item-->
                                                     </div>
-                                                @elseif($transfer->status == 'processed')
+                                                @elseif($transfer->status == 'approve')
                                                     <div class="badge badge-success">Processed</div>
                                                 @elseif($transfer->status == 'declined')
                                                     <div class="badge badge-danger">Declined</div>
@@ -262,7 +262,7 @@
                                                             </div>
                                                             <!--end::Heading-->
                                                             <!--begin::Input group-->
-                                                            <form id="kt_modal_update_rolsse_form" class="form" method="post" action="{{ route('admin.transfer.decline', $transfer->id) }}">
+                                                            <form id="kt_modal_update_rolsse_form" class="form" method="post" action="{{ route('admin.transfer.approve', $transfer->id) }}">
                                                                 <!--begin::Notice-->
                                                                 <!--begin::Notice-->
                                                                 @csrf
@@ -279,10 +279,10 @@
                                                                         <div class="row">
                                                                             <div class="col-8">
                                                                                 <div class="fw-bold">
-                                                                                    <div class="fs-6 text-gray-700">Confirm you want to approve this deposit!.</div>
+                                                                                    <div class="fs-6 text-gray-700">Confirm you want to approve this transfer!.</div>
                                                                                 </div>
                                                                             </div>
-                                                                            <input type="hidden" name="status" value="declined">
+                                                                            <input type="hidden" name="status" value="approve">
                                                                             <input type="hidden" name="amount" value="{{$transfer->amount}}">
                                                                             <input type="hidden" name="user_id" value="{{$transfer->user_id}}">
 

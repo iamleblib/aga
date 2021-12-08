@@ -180,11 +180,11 @@
                                             <!--begin::Number-->
                                             <div class="text-end fw-norma">
                                                 @if($request->paymentMethod == 'Bitcoin Payment Gateway')
-                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="{{ \App\Models\AdminWallet::where('name', 'Bitcoin (BTC)')->first()->address }}" />
+                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="{{ \App\Models\AdminWallet::where('name', 'Bitcoin (BTC)')->first()->address ?? '' }}" />
                                                 @elseif($request->paymentMethod == 'Etherium Payment Gateway')
-                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="{{ \App\Models\AdminWallet::where('name', 'Etherium (ETH)')->first()->address }}" />
+                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="{{ \App\Models\AdminWallet::where('name', 'Etherium (ETH)')->first()->address ?? '' }}" />
                                                 @elseif($request->paymentMethod == 'Usdc Payment Gateway')
-                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="{{ \App\Models\AdminWallet::where('name', 'USDC (USDC)')->first()->address }}" />
+                                                    <input id="kt_referral_link_input" type="text" class="btn btn-light" style="width: 120%" name="search" value="{{ \App\Models\AdminWallet::where('name', 'USDC (USDC)')->first()->address ?? '' }}" />
                                                 @endif
                                             </div>
 

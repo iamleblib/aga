@@ -37,8 +37,6 @@
                 <!--end::Wrapper-->
                 <!--begin::Button-->
                 @include('partials.guest.back')
-                <a href="#" class="btn btn-bg-white btn-active-color-primary m-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Top Up</a>
-                <!--end::Button-->
             </div>
             <!--end::Actions-->
         </div>
@@ -63,7 +61,7 @@
                      </svg>
                   </span>
                             <!--end::Svg Icon-->
-                            <input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Customers">
+                            <input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Withdrawal">
                         </div>
                         <!--end::Search-->
                     </div>
@@ -141,7 +139,7 @@
                     <!--begin::Table-->
                     <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         @if($withdrawals->count() > 0)
-                            <div class="table-responsive">
+                            <div class="">
                                 <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
                                     <!--begin::Table head-->
                                     <thead>
@@ -159,7 +157,7 @@
                                         <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Gateway</th>
                                         <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Address</th>
                                         {{--                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 156.781px;">Address</th>--}}
-                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Created Date</th>
+                                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Date</th>
                                         <th class="text-end min-w-70px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 118.438px;">Actions</th>
                                     </tr>
                                     <!--end::Table row-->
@@ -195,20 +193,33 @@
                                             </td>
                                             <!--end::Email=-->
                                             <!--begin::Company=-->
-                                            <td><span class="badge badge-light-warning">{{ $withdrawal->gateway }}</span></td>
+                                            <td><span class="">
+                                                    @if($withdrawal->gateway == 'Bitcoin (BTC)')
+                                                        <img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="15%" class="m-2" alt="">
+                                                    @elseif($withdrawal->gateway == 'Etherium (ETH)')
+                                                        <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="15%" class="m-2" alt="">
+                                                    @elseif($withdrawal->gateway == 'USDC (USDC)')
+                                                        <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="15%" class="m-2" alt="">
+                                                    @endif</span></td>
                                             <td>
-                                                <a class="text-gray-800 text-hover-primary mb-1 badge badge-light-success">{{ $withdrawal->address }}</a>
+                                                <input id="" type="text" class="btn btn-light" name="search" value="{{ $withdrawal->address }}" />
                                             </td>
                                             <!--end::Company=-->
                                             <!--begin::Date=-->
                                             <td data-order="2020-09-11T15:15:00+01:00">{{ $withdrawal->created_at->toFormattedDateString() }}</td>
                                             <!--end::Date=-->
                                             <!--begin::Action=-->
-                                            <td class="text-end">
+                                            <td class="top-end">
                                                 @if($withdrawal->status == 'processed')
-                                                    <div class="badge badge-success">Completed</div>
+                                                    <center>
+                                                        <div class="align-content-center text text-success">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                                                                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </center>
                                                 @elseif($withdrawal->status == 'pending')
-                                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                                    <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="top-end">
                                                         Actions
                                                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
                                                         <span class="svg-icon svg-icon-5 m-0">
@@ -222,7 +233,7 @@
                                                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
                                                         <!--begin::Menu item-->
                                                         <div class="menu-item px-3">
-                                                            <a data-bs-toggle="modal" data-bs-target="#approve_{{ $withdrawal->id }}" class="menu-link px-3">Approve</a>
+                                                            <a data-bs-toggle="modal" data-bs-target="#approve_{{ $withdrawal->id }}" class="menu-link px-3">Paid</a>
                                                         </div>
                                                         <!--end::Menu item-->
                                                         <!--begin::Menu item-->
@@ -233,7 +244,13 @@
                                                     </div>
                                                     <!--end::Menu-->
                                                 @elseif($withdrawal->status == 'declined')
-                                                    <div class="badge badge-danger">Canceled</div>
+                                                    <center>
+                                                        <div class="text text-danger">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-down-left-circle-fill" viewBox="0 0 16 16">
+                                                                <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-5.904-2.803a.5.5 0 1 1 .707.707L6.707 10h2.768a.5.5 0 0 1 0 1H5.5a.5.5 0 0 1-.5-.5V6.525a.5.5 0 0 1 1 0v2.768l4.096-4.096z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </center>
                                                 @endif
                                             </td>
                                             <!--end::Action=-->
@@ -275,7 +292,7 @@
                                                                 <!--begin::Notice-->
                                                                 @csrf
                                                                 <div class="notice d-flex bg-light-success rounded border-success border border-dashed mb-9 p-6">
-                                                                        <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                                                        <span class="svg-icon svg-icon-2tx svg-icon-success me-4">
                                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                                                 <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
                                                                                 <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>
@@ -287,13 +304,13 @@
                                                                         <div class="row">
                                                                             <div class="col-8">
                                                                                 <div class="fw-bold">
-                                                                                    <div class="fs-6 text-gray-700">Confirm you want to approve this withdrawal!.</div>
+                                                                                    <div class="fs-6 text-gray-700">Confirm that you've paid this user!</div>
                                                                                 </div>
                                                                             </div>
                                                                             <input type="hidden" name="status" value="processed">
 
                                                                             <div class="col-4">
-                                                                                <button type="submit" class="btn btn-success">Approve</button>
+                                                                                <button type="submit" class="btn btn-success">Confirmed</button>
                                                                             </div>
                                                                         </div>
                                                                         <!--end::Content-->
@@ -350,7 +367,7 @@
                                                                 <!--begin::Notice-->
                                                                 @csrf
                                                                 <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed mb-9 p-6">
-                                                                        <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                                                        <span class="svg-icon svg-icon-2tx svg-icon-danger me-4">
                                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                                                 <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black"></rect>
                                                                                 <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black"></rect>

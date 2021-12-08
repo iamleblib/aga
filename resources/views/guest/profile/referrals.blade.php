@@ -2,7 +2,12 @@
 <div class="card mb-5 mb-xl-10">
     <!--begin::Body-->
     <div class="card-body py-10">
-        <h2 class="fs-2x fw-bolder mb-0">Referral Program</h2>
+        <h2 class="fs-2x fw-bolder mb-0">Referral Program
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+            </svg></h2>
         <!--begin::Overview-->
         <div class="row mb-10">
             <!--begin::Col-->
@@ -73,11 +78,11 @@
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/google.svg')}}" class="h-15px me-3" />Contacts</a>
                                         <a href="https://www.facebook.com/share.php?{{ route('register') }}?user={{ auth()->user()->username }}"  target="_blank" class="btn btn-light w-100 mx-6">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/facebook.svg')}}" class="h-20px me-3" />Facebook</a>
-                                        <a href="https://www.twitter.com/home?status=Am inviting you to join altriagroup assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/twitter/share" class="btn btn-light w-100">
+                                        <a href="https://www.twitter.com/home?status=Am inviting you to join coinbase assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/twitter/share" class="btn btn-light w-100">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/twitter.svg')}}" class="h-20px me-3" />Twitter</a>
-                                        <a href="https://instagram.com/send?text=Am inviting you to join altriagroup Assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/instagram/share" class="btn btn-light w-100">
+                                        <a href="https://instagram.com/send?text=Am inviting you to join Coinbase Assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/instagram/share" class="btn btn-light w-100">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/instagram.svg')}}" class="h-20px me-3" />Instagram</a>
-                                        <a href="https://wa.me/?text=Am inviting you to join altriagroup Assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/whatsapp/share" class="btn btn-light w-100">
+                                        <a href="https://wa.me/?text=Am inviting you to join Coinbase Assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/whatsapp/share" class="btn btn-light w-100">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/icons/whatsapp.png')}}" class="h-20px me-3" />WhatsApp</a>
                                     </div>
                                     <!--end::Actions-->
@@ -105,7 +110,7 @@
                         <!--end::Modal content-->
                     </div>
                     <!--end::Modal dialog-->
-            <!--end::Post-->
+                    <!--end::Post-->
                 </div>
                 <!--end::Container-->
 
@@ -273,26 +278,26 @@
     <!--begin::Table-->
     @if($referrals->getReferrals()->count() > 0)
 
-    <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-        <div class="table-responsive p-9">
-            <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
-                <!--begin::Table head-->
-                <thead>
-                <!--begin::Table row-->
-                <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
-                    <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
-                        <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-                        </div>
-                    </th>
-                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Name</th>
-                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 204.734px;">Email</th>
-                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Joined Date</th>
-                </tr>
-                <!--end::Table row-->
-                </thead>
-                <!--end::Table head-->
-                <!--begin::Table body-->
-                <tbody class="fw-bold text-gray-600">
+        <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+            <div class="table-responsive p-9">
+                <table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
+                    <!--begin::Table head-->
+                    <thead>
+                    <!--begin::Table row-->
+                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+                        <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 29.25px;">
+                            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                            </div>
+                        </th>
+                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 156.781px;">Name</th>
+                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 204.734px;">Email</th>
+                        <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 163.734px;">Joined Date</th>
+                    </tr>
+                    <!--end::Table row-->
+                    </thead>
+                    <!--end::Table head-->
+                    <!--begin::Table body-->
+                    <tbody class="fw-bold text-gray-600">
 
                     @foreach($referrals->getReferrals() as $referral)
                         <tr class="even">
@@ -318,11 +323,11 @@
                         </tr>
                     @endforeach
 
-                </tbody>
-                <!--end::Table body-->
-            </table>
+                    </tbody>
+                    <!--end::Table body-->
+                </table>
+            </div>
         </div>
-    </div>
     @else
         <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6 m-6">
             <!--begin::Icon-->
@@ -340,7 +345,11 @@
             <div class="d-flex flex-stack flex-grow-1">
                 <!--begin::Content-->
                 <div class="fw-bold">
-                    <h4 class="text-gray-900 fw-bolder">No Referral Found</h4>
+                    <h4 class="text-gray-900 fw-bolder">No Referral Found
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-x-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6.146-2.854a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </h4>
                     <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
 
                         <div class="fs-6 text-gray-700">You recently do not have any referral (down-line) on your list!
@@ -354,7 +363,7 @@
             <!--end::Wrapper-->
         </div>
 @endif
-    <!--end::Table-->
+<!--end::Table-->
 
     <!--end::Tab content-->
 </div>

@@ -75,7 +75,7 @@
                                 <!--end::Position-->
                                 <!--begin::Info-->
                                 <!--begin::Info heading-->
-                                <div class="fw-bolder mb-3">Assigned Tickets
+                                <div class="fw-bolder mb-3">Wallet Port
                                     <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Number of support tickets assigned, closed and pending this week." data-bs-original-title="" title=""></i></div>
                                 <!--end::Info heading-->
                                 <div class="d-flex flex-wrap flex-center">
@@ -194,11 +194,16 @@
                                     </div>
 
                                     <div class="card-title float-right">
-                                        <a href="{{ route('messages.show', $user->id) }}" @class('btn btn-primary btn-sm')><i class="fa fa-envelope"></i> Message user </a>&nbsp;
+                                        <a href="{{ route('messages.show', $user->id) }}" @class('btn btn-primary btn-sm')>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+                                        </svg> Message user </a>&nbsp;
                                         @if($user->isBlocked())
                                             <a data-bs-toggle="modal" data-bs-target="#blockUnblock" @class('btn btn-success btn-sm')><i class="fa fa-unlock"></i> Unblock User </a>
                                         @else
-                                            <a data-bs-toggle="modal" data-bs-target="#blockUnblock" @class('btn btn-danger btn-sm')><i class="fa fa-lock"></i> Block User</a>
+                                            <a data-bs-toggle="modal" data-bs-target="#blockUnblock" @class('btn btn-danger btn-sm')><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/>
+                                            </svg> Block User</a>
                                         @endif
                                     </div>
                                     <!--end::Card title-->
@@ -278,56 +283,56 @@
                     <!--end:::Tab content-->
 
                     @if($wallets->count() > 0)
-                    <div class="tab-content" id="myTabContent">
-                        <div class="row gx-9 gy-6">
-                            <!--begin::Col-->
-                            @foreach($wallets as $wallet)
-                                <div class="col-xl-6">
-                                    <!--begin::Card-->
-                                    <div class="card card-dashed h-xl-100 flex-row flex-stack flex-wrap p-6">
-                                        <!--begin::Info-->
-                                        <div class="d-flex flex-column py-2">
-                                            <!--begin::Owner-->
-                                            <div class="d-flex align-items-center fs-4 fw-bolder mb-5">{{ $wallet->name }}</div>
-                                            <!--end::Owner-->
-                                            <!--begin::Wrapper-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Icon-->
-                                                @if($wallet->name == "Bitcoin (BTC)")
-                                                    <img src="{{ asset('backend/assets/media/icons/btc.png') }}" width="10%" alt="" class="me-4" />
-                                                @elseif($wallet->name == "Etherium (ETH)")
-                                                    <img src="{{ asset('backend/assets/media/icons/eth.png') }}" width="10%" alt="" class="me-4" />
-                                                @elseif($wallet->name == "USDC (USDC)")
-                                                    <img src="{{ asset('backend/assets/media/icons/usd.png') }}" width="10%" alt="" class="me-4" />
-                                            @endif
+                        <div class="tab-content" id="myTabContent">
+                            <div class="row gx-9 gy-6">
+                                <!--begin::Col-->
+                                @foreach($wallets as $wallet)
+                                    <div class="col-xl-6">
+                                        <!--begin::Card-->
+                                        <div class="card card-dashed h-xl-100 flex-row flex-stack flex-wrap p-6">
+                                            <!--begin::Info-->
+                                            <div class="d-flex flex-column py-2">
+                                                <!--begin::Owner-->
+                                                <div class="d-flex align-items-center fs-4 fw-bolder mb-5">{{ $wallet->name }}</div>
+                                                <!--end::Owner-->
+                                                <!--begin::Wrapper-->
+                                                <div class="d-flex align-items-center">
+                                                    <!--begin::Icon-->
+                                                    @if($wallet->name == "Bitcoin (BTC)")
+                                                        <img src="{{ asset('backend/assets/media/icons/btc.png') }}" width="10%" alt="" class="me-4" />
+                                                    @elseif($wallet->name == "Etherium (ETH)")
+                                                        <img src="{{ asset('backend/assets/media/icons/eth.png') }}" width="10%" alt="" class="me-4" />
+                                                    @elseif($wallet->name == "USDC (USDC)")
+                                                        <img src="{{ asset('backend/assets/media/icons/usd.png') }}" width="10%" alt="" class="me-4" />
+                                                @endif
 
-                                            <!--end::Icon-->
-                                                <!--begin::Details-->
-                                                <div>
-                                                    <div class="fs-4 fw-bolder">Wallet address</div>
-                                                    <div class="fs-7 fw-bold text-gray-400"><span class="badge badge-light-warning">{{ $wallet->address ?? '' }}</span></div>
+                                                <!--end::Icon-->
+                                                    <!--begin::Details-->
+                                                    <div>
+                                                        <div class="fs-4 fw-bolder">Wallet address</div>
+                                                        <div class="fs-7 fw-bold text-gray-400"><span class="badge badge-light-warning">{{ $wallet->address ?? '' }}</span></div>
+                                                    </div>
+                                                    <!--end::Details-->
                                                 </div>
-                                                <!--end::Details-->
+                                                <!--end::Wrapper-->
                                             </div>
-                                            <!--end::Wrapper-->
+                                            <!--end::Info-->
+                                            <!--begin::Actions-->
+                                            <!--end::Actions-->
                                         </div>
-                                        <!--end::Info-->
-                                        <!--begin::Actions-->
-                                        <!--end::Actions-->
+                                        <!--end::Card-->
                                     </div>
-                                    <!--end::Card-->
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
-                    </div>
                     @else
                         <div class="card p-2 text-center">
                             <p class="text-center">No Wallet added yet</p>
                         </div>
                     @endif
 
-<div class="p-4"></div>
-                <!--begin::Row-->
+                    <div class="p-4"></div>
+                    <!--begin::Row-->
                     <div class="row gx-9 gy-6">
                         <h2>Users Downline</h2>
 
@@ -724,9 +729,9 @@
                                             </div>
                                             <!--end::Wrapper-->
                                         </div>
-                                    @endif
+                                @endif
 
-                                    <!--end::Actions-->
+                                <!--end::Actions-->
                                 </form>
                                 <!--end::Input group-->
                             </div>
@@ -931,8 +936,8 @@
                     <div class="modal-content">
                         <!--begin::Form-->
                         <form action="{{ route('user.update', $user->id) }}" method="post" class="form" id="kt_modal_update_user_form">
-                            @csrf
-                            <!--begin::Modal header-->
+                        @csrf
+                        <!--begin::Modal header-->
                             <div class="modal-header" id="kt_modal_update_user_header">
                                 <!--begin::Modal title-->
                                 <h2 class="fw-bolder">Update User Details</h2>
@@ -964,7 +969,7 @@
                                                     <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
                                                 </svg>
                                             </span>
-                                                                                <!--end::Svg Icon-->
+                                            <!--end::Svg Icon-->
                                         </span>
                                     </div>
                                     <!--end::User toggle-->

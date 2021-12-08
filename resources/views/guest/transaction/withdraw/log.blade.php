@@ -1,5 +1,6 @@
 @extends('layouts.guest')
 
+@section('title', 'Withdrawal Logs')
 @section('content')
 
     <div class="toolbar py-5 py-lg-15" id="kt_toolbar">
@@ -73,7 +74,7 @@
 												</svg>
 											</span>
                             <!--end::Svg Icon-->
-                            <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search user">
+                            <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search withdrawals">
                         </div>
                         <!--end::Search-->
                     </div>
@@ -204,7 +205,7 @@
                                             <!--begin::Role=-->
                                             <td>
                                                 <div class="badge badge-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'declined')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">{{ $withdraw->status }}
-                                                    <i class="@if($withdraw->status == 'pending')fa fa-spinner fa-spin @elseif($withdraw->status == 'decline')fa fa-ban @elseif($withdraw->status == 'processed') fa fa-check @endif text-light"></i>
+                                                    <i class="@if($withdraw->status == 'pending')fa fa-spinner fa-spin @elseif($withdraw->status == 'declined') @elseif($withdraw->status == 'processed') fa fa-check @endif text-light"></i>
                                                 </div>
                                             </td>
                                             <!--end::Role=-->
@@ -217,13 +218,13 @@
                                             <!--end::Two step=-->
                                             <!--begin::Joined-->
                                             <td data-order="#abcsd">
-                                                <p class="badge badge-light-warning px-6">
+                                                <p class="badge badge-secondary px-6">
                                                     @if($withdraw->gateway == 'Bitcoin (BTC)')
-                                                        <img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="5%" class="m-0" alt="">
+                                                        <img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="7%" class="m-2" alt="">
                                                     @elseif($withdraw->gateway == 'Etherium (ETH)')
-                                                        <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="5%" class="m-0" alt="">
+                                                        <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="7%" class="m-2" alt="">
                                                     @elseif($withdraw->gateway == 'USDC (USDC)')
-                                                        <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="5%" class="m-0" alt="">
+                                                        <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="7%" class="m-2" alt="">
                                                     @endif
                                                     {{$withdraw->address}}
                                                 </p>
@@ -265,7 +266,7 @@
 
                                                                 <!--end::Modal title-->
                                                                 <!--begin::Close-->
-                                                                <div class="btn btn-sm btn-icon btn-active-color-success" data-bs-dismiss="modal">
+                                                                <div class="btn btn-sm btn-icon btn-active-color-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'processed')success @elseif($withdraw->status == 'declined')danger @endif" data-bs-dismiss="modal">
                                                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
                                                                     <span class="svg-icon svg-icon-1">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -284,16 +285,16 @@
                                                                 <div class="scroll-y me-n7 pe-7" id="kt_modal_new_address_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_new_address_header" data-kt-scroll-wrappers="#kt_modal_new_address_scroll" data-kt-scroll-offset="300px">
                                                                     <!--begin::Notice-->
                                                                     <!--begin::Notice-->
-                                                                    <div class="notice d-flex bg-light-success rounded border-success border border-dashed mb-9 p-6">
+                                                                    <div class="notice d-flex bg-light-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'processed')success @elseif($withdraw->status == 'declined')danger @endif rounded border-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'processed')success @elseif($withdraw->status == 'declined')danger @endif border border-dashed mb-9 p-6">
                                                                         <!--begin::Icon-->
                                                                         <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
-                                                                        <span class="svg-icon svg-icon-2tx svg-icon-success me-4">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                                            <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
-                                                                            <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black" />
-                                                                            <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black" />
-                                                                        </svg>
-															</span>
+                                                                        <span class="svg-icon svg-icon-2tx svg-icon-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'processed')success @elseif($withdraw->status == 'declined')danger @endif me-4">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                                <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+                                                                                <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black" />
+                                                                                <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black" />
+                                                                            </svg>
+															            </span>
                                                                         <!--end::Svg Icon-->
                                                                         <!--end::Icon-->
                                                                         <!--begin::Wrapper-->
@@ -319,7 +320,16 @@
                                                                             <label class="required fs-5 fw-bold mb-2">Withdrawal Gateway</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p class="btn btn-light-success btn-sm">{{ $withdraw->gateway }}</p>
+                                                                            <p class="fs-7 fw-bold alert alert-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'processed')success @elseif($withdraw->status == 'declined')danger @endif">
+                                                                                @if($withdraw->gateway == 'Bitcoin (BTC)')
+                                                                                    <img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="7%" class="m-2" alt="">
+                                                                                @elseif($withdraw->gateway == 'Etherium (ETH)')
+                                                                                    <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="7%" class="m-2" alt="">
+                                                                                @elseif($withdraw->gateway == 'USDC (USDC)')
+                                                                                    <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="7%" class="m-2" alt="">
+                                                                                @endif
+                                                                                {{ $withdraw->gateway }}
+                                                                            </p>
                                                                             <!--end::Input-->
                                                                         </div>
                                                                         <!--end::Col-->
@@ -329,7 +339,7 @@
                                                                             <label class="required fs-5 fw-bold mb-2">Withdrawal Amount</label>
                                                                             <!--end::Label-->
                                                                             <!--end::Input-->
-                                                                            <p>${{ number_format($withdraw->amount) }}</p><!--end::Input-->
+                                                                            <h3 class="fs-70 fw-bold alert alert-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'processed')success @elseif($withdraw->status == 'declined')danger @endif">${{ number_format($withdraw->amount) }}</h3><!--end::Input-->
                                                                         </div>
 
                                                                         <!--end::Col-->
@@ -345,7 +355,7 @@
                                                                             <label class="fs-5 fw-bold mb-2 required">Withdrawal Status</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p class="fs-7 fw-bold alert alert-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'decline')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">Your withdrawal is {{ $withdraw->status }} <i class="@if($withdraw->status == 'pending')fa fa-spinner fa-spin @elseif($withdraw->status == 'decline')fa fa-ban @elseif($withdraw->status == 'processed') fa fa-check @endif"></i></p>
+                                                                            <p class="fs-7 fw-bold alert alert-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'declined')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">Your withdrawal is {{ $withdraw->status }} <i class="@if($withdraw->status == 'pending')fa fa-spinner fa-spin @elseif($withdraw->status == 'declined') fa fa-ban @elseif($withdraw->status == 'processed') fa fa-check @endif"></i></p>
                                                                             <!--end::Input-->
                                                                         </div>
                                                                         <!--end::Col-->
@@ -367,7 +377,7 @@
                                                                 <!--begin::Button-->
                                                                 <!--end::Button-->
                                                                 <!--begin::Button-->
-                                                                <button type="submit" data-bs-dismiss="modal" class="btn btn-success btn-block">
+                                                                <button type="submit" data-bs-dismiss="modal" class="btn btn-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'processed')success @elseif($withdraw->status == 'declined')danger @endif btn-block">
                                                                     <span class="indicator-label">Alright</span>
                                                                     <span class="indicator-progress">Please wait...
 														            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
