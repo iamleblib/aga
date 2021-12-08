@@ -355,7 +355,8 @@
                                                                             <label class="fs-5 fw-bold mb-2 required">Withdrawal Status</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p class="fs-7 fw-bold alert alert-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'declined')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">Your withdrawal is {{ $withdraw->status }} <i class="@if($withdraw->status == 'pending')fa fa-spinner fa-spin @elseif($withdraw->status == 'declined') fa fa-ban @elseif($withdraw->status == 'processed') fa fa-check @endif"></i></p>
+                                                                            <p class="fs-7 fw-bold alert alert-@if($withdraw->status == 'pending')warning @elseif($withdraw->status == 'declined')danger @elseif($withdraw->status == 'processed')success @endif fw-bolder">
+                                                                                @if($withdraw->status == 'pending') Your withdrawal is {{ $withdraw->status }} @elseif($withdraw->status == 'declined') Your withdrawal has been {{ $withdraw->status }} <i class="fa fa-ban"></i> @elseif($withdraw->status == 'processed')Your payment has been made <i class="fa fa-check "></i> @endif</p>
                                                                             <!--end::Input-->
                                                                         </div>
                                                                         <!--end::Col-->
