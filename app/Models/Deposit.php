@@ -28,6 +28,22 @@ class Deposit extends Model
         return $this->create($fields);
     }
 
+    public function getAdminUsersDeposit($id)
+    {
+        $processedDeposit = $this->where(['status' => 'processed', 'user_id' => $id])->sum('amount');
+        $investments = Investment::where('user_id', $id)->sum('amount');
+        $withdrawals = Withdraw::where('user_id', $id)->sum('amount');
+        $referralBonus = ReferralBonus::where('user_id', $id)->sum('amount');
+        $refund = $this->where(['status' => 'refund', 'user_id' => $id])->sum('amount');
+        $transfer = Transfer::where('user_id', $id)->sum('amount');
+        $receivedTransfer = Transfer::where([
+            ['receiver_username', auth()->user()->username],
+            ['status', 'processed']
+        ])->sum('amount');
+
+        return $processedDeposit + $receivedTransfer + $refund + $referralBonus  - $investments - $withdrawals - $transfer;
+
+    }
 
     public static function getProcessedDeposit()
     {

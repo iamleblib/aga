@@ -25,7 +25,10 @@ class Investment extends Model
         return self::sum('amount');
     }
 
-
+    public function getInvestmentAdminUser($id)
+    {
+        return $this->where(['user_id' => $id, 'completed' => false])->sum('amount');
+    }
 
     public static function getInvestment()
     {

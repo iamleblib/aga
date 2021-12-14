@@ -357,7 +357,7 @@
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
                                                 <div class="text-dark fw-bolder fs-1 mb-2 mt-5">{{ number_format($investment) }}</div>
-                                                <div class="text-muted fw-bold fs-6">Total Investments</div>
+                                                <div class="text-muted fw-bold fs-6">Total Investments Count</div>
                                             </div>
                                         </div>
                                         <!--end::Body-->
@@ -382,7 +382,7 @@
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
                                                 <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ number_format($withdrawal) }}</div>
-                                                <div class="text-muted fw-bold fs-6">Withdrawals</div>
+                                                <div class="text-muted fw-bold fs-6">Withdrawals <small>(Approved & Declined)</small></div>
                                             </div>
                                         </div>
                                         <!--end::Body-->

@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Investment;
 use App\Models\Roi;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 
@@ -14,7 +15,7 @@ class PaymentCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'command:payment';
 
     /**
      * The console command description.
@@ -40,6 +41,7 @@ class PaymentCommand extends Command
      */
     public function handle()
     {
+
         // enterprice
         $enterPrices = Investment::where([
             ['plan', 'Enterprise'],

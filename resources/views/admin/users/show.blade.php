@@ -82,7 +82,7 @@
                                     <!--begin::Stats-->
                                     <div class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3">
                                         <div class="fs-4 fw-bolder text-gray-700">
-                                            <span class="w-75px">${{ number_format($deposit->getProcessedDeposit()) }}</span>
+                                            <span class="w-75px">${{ number_format($deposit->getAdminUsersDeposit($user->id)) }}</span>
                                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
                                             <span class="svg-icon svg-icon-3 svg-icon-success">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -97,7 +97,7 @@
 
                                     <div class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3">
                                         <div class="fs-4 fw-bolder text-gray-700">
-                                            <span class="w-75px">${{ number_format($investment->getInvestment()) }}</span>
+                                            <span class="w-75px">${{ number_format($investment->getInvestmentAdminUser($user->id)) }}</span>
                                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
                                             <span class="svg-icon svg-icon-3 svg-icon-success">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
