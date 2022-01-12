@@ -280,7 +280,377 @@
                         </div>
                         <!--end:::Tab pane-->
                     </div>
+                    <div class="tab-content" id="myTabContent">
+                        <!--begin:::Tab pane-->
+                        <div class="tab-pane fade show active" id="kt_user_view_overview_tab" role="tabpanel">
+                            <!--begin::Card-->
+                            <div class="card pt-4 mb-6 mb-xl-9">
+                                <!--begin::Card header-->
+                                <div class="card-header border-0">
+                                    <!--begin::Card title-->
+                                    <div class="card-title float-left">
+                                        <h2>Tweak Wallet</h2>
+                                    </div>
+                                </div>
+                                <!--end::Card header-->
+                                <!--begin::Card body-->
+                                <div class="card-body pt-0 pb-5">
+                                    <!--begin::Table wrapper-->
+                                    <div class="table-responsive">
+                                        <!--begin::Table-->
+                                        <table class="table align-middle table-row-dashed gy-5" id="kt_table_users_login_session">
+                                            <!--begin::Table body-->
+                                            <tbody class="fs-6 fw-bold text-gray-600">
+                                            <tr>
+                                                <td>Add fund</td>
+                                                <td>${{ number_format($deposit->getAdminUsersDeposit($user->id)) }}</td>
+                                                <td class="text-end">
+                                                    <button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#add_fund">
+                                                        <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+                                                        <span class="svg-icon svg-icon-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="black"></path>
+                                                                <path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="black"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Add Withdrawal</td>
+                                                <td>-</td>
+                                                <td class="text-end">
+                                                    <button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#add_withdrawal">
+                                                        <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+                                                        <span class="svg-icon svg-icon-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="black"></path>
+                                                                <path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="black"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Add Interest</td>
+                                                <td>-</td>
+                                                <td class="text-end">
+                                                    <button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#add_interest">
+                                                        <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+                                                        <span class="svg-icon svg-icon-3">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="black"></path>
+                                                                <path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="black"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                            <!--end::Table body-->
+                                        </table>
+                                        <!--end::Table-->
+                                    </div>
+                                    <!--end::Table wrapper-->
+                                </div>
+                                <!--end::Card body-->
+                            </div>
+
+                        </div>
+                        <!--end:::Tab pane-->
+                    </div>
                     <!--end:::Tab content-->
+
+
+{{--                    Tweak Wallet Modals--}}
+                    <div class="modal fade" id="add_fund" tabindex="-1" aria-hidden="true">
+                        <!--begin::Modal dialog-->
+                        <div class="modal-dialog modal-dialog-centered mw-650px">
+                            <!--begin::Modal content-->
+                            <div class="modal-content rounded">
+                                <!--begin::Modal header-->
+                                <div class="modal-header pb-0 border-0 justify-content-end">
+                                    <!--begin::Close-->
+                                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                        <span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+													</svg>
+												</span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Close-->
+                                </div>
+                                <!--begin::Modal header-->
+                                <!--begin::Modal body-->
+                                <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+                                    <!--begin:Form-->
+                                    <form id="kt_modal_new_target_form" method="post" class="form" action="{{ route('user.add.fund', $user->id) }}">
+                                        <!--begin::Heading-->
+                                        @csrf
+                                        <div class="mb-13 text-center">
+                                            <!--begin::Title-->
+                                            <h1 class="mb-3">Add Fund to Wallet</h1>
+                                            <!--end::Title-->
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Input group-->
+                                        <div class="d-flex flex-column mb-8 fv-row">
+                                            <!--begin::Label-->
+                                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                                <span class="required">Amount to fund</span>
+                                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="enter the amount you want to add to fund in {{ $user->username }}'s wallet"></i>
+                                            </label>
+                                            <!--end::Label-->
+                                            <input type="hidden" name="status" value="processed">
+                                            <input type="number" class="form-control form-control-solid" placeholder="Enter Amount To Fund" name="amount" />
+                                        </div>
+
+                                        <div class="fv-row">
+                                            <!--begin::Label-->
+                                            <label class="d-flex align-items-center fs-5 fw-bold mb-4">
+                                                <span class="required">Select Payment Gateway</span>
+                                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Select your app database engine"></i>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin:Option-->
+                                            <label class="d-flex flex-stack cursor-pointer mb-5">
+                                                <!--begin::Label-->
+                                                <span class="d-flex align-items-center me-2">
+														<!--begin::Icon-->
+														<img src="{{ asset('backend/assets/media/icons/btc.png')}}" width="10%" class="m-4" alt="">
+                                                    <!--end::Icon-->
+                                                    <!--begin::Info-->
+														<span class="d-flex flex-column">
+															<span class="fw-bolder fs-6">BTC</span>
+															<span class="fs-7 text-muted">Bitcoin Payment Method</span>
+														</span>
+                                                    <!--end::Info-->
+													</span>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <span class="form-check form-check-custom form-check-solid">
+														<input checked id="paymentMethod" class="form-check-input" type="radio" name="paymentMethod" value="Bitcoin Payment Gateway" />
+													</span>
+                                                <!--end::Input-->
+                                            </label>
+                                            <!--end::Option-->
+                                            <!--begin:Option-->
+                                            <label class="d-flex flex-stack cursor-pointer mb-5">
+                                                <!--begin::Label-->
+                                                <span class="d-flex align-items-center me-2">
+														<!--begin::Icon-->
+                                                <img src="{{ asset('backend/assets/media/icons/eth.png')}}" width="10%" class="m-4" alt="">
+
+                                                    <!--end::Icon-->
+                                                    <!--begin::Info-->
+														<span class="d-flex flex-column">
+															<span class="fw-bolder fs-6">ETH</span>
+															<span class="fs-7 text-muted">Etherium Payment Method</span>
+														</span>
+                                                    <!--end::Info-->
+													</span>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <span class="form-check form-check-custom form-check-solid">
+														<input id="paymentMethodEth" class="form-check-input" type="radio" name="paymentMethod" value="Etherium Payment Gateway" />
+													</span>
+                                                <!--end::Input-->
+                                            </label>
+                                            <!--end::Option-->
+                                            <!--begin:Option-->
+                                            <label class="d-flex flex-stack cursor-pointer">
+                                                <!--begin::Label-->
+                                                <span class="d-flex align-items-center me-2">
+														<!--begin::Icon-->
+                                                <img src="{{ asset('backend/assets/media/icons/usd.png')}}" width="10%" class="m-4" alt="">
+
+                                                    <!--end::Icon-->
+                                                    <!--begin::Info-->
+														<span class="d-flex flex-column">
+															<span class="fw-bolder fs-6">USDC</span>
+															<span class="fs-7 text-muted">USDC Payment Method</span>
+														</span>
+                                                    <!--end::Info-->
+													</span>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <span class="form-check form-check-custom form-check-solid">
+														<input class="form-check-input" id="paymentMethodUsdc" type="radio" name="paymentMethod" value="Usdc Payment Gateway" />
+													</span>
+                                                <!--end::Input-->
+                                            </label>
+                                            <!--end::Option-->
+                                        </div>
+
+                                        <div style="float: right" class="text-center">
+                                            <button type="submit" id="kt_modal_new_target_submit" class="btn btn-success">
+                                                <span class="indicator-label">Fund Account</span>
+                                            </button>
+                                        </div>
+                                        <!--end::Actions-->
+                                    </form>
+                                    <!--end:Form-->
+                                </div>
+                                <!--end::Modal body-->
+                            </div>
+                            <!--end::Modal content-->
+                        </div>
+                        <!--end::Modal dialog-->
+                    </div>
+                    <div class="modal fade" id="add_withdrawal" tabindex="-1" aria-hidden="true">
+                        <!--begin::Modal dialog-->
+                        <div class="modal-dialog modal-dialog-centered mw-650px">
+                            <!--begin::Modal content-->
+                            <div class="modal-content rounded">
+                                <!--begin::Modal header-->
+                                <div class="modal-header pb-0 border-0 justify-content-end">
+                                    <!--begin::Close-->
+                                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                        <span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+													</svg>
+												</span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Close-->
+                                </div>
+                                <!--begin::Modal header-->
+                                <!--begin::Modal body-->
+                                <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+                                    <!--begin:Form-->
+                                    <form id="kt_modal_new_target_form" method="post" class="form" action="{{ route('user.withdraw.fund', $user->id) }}">
+                                        <!--begin::Heading-->
+                                        @csrf
+                                        <div class="mb-13 text-center">
+                                            <!--begin::Title-->
+                                            <h1 class="mb-3">Withdraw Funds</h1>
+                                            <!--end::Title-->
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Input group-->
+                                        <div class="d-flex flex-column mb-8 fv-row">
+                                            <!--begin::Label-->
+                                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                                <span class="required">Amount to withdraw</span>
+                                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="enter the amount you want to withdraw from {{ $user->username }}'s wallet"></i>
+                                            </label>
+                                            <!--end::Label-->
+                                            <input type="hidden" name="status" value="processed">
+                                            <input type="number" class="form-control form-control-solid" placeholder="Enter Amount To Withdraw" name="amount" />
+                                        </div>
+
+                                        <div class="fv-row">
+                                            <!--begin::Label-->
+                                            <label class="d-flex align-items-center fs-5 fw-bold mb-4">
+                                                <span class="required">Withdrawal address</span>
+                                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Withdrawal address"></i>
+                                            </label>
+                                            <!--end::Label-->
+                                            <input type="text" name="address" placeholder="enter wallet address for withdrawal" class="form-control">
+                                        </div>
+                                        <br>
+                                        <div style="float: right" class="text-center">
+                                            <button type="submit" id="kt_modal_new_target_submit" class="btn btn-danger">
+                                                <span class="indicator-label">Withdraw from Account</span>
+                                            </button>
+                                        </div>
+                                        <!--end::Actions-->
+                                    </form>
+                                    <!--end:Form-->
+                                </div>
+                                <!--end::Modal body-->
+                            </div>
+                            <!--end::Modal content-->
+                        </div>
+                        <!--end::Modal dialog-->
+                    </div>
+                    <div class="modal fade" id="add_interest" tabindex="-1" aria-hidden="true">
+                        <!--begin::Modal dialog-->
+                        <div class="modal-dialog modal-dialog-centered mw-650px">
+                            <!--begin::Modal content-->
+                            <div class="modal-content rounded">
+                                <!--begin::Modal header-->
+                                <div class="modal-header pb-0 border-0 justify-content-end">
+                                    <!--begin::Close-->
+                                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                        <span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+													</svg>
+												</span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Close-->
+                                </div>
+                                <!--begin::Modal header-->
+                                <!--begin::Modal body-->
+                                <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+                                    <!--begin:Form-->
+                                    <form id="kt_modal_new_target_form" method="post" class="form" action="{{ route('user.add.roi', $user->id) }}">
+                                        <!--begin::Heading-->
+                                        @csrf
+                                        <div class="mb-13 text-center">
+                                            <!--begin::Title-->
+                                            <h1 class="mb-3">Add Interest (ROI)</h1>
+                                            <!--end::Title-->
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Input group-->
+                                        <div class="d-flex flex-column mb-8 fv-row">
+                                            <!--begin::Label-->
+                                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                                <span class="required">ROI to Add</span>
+                                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Add ROI"></i>
+                                            </label>
+                                            <!--end::Label-->
+                                            <input type="hidden" name="status" value="processed">
+                                            <input type="number" class="form-control form-control-solid" placeholder="Enter ROI To Fund" name="amount" />
+                                        </div>
+
+                                        <div class="d-flex flex-column mb-8 fv-row">
+                                            <!--begin::Label-->
+                                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                                <span class="required">Select Plan</span>
+                                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Add ROI"></i>
+                                            </label>
+                                            <!--end::Label-->
+                                            <select name="plan" id="" class="form-control">
+                                                <option value="Minimum Package">Minimum Package </option>
+                                                <option value="Standard Package">Standard Package </option>
+                                                <option value="Premium Package">Premium Package</option>
+                                            </select>
+                                        </div>
+
+                                        <div style="float: right" class="text-center">
+                                            <button type="submit" id="kt_modal_new_target_submit" class="btn btn-success">
+                                                <span class="indicator-label">Fund Account</span>
+                                            </button>
+                                        </div>
+                                        <!--end::Actions-->
+                                    </form>
+                                    <!--end:Form-->
+                                </div>
+                                <!--end::Modal body-->
+                            </div>
+                            <!--end::Modal content-->
+                        </div>
+                        <!--end::Modal dialog-->
+                    </div>
+
+                    <!--end::Modal - New Target-->
 
                     @if($wallets->count() > 0)
                         <div class="tab-content" id="myTabContent">
@@ -364,11 +734,6 @@
                         @endif
 
                     </div>
-
-
-
-
-
                 </div>
                 <!--end::Content-->
             </div>

@@ -30,6 +30,7 @@ class Deposit extends Model
 
     public function getAdminUsersDeposit($id)
     {
+        $roi = Roi::where('user_id', $id)->sum('amount');
         $processedDeposit = $this->where(['status' => 'processed', 'user_id' => $id])->sum('amount');
         $investments = Investment::where('user_id', $id)->sum('amount');
         $withdrawals = Withdraw::where('user_id', $id)->sum('amount');
@@ -41,12 +42,13 @@ class Deposit extends Model
             ['status', 'processed']
         ])->sum('amount');
 
-        return $processedDeposit + $receivedTransfer + $refund + $referralBonus  - $investments - $withdrawals - $transfer;
+        return $processedDeposit + $roi + $receivedTransfer + $refund + $referralBonus  - $investments - $withdrawals - $transfer;
 
     }
 
     public static function getProcessedDeposit()
     {
+        $roi = Roi::where('user_id', auth()->id())->sum('amount');
         $processedDeposit = self::where(['status' => 'processed', 'user_id' => auth()->id()])->sum('amount');
         $investments = Investment::getInvestment();
         $withdrawals = Withdraw::getWithdrawals();
@@ -55,7 +57,7 @@ class Deposit extends Model
         $transfer = Transfer::getTransfers();
         $receivedTransfer = Transfer::receivedTransfers();
 
-        return $processedDeposit + $receivedTransfer + $refund + $referralBonus  - $investments - $withdrawals - $transfer;
+        return $processedDeposit + $roi + $receivedTransfer + $refund + $referralBonus  - $investments - $withdrawals - $transfer;
     }
 
     public function getPendingDepositCount()

@@ -148,6 +148,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
         Route::post('/update/role/{id}', [UsersController::class, 'updateRole'])->name('user.role.update');
         Route::post('/update/ref/{id}', [DashboardController::class, 'updateRef'])->name('user.ref.update');
         Route::post('/alter/{id}', [UsersController::class, 'alter'])->name('user.alter');
+        Route::post('/fund-wallet/{id}', [UsersController::class, 'fundUser'])->name('user.add.fund');
+        Route::post('/withdraw-wallet/{id}', [UsersController::class, 'withdrawUser'])->name('user.withdraw.fund');
+        Route::post('/roi-wallet/{id}', [UsersController::class, 'roiUser'])->name('user.add.roi');
     });
 
 

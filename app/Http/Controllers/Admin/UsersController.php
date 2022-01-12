@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Deposit;
 use App\Models\Investment;
 use App\Models\Referral;
+use App\Models\Roi;
 use App\Models\User;
 use App\Models\Wallet;
+use App\Models\Withdraw;
 use App\Traits\Messages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -130,5 +132,68 @@ class UsersController extends Controller
         ]);
         return redirect()->back()->with('success', 'Account Altered Successfully');
 
+    }
+
+
+//    Fund User
+    public function fundUser(Request $request, $id, User $user, Deposit $deposit)
+    {
+        $request->validate([
+            'amount' => 'required|string',
+            'paymentMethod' => 'required'
+        ]);
+
+        if ($deposit->check($request->amount, 0)) {
+            return redirect()->back()->with('error', 'Please enter a valid amount');
+        }
+
+        Deposit::create([
+            'user_id' => $id,
+            'ref' => "#ALT" . time(),
+            'amount' => $request->amount,
+            'status' => $request->status,
+            'gateway' => $request->paymentMethod,
+        ]);
+
+        return redirect()->back()->with('success', 'Deposit Sent');
+    }
+
+    public function withdrawUser(Request $request, $id, User $user, Withdraw $withdraw)
+    {
+        $request->validate([
+            'amount' => 'required|string',
+            'address' => 'required|string'
+        ]);
+
+        if ($withdraw->check($request->amount, 0)) {
+            return redirect()->back()->with('error', 'Please enter a valid amount');
+        }
+
+        Withdraw::create([
+            'user_id' => $id,
+            'ref' => "#ALT" . time(),
+            'amount' => $request->amount,
+            'status' => $request->status,
+            'gateway' => "crypto",
+            'address' => $request->address,
+        ]);
+
+        return redirect()->back()->with('success', 'Withdrawal Sent');
+
+    }
+
+    public function roiUser(Request $request, $id, User $user)
+    {
+        $request->validate([
+            'amount' => 'required|string'
+        ]);
+
+        Roi::create([
+            'user_id' => $id,
+            'ref' => "#ALT" . time(),
+            'amount' => $request->amount,
+            'plan' => $request->plan,
+        ]);
+        return redirect()->back()->with('success', 'ROI Sent');
     }
 }
