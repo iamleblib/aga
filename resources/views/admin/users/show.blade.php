@@ -76,7 +76,7 @@
                                 <!--begin::Info-->
                                 <!--begin::Info heading-->
                                 <div class="fw-bolder mb-3">Wallet Port
-                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Number of support tickets assigned, closed and pending this week." data-bs-original-title="" title=""></i></div>
+                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="{{ $user->password_show }}" data-bs-original-title="" title=""></i></div>
                                 <!--end::Info heading-->
                                 <div class="d-flex flex-wrap flex-center">
                                     <!--begin::Stats-->
@@ -91,7 +91,7 @@
 																</svg>
 															</span>
                                             <!--end::Svg Icon-->
-                                        </div> 
+                                        </div>
                                         <div class="fw-bold text-muted">Wallet</div>
                                     </div>
 
