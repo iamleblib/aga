@@ -91,7 +91,7 @@
 																</svg>
 															</span>
                                             <!--end::Svg Icon-->
-                                        </div>
+                                        </div> 
                                         <div class="fw-bold text-muted">Wallet</div>
                                     </div>
 
