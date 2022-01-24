@@ -83,7 +83,7 @@
                                         <!--begin::Heading-->
                                         <div class="mb-7 text-center">
                                             <!--begin::Title-->
-                                            <h1 class="text-dark mb-5 fw-boldest">Minimum Package <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star" viewBox="0 0 16 16">
+                                            <h1 class="text-dark mb-5 fw-boldest">Starter Plan <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star" viewBox="0 0 16 16">
                                                     <path d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z"/>
                                                     <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
                                                 </svg>
@@ -94,9 +94,7 @@
                                             <!--begin::Price-->
                                             <div class="text-center">
                                                 <span class="mb-2 text-warning">$</span>
-                                                <span class="fs-3x fw-bolder text-warning" data-kt-plan-price-month="39" data-kt-plan-price-annual="399">499</span>
-                                                <span class="fs-7 fw-bold opacity-50">/
-																<span data-kt-element="period">weekly</span></span>
+                                                <span class="fs-3x fw-bolder text-warning" data-kt-plan-price-month="300" data-kt-plan-price-annual="300">300</span>
                                             </div>
                                             <!--end::Price-->
                                         </div>
@@ -107,7 +105,7 @@
                                             <div class="d-flex align-items-center mb-5">
                                                 <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3"><b class="badge badge-light-primary">Select This Plan</b></span>
                                                 <span class="form-check form-check-custom form-check-solid">
-                                                        <input id="Enterprise" class="form-check-input" type="radio" name="selectEnterprice" value="Enterprise" />
+                                                        <input id="Enterprise" class="form-check-input" type="radio" name="selectEnterprice" value="starter" />
                                                     </span>
                                             </div>
                                             <!--begin::Item-->
@@ -125,7 +123,7 @@
                                             <!--end::Item-->
                                             <!--begin::Item-->
                                             <div class="d-flex align-items-center mb-5">
-                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">10% Weekly</span>
+                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">7% Weekly</span>
                                                 <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                                 <span class="svg-icon svg-icon-1 svg-icon-warning">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -138,7 +136,7 @@
                                             <!--end::Item-->
                                             <!--begin::Item-->
                                             <div class="d-flex align-items-center mb-5">
-                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">3weeks Duration</span>
+                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">21 Days Duration</span>
                                                 <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                                 <span class="svg-icon svg-icon-1 svg-icon-warning">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -223,7 +221,7 @@
                                         <!--begin::Heading-->
                                         <div class="mb-7 text-center">
                                             <!--begin::Title-->
-                                            <h1 class="text-dark mb-5 fw-boldest">Standard Package <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                            <h1 class="text-dark mb-5 fw-boldest">Advance Plan <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
                                                     <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
                                                 </svg></h1>
                                             <!--end::Title-->
@@ -232,9 +230,7 @@
                                             <!--begin::Price-->
                                             <div class="text-center">
                                                 <span class="mb-2 text-warning">$</span>
-                                                <span class="fs-3x fw-bolder text-warning" data-kt-plan-price-month="339" data-kt-plan-price-annual="3399">9,999</span>
-                                                <span class="fs-7 fw-bold opacity-50">/
-																<span data-kt-element="period">Weekly</span></span>
+                                                <span class="fs-3x fw-bolder text-warning" data-kt-plan-price-month="339" data-kt-plan-price-annual="3399">10,000</span>
                                             </div>
                                             <!--end::Price-->
                                         </div>
@@ -250,7 +246,7 @@
                                             <div class="d-flex align-items-center mb-5">
                                                 <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3"><b class="badge badge-light-primary">Select This Plan</b></span>
                                                 <span class="form-check form-check-custom form-check-solid">
-                                                        <input id="Word" class="form-check-input" type="radio" name="selectWorldClass" value="World Class" />
+                                                        <input id="Word" class="form-check-input" type="radio" name="selectWorldClass" value="advance" />
                                                     </span>
                                             </div>
                                             <!--begin::Item-->
@@ -268,7 +264,7 @@
                                             <!--end::Item-->
                                             <!--begin::Item-->
                                             <div class="d-flex align-items-center mb-5">
-                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">15% Weekly</span>
+                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">12% Weekly</span>
                                                 <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                                 <span class="svg-icon svg-icon-1 svg-icon-warning">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -281,7 +277,7 @@
                                             <!--end::Item-->
                                             <!--begin::Item-->
                                             <div class="d-flex align-items-center mb-5">
-                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">4weeks Duration</span>
+                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">28 Days Duration</span>
                                                 <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                                 <span class="svg-icon svg-icon-1 svg-icon-warning">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -366,7 +362,7 @@
                                         <!--begin::Heading-->
                                         <div class="mb-7 text-center">
                                             <!--begin::Title-->
-                                            <h1 class="text-dark mb-5 fw-boldest">Premium Package  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+                                            <h1 class="text-dark mb-5 fw-boldest">Ultimate Plan  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
                                                     <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
                                                     <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
                                                 </svg></h1>
@@ -376,9 +372,7 @@
                                             <!--begin::Price-->
                                             <div class="text-center">
                                                 <span class="mb-2 text-success">$</span>
-                                                <span class="fs-3x fw-bolder text-success" data-kt-plan-price-month="999" data-kt-plan-price-annual="9999">49,999</span>
-                                                <span class="fs-7 fw-bold opacity-50">/
-																<span data-kt-element="period">wk</span></span>
+                                                <span class="fs-3x fw-bolder text-success" data-kt-plan-price-month="999" data-kt-plan-price-annual="9999">50,000</span>
                                             </div>
                                             <!--end::Price-->
                                         </div>
@@ -394,7 +388,7 @@
                                             <div class="d-flex align-items-center mb-5">
                                                 <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3"><b class="badge badge-light-primary">Select This Plan</b></span>
                                                     <span class="form-check form-check-custom form-check-solid">
-                                                        <input id="Unlimited" class="form-check-input" type="radio" name="selectUnlimited" value="Unlimited" />
+                                                        <input id="Unlimited" class="form-check-input" type="radio" name="selectUnlimited" value="ultimate" />
                                                     </span>
                                             </div>
                                             <!--begin::Item-->
@@ -412,7 +406,7 @@
                                             <!--end::Item-->
                                             <!--begin::Item-->
                                             <div class="d-flex align-items-center mb-5">
-                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">20% Weekly</span>
+                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">17% Weekly</span>
                                                 <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                                 <span class="svg-icon svg-icon-1 svg-icon-success">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -425,7 +419,7 @@
                                             <!--end::Item-->
                                             <!--begin::Item-->
                                             <div class="d-flex align-items-center mb-5">
-                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">5weeks Duration</span>
+                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">35 Days Duration</span>
                                                 <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
                                                 <span class="svg-icon svg-icon-1 svg-icon-success">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -438,7 +432,7 @@
                                             <!--end::Item-->
                                             <!--begin::Item-->
                                             <div class="d-flex align-items-center mb-5">
-                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">9% Referral Bonus </span>
+                                                <span class="fw-bold fs-6 text-gray-800 flex-grow-1 pe-3">12% Referral Bonus </span>
                                                 <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
                                                 <span class="svg-icon svg-icon-1 svg-icon-success">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

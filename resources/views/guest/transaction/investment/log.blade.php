@@ -231,30 +231,25 @@
                                             <!--end::Two step=-->
                                             <!--begin::Joined-->
                                             <td data-order="#abcsd">
-                                                @if($investment->plan == 'Enterprise'){{ $investment->plan }}
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
-                                                </svg>
-                                                @elseif($investment->plan == 'World Class'){{ $investment->plan }}
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
-                                                </svg>
-                                                @elseif($investment->plan == 'Unlimited'){{ $investment->plan }}
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
-                                                    <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
-                                                    <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
-                                                </svg>
-                                                @endif
+                                               <span class="badge badge-info">
+                                                   {{ $investment->plan }}
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                                    </svg>
+                                               </span>
                                             </td>
                                             <td data-order="#abcsd">
-                                                @if($investment->plan == 'Enterprise')<div class="badge badge-warning"> 3weeks
-                                                    @elseif($investment->plan == 'World Class')<div class="badge badge-warning"> 4weeks
-                                                        @elseif($investment->plan == 'Unlimited')<div class="badge badge-success"> 5weeks @endif </div>
+                                                @if($investment->plan == 'starter')
+                                                <div class="badge badge-warning"> 21 days </div>
+                                                        @elseif($investment->plan == 'advance')
+                                                <div class="badge badge-warning"> 28 days </div>
+                                                        @elseif($investment->plan == 'ultimate')
+                                                    <div class="badge badge-success"> 35 days</div>  @endif
+
                                             </td>
                                             <td data-order="#abcsd">{{ $investment->ref }}</td>
-
                                             <td>
-                                                <div class="badge badge-@if($investment->completed === 0)warning @else success @endif"> </div>
+                                                <div class="badge @if($investment->completed === 0) badge-warning @else badge-success @endif">@if($investment->completed === 0) Processing @else Completed @endif</div>
                                             </td>
                                             <td data-order="2021-05-05T17:20:00+01:00">{{ $investment->created_at->toFormattedDateString() }}
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm-fill" viewBox="0 0 16 16">
@@ -351,17 +346,17 @@
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
 
-                                                                            @if($investment->plan == 'Enterprise')
+                                                                            @if($investment->plan == 'starter')
                                                                                 <p class="btn btn-light-warning btn-sm">{{ $investment->plan }}
                                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
                                                                                         <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
                                                                                     </svg>
-                                                                            @elseif($investment->plan == 'World Class')
+                                                                            @elseif($investment->plan == 'advance')
                                                                                 <p class="btn btn-light-warning btn-sm">{{ $investment->plan }}
                                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
                                                                                         <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
                                                                                     </svg>
-                                                                            @elseif($investment->plan == 'Unlimited')
+                                                                            @elseif($investment->plan == 'ultimate')
                                                                                 <p class="btn btn-light-success btn-sm">{{ $investment->plan }}
                                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
                                                                                         <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
@@ -398,7 +393,7 @@
                                                                             <label class="fs-5 fw-bold mb-2 required">Duration</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p>@if($investment->plan == 'Enterprise') 3weeks @elseif($investment->plan == 'World Class') 4weeks @elseif($investment->plan == 'Unlimited') 5weeks @endif </p><!--end::Input-->
+                                                                            <p>@if($investment->plan == 'starter') 21 days @elseif($investment->plan == 'advance') 28 days @elseif($investment->plan == 'ultimate') 35 days @endif </p><!--end::Input-->
                                                                             <!--end::Input-->
                                                                         </div>
                                                                         <!--end::Col-->
@@ -408,7 +403,7 @@
                                                                             <label class="fs-5 fw-bold mb-2 required">Total Earning</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p>@if($investment->plan == 'Enterprise') ${{ number_format($investment->amount /100 * 10 * 3) }} @elseif($investment->plan == 'World Class') ${{ number_format($investment->amount  /100 * 15* 4) }} @elseif($investment->plan == 'Unlimited') ${{ number_format($investment->amount  /100 * 20 * 5) }} @endif</p>
+                                                                            <p>@if($investment->plan == 'starter') ${{ number_format($investment->amount /100 * 23) }} @elseif($investment->plan == 'advance') ${{ number_format($investment->amount  /100 * 48) }} @elseif($investment->plan == 'ultimate') ${{ number_format($investment->amount  /100 * 85) }} @endif</p>
                                                                             <!--end::Input-->
                                                                         </div>
 
@@ -417,7 +412,7 @@
                                                                             <label class="fs-5 fw-bold mb-2 required">Weekly Earning</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p>@if($investment->plan == 'Enterprise') ${{ number_format($investment->amount  /100 * 10) }} @elseif($investment->plan == 'World Class') ${{ number_format($investment->amount  /100 * 15) }} @elseif($investment->plan == 'Unlimited') ${{ number_format($investment->amount  /100 * 20) }} @endif</p>
+                                                                            <p>@if($investment->plan == 'starter') ${{ number_format($investment->amount  /100 * 7) }} @elseif($investment->plan == 'advance') ${{ number_format($investment->amount  /100 * 12) }} @elseif($investment->plan == 'ultimate') ${{ number_format($investment->amount  /100 * 17) }} @endif</p>
                                                                             <!--end::Input-->
                                                                         </div>
 
@@ -449,7 +444,7 @@
                                                                             <label class="fs-5 fw-bold mb-2 required">Investment Status</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p class="fs-7 fw-bold alert alert-@if($investment->status == 'pending')warning @elseif($investment->status == 'decline')danger @elseif($investment->status == 'processed')success @endif fw-bolder">Your Investment is {{ $investment->status }} <i class="fa fa-spinner fa-spin"></i></p>
+                                                                            <p class="fs-7 fw-bold alert alert-@if($investment->status == 'pending')warning @elseif($investment->status == 'decline')danger @elseif($investment->status == 'processed')success @endif fw-bolder">Your Investment is {{ $investment->status }} &nbsp; <i class="fa fa-spinner fa-spin"></i></p>
                                                                             <!--end::Input-->
                                                                         </div>
                                                                         <!--end::Col-->

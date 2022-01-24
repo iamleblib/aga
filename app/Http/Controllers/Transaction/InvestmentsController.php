@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class InvestmentsController extends Controller
 {
     public string $check = "";
+    public string $plan = "";
     public function index()
     {
         $wallet = Deposit::getProcessedDeposit();
@@ -26,16 +27,15 @@ class InvestmentsController extends Controller
             return redirect()->back()->with('error', "You do not have sufficient fund to complete this transaction");
         }
 
-        $plan = "";
         if ($request->selectUnlimited) {
-            $plan = $request->selectUnlimited;
-            $this->check = Investment::check($request->amount, 49999, 9999999999999999999999999999);
+            $this->plan = $request->selectUnlimited;
+            $this->check = Investment::check($request->amount, 50000, 9999999999999999999999999999);
         } else if ($request->selectEnterprice) {
-            $plan = $request->selectEnterprice;
-            $this->check = Investment::check($request->amount, 499, 9999);
+            $this->plan = $request->selectEnterprice;
+            $this->check = Investment::check($request->amount, 300, 9999);
         } else if ($request->selectWorldClass) {
-            $plan = $request->selectWorldClass;
-            $this->check = Investment::check($request->amount, 9999, 49999);
+            $this->plan = $request->selectWorldClass;
+            $this->check = Investment::check($request->amount, 10000, 49999);
         }
 
 
@@ -44,7 +44,7 @@ class InvestmentsController extends Controller
             return redirect()->back()->with('error', 'You have entered an invalid amount');
         }
 
-        return view('guest.transaction.investment.preview')->with(['request' => $request, 'plan' => $plan]);
+        return view('guest.transaction.investment.preview')->with(['request' => $request, 'plan' => $this->plan]);
     }
 
     public function process(Request $request, MailController $investment)

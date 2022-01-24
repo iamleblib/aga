@@ -54,7 +54,7 @@
                                         </div>
                                         <div class="text"></div>
                                         <ul class="list-style-two">
-                                            <li><span class="icon fa fa-phone"></span> +123 (4567) 890</li>
+                                            <li><span class="icon fa fa-phone"></span> <a href="tel:+447852241699">+44 (7852) 241699</a></li>
                                             <li><span class="icon fa fa-envelope"></span> support@altriagroupasset.com</li>
                                             <li><span class="icon fa fa-home"></span>England Cres, <br> Leamington Spa, UK</li>
                                         </ul>
@@ -126,6 +126,7 @@
                         <!-- Copyright Column -->
                         <div class="copyright-column col-lg-6 col-md-6 col-sm-12">
                             <div class="copyright">2019 &copy; All rights reserved by <a href="#">{{ env('APP_NAME') }}</a></div>
+                            <div class="copyright">Contact us <a href="tel:+447852241699">{{ env('ACCOUNT_PHONE') }}</a></div>
                         </div>
 
                         <!-- Social Column -->
@@ -139,7 +140,6 @@
                                 <li><a href="#"><span class="fa fa-rss-square"></span></a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>

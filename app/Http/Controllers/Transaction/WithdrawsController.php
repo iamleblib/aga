@@ -29,6 +29,8 @@ class WithdrawsController extends Controller
             return redirect()->back()->with('error', 'Please enter a valid amount');
         }
 
+        $request['address'] = auth()->user()->wallet()->where('name', $request->paymentMethod)->first()->address;
+
         $fields = [
             'email' => auth()->user()->email,
             'ref' => "#CBA" . time(),
@@ -38,7 +40,7 @@ class WithdrawsController extends Controller
         ];
 
         $withdraw = new MailController();
-        $withdraw->withdraw($fields);
+//        $withdraw->withdraw($fields);
 
         Auth::user()->withdraw()->create($fields);
 

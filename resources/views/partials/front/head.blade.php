@@ -39,7 +39,8 @@
                 <div class="inner-container clearfix">
                     <div class="top-left">
                         <ul class="contact-list clearfix">
-                            <li><a href="mailto:support@altriagroupassets.com"> <i class="fa fa-envelope-o"></i> Support@altria... </a></li>
+                            <li><a href="mailto:support@altriagroupassets.com"> <i class="fa fa-envelope-o"></i>
+                                {{ env('MAIL_FROM_ADDRESS') }}</a></li>
                             <li><i class="fa fa-phone"></i><a href="#">+1 401 572 4423</a></li>
                             <li><i class="fa fa-map-marker"></i><a href="#">England Cres, Leamington Spa, UK</a></li>
                         </ul>
