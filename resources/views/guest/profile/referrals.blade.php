@@ -78,11 +78,11 @@
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/google.svg')}}" class="h-15px me-3" />Contacts</a>
                                         <a href="https://www.facebook.com/share.php?{{ route('register') }}?user={{ auth()->user()->username }}"  target="_blank" class="btn btn-light w-100 mx-6">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/facebook.svg')}}" class="h-20px me-3" />Facebook</a>
-                                        <a href="https://www.twitter.com/home?status=Am inviting you to join coinbase assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/twitter/share" class="btn btn-light w-100">
+                                        <a href="https://www.twitter.com/home?status=Am inviting you to join {{ env('APP_NAME') }} and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/twitter/share" class="btn btn-light w-100">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/twitter.svg')}}" class="h-20px me-3" />Twitter</a>
-                                        <a href="https://instagram.com/send?text=Am inviting you to join Coinbase Assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/instagram/share" class="btn btn-light w-100">
+                                        <a href="https://instagram.com/send?text=Am inviting you to join {{ env('APP_NAME') }} and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/instagram/share" class="btn btn-light w-100">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/svg/social-logos/instagram.svg')}}" class="h-20px me-3" />Instagram</a>
-                                        <a href="https://wa.me/?text=Am inviting you to join Coinbase Assets and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/whatsapp/share" class="btn btn-light w-100">
+                                        <a href="https://wa.me/?text=Am inviting you to join {{ env('APP_NAME') }} and earn with me using my referral link {{ route('register') }}?user={{ auth()->user()->username }}" target="_blank" data-action="share/whatsapp/share" class="btn btn-light w-100">
                                             <img alt="Logo" src="{{ asset('backend/assets/media/icons/whatsapp.png')}}" class="h-20px me-3" />WhatsApp</a>
                                     </div>
                                     <!--end::Actions-->
