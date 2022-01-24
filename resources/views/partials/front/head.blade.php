@@ -41,7 +41,7 @@
                         <ul class="contact-list clearfix">
                             <li><a href="mailto:support@altriagroupassets.com"> <i class="fa fa-envelope-o"></i>
                                 {{ env('MAIL_FROM_ADDRESS') }}</a></li>
-                            <li><i class="fa fa-phone"></i><a href="#">+1 401 572 4423</a></li>
+                            <li><i class="fa fa-phone"></i><a href="tel:+447852241699">{{ env('ACCOUNT_PHONE') }}/a></li>
                             <li><i class="fa fa-map-marker"></i><a href="#">England Cres, Leamington Spa, UK</a></li>
                         </ul>
 

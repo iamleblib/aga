@@ -28,8 +28,8 @@
                                 <ul class="list-style-five">
                                     <li><span class="icon fa fa-building"></span> England Cres,
                                          <br> Leamington Spa, <br> United Kingdom</li>
-                                    <li><span class="icon fa fa-fax"></span> +1 617 572 2000</li>
-                                    <li><span class="icon fa fa-envelope-o"></span>support@altrialgroupasset.com</li>
+                                    <li><span class="icon fa fa-fax"></span> +1 401 572 4423</li>
+                                    <li><span class="icon fa fa-envelope-o"></span>{{ env('MAIL_FROM_ADDRESS') }}</li>
                                 </ul>
                             </div>
                         </div>
