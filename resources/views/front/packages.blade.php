@@ -52,11 +52,11 @@
                                                 <h5>Minimum Package</h5>
                                                 <div class="text">This Package Is Known As Standard Package, Investment Strategy With A Minimum Denomination Of $499 To A Maximum Denomination Of $9,999, This Strategy Assured Returns For 3 Weeks</div>
                                             </div>
-                                            <div class="price">$499 </div>
+                                            <div class="price">$300 </div>
                                             <div class="lower-box">
                                                 <ul class="price-list">
                                                     <li>Maximum Investment: $9,999</li>
-                                                    <li>On Weekly ROI Model: 10% Weekly</li>
+                                                    <li>On Weekly ROI Model: 7% Weekly</li>
                                                     <li>Duration: 21 days</li>
                                                     <li>Referral Commission: 3%</li>
                                                 </ul>
@@ -74,11 +74,11 @@
                                                 <h5>Standard Package</h5>
                                                 <div class="text">This Package Is Known As Standard Package, Investment Strategy With A Minimum Denomination Of $9,999 To A Maximum Denomination Of $49,999, This Strategy Assured Returns For 4 Weeks</div>
                                             </div>
-                                            <div class="price" style="background: green">$9,999 </div>
+                                            <div class="price" style="background: green">$10,000 </div>
                                             <div class="lower-box">
                                                 <ul class="price-list">
                                                     <li>Maximum Investment: $49,999</li>
-                                                    <li>On Weekly ROI Model: 15% Weekly</li>
+                                                    <li>On Weekly ROI Model: 12% Weekly</li>
                                                     <li>Duration: 28 days</li>
                                                     <li>Referral Commission: 6%</li>
                                                 </ul>
@@ -99,9 +99,9 @@
                                             <div class="lower-box">
                                                 <ul class="price-list">
                                                     <li>Maximum Investment: Unlimited</li>
-                                                    <li>On Weekly ROI Model: 20% Weekly</li>
+                                                    <li>On Weekly ROI Model: 17% Weekly</li>
                                                     <li>Duration: 35 days</li>
-                                                    <li>Referral Commission: 9%</li>
+                                                    <li>Referral Commission: 12%</li>
                                                 </ul>
                                                 <a href="{{ route('investment.guest.index') }}" class="theme-btn btn btn-primary">Invest Now</a>
                                             </div>
