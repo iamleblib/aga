@@ -95,7 +95,7 @@
                                                 <h5>Premium Package</h5>
                                                 <div class="text">This Package Is Known As Extended Package, Investment Strategy With A Minimum Denomination Of $50,000, This Strategy Assured Returns For 5 Weeks</div>
                                             </div>
-                                            <div class="price">$49,999</div>
+                                            <div class="price">$50,000</div>
                                             <div class="lower-box">
                                                 <ul class="price-list">
                                                     <li>Maximum Investment: Unlimited</li>
