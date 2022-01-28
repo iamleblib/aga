@@ -628,6 +628,8 @@
 </div>
 <!--end::Scrolltop-->
 @include('partials.guest.script')
+@include('livechat')
+
 </body>
 <!--end::Body-->
 

@@ -9,6 +9,7 @@
 @include('partials.front.auth.head')
 
 @include('partials.front.scripts')
+@include('livechat')
 
 
 

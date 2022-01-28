@@ -79,5 +79,6 @@
             @yield('content')
         </main>
     </div>
+@include('livechat')
 </body>
 </html>

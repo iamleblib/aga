@@ -229,5 +229,7 @@
                 document.documentElement.scrollTop = 0;
             }
         </script>
+        @include('livechat')
+
     </body>
     </html>
