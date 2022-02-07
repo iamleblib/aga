@@ -175,8 +175,8 @@
                                 <tbody class="text-gray-600 fw-bold">
                                 <!--begin::Table row-->
 
-                                @if($rois->getAll()->count() > 0)
-                                    @foreach($rois->getAll() as $roi)
+                                @if($rois)
+                                    @foreach($rois as $roi)
                                         <tr class="even">
                                             <!--begin::Checkbox-->
                                             <td>
