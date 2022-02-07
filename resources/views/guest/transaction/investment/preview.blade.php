@@ -101,7 +101,7 @@
                                             <tbody>
                                             <tr class="fw-bolder text-gray-700 fs-5 text-end">
                                                 <td class="d-flex align-items-center pt-11"><i class="fa fa-genderless text-success fs-1 me-2"></i> Package </td>
-                                                <td class="pt-11">{{ ucfirst($plan) }} Plan</td>
+                                                <td class="pt-11">@if($plan == 'starter') Minimum @elseif($plan == 'advance') Standard @elseif($plan == 'ultimate') Premium @endif Package</td>
                                                 <td class="pt-11">${{ number_format($request->amount) }}</td>
                                                 <td class="pt-11">@if($plan == 'Enterprise') 10% @elseif($plan == 'Unlimited') 20% @elseif($plan == 'World Class')  15% @endif</td>
                                                 <td class="pt-11">@if($plan == 'Enterprise') 3Weeks @elseif($plan == 'Unlimited') 5weeks @elseif($plan == 'World Class') 4weeks @endif</td>
