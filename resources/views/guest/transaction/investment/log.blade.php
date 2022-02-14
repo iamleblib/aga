@@ -403,7 +403,7 @@
                                                                             <label class="fs-5 fw-bold mb-2 required">Total Earning</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input-->
-                                                                            <p>@if($investment->plan == 'starter') ${{ number_format($investment->amount /100 * 23) }} @elseif($investment->plan == 'advance') ${{ number_format($investment->amount  /100 * 48) }} @elseif($investment->plan == 'ultimate') ${{ number_format($investment->amount  /100 * 85) }} @endif</p>
+                                                                            <p>@if($investment->plan == 'starter') ${{ number_format($investment->amount /100 * 21) }} @elseif($investment->plan == 'advance') ${{ number_format($investment->amount  /100 * 48) }} @elseif($investment->plan == 'ultimate') ${{ number_format($investment->amount  /100 * 85) }} @endif</p>
                                                                             <!--end::Input-->
                                                                         </div>
 
