@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    /**
+    /** 
      * @param $item
      */
     public function welcome($item)

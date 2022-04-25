@@ -85,7 +85,7 @@
                                     <div class="footer-widget links-widget">
                                         <h4>Support</h4>
                                         <ul class="list-link">
-                                            <li><a href="{{ route('legacy') }}">Legacy</a></li>
+{{--                                            <li><a href="{{ route('legacy') }}">Legacy</a></li>--}}
                                             <li><a href="{{ route('contact') }}">Contact</a></li>
                                             <li><a href="{{ route('faq') }}">FAQs</a></li>
                                             <li><a href="{{ route('terms') }}">Terms</a></li>

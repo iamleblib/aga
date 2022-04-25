@@ -426,7 +426,7 @@
                                             </span>
                                             <!--end::Svg Icon-->
                                             <div class="d-flex flex-column">
-                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ $roi }}</div>
+                                                <div class="text-dark fw-bolder fs-1 mb-2 mt-5">${{ $roi->sum('amount') }}</div>
                                                 <div class="text-muted fw-bold fs-6">Return of Investment (ROI)</div>
                                             </div>
                                         </div>

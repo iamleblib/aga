@@ -160,7 +160,89 @@
     </div>
 </section>
 <!-- End About Section -->
+<section class="services-section-six" style="background-image: url(' http://merchantgroupassets.com/front/images/background/faqs_breadcrumb_wrapper_content.png ') !important">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <div class="title">Steps for processing</div>
+            <h2 class="">Take some easy steps <br> for <span> processing </span></h2>
+        </div>
 
+        <div class="outer-container">
+            <div class="row clearfix">
+
+                <!-- Services Block Nine -->
+                <div class="services-block-nine col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                        <div class="icon-outer">
+                            <div class="service-number">1</div>
+                            <div class="icon-box">
+                                <span class="icon flaticon-contact"></span>
+                            </div>
+                        </div>
+                        <div class="lower-box">
+                            <h6><a href="#">Activate Account</a></h6>
+                            <div class="text">You must signin and activate your account in other to have access with us.</div>
+                            <a class="contact" href="{{ route('register') }}">Register <span class="arrow fa fa-angle-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Block Nine -->
+                <div class="services-block-nine col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                        <div class="icon-outer">
+                            <div class="service-number">2</div>
+                            <div class="icon-box">
+                                <img src="https://cdn-icons-png.flaticon.com/128/584/584067.png" data-src="https://cdn-icons-png.flaticon.com/128/584/584067.png" alt="Wallet free icon" title="Wallet free icon" width="64" height="64" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/584/584067.png 4x">
+                            </div>
+                        </div>
+                        <div class="lower-box">
+                            <h6><a href="#">Fund Wallet</a></h6>
+                            <div class="text">To purchase or buy asset, you must fund your wallet.</div>
+                            <a class="contact" href="{{ route('deposit.logs') }}">Deposit <span class="arrow fa fa-angle-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Block Nine -->
+                <div class="services-block-nine col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: fadeInUp;">
+                        <div class="icon-outer">
+                            <div class="service-number">3</div>
+                            <div class="icon-box">
+                                <span class="icon flaticon-target"></span>
+                            </div>
+                        </div>
+                        <div class="lower-box">
+                            <h6><a href="#">Place your investment</a></h6>
+                            <div class="text">in other to start earning, you must purchase a package and start earning weekly.</div>
+                            <a class="contact" href="{{ route('investment.logs') }}">Invest Now <span class="arrow fa fa-angle-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Block Nine -->
+                <div class="services-block-nine col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp animated" data-wow-delay="900ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 900ms; animation-name: fadeInUp;">
+                        <div class="icon-outer">
+                            <div class="service-number">4</div>
+                            <div class="icon-box">
+                                <span class="icon flaticon-banknote"></span>
+                            </div>
+                        </div>
+                        <div class="lower-box">
+                            <h6><a href="#">Cash your profit</a></h6>
+                            <div class="text">You are entitle to cash your profit once your wallet is sufficient.</div>
+                            <a class="contact" href="{{ route('withdraw.logs') }}">Withdraw <span class="arrow fa fa-angle-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Gallery Section -->
 <section class="gallery-section">
     <div class="outer-container">

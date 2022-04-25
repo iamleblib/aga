@@ -206,7 +206,7 @@
                                             <!--end::User=-->
                                             <!--begin::Last login=-->
                                             <td data-order="$$$">
-                                                <div class="badge badge-light fw-bolder">${{ number_format($roi->amount) }}</div>
+                                                <div class="badge badge-light fw-bolder">${{ number_format($rois->sum('amount')) }}</div>
                                             </td>
                                             <!--end::Last login=-->
                                             <!--begin::Two step=-->

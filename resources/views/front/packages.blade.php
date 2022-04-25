@@ -50,7 +50,7 @@
                                             <!-- Title Box -->
                                             <div class="title-box">
                                                 <h5>Minimum Package</h5>
-                                                <div class="text">This Package Is Known As Standard Package, Investment Strategy With A Minimum Denomination Of $499 To A Maximum Denomination Of $9,999, This Strategy Assured Returns For 3 Weeks</div>
+                                                <div class="text">This Package Is Known As Minimum Package, Investment Strategy With A Minimum Denomination Of $300 To A Maximum Denomination Of $9,999, This Strategy Assured Returns For 3 Weeks</div>
                                             </div>
                                             <div class="price">$300 </div>
                                             <div class="lower-box">
@@ -93,7 +93,7 @@
                                             <!-- Title Box -->
                                             <div class="title-box">
                                                 <h5>Premium Package</h5>
-                                                <div class="text">This Package Is Known As Extended Package, Investment Strategy With A Minimum Denomination Of $50,000, This Strategy Assured Returns For 5 Weeks</div>
+                                                <div class="text">This Package Is Known As Premium Package, Investment Strategy With A Minimum Denomination Of $50,000, This Strategy Assured Returns For 5 Weeks</div>
                                             </div>
                                             <div class="price">$50,000</div>
                                             <div class="lower-box">

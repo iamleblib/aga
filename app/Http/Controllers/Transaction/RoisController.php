@@ -10,6 +10,7 @@ class RoisController extends Controller
 {
     public function logs(Roi $rois)
     {
+//        return $rois->getRoi();
         return view('guest.transaction.roi.log')->with([
             'rois' => $rois->getRoi()
         ]);
