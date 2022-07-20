@@ -231,8 +231,9 @@
                                 <span class="icon flaticon-banknote"></span>
                             </div>
                         </div>
+{{--Github Comment Appending--}}
                         <div class="lower-box">
-                            <h6><a href="#">Cash your profit</a></h6>
+                            <h6><a href="#">Cash your profits</a></h6>
                             <div class="text">You are entitle to cash your profit once your wallet is sufficient.</div>
                             <a class="contact" href="{{ route('withdraw.logs') }}">Withdraw <span class="arrow fa fa-angle-right"></span></a>
                         </div>
